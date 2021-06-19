@@ -1,3 +1,59 @@
+<?php
+    require_once('authenticate/auth.php');
+?>
+    <?php
+        //checking connection and connecting to a database
+        require_once('connect/config.php');
+        //Connect to mysqli server
+        $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,DB_DATABASE);
+        if(!$conn) {
+            die('Failed to connect to server: ' . mysqli_error());
+        }
+
+        //Select database
+
+
+        //retrive categories from the categories table
+        $categories=mysqli_query($conn,"SELECT * FROM categories")
+        or die("There are no records to display ... \n" . mysqli_error());
+
+        //retrieve quantities from the quantities table
+        $quantities=mysqli_query($conn,"SELECT * FROM quantities")
+        or die("Something is wrong ... \n" . mysqli_error());
+
+        //retrieve currencies from the currencies table (deleting)
+        $currencies=mysqli_query($conn,"SELECT * FROM currencies")
+        or die("Something is wrong ... \n" . mysqli_error());
+
+        //retrieve currencies from the currencies table (updating)
+        $currencies_1=mysqli_query($conn,"SELECT * FROM currencies")
+        or die("Something is wrong ... \n" . mysqli_error());
+
+        //retrieve polls from the ratings table
+        $ratings=mysqli_query($conn,"SELECT * FROM ratings")
+        or die("Something is wrong ... \n" . mysqli_error());
+
+        //retrieve timezones from the timezones table (deleting)
+        $timezones=mysqli_query($conn,"SELECT * FROM timezones")
+        or die("Something is wrong ... \n" . mysqli_error());
+
+        //retrieve timezones from the timezones table (updating)
+        $timezones_1=mysqli_query($conn,"SELECT * FROM timezones")
+        or die("Something is wrong ... \n" . mysqli_error());
+
+        //retrieve tables from the tables table
+        $tables=mysqli_query($conn,"SELECT * FROM tables")
+        or die("Something is wrong ... \n" . mysqli_error());
+
+
+
+        //retrieve questions from the questions table
+        $questions=mysqli_query($conn,"SELECT * FROM questions")
+        or die("Something is wrong ... \n" . mysqli_error());
+    ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

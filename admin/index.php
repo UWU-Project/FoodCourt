@@ -1,4 +1,8 @@
 
+
+
+
+
 <?php
 //checking connection and connecting to a database
 require_once('connect/config.php');

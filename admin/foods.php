@@ -93,23 +93,24 @@
                 <th>Action(s)</th>
             </tr>
 
+
             <?php
             //loop through all table rows
             $symbol=mysqli_fetch_assoc($currencies); //gets active currency
             while ($row=mysqli_fetch_array($result)){
                 echo "<tr>";
-                echo '<td><img src=../images/'. $row['special_photo']. ' width="80" height="70"></td>';
-                echo "<td>" . $row['special_name']."</td>";
-                echo "<td width='180' align='left'>" . $row['special_description']."</td>";
-                echo "<td>" . $symbol['currency_symbol']. "" . $row['special_price']."</td>";
-                echo "<td>" . $row['special_start_date']."</td>";
-                echo "<td>" . $row['special_end_date']."</td>";
-                echo '<td><a href="delete-special.php?id=' . $row['special_id'] . '">Remove Promo</a></td>';
+                echo '<td><img src=images/'. $row['food_photo']. ' width="80" height="70"></td>';
+                echo "<td>" . $row['food_name']."</td>";
+                echo "<td>" . $row['food_description']."</td>";
+                echo "<td>" . $symbol['currency_symbol']. "" . $row['food_price']."</td>";
+                echo "<td>" . $row['category_name']."</td>";
+                echo '<td><a href="delete-food.php?id=' . $row['food_id'] . '">Remove Food</a></td>';
                 echo "</tr>";
             }
             mysqli_free_result($result);
             mysqli_close($conn);
             ?>
+
         </table>
         <hr>
     </div>

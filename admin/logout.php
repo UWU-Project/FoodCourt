@@ -25,7 +25,7 @@ unset($_SESSION['SESS_ADMIN_NAME']);
             <h4 style="text-align:center" class="err">You have been logged out.</h4>
             <p style="text-align:center"><a href="login-form.php">Click Here</a> to Login</p>
             <div id="footer">
-                <div class="bottom_addr">&copy; <?php echo date('Y'); ?> Pathfinder Hotel Restaurant. All Rights Reserved</div>
+                <div class="bottom_addr">&copy; <?php echo date('Y'); ?> Tuck Hotel Restaurant. All Rights Reserved</div>
             </div>
         </div>
     </body>
