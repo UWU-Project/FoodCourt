@@ -14,7 +14,7 @@
 
 
         //retrive categories from the categories table
-        $categories=mysqli_query($conn,"SELECT * FROM categories")
+        $categories=mysqli_query($conn,"SELECT * FROM food_categories")
         or die("There are no records to display ... \n" . mysqli_error());
 
         //retrieve quantities from the quantities table
@@ -33,19 +33,9 @@
         $ratings=mysqli_query($conn,"SELECT * FROM ratings")
         or die("Something is wrong ... \n" . mysqli_error());
 
-        //retrieve timezones from the timezones table (deleting)
-        $timezones=mysqli_query($conn,"SELECT * FROM timezones")
-        or die("Something is wrong ... \n" . mysqli_error());
-
-        //retrieve timezones from the timezones table (updating)
-        $timezones_1=mysqli_query($conn,"SELECT * FROM timezones")
-        or die("Something is wrong ... \n" . mysqli_error());
-
         //retrieve tables from the tables table
         $tables=mysqli_query($conn,"SELECT * FROM tables")
         or die("Something is wrong ... \n" . mysqli_error());
-
-
 
         //retrieve questions from the questions table
         $questions=mysqli_query($conn,"SELECT * FROM questions")
@@ -72,6 +62,7 @@
         <a href="index.php">Home</a> | <a href="categories.php">Categories</a> | <a href="foods.php">Foods</a> | <a href="accounts.php">Accounts</a> | <a href="orders.php">Orders</a> | <a href="reservations.php">Reservations</a> | <a href="specials.php">Specials</a> | <a href="allocation.php">Staff</a> | <a href="options.php">Options</a> | <a href="logout.php">Logout</a>
     </div>
 
+    <!-- Manage Categories -->
     <div id="container">
         <table align="center" width="910">
             <CAPTION><h3>MANAGE CATEGORIES</h3></CAPTION>
@@ -109,7 +100,8 @@
             </tr>
         </table>
         <p>&nbsp;</p>
-        //Manage Quantities
+
+        <!-- Manage Quantities -->
         <hr>
         <table align="center" width="910">
             <CAPTION><h3>MANAGE QUANTITIES</h3></CAPTION>
@@ -146,7 +138,7 @@
                 </td>
             </tr>
         </table>
-        //Manage Currencies
+        <!-- Manage Currencies -->
         <p>&nbsp;</p>
         <hr>
         <table align="center" width="910">
@@ -204,8 +196,8 @@
             </tr>
         </table>
         <p>&nbsp;</p>
-        //endof currency no need delete
-        //manage  ratings
+
+        <!-- Manage Ratings -->
         <hr>
         <table align="center" width="910">
             <CAPTION><h3>MANAGE RATINGS</h3></CAPTION>
@@ -244,62 +236,8 @@
         </table>
         <p>&nbsp;</p>
         <hr>
-        <table align="center" width="910">
-            <CAPTION><h3>MANAGE TIMEZONES</h3></CAPTION>
-            <tr>
-                <td>
-                    <form name="timezoneForm" id="timezoneForm" action="timezone-exec.php" method="post" onsubmit="return timezonesValidate(this)">
-                        <table width="250" border="0" cellpadding="2" cellspacing="0" align="center">
-                            <tr>
-                                <td>Timezone</td>
-                                <td><input type="text" name="name" class="textfield" /></td>
-                                <td><input type="submit" name="Insert" value="Add" /></td>
-                            </tr>
-                        </table>
-                    </form>
-                </td>
-                <td>
-                    <form name="timezoneForm" id="timezoneForm" action="delete-timezone.php" method="post" onsubmit="return timezonesValidate(this)">
-                        <table width="250" border="0" align="center" cellpadding="2" cellspacing="0">
-                            <tr>
-                                <td>Timezone</td>
-                                <td><select name="timezone" id="timezone">
-                                        <option value="select">- select timezone -
-                                            <?php
-                                            //loop through timezones table rows
-                                            while ($row=mysqli_fetch_array($timezones)){
-                                                echo "<option value=$row[timezone_id]>$row[timezone_reference]";
-                                            }
-                                            ?>
-                                    </select></td>
-                                <td><input type="submit" name="Delete" value="Remove" /></td>
-                            </tr>
-                        </table>
-                    </form>
-                </td>
-                <td>
-                    <form name="timezoneForm" id="timezoneForm" action="activate-timezone.php" method="post" onsubmit="return timezonesValidate(this)">
-                        <table width="250" border="0" align="center" cellpadding="2" cellspacing="0">
-                            <tr>
-                                <td>Timezone</td>
-                                <td><select name="timezone" id="timezone">
-                                        <option value="select">- select timezone -
-                                            <?php
-                                            //loop through timezones table rows
-                                            while ($row=mysqli_fetch_array($timezones_1)){
-                                                echo "<option value=$row[timezone_id]>$row[timezone_reference]";
-                                            }
-                                            ?>
-                                    </select></td>
-                                <td><input type="submit" name="Update" value="Activate" /></td>
-                            </tr>
-                        </table>
-                    </form>
-                </td>
-            </tr>
-        </table>
-        <p>&nbsp;</p>
-        <hr>
+
+        <!-- Manage tables -->
         <table align="center" width="910">
             <CAPTION><h3>MANAGE TABLES</h3></CAPTION>
             <tr>

@@ -11,8 +11,6 @@
             die('Failed to connect to server: ' . mysqli_error());
         }
 
-
-
         //Function to sanitize values received from the form. Prevents SQL injection
         function clean($str) {
             global $conn;

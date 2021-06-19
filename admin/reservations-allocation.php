@@ -1,6 +1,6 @@
 <?php
 //checking connection and connecting to a database
-require_once('connection/config.php');
+require_once('connect/config.php');
 //Connect to mysqli server
 $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,DB_DATABASE);
 if(!$conn) {
