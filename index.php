@@ -588,7 +588,7 @@ padding-top: 15rem ;
 				<div class="col-md-4">
 					<div class="block clearfix">
 						<a href="#">
-							<img src="images/footer-logo.png" alt="">
+							<img src="images/footerlogo5.png" alt="">
 						</a>
 						<p>
 							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
