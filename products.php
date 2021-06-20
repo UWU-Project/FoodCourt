@@ -9,12 +9,12 @@ if(!$conn) {
 
 
 //selecting all records from the food_details table. Return an error if there are no records in the table
-$result=mysqli_query($conn,"SELECT * FROM food_details,categories WHERE food_details.food_category=categories.category_id ")
+$result=mysqli_query($conn,"SELECT * FROM food_details,food_categories WHERE food_details.food_category=food_categories.category_id ")
 or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
 ?>
 <?php
 //retrive categories from the categories table
-$categories=mysqli_query($conn,"SELECT * FROM categories")
+$categories=mysqli_query($conn,"SELECT * FROM food_categories")
 or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
 ?>
 <?php
@@ -39,7 +39,7 @@ if(isset($_POST['Submit'])){
 
     //selecting all records from the food_details and categories tables based on category id. Return an error if there are no records in the table
     if($id > 0){
-        $result=mysqli_query($conn,"SELECT * FROM food_details,categories WHERE food_category='$id' AND food_details.food_category=categories.category_id ")
+        $result=mysqli_query($conn,"SELECT * FROM food_details,food_categories WHERE food_category='$id' AND food_details.food_category=food_categories.category_id ")
         or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
     }elseif($id == 0){
         $result=mysqli_query($conn,"SELECT * FROM specials WHERE '".date('Y-m-d')."' BETWEEN date(special_start_date) and date(special_end_date) ")
@@ -393,7 +393,7 @@ if(isset($_POST['Submit'])){
 				<div class="product-grid">
 				
 					
-				<?php
+				        <?php
                                     $count = mysqli_num_rows($result);
                                     if(isset($_POST['Submit']) && $count < 1){
                                         echo "<html><script language='JavaScript'>alert('There are no foods under the selected category at the moment. Please check back later.')</script></html>";
@@ -407,34 +407,32 @@ if(isset($_POST['Submit'])){
                                         else
                                             $lt = "food";
                                         while ($row=mysqli_fetch_assoc($result)){
-
-                                        ?>
+                        ?>
 										
 										
 								<div class="products view1" style="width: 200px; float: left;" >
-								<a href="#">
-								<?php echo '<a href=images/'. $row[$lt.'_photo']. ' alt="click to view full image" target="_blank"><img src=images/'. $row[$lt.'_photo']. ' width="auto" height="100%"></a>'?>
-								</a>
-								<a href="#">
-								<h4><?php echo $row[$lt.'_name']?></h4>
-								</a>
-								<p class="price"><?php echo $symbol['currency_symbol']. "" . $row[$lt.'_price']?></p>
-								<div >
-									<a class="view-link shutter" href="#">
-									<i class="fa fa-plus-circle"></i>Add To Cart</a>
-								</div>
-							</div>
+                                    <a href="#">
+                                    <?php echo '<a href=images/'. $row[$lt.'_photo']. ' alt="click to view full image" target="_blank"><img src=images/'. $row[$lt.'_photo']. ' width="auto" height="100%"></a>'?>
+                                    </a>
+                                    <a href="#">
+                                    <h4><?php echo $row[$lt.'_name']?></h4>
+                                    </a>
+                                    <p class="price"><?php echo $symbol['currency_symbol']. "" . $row[$lt.'_price']?></p>
+                                    <div >
+                                        <a class="view-link shutter" href="#">
+                                        <i class="fa fa-plus-circle"></i>Add To Cart</a>
+								    </div>
+							    </div>
                                            
+                        <?php  }} ?>
+                        <?php
+                             mysqli_free_result($result);
+                             mysqli_close($conn);
+                        ?>
 
-                                        <?php  }} ?>
-                                    <?php
-                                    mysqli_free_result($result);
-                                    mysqli_close($conn);
-                                    ?>
-							</div>	<!-- End of /.products -->
+                </div>	<!-- End of /.products -->
 						
-						
-					
+
 				</div>	<!-- End of /.products-grid -->
 
 				<!-- Pagination -->
