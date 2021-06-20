@@ -166,8 +166,8 @@ if(isset($_POST['Submit'])){
 										<span>
 											<input placeholder="E-mail address"  type="text" id="email_create" name="email_create" value="" class="account_input">
 					                    </span>
-									</p>
-									<p class="submit">
+									 </p>
+									 <p class="submit">
 										<button class="btn btn-primary">Create Your Account</button>
 									</p>
 								</div>
@@ -213,7 +213,7 @@ if(isset($_POST['Submit'])){
 			<div class="row">
 				<div class="col-md-12">
 					<a href="#">
-						<img src="images/logo.png" alt="logo">
+						<img src="images/logo2copy.png" alt="logo">
 					</a>
 				</div>	<!-- End of /.col-md-12 -->
 			</div>	<!-- End of /.row -->

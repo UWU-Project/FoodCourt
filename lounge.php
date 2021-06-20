@@ -203,7 +203,6 @@ if(isset($_POST['Submit'])){
 </section>  <!-- End of /Section -->
 
 
-
 <!-- LOGO Start
 ================================================== -->
 
@@ -212,15 +211,12 @@ if(isset($_POST['Submit'])){
         <div class="row">
             <div class="col-md-12">
                 <a href="#">
-                    <img src="images/logo_copy.png" alt="logo">
+                    <img src="images/logo2copy.png" alt="logo">
                 </a>
             </div>	<!-- End of /.col-md-12 -->
         </div>	<!-- End of /.row -->
     </div>	<!-- End of /.container -->
 </header> <!-- End of /Header -->
-
-
-
 
 <!-- MENU Start
 ================================================== -->
