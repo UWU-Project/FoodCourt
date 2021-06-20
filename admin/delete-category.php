@@ -27,7 +27,7 @@
         $category_id = clean($_POST['category']);
 
         // delete the entry
-        $result = mysqli_query($conn,"DELETE FROM categories WHERE category_id='$category_id'")
+        $result = mysqli_query($conn,"DELETE FROM food_categories WHERE category_id='$category_id'")
         or die("There was a problem while deleting the category ... \n" . mysqli_error());
 
         // redirect back to options
@@ -48,7 +48,7 @@
         $id = $_GET['id'];
 
         // delete the entry
-        $result = mysqli_query($conn,"DELETE FROM categories WHERE category_id='$id'")
+        $result = mysqli_query($conn,"DELETE FROM food_categories WHERE category_id='$id'")
         or die("There was a problem while deleting the category ... \n" . mysqli_error());
 
         // redirect back to the categories

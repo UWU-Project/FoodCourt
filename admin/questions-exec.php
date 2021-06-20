@@ -12,7 +12,6 @@ if(!$conn) {
 }
 
 
-
 //Function to sanitize values received from the form. Prevents SQL injection
 function clean($str) {
     global $conn;
@@ -23,22 +22,17 @@ function clean($str) {
 }
 
 //Sanitize the POST values
-$FirstName = clean($_POST['fName']);
-$LastName = clean($_POST['lName']);
-$StreetAddress = clean($_POST['sAddress']);
-$MobileNo = clean($_POST['mobile']);
-
+$name = clean($_POST['name']);
 
 //Create INSERT query
-$qry = "INSERT INTO staff(firstname,lastname,Street_Address,Mobile_Tel) VALUES('$FirstName','$LastName','$StreetAddress','$MobileNo')";
+$qry = "INSERT INTO questions(question_text) VALUES('$name')";
 $result = @mysqli_query($conn,$qry);
 
 //Check whether the query was successful or not
 if($result) {
-    header("location: profile.php");
-    echo "<html><script>alert('Staff information added successfully.')</script></html>";
+    header("location: options.php");
     exit();
 }else {
-    die("Adding staff information failed ... " . mysqli_error());
+    die("Query failed " . mysqli_error());
 }
 ?>

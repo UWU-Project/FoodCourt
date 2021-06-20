@@ -138,6 +138,7 @@
                 </td>
             </tr>
         </table>
+
         <!-- Manage Currencies -->
         <p>&nbsp;</p>
         <hr>
