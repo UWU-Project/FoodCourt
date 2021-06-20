@@ -78,6 +78,11 @@ padding-top: 15rem ;
 	margin-top: 10rem;
 	margin-bottom: 10rem;
 }
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
 </style>
 
@@ -195,9 +200,12 @@ padding-top: 15rem ;
 			<div class="row">
 				<div class="col-md-12">
 					<div id="slider" class="nivoSlider">
-				    	<img src="images/slider.jpg" alt="" />
-				    	<img src="images/slider1.jpg" alt=""/>
-				    	<img src="images/slider2.jpg" alt="" />
+                        <div >
+                            <img src="images/slider.jpg" alt="" />
+                            <div class="centered">Caption Three</div>
+                       </div>
+				    	<img src="images/slider23.jpg" alt=""/>
+				    	<img src="images/slider22.jpg" alt="" />
 					</div>	<!-- End of /.nivoslider -->
 				</div>	<!-- End of /.col-md-12 -->
 			</div>	<!-- End of /.row -->
@@ -269,10 +277,8 @@ padding-top: 15rem ;
 				<div>
 					
 					  <img src="images/img1.png" alt="...">
-					
-				  
+
 				</div>
-				
 
 			</div>
 			<div class="col-md-4 txtpadding" style="text-align: center;">
