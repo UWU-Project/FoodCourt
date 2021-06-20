@@ -55,7 +55,7 @@ require_once('connect/config.php');
         <div id="page">
         <div id="header">
         <h1>Administrator Control Panel</h1>
-        <a href="profile.php">Profile</a> | <a href="categories-menu.php">Categories</a> | <a href="foods-menu.php">Foods</a> | <a href="accounts.php">Accounts</a> | <a href="orders.php">Orders</a> | <a href="reservations.php">Reservations</a> | <a href="specials.php">Promotions</a> | <a href="allocation.php">Staff</a> | <a href="options.php">Options</a> | <a href="logout.php">Logout</a>
+        <a href="profile.php">Profile</a> | <a href="foods-menu.php">Foods</a> | <a href="accounts.php">Accounts</a> | <a href="orders.php">Orders</a> | <a href="reservations.php">Reservations</a> | <a href="specials.php">Promotions</a> | <a href="allocation.php">Staff</a> | <a href="options.php">Options</a> | <a href="logout.php">Logout</a>
         </div>
         <div id="container">
         <table width="1000" align="center" style="text-align:center">

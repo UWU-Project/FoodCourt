@@ -10,14 +10,18 @@ require_once('authenticate/auth.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foods</title>
     <link href="stylesheets/admin_styles.css" rel="stylesheet" type="text/css" />
-    <script language="JavaScript" src="validation/admin.js">
-    </script>
+
+    <script language="JavaScript" src="validation/admin.js"></script>
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+    <script language="JavaScript" src="validation/admin.js"></script>
+
 </head>
 <body>
 <div id="page">
     <div id="header">
         <h1>Foods Categories Management </h1>
-        <a href="index.php">Home</a> | <a href="categories-menu.php">Categories</a> | <a href="foods-menu.php">Foods</a> | <a href="accounts.php">Accounts</a> | <a href="orders.php">Orders</a> | <a href="reservations.php">Reservations</a> | <a href="specials.php">Promotions</a> | <a href="allocation.php">Staff</a> | <a href="options.php">Options</a> | <a href="logout.php">Logout</a>
+        <a href="index.php">Home</a> | <a href="foods-menu.php">Foods</a> | <a href="accounts.php">Accounts</a> | <a href="orders.php">Orders</a> | <a href="reservations.php">Reservations</a> | <a href="specials.php">Promotions</a> | <a href="allocation.php">Staff</a> | <a href="options.php">Options</a> | <a href="logout.php">Logout</a>
     </div>
     <div id="container">
         <table width="760" align="center">

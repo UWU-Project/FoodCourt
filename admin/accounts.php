@@ -1,21 +1,21 @@
 <?php
-require_once('authenticate/auth.php');
+    require_once('authenticate/auth.php');
 ?>
 
-<?php
-//checking connection and connecting to a database
-require_once('connect/config.php');
-//Connect to mysqli server
-$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,DB_DATABASE);
-if(!$conn) {
-    die('Failed to connect to server: ' . mysqli_error());
-}
+    <?php
+        //checking connection and connecting to a database
+        require_once('connect/config.php');
+        //Connect to mysqli server
+        $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,DB_DATABASE);
+        if(!$conn) {
+            die('Failed to connect to server: ' . mysqli_error());
+        }
 
 
-//selecting all records from the members table. Return an error if there are no records in the tables
-$result=mysqli_query($conn,"SELECT * FROM customers")
-or die("There are no records to display ... \n" . mysqli_error());
-?>
+        //selecting all records from the members table. Return an error if there are no records in the tables
+        $result=mysqli_query($conn,"SELECT * FROM customers")
+        or die("There are no records to display ... \n" . mysqli_error());
+    ?>
 
 
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ or die("There are no records to display ... \n" . mysqli_error());
 <div id="page">
     <div id="header">
         <h1>Members Management </h1>
-        <a href="index.php">Home</a> | <a href="categories-menu.php">Categories</a> | <a href="foods-menu.php">Foods</a> | <a href="accounts.php">Accounts</a> | <a href="orders.php">Orders</a> | <a href="reservations.php">Reservations</a> | <a href="specials.php">Promotions</a> | <a href="allocation.php">Staff</a> | <a href="options.php">Options</a> | <a href="logout.php">Logout</a>
+        <a href="index.php">Home</a> | <a href="foods-menu.php">Foods</a> | <a href="accounts.php">Accounts</a> | <a href="orders.php">Orders</a> | <a href="reservations.php">Reservations</a> | <a href="specials.php">Promotions</a> | <a href="allocation.php">Staff</a> | <a href="options.php">Options</a> | <a href="logout.php">Logout</a>
     </div>
     <div id="container">
         <table border="0" width="620" align="center">
