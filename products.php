@@ -24,6 +24,7 @@ $flag_1 = 1;
 $currencies=mysqli_query($conn,"SELECT * FROM currencies WHERE flag='$flag_1'")
 or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
 ?>
+
 <?php
 if(isset($_POST['Submit'])){
     //Function to sanitize values received from the form. Prevents SQL injection
