@@ -10,8 +10,12 @@ require_once('authenticate/auth.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foods</title>
     <link href="stylesheets/admin_styles.css" rel="stylesheet" type="text/css" />
-    <script language="JavaScript" src="validation/admin.js">
-    </script>
+
+    <script language="JavaScript" src="validation/admin.js"></script>
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+    <script language="JavaScript" src="validation/admin.js"></script>
+
 </head>
 <body>
 <div id="page">

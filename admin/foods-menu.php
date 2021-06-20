@@ -24,13 +24,7 @@ require_once('authenticate/auth.php');
     <div id="container">
 
         <table width="760" align="center">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Library</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Data</li>
-                </ol>
-            </nav>
+
             <CAPTION><h3>SELECT RESTAURANT</h3></CAPTION>
         </table>
         <hr>
