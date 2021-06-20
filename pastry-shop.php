@@ -303,6 +303,7 @@ if(isset($_POST['Submit'])){
         echo "<option value='{$row['category_id']}' ".($id == $row['category_id'] ? "selected" : "").">$row[category_name]</option>";
         }
         ?>
+
         <option value="0" <?php echo isset($id) &&  $id == 0 ? "selected" : "" ?>>Special Deals</option>
         </select></p>
         <p><input type="submit" name="Submit" value="Show Foods" /></p>

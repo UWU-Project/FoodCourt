@@ -3,34 +3,34 @@
 ?>
 
     <?php
-        //checking connection and connecting to a database
-        require_once('connect/config.php');
-        //Connect to mysqli server
-        $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,DB_DATABASE);
-        if(!$conn) {
-            die('Failed to connect to server: ' . mysqli_error());
-        }
+    //checking connection and connecting to a database
+    require_once('connect/config.php');
+    //Connect to mysqli server
+    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,DB_DATABASE);
+    if(!$conn) {
+        die('Failed to connect to server: ' . mysqli_error());
+    }
 
-        //Select database
+    //Select database
 
-        //retrive promotions from the specials table
-        $result=mysqli_query($conn,"SELECT * FROM food_details,food_categories WHERE food_details.food_category=food_categories.category_id")
-        or die("There are no records to display ... \n" . mysqli_error());
+    //retrive promotions from the specials table
+    $result=mysqli_query($conn,"SELECT * FROM food_details_lounge,food_categories_lounge WHERE food_details_lounge.food_category=food_categories_lounge.category_id")
+    or die("There are no records to display ... \n" . mysqli_error());
     ?>
 
-    <?php
-        //retrive categories from the categories table
-        $categories=mysqli_query($conn,"SELECT * FROM food_categories")
-        or die("There are no records to display ... \n" . mysqli_error());
-    ?>
+<?php
+//retrive categories from the categories table
+$categories=mysqli_query($conn,"SELECT * FROM food_categories_lounge")
+or die("There are no records to display ... \n" . mysqli_error());
+?>
 
-    <?php
-        //retrive a currency from the currencies table
-        //define a default value for flag_1
-        $flag_1 = 1;
-        $currencies=mysqli_query($conn,"SELECT * FROM currencies WHERE flag='$flag_1'")
-        or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
-    ?>
+<?php
+//retrive a currency from the currencies table
+//define a default value for flag_1
+$flag_1 = 1;
+$currencies=mysqli_query($conn,"SELECT * FROM currencies WHERE flag='$flag_1'")
+or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+?>
 
 
 
@@ -54,7 +54,7 @@
     <div id="container">
         <table width="760" align="center">
             <CAPTION><h3>ADD A NEW FOOD</h3></CAPTION>
-            <form name="foodsForm" id="foodsForm" action="foods-exec.php" method="post" enctype="multipart/form-data" onsubmit="return foodsValidate(this)">
+            <form name="foodsForm" id="foodsForm" action="foods-lounge-exec.php" method="post" enctype="multipart/form-data" onsubmit="return foodsValidate(this)">
                 <tr>
                     <th>Name</th>
                     <th>Description</th>
@@ -104,7 +104,7 @@
                 echo "<td>" . $row['food_description']."</td>";
                 echo "<td>" . $symbol['currency_symbol']. "" . $row['food_price']."</td>";
                 echo "<td>" . $row['category_name']."</td>";
-                echo '<td><a href="delete-food.php?id=' . $row['food_id'] . '">Remove Food</a></td>';
+                echo '<td><a href="delete-food-lounge.php?id=' . $row['food_id'] . '">Remove Food</a></td>';
                 echo "</tr>";
             }
             mysqli_free_result($result);
