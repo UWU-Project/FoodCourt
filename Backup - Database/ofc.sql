@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 19, 2021 at 10:35 PM
+-- Generation Time: Jun 20, 2021 at 08:06 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -41,7 +41,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`, `username`, `password`, `f_name`, `l_name`, `mob_number`) VALUES
-(1, 'admin', '1234', 'Akila', 'Pramod', 714064114);
+(1, 'admin', '12345', 'Akila', 'Pramod', 714064114);
 
 -- --------------------------------------------------------
 
@@ -92,7 +92,8 @@ CREATE TABLE `currencies` (
 --
 
 INSERT INTO `currencies` (`currency_id`, `currency_symbol`, `flag`) VALUES
-(1, 'Rs.', 1);
+(1, 'Rs.', 0),
+(2, 'LKR', 1);
 
 -- --------------------------------------------------------
 
@@ -128,8 +129,26 @@ CREATE TABLE `food_categories` (
 INSERT INTO `food_categories` (`category_id`, `category_name`) VALUES
 (1, 'LocalFoods'),
 (2, 'ForeignFoods'),
-(3, 'dogfood'),
-(4, 'akilafoods');
+(5, 'PrasangiFoods'),
+(6, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `food_categories_lounge`
+--
+
+CREATE TABLE `food_categories_lounge` (
+  `category_id` int(15) NOT NULL,
+  `category_name` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `food_categories_lounge`
+--
+
+INSERT INTO `food_categories_lounge` (`category_id`, `category_name`) VALUES
+(1, 'Rice Varieties');
 
 -- --------------------------------------------------------
 
@@ -152,7 +171,24 @@ CREATE TABLE `food_details` (
 
 INSERT INTO `food_details` (`food_id`, `food_name`, `food_description`, `food_price`, `food_photo`, `food_category`) VALUES
 (4, 'Lasagna', 'Healthy Diet Food', 450, 'category-image-2.jpg', 2),
-(5, 'Pasta', 'Healthy diet food', 1234, 'blog-1.jpg', 4);
+(5, 'Pasta', 'Healthy diet food', 1234, 'blog-1.jpg', 4),
+(8, 'Beef', 'Smoked Beef Portion', 600, 'category-image-1.jpg', 1),
+(10, 'Pasta', 'Healthy Pasta Portion', 400, 'product-image.jpg', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `food_details_lounge`
+--
+
+CREATE TABLE `food_details_lounge` (
+  `food_id` int(15) NOT NULL,
+  `food_name` varchar(45) NOT NULL,
+  `food_description` text NOT NULL,
+  `food_price` float NOT NULL,
+  `food_photo` text NOT NULL,
+  `food_category` int(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -192,6 +228,14 @@ CREATE TABLE `questions` (
   `question_id` int(5) NOT NULL,
   `question_text` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `questions`
+--
+
+INSERT INTO `questions` (`question_id`, `question_text`) VALUES
+(0, 'What is the Name of your Mom?'),
+(0, 'What is the name of your First Pet?');
 
 -- --------------------------------------------------------
 
@@ -264,8 +308,7 @@ CREATE TABLE `staff` (
 
 INSERT INTO `staff` (`StaffID`, `firstname`, `lastname`, `Street_Address`, `Mobile_Tel`) VALUES
 (1, 'Prasangi', 'Bandara', '35/5,Henegedara', '0714064114'),
-(2, 'Prasangi', 'Bandara', '35/5,Henegedara', '0714064114'),
-(3, 'Prasangi', 'Bandara', '35/5,Henegedara', '0714064114');
+(11, 'Dileesha', 'Weliwaththa', '35/5, Henegedara Road, Maharagama', '0714064114');
 
 -- --------------------------------------------------------
 
@@ -277,6 +320,13 @@ CREATE TABLE `tables` (
   `table_id` int(5) NOT NULL,
   `table_name` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tables`
+--
+
+INSERT INTO `tables` (`table_id`, `table_name`) VALUES
+(1, 'VIP');
 
 --
 -- Indexes for dumped tables
@@ -319,9 +369,21 @@ ALTER TABLE `food_categories`
   ADD PRIMARY KEY (`category_id`);
 
 --
+-- Indexes for table `food_categories_lounge`
+--
+ALTER TABLE `food_categories_lounge`
+  ADD PRIMARY KEY (`category_id`);
+
+--
 -- Indexes for table `food_details`
 --
 ALTER TABLE `food_details`
+  ADD PRIMARY KEY (`food_id`);
+
+--
+-- Indexes for table `food_details_lounge`
+--
+ALTER TABLE `food_details_lounge`
   ADD PRIMARY KEY (`food_id`);
 
 --
@@ -392,7 +454,7 @@ ALTER TABLE `cart_details`
 -- AUTO_INCREMENT for table `currencies`
 --
 ALTER TABLE `currencies`
-  MODIFY `currency_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `currency_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `customers`
@@ -404,13 +466,25 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `food_categories`
 --
 ALTER TABLE `food_categories`
-  MODIFY `category_id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `category_id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `food_categories_lounge`
+--
+ALTER TABLE `food_categories_lounge`
+  MODIFY `category_id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `food_details`
 --
 ALTER TABLE `food_details`
-  MODIFY `food_id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `food_id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `food_details_lounge`
+--
+ALTER TABLE `food_details_lounge`
+  MODIFY `food_id` int(15) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `orders_details`
@@ -446,13 +520,13 @@ ALTER TABLE `specials`
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `StaffID` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `StaffID` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tables`
 --
 ALTER TABLE `tables`
-  MODIFY `table_id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `table_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
