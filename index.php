@@ -92,12 +92,59 @@ padding-top: 15rem ;
 
 <!-- TOP HEADER Start
     ================================================== -->
-	
-	<section>
+
+<section id="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <p class="contact-action"><i class="fa fa-phone-square"></i>IN CASE OF ANY QUESTIONS, CALL THIS NUMBER: <strong>+565 975 658</strong></p>
+            </div>
+            <div class="col-md-3 clearfix">
+                <ul class="login-cart">
+                    <li>
+                        <a data-toggle="modal" data-target="#myModal" href="#">
+                            <i class="fa fa-user"></i>
+                            Login
+                        </a>
+                    </li>
+                    <li>
+                        <div class="cart dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="fa fa-shopping-cart"></i>Cart(1)</a>
+                            <div class="dropdown-menu dropup">
+                                <span class="caret"></span>
+                                <ul class="media-list">
+                                    <li class="media">
+                                        <img class="pull-left" src="images/product-item.jpg" alt="">
+                                        <div class="media-body">
+                                            <h6>Italian Sauce
+                                                <span>$250</span>
+                                            </h6>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-sm">Checkout</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <div class="search-box">
+                    <div class="input-group">
+                        <input placeholder="Search Here" type="text" class="form-control">
+                        <span class="input-group-btn">
+					        	<button class="btn btn-default" type="button"></button>
+					      	</span>
+                    </div><!-- /.input-group -->
+                </div><!-- /.search-box -->
+            </div>
+        </div> <!-- End Of /.row -->
+    </div>	<!-- End Of /.Container -->
+    </section>
 		
 	<!-- MODAL Start
     	================================================== -->
-
+        <section>
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 		    	<div class="modal-content">
@@ -153,9 +200,25 @@ padding-top: 15rem ;
 		  	</div>
 		</div>	
 	</section>  <!-- End of /Section -->
-	
 
-	<!-- MENU Start
+    <!-- LOGO Start
+================================================== -->
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="#">
+                        <img src="images/logo.png" alt="logo">
+                    </a>
+                </div>	<!-- End of /.col-md-12 -->
+            </div>	<!-- End of /.row -->
+        </div>	<!-- End of /.container -->
+    </header> <!-- End of /Header -->
+
+
+
+    <!-- MENU Start
     ================================================== -->
 
 	<nav class="navbar navbar-default">
