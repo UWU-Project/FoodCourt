@@ -237,22 +237,20 @@ if(isset($_POST['Submit'])){
 		    </div> <!-- End of /.navbar-header -->
 
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      	<ul class="nav navbar-nav nav-main">
-		        	<li ><a href="index.php">HOME</a></li>
-					<li class="active"><a href="products.php">SHOP</a></li>
-					<li><a href="blog.html">BLOG</a></li>
-					<li><a href="blog-single.html">ARTICLE</a></li>
-					<li class="dropdown">
-						<a href="#">
-							cLASSEGFG
-							<span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu">
-						   <li><a  href="#">Action</a></li>
-						    <li><a  href="#">Another action</a></li>
-						    <li><a  href="#">SomethingCDSDVC else here</a></li>
-						    <li><a  href="#">Separated link</a></li>
-						</ul>
+                <ul class="nav navbar-nav nav-main">
+                    <li ><a href="index.php">HOME</a></li>
+                    <li class="active"><a href="pastry-shop.php">PASTRY SHOP</a></li>
+                    <li><a href="lounge.php">THE lOUNGE</a></li>
+                    <li><a href="buffet.php">BUFFET</a></li>
+
+                    <li>
+                        <a data-toggle="modal" data-target="#myModal" href="#">
+                            <i class="fa fa-user"></i>
+                            LOGIN
+                        </a>
+                    </li>
+                    <li><a href="blog-single.html">CART</a></li>
+                </ul>
 					</li> <!-- End of /.dropdown -->
 
 					
@@ -293,7 +291,7 @@ if(isset($_POST['Submit'])){
 					<div class="blog-sidebar">
 						<div class="block">
 							
-							<form name="categoryForm" id="categoryForm" method="post" action="products.php" onsubmit="return categoriesValidate(this)">
+							<form name="categoryForm" id="categoryForm" method="post" action="pastry-shop.php" onsubmit="return categoriesValidate(this)">
 							
         <h3>Category</h3>
         <p width="168"><select name="category" id="category">

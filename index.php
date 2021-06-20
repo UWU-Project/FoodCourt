@@ -171,10 +171,10 @@ padding-top: 15rem ;
 
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	<ul class="nav navbar-nav nav-main">
-		        	<li class="active"><a href="#">HOME</a></li>
-					<li><a href="products.php">PASTRY SHOP</a></li>
+		        	<li class="active"><a href="index.php">HOME</a></li>
+					<li><a href="pastry-shop.php">PASTRY SHOP</a></li>
 					<li><a href="blog.html">THE lOUNGE</a></li>
-					<li><a href="blog-single.html">BUFFET</a></li>
+					<li><a href="buffet.php">BUFFET</a></li>
 					
 					<li>
 							<a data-toggle="modal" data-target="#myModal" href="#">
