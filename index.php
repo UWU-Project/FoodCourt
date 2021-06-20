@@ -209,7 +209,7 @@ padding-top: 15rem ;
             <div class="row">
                 <div class="col-md-12">
                     <a href="#">
-                        <img src="images/logo.png" alt="logo">
+                        <img src="images/logo_copy.png" alt="logo">
                     </a>
                 </div>	<!-- End of /.col-md-12 -->
             </div>	<!-- End of /.row -->
