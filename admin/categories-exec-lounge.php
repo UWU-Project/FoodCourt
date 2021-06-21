@@ -31,7 +31,7 @@ $result = @mysqli_query($conn,$qry);
 
 //Check whether the query was successful or not
 if($result) {
-    header("location: options.php");
+    header("location: categories-exec-lounge.php");
     exit();
 }else {
     die("Query failed " . mysqli_error());
