@@ -32,7 +32,7 @@ if (isset($_POST['Submit'])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Food Code Proudly Presents By Themexpert</title>
+    <title>Food Court</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- Fonts -->
