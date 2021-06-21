@@ -242,13 +242,6 @@ if(isset($_POST['Submit'])){
                 <li><a href="pastry-shop.php">PASTRY SHOP</a></li>
                 <li><a href="lounge.php">THE lOUNGE</a></li>
                 <li class="active"><a href="buffet.php">BUFFET</a></li>
-
-                <li>
-                    <a data-toggle="modal" data-target="#myModal" href="#">
-                        <i class="fa fa-user"></i>
-                        LOGIN
-                    </a>
-                </li>
                 <li><a href="blog-single.html">CART</a></li>
             </ul>
             </li> <!-- End of /.dropdown -->
@@ -266,7 +259,7 @@ if(isset($_POST['Submit'])){
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h1>Fuck Shop</h1>
+                <h1>BUFFET</h1>
                 <p>A Bunch Of Products</p>
             </div>	<!-- End of /.col-md-4 -->
             <div class="col-md-8 hidden-xs">
@@ -460,7 +453,7 @@ if(isset($_POST['Submit'])){
 
 
 <!-- FOOTER Start
-    ================================================== -->
+================================================== -->
 
 <footer>
     <div class="container">
@@ -468,7 +461,7 @@ if(isset($_POST['Submit'])){
             <div class="col-md-4">
                 <div class="block clearfix">
                     <a href="#">
-                        <img src="images/footer-logo.png" alt="">
+                        <img src="images/footerlogo5.png" alt="">
                     </a>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -506,36 +499,32 @@ if(isset($_POST['Submit'])){
             <div class="col-md-4">
                 <div class="block">
                     <h4>GET IN TOUCH</h4>
-                    <p ><i class="fa  fa-map-marker"></i> <span>Food Code d.o.o.,</span>1000 Ljubljana Celovska cesta 135, Slovenia</p>
-                    <p> <i class="fa  fa-phone"></i> <span>Phone:</span> (+386) 40 123 456 </p>
+                    <p ><i class="fa  fa-map-marker"></i> <span>Food Court: </span>77-L3/22 Lady Mccallum's Drive Nuwara Eliya</p>
+                    <p> <i class="fa  fa-phone"></i> <span>Phone:</span> 052 22 22 878 </p>
 
-                    <p> <i class="fa  fa-mobile"></i> <span>Mobile:</span> (+386) 40 654 123 651</p>
+                    <p> <i class="fa  fa-mobile"></i> <span>Mobile:</span> 070 2 100 600</p>
 
-                    <p class="mail"><i class="fa  fa-envelope"></i>Eamil: <span>info@sitename.com</span></p>
+                    <p class="mail"><i class="fa  fa-envelope"></i>Eamil: <span>info@foodcourt.com</span></p>
                 </div>	<!-- End Of /.block -->
             </div> <!-- End Of Col-md-3 -->
             <div class="col-md-4">
                 <div class="block">
-                    <h4>UPCOMING ITEMS</h4>
                     <div class="media">
-                        <a class="pull-left" href="#">
-                            <img class="media-object" src="images/product-item.jpg" alt="...">
-                        </a>
-                        <a class="pull-left" href="#">
-                            <img class="media-object" src="images/product-item.jpg" alt="...">
-                        </a>
-                        <a class="pull-left" href="#">
-                            <img class="media-object" src="images/product-item.jpg" alt="...">
-                        </a>
-                        <a class="pull-left" href="#">
-                            <img class="media-object" src="images/product-item.jpg" alt="...">
-                        </a>
-                        <a class="pull-left" href="#">
-                            <img class="media-object" src="images/product-item.jpg" alt="...">
-                        </a>
-                        <a class="pull-left" href="#">
-                            <img class="media-object" src="images/product-item.jpg" alt="...">
-                        </a>
+                        <h4>Our Location</h4>
+
+                        <div id="googleMap" style="width:100%;height:200px;"></div>
+
+                        <script>
+                            function myMap() {
+                                var mapProp= {
+                                    center:new google.maps.LatLng(51.508742,-0.120850),
+                                    zoom:5,
+                                };
+                                var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                            }
+                        </script>
+
+                        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
                     </div>	<!-- End Of /.media -->
                 </div>	<!-- End Of /.block -->
             </div> <!-- End Of Col-md-3 -->
@@ -551,34 +540,8 @@ if(isset($_POST['Submit'])){
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <ul class="cash-out pull-left">
-                        <li>
-                            <a href="#">
-                                <img src="images/American-Express.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/PayPal.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/Maestro.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/Visa.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/Visa-Electron.png" alt="">
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright-text pull-right">Food Court <a href="">Group 4</a> All Rights Reserved</p>
+
+                    <p style="text-align: center;">© 2021 | Food Court <a href="">Group 4</a> All Rights Reserved</p>
                 </div>	<!-- End Of /.col-md-12 -->
             </div>	<!-- End Of /.row -->
         </div>	<!-- End Of /.container -->

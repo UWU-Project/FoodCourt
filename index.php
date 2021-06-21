@@ -238,14 +238,7 @@ padding-top: 15rem ;
 					<li><a href="pastry-shop.php">PASTRY SHOP</a></li>
 					<li><a href="lounge.php">THE lOUNGE</a></li>
 					<li><a href="buffet.php">BUFFET</a></li>
-					
-					<li>
-							<a data-toggle="modal" data-target="#myModal" href="#">
-							<i class="fa fa-user"></i>
-								LOGIN
-							</a>
-						</li>
-						<li><a href="blog-single.html">CART</a></li>
+                    <li><a href="blog-single.html">CART</a></li>
 					</ul>
 					
 		        </ul> <!-- End of /.nav-main -->
@@ -259,13 +252,13 @@ padding-top: 15rem ;
 
 
 	<section id="slider-area">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div id="slider" class="nivoSlider">
                         <div >
                             <img src="images/slider.jpg" alt="" />
-                            <div class="centered">Caption Three</div>
+
                        </div>
 				    	<img src="images/slider23.jpg" alt=""/>
 				    	<img src="images/slider22.jpg" alt="" />
@@ -537,47 +530,6 @@ padding-top: 15rem ;
 		</div>	<!-- End of /.container -->
 	</section>	<!-- End of section -->
 
-
-
-	<!-- CATAGORIE Start
-    ================================================== -->
-
-	
-
-
-
-
-
-	
-	
-		<!-- CALL TO ACTION Start
-    ================================================== -->
-
-	<section id="call-to-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="block">
-						<div class="block-heading">
-							<h2>Our Partners</h2>
-						</div>
-					</div>	<!-- End of /.block -->
-					<div id="owl-example" class="owl-carousel">
-						<div> <img src="images/company-1.png" alt=""></div>
-						<div> <img src="images/company-2.png" alt=""></div>
-						<div> <img src="images/company-3.png" alt=""></div>
-						<div> <img src="images/company-4.png" alt=""></div>
-						<div> <img src="images/company-5.png" alt=""></div>
-						<div> <img src="images/company-6.png" alt=""></div>
-						<div> <img src="images/company-8.png" alt=""></div>
-						<div> <img src="images/company-9.png" alt=""></div>
-					</div>	<!-- End of /.Owl-Slider -->
-				</div>	<!-- End of /.col-md-12 -->
-			</div> <!-- End Of /.Row -->
-		</div> <!-- End Of /.Container -->
-	</section>	<!-- End of Section -->
-	
-	
 
 	<!-- FOOTER Start
     ================================================== -->
