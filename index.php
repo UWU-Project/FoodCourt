@@ -220,7 +220,7 @@ padding-top: 15rem ;
 					<li><a href="pastry-shop.php">PASTRY SHOP</a></li>
 					<li><a href="lounge.php">THE lOUNGE</a></li>
 					<li><a href="buffet.php">BUFFET</a></li>
-                    <li><a href="blog-single.html">CART</a></li>
+                    <li><a href="#">CART</a></li>
 					</ul>
 					
 		        </ul> <!-- End of /.nav-main -->
