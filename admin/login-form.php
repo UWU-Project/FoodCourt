@@ -9,16 +9,21 @@ require_once('connect/config.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
-    <link href="stylesheets/admin_styles.css" rel="stylesheet" type="text/css" />
-    <script language="JavaScript" src="validation/admin.js">
-    </script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script language="JavaScript" src="validation/admin.js"></script>
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+
 </head>
 <body>
 <div id="page">
-    <div id="header">
-        <h1>Administrator Login </h1>
-        <p style="text-align:center">&nbsp;</p>
-    </div>
+    <section id="topic-header">
+        <div class="container">
+            <div class="row">
+                <h1>Administrator Login</h1>
+            </div>
+        </div>
+    </section>
     <form id="loginForm" name="loginForm" method="post" action="login-exec.php" onsubmit="return loginValidate(this)">
         <table width="300" border="0" align="center" cellpadding="2" cellspacing="0">
             <tr>

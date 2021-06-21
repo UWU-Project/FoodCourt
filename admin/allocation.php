@@ -51,16 +51,30 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Staff</title>
-            <link href="stylesheets/admin_styles.css" rel="stylesheet" type="text/css" />
-            <script language="JavaScript" src="validation/admin.js">
-            </script>
+            <link rel="stylesheet" href="../css/bootstrap.min.css">
+            <script language="JavaScript" src="validation/admin.js"></script>
+            <script src="../js/jquery.min.js" type="text/javascript"></script>
+            <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+
         </head>
         <body>
-        <div id="page">
-            <div id="header">
-                <h1>Staff Allocation </h1>
-                <a href="index.php">Home</a> | <a href="foods-menu.php">Foods</a> | <a href="accounts.php">Accounts</a> | <a href="orders.php">Orders</a> | <a href="reservations.php">Reservations</a> | <a href="specials.php">Promotions</a> | <a href="allocation.php">Staff</a> | <a href="options.php">Options</a> | <a href="logout.php">Logout</a>
+        <section id="topic-header">
+            <div class="container">
+                <div class="row">
+                    <h1>Staff Allocation</h1>
+                </div>
             </div>
+        </section>
+
+        <div id="page">
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <a href="index.php">Home</a> | <a href="foods-menu.php">Foods</a> | <a href="accounts.php">Accounts</a> | <a href="orders.php">Orders</a> | <a href="reservations.php">Reservations</a> | <a href="specials.php">Promotions</a> | <a href="allocation.php">Staff</a> | <a href="options.php">Options</a> | <a href="logout.php">Logout</a>
+                    </div>
+                </div>
+            </div>
+
             <div id="container">
                 <table border="0" width="600" align="center">
                     <CAPTION><h3>STAFF LIST</h3></CAPTION>
