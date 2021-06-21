@@ -59,8 +59,7 @@ if(isset($_POST['Submit'])){
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
-    <!-- Icon -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- Css -->
     <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
     <link rel="stylesheet" href="css/owl.carousel.css">
@@ -222,7 +221,7 @@ if(isset($_POST['Submit'])){
             <ul class="nav navbar-nav nav-main">
                 <li ><a href="index.php">HOME</a></li>
                 <li><a href="pastry-shop.php">PASTRY SHOP</a></li>
-                <li><a href="lounge.php">THE lOUNGE</a></li>
+                <li><a href="lounge.php">THE LOUNGE</a></li>
                 <li class="active"><a href="buffet.php">BUFFET</a></li>
                 <li><a href="#">CART</a></li>
             </ul>
@@ -241,8 +240,8 @@ if(isset($_POST['Submit'])){
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h1>BUFFET</h1>
-                <p>A Bunch Of Products</p>
+                <h2>BUFFET</h2>
+
             </div>	<!-- End of /.col-md-4 -->
             <div class="col-md-8 hidden-xs">
                 <ol class="breadcrumb pull-right">
@@ -255,183 +254,7 @@ if(isset($_POST['Submit'])){
 </section>	<!-- End of /#Topic-header -->
 
 
-
-<!-- PRODUCTS Start
-================================================== -->
-
-<section id="shop">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="blog-sidebar">
-                    <div class="block">
-
-                        <form name="categoryForm" id="categoryForm" method="post" action="pastry-shop.php" onsubmit="return categoriesValidate(this)">
-
-                            <h3>Category</h3>
-                            <p width="168"><select name="category" id="category">
-                                    <option value="select">- select category -
-                                        <?php
-                                        //loop through categories table rows
-                                        while ($row=mysqli_fetch_array($categories)){
-                                            echo "<option value='{$row['category_id']}' ".($id == $row['category_id'] ? "selected" : "").">$row[category_name]</option>";
-                                        }
-                                        ?>
-                                    <option value="0" <?php echo isset($id) &&  $id == 0 ? "selected" : "" ?>>Special Deals</option>
-                                </select></p>
-                            <p><input type="submit" name="Submit" value="Show Foods" /></p>
-
-
-                        </form>
-                        <div class="list-group">
-                            <a href="#" class="list-group-item">
-                                <i class="fa  fa-dot-circle-o"></i>
-                                Local Food
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa  fa-dot-circle-o"></i>
-                                Foreign Food
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa  fa-dot-circle-o"></i>
-                                Indian Food
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa  fa-dot-circle-o"></i>
-                                Spanish Food
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa  fa-dot-circle-o"></i>
-                                Thai Food
-                            </a>
-                        </div>
-                    </div>
-                    <div class="block">
-                        <img src="images/food-ad.png" alt="">
-                    </div>
-                    <div class="block">
-                        <h4>Latest Food Items</h4>
-                        <ul class="media-list">
-                            <li class="media">
-                                <a class="pull-left" href="#">
-                                    <img class="media-object" src="images/post-img.png" alt="...">
-                                </a>
-                                <div class="media-body">
-                                    <a href="" class="media-heading">Lamb leg roast
-                                        <p>Lorem ipsum dolor sit amet.</p></a>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <a class="pull-left" href="#">
-                                    <img class="media-object" src="images/post-img-2.png" alt="...">
-                                </a>
-                                <div class="media-body">
-                                    <a href="" class="media-heading"> Lamingtons
-                                        <p>Lorem ipsum dolor.</p></a>
-                                </div>
-                            </li>
-                            <li class="media">
-                                <a class="pull-left" href="#">
-                                    <img class="media-object" src="images/post-img-3.png" alt="...">
-                                </a>
-                                <div class="media-body">
-                                    <a href="" class="media-heading">
-                                        Anzac Salad
-                                        <p>Lorem ipsum dolor sit.</p>
-
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="block">
-                        <h4>Food Tag</h4>
-                        <div class="tag-link">
-                            <a href="">BALLET</a>
-                            <a href="">CHRISTMAS</a>
-                            <a href="">ELEGANCE</a>
-                            <a href="">ELEGANT</a>
-                            <a href="">SHOPPING</a>
-                            <a href="">SHOP</a>
-                        </div>
-                    </div>
-                </div>	<!-- End of /.col-md-3 -->
-
-            </div>	<!-- End of /.row -->
-            <div class="col-md-9">
-                <div class="products-heading">
-                    <h2>NEW PRODUCTS</h2>
-                </div>	<!-- End of /.Products-heading -->
-                <div class="product-grid">
-
-
-                    <?php
-                    $count = mysqli_num_rows($result);
-                    if(isset($_POST['Submit']) && $count < 1){
-                        echo "<html><script language='JavaScript'>alert('There are no foods under the selected category at the moment. Please check back later.')</script></html>";
-                    }
-                    else{
-                        //loop through all table rows
-                        //$counter = 3;
-                        $symbol=mysqli_fetch_assoc($currencies); //gets active currency
-                        if(isset($id) && $id == 0)
-                            $lt = "special";
-                        else
-                            $lt = "food";
-                        while ($row=mysqli_fetch_assoc($result)){
-                            ?>
-
-
-                            <div class="products view1" style="width: 200px; float: left;" >
-                                <a href="#">
-                                    <?php echo '<a href=images/'. $row[$lt.'_photo']. ' alt="click to view full image" target="_blank"><img src=images/'. $row[$lt.'_photo']. ' width="auto" height="100%"></a>'?>
-                                </a>
-                                <a href="#">
-                                    <h4><?php echo $row[$lt.'_name']?></h4>
-                                </a>
-                                <p class="price"><?php echo $symbol['currency_symbol']. "" . $row[$lt.'_price']?></p>
-                                <div >
-                                    <a class="view-link shutter" href="#">
-                                        <i class="fa fa-plus-circle"></i>Add To Cart</a>
-                                </div>
-                            </div>
-
-                        <?php  }} ?>
-                    <?php
-                    mysqli_free_result($result);
-                    mysqli_close($conn);
-                    ?>
-
-                </div>	<!-- End of /.products -->
-
-
-            </div>	<!-- End of /.products-grid -->
-
-            <!-- Pagination -->
-
-            <div class="pagination-bottom">
-                <ul class="pagination">
-                    <li class="disabled"><a href="#">&laquo;</a></li>
-                    <li class="active"><a href="#">1 <span class="sr-only"></span></a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">»</a></li>
-                </ul>	<!-- End of /.pagination -->
-            </div>
-        </div>	<!-- End of /.col-md-9 -->
-    </div>	<!-- End of /.container -->
-</section>	<!-- End of Section -->
-
-
-
-
-
-
-
-
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <!-- FOOTER Start
 ================================================== -->

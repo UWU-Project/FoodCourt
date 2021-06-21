@@ -246,13 +246,7 @@ if(isset($_POST['Submit'])){
 					<h2>PASTRY SHOP</h2>
 					<p> </p>
 				</div>	<!-- End of /.col-md-4 -->
-				<div class="col-md-8 hidden-xs">
-					<ol class="breadcrumb pull-right">
-					  	<li><a href="#">Home</a></li>
-					  	<li class="active">Shop</li>
-					</ol>
-				</div>	<!-- End of /.col-md-8 -->
-			</div>	<!-- End of /.row -->
+            </div>	<!-- End of /.row -->
 		</div>	<!-- End of /.container -->
 	</section>	<!-- End of /#Topic-header -->
 
