@@ -65,6 +65,7 @@ section+section { margin-top: 50px; }
 }
 #top .login-cart li {
 	float: left;
+	list-style: none;
 }
 #top .login-cart li a {
 	color: #fff ;
@@ -75,6 +76,7 @@ section+section { margin-top: 50px; }
 	-ms-transition: .4s ease-in-out;
 	-o-transition: .4s ease-in-out;
 	transition: .4s ease-in-out;
+	
 }
 #top .login-cart li a:hover {
 	color: #555;
