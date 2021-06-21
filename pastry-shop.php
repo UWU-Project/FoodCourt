@@ -279,7 +279,7 @@ if(isset($_POST['Submit'])){
 
         <option value="0" <?php echo isset($id) &&  $id == 0 ? "selected" : "" ?>>Special Deals</option>
         </select></p>
-        <p><button type="submit" name="Submit" class="btn" >Show Foods</button></p>
+        <p><button type="submit" name="Submit" class="btn btn-secondary btn-sm btn-block " >Show Foods</button></p>
 
 							</form>
 							<div class="list-group">
