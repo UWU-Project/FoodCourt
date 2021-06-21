@@ -98,38 +98,19 @@ if(isset($_POST['Submit'])){
     <div class="container">
         <div class="row">
             <div class="col-md-7">
-                <p class="contact-action"><i class="fa fa-phone-square"></i>IN CASE OF ANY QUESTIONS, CALL THIS NUMBER: <strong>+565 975 658</strong></p>
+                <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
             <div class="col-md-3 clearfix">
                 <ul class="login-cart">
                     <li>
-                        <a data-toggle="modal" data-target="#myModal" href="#">
-                            <i class="fa fa-user"></i>
-                            Login
-                        </a>
+                        <a href="customer/login.php.php">LOGIN</a>
                     </li>
                     <li>
-                        <div class="cart dropdown">
-                            <a data-toggle="dropdown" href="#"><i class="fa fa-shopping-cart"></i>Cart(1)</a>
-                            <div class="dropdown-menu dropup">
-                                <span class="caret"></span>
-                                <ul class="media-list">
-                                    <li class="media">
-                                        <img class="pull-left" src="images/product-item.jpg" alt="">
-                                        <div class="media-body">
-                                            <h6>Italian Sauce
-                                                <span>$250</span>
-                                            </h6>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-primary btn-sm">Checkout</button>
-                            </div>
-                        </div>
+                        <a href="customer/create.php">REGISTER</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-md-2">
+
                 <div class="search-box">
                     <div class="input-group">
                         <input placeholder="Search Here" type="text" class="form-control">
