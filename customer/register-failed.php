@@ -32,7 +32,8 @@
 <p>You are seeing this page because your attempt to create a new account has failed. You have used an email address that is already in use. <a href="login-register.php">Click Here</a> to try again. Or <a href="JavaScript: resetPassword()">Click Here</a> to reset your password.</p>
 </div>
 </div>
-<?php include 'footer.php'; ?>
+
 </div>
+
 </body>
 </html>

@@ -105,102 +105,58 @@ if (isset($_POST['Submit'])) {
 
     </style>
 
-    </style>
 </head>
 
 <body>
-
-
 <!-- TOP HEADER Start
     ================================================== -->
 
-<section>
-
-    <!-- MODAL Start
-        ================================================== -->
-
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Nice to see you here.</h4>
-                </div>
-                <div class="modal-body clearfix">
-
-                    <!-- <form action="#" method="post" id="create-account_form" class="std">
-                            <fieldset>
-                                <h3>Create your account</h3>
-                                <div class="form_content clearfix">
-                                    <h4>Enter your e-mail address to create an account.</h4>
-                                    <p class="text">
-                                        <label for="email_create">E-mail address</label>
-                                        <span>
-                                            <input placeholder="E-mail address"  type="text" id="email_create" name="email_create" value="" class="account_input">
-                                        </span>
-                                    </p>
-                                    <p class="submit">
-                                        <button class="btn btn-primary">Create Your Account</button>
-                                    </p>
-                                </div>
-                            </fieldset> -->
-
-                    <form id="loginForm" name="loginForm" method="post" action="../login-exec.php"
-                          onsubmit="return loginValidate(this)" class="std">
-                        <fieldset>
-                            <h3>Log into your Account</h3>
-                            <div class="form_content clearfix">
-                                <p class="text">
-                                    <label for="email">E-mail address</label>
-                                    <span><input name="login" type="text" class="textfield" id="login"
-                                                 class="account_input" placeholder="E-mail address"/></span>
-                                </p>
-                                <p class="text">
-                                    <label for="passwd">Password</label>
-                                    <span><input name="password" type="password" class="textfield" id="password"
-                                                 class="account_input" placeholder="Password"/></span>
-                                </p>
-
-                                <label for="remember">remember me</label>
-                                <input name="remember" type="checkbox" class="" id="remember" value="1"
-                                       onselect="cookie()" <?php if (isset($_COOKIE['remember_me'])) {
-                                    echo 'checked="checked"';
-                                } else {
-                                    echo '';
-                                }
-                                ?>/>
-                                </p>
-                                <p class="submit">
-                                    <button class="btn btn-success" type="submit" name="Submit" value="Login">Log in
-                                    </button>
-                                </p>
-                                <p>
-                                <p class="lost_password">
-                                    <a href="JavaScript: resetPassword()" class="popab-password-link">Forgot your
-                                        password?</a>
-                                </p>
-
-                            </div>
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Not have a account yet?
-                        <a href="register-login.php" class="btn btn-primary" role="button">Create an Account</a>
-                    </p>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+<section id="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
-        </div>
-    </div>
-</section>  <!-- End of /Section -->
+            <div class="col-md-3 clearfix">
+                <ul class="login-cart">
+
+                    <li>
+                        <a href="create.php">REGISTER</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <div class="search-box">
+                    <div class="input-group">
+                        <input placeholder="Search Here" type="text" class="form-control">
+                        <span class="input-group-btn">
+					        	<button class="btn btn-default" type="button"></button>
+					      	</span>
+                    </div><!-- /.input-group -->
+                </div><!-- /.search-box -->
+            </div>
+        </div> <!-- End Of /.row -->
+    </div>	<!-- End Of /.Container -->
+
+</section>
 
 <!-- LOGO Start
-================================================== -->
+    ================================================== -->
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#">
+                    <img src="../images/logo2copy.png" alt="logo">
+                </a>
+            </div>	<!-- End of /.col-md-12 -->
+        </div>	<!-- End of /.row -->
+    </div>	<!-- End of /.container -->
+</header> <!-- End of /Header -->
+
+
 
 
 <!-- MENU Start
@@ -209,8 +165,7 @@ if (isset($_POST['Submit'])) {
 <nav class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -220,59 +175,21 @@ if (isset($_POST['Submit'])) {
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav nav-main">
-                <li class="active"><a href="#">HOME</a></li>
-                <li><a href="products.html">SHOP</a></li>
-                <li><a href="blog.html">BLOG</a></li>
-                <li><a href="blog-single.html">ARTICLE</a></li>
-                <li>
-                    <ul class="login-cart">
-                        <li>
-                            <a data-toggle="modal" data-target="#myModal" href="#">
-                                <i class="fa fa-user"></i>
-                                Login
-                            </a>
-                        </li>
-                        <li>
-                            <div class="cart dropdown">
-                                <a data-toggle="dropdown" href="#"><i class="fa fa-shopping-cart"></i>Cart(1)</a>
-                                <div class="dropdown-menu dropup">
-                                    <span class="caret"></span>
-                                    <ul class="media-list">
-                                        <li class="media">
-                                            <img class="pull-left" src="images/product-item.jpg" alt="">
-                                            <div class="media-body">
-                                                <h6>Italian Sauce
-                                                    <span>$250</span>
-                                                </h6>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-sm">Checkout</button>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#">
-                        PAGES
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </li> <!-- End of /.dropdown -->
-
-
+                <li ><a href="index.php">HOME</a></li>
+                <li class="active"><a href="pastry-shop.php">PASTRY SHOP</a></li>
+                <li><a href="lounge.php">THE lOUNGE</a></li>
+                <li><a href="buffet.php">BUFFET</a></li>
+                <li><a href="#">CART</a></li>
+            </ul>
+            </li> <!-- End of /.dropdown -->
             </ul> <!-- End of /.nav-main -->
-        </div>    <!-- /.navbar-collapse -->
-    </div>    <!-- /.container-fluid -->
-</nav>    <!-- End of /.nav -->
+        </div>	<!-- /.navbar-collapse -->
+    </div>	<!-- /.container-fluid -->
+</nav>	<!-- End of /.nav -->
 
-<div class="wrapper">
+
+
+    <div class="wrapper">
     <form id="loginForm" class="form-signin" name="loginForm" method="post" action="login-exec.php"
           onsubmit="return loginValidate(this)">
         <h2 class="form-signin-heading">Please login</h2>
@@ -332,8 +249,8 @@ if (isset($_POST['Submit'])) {
                         <img src="images/footer-logo.png" alt="">
                     </a>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s
+                        We stand for best in everything we do, to create an environment where absolute guest satisfaction,which is our highest priority.
+
                     </p>
                     <h4 class="connect-heading">CONNECT WITH US</h4>
                     <ul class="social-icon">

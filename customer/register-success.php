@@ -27,7 +27,8 @@
 <p><a href="login-register.php">Click Here</a> to login to your account.</p>
 </div>
 </div>
-<?php include 'footer.php'; ?>
+
 </div>
+
 </body>
 </html>

@@ -31,7 +31,7 @@
   <p>Please check your email and password. <a href="create.php">Click Here</a> to try again.</p>
   </div>
 </div>
-<?php include 'footer.php'; ?>
+
 </div>
 </body>
 </html>

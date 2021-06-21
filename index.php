@@ -477,9 +477,11 @@ padding-top: 15rem ;
 						<a href="#">
 							<img src="images/footerlogo5.png" alt="">
 						</a>
+                        <br><br>
 						<p>
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-						</p>
+                            We stand for best in everything we do, to create an environment where absolute guest satisfaction,which is our highest priority.
+
+                        </p>
 						<h4 class="connect-heading">CONNECT WITH US</h4>
 						<ul class="social-icon">
 							<li>
