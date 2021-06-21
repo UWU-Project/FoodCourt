@@ -209,7 +209,7 @@ padding-top: 15rem ;
 					<div class="block">
 						<div class="media">
 							<div class="pull-left" href="#">
-						    	<i class="fa fa-ambulance"></i>
+                                <i class="fa fa-heart" aria-hidden="true"></i>
 						  	</div>
 						  	<div class="media-body">
 						    	<h4 class="media-heading">Healthy Meal</h4>
@@ -222,7 +222,7 @@ padding-top: 15rem ;
 					<div class="block">
 						<div class="media">
 							<div class="pull-left" href="#">
-								<i class=" fa fa-foursquare"></i>
+                                <i class="fa fa-cutlery" aria-hidden="true"></i>
 						  	</div>
 						  	<div class="media-body">
 						    	<h4 class="media-heading">Fast Food</h4>
@@ -235,7 +235,7 @@ padding-top: 15rem ;
 					<div class="block">
 						<div class="media">
 							<div class="pull-left" href="#">
-						    	<i class=" fa fa-phone"></i>
+                                <i class="fa fa-users" aria-hidden="true"></i>
 						  	</div>
 						  	<div class="media-body">
 						    	<h4 class="media-heading">Meet, Eat & Enjoy</h4>
