@@ -239,11 +239,11 @@ padding-top: 15rem ;
 				<div class="col-md-12">
 					<div id="slider" class="nivoSlider">
                         <div >
-                            <img src="images/slider.jpg" alt="" />
+                            <img src="images/PASTRYSHOP.jpg" alt="" />
 
                        </div>
-				    	<img src="images/slider23.jpg" alt=""/>
-				    	<img src="images/slider22.jpg" alt="" />
+				    	<img src="images/BUFFET2.jpg" alt=""/>
+				    	<img src="images/LOUNGE.jpg" alt="" />
 					</div>	<!-- End of /.nivoslider -->
 				</div>	<!-- End of /.col-md-12 -->
 			</div>	<!-- End of /.row -->
@@ -314,7 +314,7 @@ padding-top: 15rem ;
 				
 				<div>
 					
-					  <img src="images/img1.png" alt="...">
+					  <img src="images/pasrtyhome.jpg" alt="...">
 
 				</div>
 
@@ -327,7 +327,7 @@ padding-top: 15rem ;
 				<p>Wide range of Delicious Pastries,Sandwiches,Cake, etc...</p>
 				<p>Handmade Chocolates,Sweets,Fresh Juices...</p>
 				<p>
-					<a href="blog-single.html" class="btn btn-default btn-transparent" role="button">
+					<a href="pastry-shop.php" class="btn btn-default btn-transparent" role="button">
 						<span>ORDER NOW</span>
 					</a>
 				</p>
@@ -365,14 +365,14 @@ padding-top: 15rem ;
 				
 				<p>Explanation of why you are going to love it and the benefit!</p>
 				
-					<a href="blog-single.html" class="btn btn-default btn-transparent" role="button">
+					<a href="lounge.php" class="btn btn-default btn-transparent" role="button">
 						<span>ORDER NOW</span>
 					</a>
 				</p>
 			</div>
 			<div class="col-md-8">
 				
-				<img src="images/img1.png" alt="...">
+				<img src="images/homelonge.png" alt="...">
 			</div>
 		</div>
 	</div>

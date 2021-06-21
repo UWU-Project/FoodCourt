@@ -160,7 +160,7 @@ if(isset($_POST['Submit'])){
             <ul class="nav navbar-nav nav-main">
                 <li ><a href="index.php">HOME</a></li>
                 <li><a href="pastry-shop.php">PASTRY SHOP</a></li>
-                <li class="active"><a href="lounge.php">THE lOUNGE</a></li>
+                <li class="active"><a href="lounge.php">THE LOUNGE</a></li>
                 <li><a href="buffet.php">BUFFET</a></li>
                 <li><a href="#">CART</a></li>
             </ul>
@@ -179,8 +179,8 @@ if(isset($_POST['Submit'])){
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h1>THE lOUNGE</h1>
-                <p>A Bunch Of Products</p>
+                <h2>THE LOUNGE</h2>
+                <p></p>
             </div>	<!-- End of /.col-md-4 -->
             <div class="col-md-8 hidden-xs">
                 <ol class="breadcrumb pull-right">
