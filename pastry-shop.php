@@ -240,7 +240,7 @@ if(isset($_POST['Submit'])){
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<h1>PASTRY SHOP</h1>
+					<h2>PASTRY SHOP</h2>
 					<p>A Bunch Of Products</p>
 				</div>	<!-- End of /.col-md-4 -->
 				<div class="col-md-8 hidden-xs">

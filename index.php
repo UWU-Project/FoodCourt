@@ -102,7 +102,7 @@ padding-top: 15rem ;
             <div class="col-md-3 clearfix">
                 <ul class="login-cart">
                     <li>
-                        <a href="customer/login.php.php">LOGIN</a>
+                        <a href="customer/login.php">LOGIN</a>
                     </li>
                     <li>
                         <a href="customer/create.php">REGISTER</a>
@@ -399,7 +399,7 @@ padding-top: 15rem ;
 	<!-- CATAGORIE Start
     ================================================== -->
 
-	<section id="catagorie">
+	<section id="catagorie" style="padding-bottom: 30px">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -411,13 +411,15 @@ padding-top: 15rem ;
 						  	<div class="col-sm-6 col-md-4">
 							    <div class="thumbnail">
 							    	<a class="catagotie-head" href="blog-single.html">
-										<img src="images/category-image-1.jpg" alt="...">
-										<h3>Beef Steak</h3>
+										<img src="images/fav1.jpg" alt="...">
+										<h3>Chicken Biriyani</h3>
 									</a>
 							      	<div class="caption">
-							        	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aut, esse, laborum placeat id illo a expedita aperiam...</p>
+							        	<p>LAccompaniments in the biriyani take-away pack include: Chicken (whole leg), boiled egg, onion raita and malay pickle.
+
+                                            These accompaniments may vary depending on availability of ingredients.</p>
 							        	<p>
-							        		<a href="blog-single.html" class="btn btn-default btn-transparent" role="button">
+							        		<a href="lounge.php" class="btn btn-default btn-transparent" role="button">
 							        			<span>Check Items</span>
 							        		</a>
 							        	</p>
@@ -427,13 +429,13 @@ padding-top: 15rem ;
 						  	<div class="col-sm-6 col-md-4">
 							    <div class="thumbnail">
 							    	<a class="catagotie-head" href="blog-single.html">
-										<img src="images/category-image-2.jpg" alt="...">
-										<h3>Miscellaneous</h3>
+										<img src="images/fav2.jpg" alt="...">
+										<h3>Vegetable Biriyani</h3>
 									</a>
 							      	<div class="caption">
-							        	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aut, esse, laborum placeat id illo a expedita aperiam...</p>
+							        	<p>Accompaniments in the biriyani take-away pack include: Vegetable cutlets, brinjal moju, onion raita, mango chutney and malay pickle.</p>
 							        	<p>
-							        		<a href="blog-single.html" class="btn btn-default btn-transparent" role="button">
+							        		<a href="lounge.php" class="btn btn-default btn-transparent" role="button">
 							        			<span>Check Items</span>
 							        		</a>
 							        	</p>
@@ -443,13 +445,13 @@ padding-top: 15rem ;
 						  	<div class="col-sm-6 col-md-4">
 							    <div class="thumbnail">
 							    	<a class="catagotie-head" href="blog-single.html">
-										<img src="images/category-image-3.jpg" alt="...">
-										<h3>Elegant Apparel</h3>
+										<img src="images/fav3.jpg" alt="...">
+										<h3>Fathers Day Marble Cakel</h3>
 									</a>
 							      	<div class="caption">
-								        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, aut, esse, laborum placeat id illo a expedita aperiam...</p>
+								        <p>A delicious Chocolate and Vanilla Marble Cake finished with fondant icing and elegantly decorated with a Father’s Day greeting on top.</p>
 								        <p>
-								        	<a href="blog-single.html" class="btn btn-default btn-transparent" role="button">
+								        	<a href="pastry-shop.php" class="btn btn-default btn-transparent" role="button">
 								        		<span>Check Items</span>
 								        	</a>
 								        </p>
@@ -463,55 +465,6 @@ padding-top: 15rem ;
 		</div>	<!-- End of /.container -->
 	</section>	<!-- End of Section -->
 	
-	<!-- FEATURES Start
-    ================================================== -->
-
-	<section id="features">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="block">
-						<div class="media">
-							<div class="pull-left" href="#">
-						    	<i class="fa fa-ambulance"></i>
-						  	</div>
-						  	<div class="media-body">
-						    	<h4 class="media-heading">Free Shipping</h4>
-						    	<p>Lorem ipsum dolor sit amet, consectetur.</p>
-						  </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="block">
-						<div class="media">
-							<div class="pull-left" href="#">
-								<i class=" fa fa-foursquare"></i>
-						  	</div>
-						  	<div class="media-body">
-						    	<h4 class="media-heading">Media heading</h4>
-						    	<p>Lorem ipsum dolor sit amet, consectetur.</p>
-						  </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="block">
-						<div class="media">
-							<div class="pull-left" href="#">
-						    	<i class=" fa fa-phone"></i>
-						  	</div>
-						  	<div class="media-body">
-						    	<h4 class="media-heading">Call Us</h4>
-						    	<p>Lorem ipsum dolor sit amet, consectetur.</p>
-						  </div>	<!-- End of /.media-body -->
-						</div>	<!-- End of /.media -->
-					</div>	<!-- End of /.block -->
-				</div> <!-- End of /.col-md-4 -->
-			</div>	<!-- End of /.row -->
-		</div>	<!-- End of /.container -->
-	</section>	<!-- End of section -->
-
 
 	<!-- FOOTER Start
     ================================================== -->
@@ -602,7 +555,7 @@ var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 				<div class="row">
 					<div class="col-md-12">
 						
-						<p style="text-align: center;">© 2021 | Food Court <a href="">Group 4</a> All Rights Reserved</p>
+						<p style="text-align: center;">© 2021 | Food Court <a href="admin/login-form.php">Administrator</a> All Rights Reserved</p>
 					</div>	<!-- End Of /.col-md-12 -->	
 				</div>	<!-- End Of /.row -->	
 			</div>	<!-- End Of /.container -->	
