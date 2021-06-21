@@ -279,8 +279,7 @@ if(isset($_POST['Submit'])){
 
         <option value="0" <?php echo isset($id) &&  $id == 0 ? "selected" : "" ?>>Special Deals</option>
         </select></p>
-        <p><input type="submit" name="Submit" value="Show Foods" /></p>
-    
+        <p><button type="submit" name="Submit" class="btn" >Show Foods</button></p>
 
 							</form>
 							<div class="list-group">
