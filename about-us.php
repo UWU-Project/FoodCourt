@@ -202,12 +202,12 @@ if(isset($_POST['Submit'])){
 					            
 					            <div class="blog-post-body clearfix">
 						            <a href="blog-single.html">
-					            		<h2>Ricebean black-eyed pea</h2>
+					            		<h2>Orchid Bliss</h2>
 						            </a>
 					            	<div class="blog-post-tag">
 						            	<div class="block">
 						            		<i class="fa fa-clock-o"></i>
-						            		<p>12 Jan,2014</p>
+						            		<p>12 Jan,2021</p>
 						            	</div>
 						            	<div class="block">
 						            		<i class="fa fa-user"></i>
@@ -225,7 +225,7 @@ if(isset($_POST['Submit'])){
 						            		<p>3 Comments</p>
 						            	</div>
 						            </div>
-						            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nostrum inventore debitis accusantium natus praesentium enim sequi culpa provident dignissimos veniam deserunt voluptatibus fugit delectus pariatur numquam optio quidem illo. Obcaecati, placeat, enim accusantium sunt inventore sed dolorum molestiae ab consequuntur voluptatem dolor necessitatibus reprehenderit adipisci explicabo hic quibusdam pariatur!</p>
+						            <p>Orchid Bliss, blessed with captivating natural beauty and showcasing ancient colonial splendour; what more do you need to revive the mind and body? The Blackpool stands at an altitude of 1876m, surrounded by vast tea estates, carefully tended vegetable plantations and beautiful mountainous terrains. Come, discover The Blackpool’s warm hospitality by yourself, and become a member of the ‘Princess of Little England’. Indulge in the delicious, local and international cuisine that the Blackpool has to offer and relax in the luxurious rooms that look out to picturesque views presenting the true beauty of Mother Nature. The aroma of Ceylon tea coupled with the sweet-scented mist surrounding the area, adds to the beauty of the place. It is worth getting out of the comfort of your bed to take a dip to feel the warmth of the ‘Unu Diya Pokuna’, stroll in the hills or cycle alongside the lush green tea plantations. Somehow, the landscape urges you to climb higher, delve deeper and walk further. There are hotels and there are experiences. There are places where you simply stay and places you simply never want to leave. Welcome to BLACKPOOL, where you meet your family in the hills.</p>
 						            <a href="blog-single.html" class="btn btn-default btn-transparent pull-right" role="button">
 								        <span>Read More</span>
 								    </a>
@@ -237,89 +237,9 @@ if(isset($_POST['Submit'])){
 					        	<i class="fa  fa-video-camera"></i>
 					        </div>
 
-					        <!-- Youtube -->
-					        <div class="blog-box">
-					        	<iframe src="http://www.youtube.com/embed/mcw6j-QWGMo" frameborder="0" allowfullscreen="" width="100%" height="400px"></iframe>
-					            
-					            <div class="blog-post-body clearfix">
-					            	<a href="blog-single.html">
-					            		<h2>Youtube Video Post Type Example</h2>
-					            	</a>
-					            	<div class="blog-post-tag">
-						            	<div class="block">
-						            		<i class="fa fa-clock-o"></i>
-						            		<p>12 Jan,2014</p>
-						            	</div>
-						            	<div class="block">
-						            		<i class="fa fa-user"></i>
-						            		<p>Admin</p>
-						            	</div>
-						            	<div class="block">
-						            		<i class="fa fa-tags"></i>
-						            		<p>
-						            			<a href="">Food Culture</a>,
-						            			<a href="">Green Items</a>
-						            		</p>
-						            	</div>
-						            	<div class="block">
-						            		<i class="fa fa-comments"></i>
-						            		<p>3 Comments</p>
-						            	</div>
-						            </div>
-						            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nostrum inventore debitis accusantium natus praesentium enim sequi culpa provident dignissimos veniam deserunt voluptatibus fugit delectus pariatur numquam optio quidem illo. Obcaecati, placeat, enim accusantium sunt inventore sed dolorum molestiae ab consequuntur voluptatem dolor necessitatibus reprehenderit adipisci explicabo hic quibusdam pariatur!</p>
-						            <a href="blog-single.html" class="btn btn-default btn-transparent pull-right" role="button">
-								        <span>Read More</span>
-								    </a>
-					            </div>
-					        </div>	<!-- End of /.blog-box -->
-					    </li>
-					    <li>
-					       <div class="blog-icon">
-					        	<i class="fa fa-music"></i>
-					        </div>
-
-					        <!-- Sound Cloud -->
-					        <div class="blog-box">
-					        	<iframe src="https://w.soundcloud.com/player/?url=https://soundcloud.com/haloproject/halo-scenes-from-the-four" frameborder="0" allowfullscreen="" width="100%" height="166"></iframe>
-					            
-					            <div class="blog-post-body clearfix">
-					            	<a href="blog-single.html">
-					            		<h2>Aduio Post Type Example</h2>
-					            	</a>
-					            	<div class="blog-post-tag">
-						            	<div class="block">
-						            		<i class="fa fa-clock-o"></i>
-						            		<p>12 Jan,2014</p>
-						            	</div>
-						            	<div class="block">
-						            		<i class="fa fa-user"></i>
-						            		<p>Admin</p>
-						            	</div>
-						            	<div class="block">
-						            		<i class="fa fa-tags"></i>
-						            		<p>
-						            			<a href="">Food Culture</a>,
-						            			<a href="">Green Items</a>
-						            		</p>
-						            	</div>
-						            	<div class="block">
-						            		<i class="fa fa-comments"></i>
-						            		<p>3 Comments</p>
-						            	</div>
-						            </div>
-						            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, nostrum inventore debitis accusantium natus praesentium enim sequi culpa provident dignissimos veniam deserunt voluptatibus fugit delectus pariatur numquam optio quidem illo. Obcaecati, placeat, enim accusantium sunt inventore sed dolorum molestiae ab consequuntur voluptatem dolor necessitatibus reprehenderit adipisci explicabo hic quibusdam pariatur!</p>
-						            <a href="blog-single.html" class="btn btn-default btn-transparent pull-right" role="button">
-								        <span>Read More</span>
-								    </a>
-					            </div>
-					        </div>
 					    </li>
 					  </ul>	<!-- End of /.blog-zone -->
 				</div>	<!-- End of /.col-md-9 -->
-
-
-
-
 
 
 					</div>	<!-- End of /.blog-sidebar -->
@@ -327,12 +247,6 @@ if(isset($_POST['Submit'])){
 			</div>	<!-- End of /.row -->
 		</div>	<!-- End of /.container -->
 	</section>	<!-- End of /#Blog -->
-
-
-
-
-
-
 
 
 <!-- FOOTER Start
