@@ -1,5 +1,5 @@
 <?php
-require_once('authenticate/auth.php');
+    require_once('authenticate/auth.php');
 ?>
 
 <?php
