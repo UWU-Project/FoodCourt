@@ -39,6 +39,9 @@ if (isset($_POST['Submit'])) {
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
 
+    <!-- Icon -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- Css -->
     <link rel="stylesheet" href="../css/nivo-slider.css" type="text/css"/>
     <link rel="stylesheet" href="../css/owl.carousel.css">
@@ -47,8 +50,6 @@ if (isset($_POST['Submit'])) {
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="custom.css">
-
 
     <!-- jS -->
     <script src="../js/jquery.min.js" type="text/javascript"></script>
@@ -60,6 +61,52 @@ if (isset($_POST['Submit'])) {
     <script src="../js/main.js" type="text/javascript"></script>
     <script language="JavaScript" src="../validation/user.js"></script>
 
+    <style>
+        .wrapper {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        .form-signin {
+            max-width: 380px;
+            padding: 15px 35px 45px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .form-signin .form-signin-heading, .form-signin .checkbox {
+            margin-bottom: 30px;
+        }
+
+        .form-signin .checkbox {
+            font-weight: normal;
+        }
+
+        .form-signin .form-control {
+            position: relative;
+            font-size: 16px;
+            height: auto;
+            padding: 10px;
+        }
+
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+
+        .form-signin input[type="text"] {
+            margin-bottom: -1px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .form-signin input[type="password"] {
+            margin-bottom: 20px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+    </style>
 
 </head>
 
@@ -131,10 +178,10 @@ if (isset($_POST['Submit'])) {
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav nav-main">
-                <li ><a href="index.php">HOME</a></li>
-                <li class="active"><a href="pastry-shop.php">PASTRY SHOP</a></li>
-                <li><a href="lounge.php">THE lOUNGE</a></li>
-                <li><a href="buffet.php">BUFFET</a></li>
+                <li ><a href="../index.php">HOME</a></li>
+                <li><a href="../pastry-shop.php">PASTRY SHOP</a></li>
+                <li><a href="../lounge.php">THE LOUNGE</a></li>
+                <li><a href="../buffet.php">BUFFET</a></li>
                 <li><a href="#">CART</a></li>
             </ul>
             </li> <!-- End of /.dropdown -->
@@ -193,6 +240,7 @@ if (isset($_POST['Submit'])) {
 
 </div>
 
+
 <!-- FOOTER Start
 ================================================== -->
 
@@ -202,8 +250,9 @@ if (isset($_POST['Submit'])) {
             <div class="col-md-4">
                 <div class="block clearfix">
                     <a href="#">
-                        <img src="images/footer-logo.png" alt="">
+                        <img src="../images/footerlogo5.png" alt="">
                     </a>
+                    <br><br>
                     <p>
                         We stand for best in everything we do, to create an environment where absolute guest satisfaction,which is our highest priority.
 
@@ -235,48 +284,33 @@ if (isset($_POST['Submit'])) {
                                 <i class="fa fa-linkedin"></i>
                             </a>
                         </li>
-                    </ul>    <!-- End Of /.social-icon -->
-                </div>    <!-- End Of /.block -->
+                    </ul>	<!-- End Of /.social-icon -->
+                </div>	<!-- End Of /.block -->
             </div> <!-- End Of /.Col-md-4 -->
             <div class="col-md-4">
                 <div class="block">
                     <h4>GET IN TOUCH</h4>
-                    <p><i class="fa  fa-map-marker"></i> <span>Food Code d.o.o.,</span>1000 Ljubljana Celovska cesta
-                        135, Slovenia</p>
-                    <p><i class="fa  fa-phone"></i> <span>Phone:</span> (+386) 40 123 456 </p>
+                    <p ><i class="fa  fa-map-marker"></i> <span>Food Court: </span>NO:22 Mccallum's Drive Nuwara Eliya</p>
+                    <p> <i class="fa  fa-phone"></i> <span>Phone:</span> 052 22 22 878 </p>
 
-                    <p><i class="fa  fa-mobile"></i> <span>Mobile:</span> (+386) 40 654 123 651</p>
+                    <p> <i class="fa  fa-mobile"></i> <span>Mobile:</span> 070 2 100 600</p>
 
-                    <p class="mail"><i class="fa  fa-envelope"></i>Eamil: <span>info@sitename.com</span></p>
-                </div>    <!-- End Of /.block -->
+                    <p class="mail"><i class="fa  fa-envelope"></i>Eamil: <span>info@foodcourt.com</span></p>
+                </div>	<!-- End Of /.block -->
             </div> <!-- End Of Col-md-3 -->
+
             <div class="col-md-4">
                 <div class="block">
-                    <h4>UPCOMING ITEMS</h4>
                     <div class="media">
-                        <a class="pull-left" href="#">
-                            <img class="media-object" src="images/product-item.jpg" alt="...">
-                        </a>
-                        <a class="pull-left" href="#">
-                            <img class="media-object" src="images/product-item.jpg" alt="...">
-                        </a>
-                        <a class="pull-left" href="#">
-                            <img class="media-object" src="images/product-item.jpg" alt="...">
-                        </a>
-                        <a class="pull-left" href="#">
-                            <img class="media-object" src="images/product-item.jpg" alt="...">
-                        </a>
-                        <a class="pull-left" href="#">
-                            <img class="media-object" src="images/product-item.jpg" alt="...">
-                        </a>
-                        <a class="pull-left" href="#">
-                            <img class="media-object" src="images/product-item.jpg" alt="...">
-                        </a>
-                    </div>    <!-- End Of /.media -->
-                </div>    <!-- End Of /.block -->
+                        <h4>Our Location</h4>
+
+
+                    </div>	<!-- End Of /.media -->
+                </div>	<!-- End Of /.block -->
             </div> <!-- End Of Col-md-3 -->
         </div> <!-- End Of /.row -->
     </div> <!-- End Of /.Container -->
+
 
 
     <!-- FOOTER-BOTTOM Start
@@ -286,46 +320,14 @@ if (isset($_POST['Submit'])) {
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <ul class="cash-out pull-left">
-                        <li>
-                            <a href="#">
-                                <img src="images/American-Express.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/PayPal.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/Maestro.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/Visa.png" alt="">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="images/Visa-Electron.png" alt="">
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright-text pull-right">Food Code @2013 Designed by <a
-                                href="http://www.themexpert.com">Themexpert</a> All Rights Reserved</p>
-                </div>    <!-- End Of /.col-md-12 -->
-            </div>    <!-- End Of /.row -->
-        </div>    <!-- End Of /.container -->
-    </div>    <!-- End Of /.footer-bottom -->
+
+                    <p style="text-align: center;">© 2021 | Food Court <a href="admin/login-form.php">Administrator</a> All Rights Reserved</p>
+                </div>	<!-- End Of /.col-md-12 -->
+            </div>	<!-- End Of /.row -->
+        </div>	<!-- End Of /.container -->
+    </div>	<!-- End Of /.footer-bottom -->
 </footer> <!-- End Of Footer -->
 
 <a id="back-top" href="#"></a>
-
-<script>
-
-</script>
-
 </body>
 </html>

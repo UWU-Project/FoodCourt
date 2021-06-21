@@ -226,7 +226,7 @@ if(isset($_POST['Submit'])){
                 <ul class="nav navbar-nav nav-main">
                     <li ><a href="index.php">HOME</a></li>
                     <li class="active"><a href="pastry-shop.php">PASTRY SHOP</a></li>
-                    <li><a href="lounge.php">THE lOUNGE</a></li>
+                    <li><a href="lounge.php">THE LOUNGE</a></li>
                     <li><a href="buffet.php">BUFFET</a></li>
                     <li><a href="#">CART</a></li>
                 </ul>
@@ -426,14 +426,6 @@ if(isset($_POST['Submit'])){
 			</div>	<!-- End of /.col-md-9 -->
 		</div>	<!-- End of /.container -->
 	</section>	<!-- End of Section -->
-
-
-
-
-
-
-
-
 
 
 

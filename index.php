@@ -212,8 +212,8 @@ padding-top: 15rem ;
 						    	<i class="fa fa-ambulance"></i>
 						  	</div>
 						  	<div class="media-body">
-						    	<h4 class="media-heading">Free Shipping</h4>
-						    	<p>Lorem ipsum dolor sit amet, consectetur.</p>
+						    	<h4 class="media-heading">Healthy Meal</h4>
+
 						  </div>
 						</div>
 					</div>
@@ -225,8 +225,8 @@ padding-top: 15rem ;
 								<i class=" fa fa-foursquare"></i>
 						  	</div>
 						  	<div class="media-body">
-						    	<h4 class="media-heading">Media heading</h4>
-						    	<p>Lorem ipsum dolor sit amet, consectetur.</p>
+						    	<h4 class="media-heading">Fast Food</h4>
+
 						  </div>
 						</div>
 					</div>
@@ -238,8 +238,8 @@ padding-top: 15rem ;
 						    	<i class=" fa fa-phone"></i>
 						  	</div>
 						  	<div class="media-body">
-						    	<h4 class="media-heading">Call Us</h4>
-						    	<p>Lorem ipsum dolor sit amet, consectetur.</p>
+						    	<h4 class="media-heading">Meet, Eat & Enjoy</h4>
+
 						  </div>	<!-- End of /.media-body -->
 						</div>	<!-- End of /.media -->
 					</div>	<!-- End of /.block -->
