@@ -65,7 +65,7 @@
 <section id="topic-header">
     <div class="container">
         <div class="row text-center">
-            <h1>Pastry Shop Categories</h1>
+            <h1>PASTRY SHOP</h1>
         </div>
     </div>
 </section>

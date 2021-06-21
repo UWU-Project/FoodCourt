@@ -47,7 +47,7 @@ or die("There are no records to display ... \n" . mysqli_error());
 <section id="topic-header">
     <div class="container">
         <div class="row text-center">
-            <h1>The Lounge - Food Categories</h1>
+            <h1>THE LOUNGE</h1>
         </div>
     </div>
 </section>

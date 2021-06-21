@@ -65,7 +65,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
 <section id="topic-header">
     <div class="container">
         <div class="row text-center">
-            <h1>The Lounge- Add Foods</h1>
+            <h1>THE LOUNGE</h1>
         </div>
     </div>
 </section>
