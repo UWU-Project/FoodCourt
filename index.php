@@ -167,6 +167,7 @@ padding-top: 15rem ;
 					<li><a href="pastry-shop.php">PASTRY SHOP</a></li>
 					<li><a href="lounge.php">THE LOUNGE</a></li>
 					<li><a href="buffet.php">BUFFET</a></li>
+                    <li ><a href="about-us.php">ABOUT US</a></li>
                     <li><a href="#">CART</a></li>
 					</ul>
 					

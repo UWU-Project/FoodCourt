@@ -163,7 +163,8 @@ if(isset($_POST['Submit'])){
                 <li><a href="pastry-shop.php">PASTRY SHOP</a></li>
                 <li><a href="lounge.php">THE LOUNGE</a></li>
                 <li><a href="buffet.php">BUFFET</a></li>
-                <li><a href="#">CART</a></li>
+                <li class="active"><a href="about-us.php">ABOUT US</a></li>
+                <li ><a href="#">CART</a></li>
             </ul>
             </li> <!-- End of /.dropdown -->
 
@@ -181,12 +182,7 @@ if(isset($_POST['Submit'])){
 				<div class="col-md-4">
 					<h1>About Us</h1>
 				</div>	<!-- End of /.col-md-4 -->	
-				<div class="col-md-8 hidden-xs">
-					<ol class="breadcrumb pull-right">
-					  	<li><a href="#">Home</a></li>
-					  	<li class="active">About Us</li>
-					</ol>
-				</div>	<!-- End of /.col-md-8 -->
+
 			</div>	<!-- End of /.row -->
 		</div>	<!-- End of /.container -->
 	</section>	<!-- End of /#Topic-header -->
@@ -195,14 +191,14 @@ if(isset($_POST['Submit'])){
 	<section id="blog">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-9 clearfix">
+				<div class="col-md-12 clearfix">
 					<ul class="blog-zone">
 					    <li>
 					        <div class="blog-icon">
 					        	<i class="fa  fa-pencil"></i>
 					        </div>
 					        <div class="blog-box">
-					        	<img src="images/blog-1.jpg" alt="">
+					        	<img src="images/ABOUT.jpg" alt="">
 					            
 					            <div class="blog-post-body clearfix">
 						            <a href="blog-single.html">
@@ -321,83 +317,11 @@ if(isset($_POST['Submit'])){
 					  </ul>	<!-- End of /.blog-zone -->
 				</div>	<!-- End of /.col-md-9 -->
 
-				<div class="col-md-3">
-					<div class="blog-sidebar">
-						<div class="block">
-							<h4>Catagories</h4>
-							<div class="list-group">
-								<a href="#" class="list-group-item">
-									<i class="fa  fa-dot-circle-o"></i>
-									Italian Foods
-								</a>
-								<a href="#" class="list-group-item">
-									<i class="fa  fa-dot-circle-o"></i>
-									Traditional Food
-								</a>
-								<a href="#" class="list-group-item">
-									<i class="fa  fa-dot-circle-o"></i>
-									Indian Food
-								</a>
-								<a href="#" class="list-group-item">
-									<i class="fa  fa-dot-circle-o"></i>
-									Spanish Food
-								</a>
-								<a href="#" class="list-group-item">
-									<i class="fa  fa-dot-circle-o"></i>
-									Thai FoodN
-								</a>
-							</div>
-						</div>	<!-- End of /.block -->
-						<div class="block">
-							<h4>Popular Posts</h4>
-							<ul class="media-list">
-							 	<li class="media">
-							    	<a class="pull-left" href="#">
-							      		<img class="media-object" src="images/post-img.png" alt="...">
-							    	</a>
-							    	<div class="media-body">
-							      		<a href="" class="media-heading">
-							      			Lorem ipsum dolor</a>
-							    	  	<p>January 10,2014</p>
-							    	</div>
-							  	</li>	<!-- End of /.media -->
-							  	<li class="media">
-							    	<a class="pull-left" href="#">
-							      		<img class="media-object" src="images/post-img-2.png" alt="...">
-							    	</a>
-							    	<div class="media-body">
-							      		<a href="" class="media-heading">
-							      			Mauris blandit aliquet</a>
-							    	  	<p>January 10,2014</p>
-							    	</div>
-							  	</li>	<!-- End of /.media -->
-							  	<li class="media">
-							    	<a class="pull-left" href="#">
-							      		<img class="media-object" src="images/post-img-3.png" alt="...">
-							    	</a>
-							    	<div class="media-body">
-							      		<a href="" class="media-heading">
-							      			Quisque velit nisi</a>
-							    	  	<p>January 10,2014</p>
-							    	</div>
-							  	</li>	<!-- End of /.media -->
-							</ul>	<!-- End of /.media-list -->
-						</div>	<!-- End of /.block -->
 
-						<div class="block">
-							<h4>Tag Cloud</h4>
-							<div class="tag-link">
-								<a href="">BALLET</a>
-								<a href="">BLOG</a>
-								<a href="">CHRISTMAS</a>
-								<a href="">ELEGANCE</a>
-								<a href="">ELEGANT</a>
-								<a href="">SHOPPING</a>
-								<a href="">SHOP</a>
-								<a href="">PHOTOGRAPHY</a>
-							</div>	
-						</div>	<!-- End of /.block -->
-						
+
+
+
+
 					</div>	<!-- End of /.blog-sidebar -->
 				</div>	<!-- End of /.col-md-3 -->
 			</div>	<!-- End of /.row -->
