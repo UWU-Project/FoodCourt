@@ -410,12 +410,12 @@ padding-top: 15rem ;
 						<div class="row">
 						  	<div class="col-sm-6 col-md-4">
 							    <div class="thumbnail">
-							    	<a class="catagotie-head" href="blog-single.html">
+							    	<a class="catagotie-head" href="lounge.php">
 										<img src="images/fav1.jpg" alt="...">
 										<h3>Chicken Biriyani</h3>
 									</a>
 							      	<div class="caption">
-							        	<p>LAccompaniments in the biriyani take-away pack include: Chicken (whole leg), boiled egg, onion raita and malay pickle.
+							        	<p>Companiments in the biriyani take-away pack include: Chicken (whole leg), boiled egg, onion raita and malay pickle.
 
                                             These accompaniments may vary depending on availability of ingredients.</p>
 							        	<p>
@@ -428,7 +428,7 @@ padding-top: 15rem ;
 						  	</div>	<!-- End of /.col-sm-6 col-md-4 -->
 						  	<div class="col-sm-6 col-md-4">
 							    <div class="thumbnail">
-							    	<a class="catagotie-head" href="blog-single.html">
+							    	<a class="catagotie-head" href="lounge.php">
 										<img src="images/fav2.jpg" alt="...">
 										<h3>Vegetable Biriyani</h3>
 									</a>
@@ -444,9 +444,9 @@ padding-top: 15rem ;
 						  	</div>	<!-- End of /.col-sm-6 col-md-4 -->
 						  	<div class="col-sm-6 col-md-4">
 							    <div class="thumbnail">
-							    	<a class="catagotie-head" href="blog-single.html">
+							    	<a class="catagotie-head" href="pastry-shop.php">
 										<img src="images/fav3.jpg" alt="...">
-										<h3>Fathers Day Marble Cakel</h3>
+										<h3>Fathers Day Cake</h3>
 									</a>
 							      	<div class="caption">
 								        <p>A delicious Chocolate and Vanilla Marble Cake finished with fondant icing and elegantly decorated with a Father’s Day greeting on top.</p>
@@ -513,7 +513,7 @@ padding-top: 15rem ;
 				<div class="col-md-4">
 					<div class="block">
 						<h4>GET IN TOUCH</h4>
-						<p ><i class="fa  fa-map-marker"></i> <span>Food Court: </span>77-L3/22 Lady Mccallum's Drive Nuwara Eliya</p>
+						<p ><i class="fa  fa-map-marker"></i> <span>Food Court: </span>NO:22 Mccallum's Drive Nuwara Eliya</p>
 						<p> <i class="fa  fa-phone"></i> <span>Phone:</span> 052 22 22 878 </p>
 
 						<p> <i class="fa  fa-mobile"></i> <span>Mobile:</span> 070 2 100 600</p>
@@ -521,24 +521,13 @@ padding-top: 15rem ;
 						<p class="mail"><i class="fa  fa-envelope"></i>Eamil: <span>info@foodcourt.com</span></p>
 					</div>	<!-- End Of /.block -->
 				</div> <!-- End Of Col-md-3 -->
+
 				<div class="col-md-4">
 					<div class="block">
 						<div class="media">
 						<h4>Our Location</h4>
 
-<div id="googleMap" style="width:100%;height:200px;"></div>
 
-<script>
-function myMap() {
-var mapProp= {
-  center:new google.maps.LatLng(51.508742,-0.120850),
-  zoom:5,
-};
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
 						</div>	<!-- End Of /.media -->
 					</div>	<!-- End Of /.block -->
 				</div> <!-- End Of Col-md-3 -->

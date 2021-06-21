@@ -241,7 +241,7 @@ if(isset($_POST['Submit'])){
 			<div class="row">
 				<div class="col-md-4">
 					<h2>PASTRY SHOP</h2>
-					<p>A Bunch Of Products</p>
+					<p> </p>
 				</div>	<!-- End of /.col-md-4 -->
 				<div class="col-md-8 hidden-xs">
 					<ol class="breadcrumb pull-right">
@@ -306,37 +306,38 @@ if(isset($_POST['Submit'])){
 							</div>
 						</div>
 						<div class="block">
-							<img src="images/food-ad.png" alt="">
+							<img src="images/resevation.jpg" alt="">
 						</div>
 						<div class="block">
-							<h4>Latest Food Items</h4>
+							<h4>Reserve Your Day..</h4>
 							<ul class="media-list">
-							 	<li class="media">
-							    	<a class="pull-left" href="#">
-							      		<img class="media-object" src="images/post-img.png" alt="...">
-							    	</a>
-							    	<div class="media-body">
-							      		<a href="" class="media-heading">Lamb leg roast
-							      		<p>Lorem ipsum dolor sit amet.</p></a>
-							    	</div>
-							  	</li>
+
 							  	<li class="media">
 							    	<a class="pull-left" href="#">
-							      		<img class="media-object" src="images/post-img-2.png" alt="...">
+							      		<img class="media-object" src="images/family.jpg" alt="...">
 							    	</a>
 							    	<div class="media-body">
-							      		<a href="" class="media-heading"> Lamingtons
-							      		<p>Lorem ipsum dolor.</p></a>
+							      		<a href="" class="media-heading">FAMILY
+							      		<p>Happiness Stories. </p></a>
 							    	</div>
 							  	</li>
+                                <li class="media">
+                                    <a class="pull-left" href="#">
+                                        <img class="media-object" src="images/love.jpg" alt="...">
+                                    </a>
+                                    <div class="media-body">
+                                        <a href="" class="media-heading">LOVE
+                                            <p>Endless Stories.</p></a>
+                                    </div>
+                                </li>
 							  	<li class="media">
 							    	<a class="pull-left" href="#">
-							      		<img class="media-object" src="images/post-img-3.png" alt="...">
+							      		<img class="media-object" src="images/Event.jpg" alt="...">
 							    	</a>
 							    	<div class="media-body">
 							      		<a href="" class="media-heading">
-							      		Anzac Salad
-							      		<p>Lorem ipsum dolor sit.</p>
+							      		EVENT
+							      		<p>Compassionate Together.</p>
 
 							      		</a>
 							    	</div>
