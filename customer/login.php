@@ -47,6 +47,8 @@ if (isset($_POST['Submit'])) {
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="custom.css">
+
 
     <!-- jS -->
     <script src="../js/jquery.min.js" type="text/javascript"></script>
@@ -58,52 +60,6 @@ if (isset($_POST['Submit'])) {
     <script src="../js/main.js" type="text/javascript"></script>
     <script language="JavaScript" src="../validation/user.js"></script>
 
-    <style>
-        .wrapper {
-            margin-top: 80px;
-            margin-bottom: 80px;
-        }
-
-        .form-signin {
-            max-width: 380px;
-            padding: 15px 35px 45px;
-            margin: 0 auto;
-            background-color: #fff;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .form-signin .form-signin-heading, .form-signin .checkbox {
-            margin-bottom: 30px;
-        }
-
-        .form-signin .checkbox {
-            font-weight: normal;
-        }
-
-        .form-signin .form-control {
-            position: relative;
-            font-size: 16px;
-            height: auto;
-            padding: 10px;
-        }
-
-        .form-signin .form-control:focus {
-            z-index: 2;
-        }
-
-        .form-signin input[type="text"] {
-            margin-bottom: -1px;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-
-        .form-signin input[type="password"] {
-            margin-bottom: 20px;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-        }
-
-    </style>
 
 </head>
 
