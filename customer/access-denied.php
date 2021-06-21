@@ -3,7 +3,7 @@
 <head>
 <?php include '../connection/config.php'; ?>
     <meta charset="UTF-8">
-    <title>Access Denied</title>
+    <title>Welcome</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- Fonts -->
@@ -126,18 +126,17 @@
 				<div class="col-md-12">
 					<div class="block">
 						<div class="block-heading">
-							<h2>Access Denied</h2>
+							<h2>Welcome!</h2>
 						</div>	
 						<div class="row" style="margin:50px 0;">
 						  	<div class="col-md-2">
 						  	</div>	<!-- End of /.col-sm-6 col-md-4 -->
 						  	<div class="col-md-8">
                 <div style="text-align:center;">
-							      <p style="font-size:2rem;">You don't have access to this page. 
+							      <p style="font-size:2rem;">We are please to have you here.
                       <br/>
-                      <a href="login.php">Click Here</a> to login first or <a href="create.php">Click Here</a>  register for free. 
-                      <br/>
-                    The registration won't take long</p>
+                      <a href="../pastry-shop.php">explore </a> some delicious foods now.
+                    </p>
 							    </div>
 						  	</div>	<!-- End of /.col-sm-6 col-md-4 -->
 						  	<div class="col-md-2">
