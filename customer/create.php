@@ -27,7 +27,6 @@ or die("Something is wrong ... \n" . mysqli_error());
             }
         }
     }
-
 	?>
 <!doctype html>
 <html lang="en">
@@ -41,64 +40,23 @@ or die("Something is wrong ... \n" . mysqli_error());
 	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
 
 	<!-- Css -->
-	<link rel="stylesheet" href="../css/nivo-slider.css" type="text/css" />
-	<link rel="stylesheet" href="../css/owl.carousel.css">
-	<link rel="stylesheet" href="../css/owl.theme.css">
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/font-awesome.min.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/responsive.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="custom.css">
+
 
 	<!-- jS -->
 	<script src="../js/jquery.min.js" type="text/javascript"></script>
 	<script src="../js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="../js/jquery.nivo.slider.js" type="text/javascript"></script>
 	<script src="../js/owl.carousel.min.js" type="text/javascript"></script>
 	<script src="../js/jquery.nicescroll.js"></script>
 	<script src="../js/jquery.scrollUp.min.js"></script>
 	<script src="../js/main.js" type="text/javascript"></script>
 	<script language="JavaScript" src="../validation/user.js"></script>
 
-<style>
- .wrapper {
-	 margin-top: 80px;
-	 margin-bottom: 80px;
-}
- .form-signin {
-	 max-width: 500px;
-	 padding: 15px 35px 45px;
-	 margin: 0 auto;
-	 background-color: #fff;
-	 border: 1px solid rgba(0, 0, 0, 0.1);
-}
- .form-signin .form-signin-heading, .form-signin .checkbox {
-	 margin-bottom: 30px;
-}
- .form-signin .checkbox {
-	 font-weight: normal;
-}
- .form-signin .form-control {
-	 position: relative;
-	 font-size: 16px;
-	 height: auto;
-	 padding: 10px;
-}
- .form-signin .form-control:focus {
-	 z-index: 2;
-}
- .form-signin input[type="text"] {
-	 margin-bottom: -1px;
-	 border-bottom-left-radius: 0;
-	 border-bottom-right-radius: 0;
-}
- .form-signin input[type="password"] {
-	 margin-bottom: 20px;
-	 border-top-left-radius: 0;
-	 border-top-right-radius: 0;
-}
-
-
-</style>
 
 </head>
 
@@ -106,70 +64,7 @@ or die("Something is wrong ... \n" . mysqli_error());
 
 
 
-	<section>
-
-	<!-- MODAL Start
-    	================================================== -->
-
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-		    	<div class="modal-content">
-		    		<div class="modal-header">
-		        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		        		<h4 class="modal-title" id="myModalLabel">Nice to see you here.</h4>
-		      		</div>
-			      	<div class="modal-body clearfix">
-
-
-							
-			      		<form id="loginForm" name="loginForm" method="post" action="../login-exec.php" onsubmit="return loginValidate(this)" class="std">
-							<fieldset>
-								<h3>Log into your Account</h3>
-								<div class="form_content clearfix">
-									<p class="text">
-									<label for="email">E-mail address</label>
-										<span><input name="login" type="text" class="textfield" id="login" class="account_input" placeholder="E-mail address"/></span>
-									</p>
-									<p class="text">
-									<label for="passwd">Password</label>
-										<span><input name="password" type="password" class="textfield" id="password" class="account_input" placeholder="Password"/></span>
-									</p>
-									
-									<label for="remember">remember me</label>
-									<input name="remember" type="checkbox" class="" id="remember" value="1" onselect="cookie()" <?php if(isset($_COOKIE['remember_me'])) {
-                        echo 'checked="checked"';
-                    }
-                    else {
-                        echo '';
-                    }
-                    ?>/>
-									</p>
-									<p class="submit">
-										<button class="btn btn-success" type="submit" name="Submit" value="Login" >Log in</button>
-									</p>
-									<p>
-									<p class="lost_password">
-										<a href="JavaScript: resetPassword()" class="popab-password-link">Forgot your password?</a>
-									</p>
-									
-								</div>
-							</fieldset>
-						</form>
-			      	</div>
-					  <div class="modal-body">
-					  <p>
-									Not have a account yet?
-									<a href="register-login.php" class="btn btn-primary" role="button">Create an Account</a>
-									</p>
-					  </div>
-
-			      	<div class="modal-footer">
-			        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			      	</div>
-		    	</div>
-		  	</div>
-		</div>	
-	</section>  <!-- End of /Section -->
+	
 	
 	<!-- TOP HEADER Start
     ================================================== -->
@@ -201,7 +96,6 @@ or die("Something is wrong ... \n" . mysqli_error());
             </div>
         </div> <!-- End Of /.row -->
     </div>	<!-- End Of /.Container -->
-
 </section>
 
 <!-- LOGO Start
@@ -238,10 +132,10 @@ or die("Something is wrong ... \n" . mysqli_error());
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav nav-main">
-                <li ><a href="index.php">HOME</a></li>
+                <li ><a href="../index.php">HOME</a></li>
                 <li class="active"><a href="pastry-shop.php">PASTRY SHOP</a></li>
-                <li><a href="lounge.php">THE lOUNGE</a></li>
-                <li><a href="buffet.php">BUFFET</a></li>
+                <li><a href="../lounge.php">THE lOUNGE</a></li>
+                <li><a href="../buffet.php">BUFFET</a></li>
                 <li><a href="#">CART</a></li>
             </ul>
             </li> <!-- End of /.dropdown -->

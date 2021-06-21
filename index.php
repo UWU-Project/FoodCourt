@@ -128,65 +128,7 @@ padding-top: 15rem ;
         </div> <!-- End Of /.row -->
     </div>	<!-- End Of /.Container -->
     </section>
-		
-	<!-- MODAL Start
-    	================================================== -->
-        <section>
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-		    	<div class="modal-content">
-		    		<div class="modal-header">
-		        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		        		<h4 class="modal-title" id="myModalLabel">Introduce Yourself</h4>
-		      		</div>
-			      	<div class="modal-body clearfix">
-
-						<form action="#" method="post" id="create-account_form" class="std">
-							<fieldset>
-								<h3>Create your account</h3>
-								<div class="form_content clearfix">
-									<h4>Enter your e-mail address to create an account.</h4>
-									<p class="text">
-										<label for="email_create">E-mail address</label>
-										<span>
-											<input placeholder="E-mail address"  type="text" id="email_create" name="email_create" value="" class="account_input">
-					                    </span>
-									</p>
-									<p class="submit">
-										<button class="btn btn-primary">Create Your Account</button>
-									</p>
-								</div>
-							</fieldset>
-						</form>
-			      		<form action="" method="post" id="login_form" class="std">
-							<fieldset>
-								<h3>Already registered?</h3>
-								<div class="form_content clearfix">
-									<p class="text">
-									<label for="email">E-mail address</label>
-										<span><input placeholder="E-mail address" type="text" id="email" name="email" value="" class="account_input"></span>
-									</p>
-									<p class="text">
-									<label for="passwd">Password</label>
-										<span><input placeholder="Password" type="password" id="passwd" name="passwd" value="" class="account_input"></span>
-									</p>
-									<p class="lost_password">
-										<a href="#popab-password-reset" class="popab-password-link">Forgot your password?</a>
-									</p>
-									<p class="submit">
-										<button class="btn btn-success">Log in</button>
-									</p>
-								</div>
-							</fieldset>
-						</form>
-			      	</div>
-			      	<div class="modal-footer">
-			        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			      	</div>
-		    	</div>
-		  	</div>
-		</div>	
-	</section>  <!-- End of /Section -->
+	
 
     <!-- LOGO Start
 ================================================== -->
@@ -223,7 +165,7 @@ padding-top: 15rem ;
 		      	<ul class="nav navbar-nav nav-main">
 		        	<li class="active"><a href="index.php">HOME</a></li>
 					<li><a href="pastry-shop.php">PASTRY SHOP</a></li>
-					<li><a href="lounge.php">THE lOUNGE</a></li>
+					<li><a href="lounge.php">THE LOUNGE</a></li>
 					<li><a href="buffet.php">BUFFET</a></li>
                     <li><a href="#">CART</a></li>
 					</ul>
