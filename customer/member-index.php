@@ -1,117 +1,236 @@
 <?php
 	require_once('../auth.php');
 ?>
-<?php
-//checking connection and connecting to a database
-require_once('../connection/config.php');
-//Connect to mysqli server
-	$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,DB_DATABASE);
-	if(!$conn) {
-		die('Failed to connect to server: ' . mysqli_error());
-	}
-	
-	//Select database
-	
-//get member id from session
-$memberId=$_SESSION['SESS_MEMBER_ID'];
-
-//selecting all records from the orders_details table. Return an error if there are no records in the table
-$result=mysqli_query($conn,"SELECT * FROM orders_details o inner join cart_details c on c.cart_id = o.cart_id inner join quantities q on q.quantity_id = c.quantity_id WHERE o.member_id='$memberId' ")
-or die("There are no records to display ... \n" . mysqli_error()); 
-?>
-<?php
-    //retrieving all rows from the cart_details table based on flag=0
-    $flag_0 = 0;
-    $items=mysqli_query($conn,"SELECT * FROM cart_details WHERE member_id='$memberId' AND flag='$flag_0'")
-    or die("Something is wrong ... \n" . mysqli_error()); 
-    //get the number of rows
-    $num_items = mysqli_num_rows($items);
-?>
-
-<?php
-    //retrive a currency from the currencies table
-    //define a default value for flag_1
-    $flag_1 = 1;
-    $currencies=mysqli_query($conn,"SELECT * FROM currencies WHERE flag='$flag_1'")
-    or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours."); 
-?>
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title><?php echo APP_NAME; ?>:Member Home</title>
-<link href="stylesheets/user_styles.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="../validation/user.js">
-</script>
+<?php include '../connection/config.php'; ?>
+    <meta charset="UTF-8">
+    <title>Registration Successful</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
+    <!-- Icon -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- jS -->
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../js/jquery.nicescroll.js"></script>
+    <script src="../js/jquery.scrollUp.min.js"></script>
+    <script src="../js/main.js" type="text/javascript"></script>
+    <script language="JavaScript" src="../validation/user.js"></script>
+    <style>
+        .view1{
+
+            margin: 15px;
+            width: 200px;
+            float: left;
+        }
+    </style>
+
+
 </head>
 <body>
-<div id="page">
-  <div id="menu"><ul>
-  <li><a href="member-index.php">Home</a></li>
-  <li><a href="foodzone.php">Food Zone</a></li>
-  <li><a href="specialdeals.php">Special Deals</a></li>
-  <li><a href="member-index.php">My Account</a></li>
-  <li><a href="contactus.php">Contact Us</a></li>
-  </ul>
-  </div>
-<div id="header">
-  <div id="logo"> <a href="index.php" class="blockLink"></a></div>
-  <div id="company_name"><?php echo APP_NAME; ?> Restaurant</div>
-</div>
-<div id="center">
-<h1>Welcome <?php echo $_SESSION['SESS_FIRST_NAME'];?></h1>
-  <div style="border:#bd6f2f solid 1px;padding:4px 6px 2px 6px">
-<a href="member-profile.php">My Profile</a> | <a href="cart.php">Cart[<?php echo $num_items;?>]</a> |  <a href="inbox.php">Inbox[<?php echo $num_messages;?>]</a> | <a href="tables.php">Tables</a> | <a href="partyhalls.php">Party-Halls</a> | <a href="ratings.php">Rate Us</a> | <a href="logout.php">Logout</a>
-<p>&nbsp;</p>
-<p>Here you can view order history and delete old orders from your account. Invoices can be viewed from the order history. You can also make table reservations in your account. For more information <a href="contactus.php">Click Here</a> to contact us.
-<h3><a href="foodzone.php">Order More Food!</a></h3>
-<hr>
-<table border="0" width="910" style="text-align:center;">
-<CAPTION><h2>ORDER HISTORY</h2></CAPTION>
-<tr>
-<th>Order ID</th>
-<th>Food Photo</th>
-<th>Food Name</th>
-<th>Food Category</th>
-<th>Food Price</th>
-<th>Quantity</th>
-<th>Total Cost</th>
-<th>Delivery Date</th>
-<th>Action(s)</th>
-</tr>
 
-<?php
-//loop through all table rows
-$symbol=mysqli_fetch_assoc($currencies); //gets active currency
-while ($row=mysqli_fetch_array($result)){
-  $lt = $row['lt'];
-  if($lt =='food'){
-    $qry = "SELECT * FROM food_details f inner join categories c on c.category_id = f.food_category where food_id = {$row['food_id']}";
-  }else{
-    $qry = "SELECT * FROM specials where special_id = {$row['food_id']}";
-  }
-  // echo $qry.'\n';
-  $res = mysqli_fetch_array(mysqli_query($conn,$qry));
-echo "<tr>";
-echo "<td>" . $row['order_id']."</td>";
-echo '<td><a href=images/'. $res[$lt.'_photo']. ' alt="click to view full image" target="_blank"><img src=images/'. $res[$lt.'_photo']. ' width="80" height="70"></a></td>';
-echo "<td>" . $res[$lt.'_name']."</td>";
-echo "<td>" . ($lt == 'food'? $res['category_name'] : 'Special Deals')."</td>";
-echo "<td>" . $symbol['currency_symbol']. "" . $res[$lt.'_price']."</td>";
-echo "<td>" . $row['quantity_value']."</td>";
-echo "<td>" . $symbol['currency_symbol']. "" . $row['total']."</td>";
-echo "<td>" . $row['delivery_date']."</td>";
-echo '<td><a href="delete-order.php?id=' . $row['order_id'] . '">Cancel Order</a></td>';
-echo "</tr>";
-}
-mysqli_free_result($result);
-mysqli_close($conn);
-?>
-</table>
-</div>
-</div>
-<?php include 'footer.php'; ?>
-</div>
+
+<!-- TOP HEADER Start
+    ================================================== -->
+
+<section id="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
+            </div>
+            <div class="col-md-3 clearfix">
+               
+            </div>
+
+            <div class="col-md-2">
+                <div class="search-box">
+                    <div class="input-group">
+                        <input placeholder="Search Here" type="text" class="form-control">
+                        <span class="input-group-btn">
+					        	<button class="btn btn-default" type="button"></button>
+					      	</span>
+                    </div><!-- /.input-group -->
+                </div><!-- /.search-box -->
+            </div>
+        </div> <!-- End Of /.row -->
+    </div>	<!-- End Of /.Container -->
+
+</section>  <!-- End of /Section -->
+
+
+<!-- LOGO Start
+================================================== -->
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#">
+                    <img src="../images/logo2copy.png" alt="logo">
+                </a>
+            </div>	<!-- End of /.col-md-12 -->
+        </div>	<!-- End of /.row -->
+    </div>	<!-- End of /.container -->
+</header> <!-- End of /Header -->
+
+<!-- MENU Start
+================================================== -->
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div> <!-- End of /.navbar-header -->
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav nav-main">
+                <li ><a href="../index.php">HOME</a></li>
+                <li><a href="../pastry-shop.php">PASTRY SHOP</a></li>
+                <li><a href="../lounge.php">THE LOUNGE</a></li>
+                <li><a href="../buffet.php">BUFFET</a></li>
+                <li><a href="#">CART</a></li>
+            </ul>
+            </li> <!-- End of /.dropdown -->
+
+
+            </ul> <!-- End of /.nav-main -->
+        </div>	<!-- /.navbar-collapse -->
+    </div>	<!-- /.container-fluid -->
+</nav>	<!-- End of /.nav -->
+
+	<section id="catagorie" style="padding-bottom: 30px">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="block">
+						<div class="block-heading">
+							<h2>Login Successful</h2>
+						</div>	
+						<div class="row" style="margin:50px 0;">
+						  	<div class="col-md-2">
+						  	</div>	<!-- End of /.col-sm-6 col-md-4 -->
+						  	<div class="col-md-8">
+                <div style="text-align:center;">
+										<h3> Thank you</h3>
+                    <h4>Browse Our Foods</h4>
+							      
+							    </div>
+						  	</div>	<!-- End of /.col-sm-6 col-md-4 -->
+						  	<div class="col-md-2">
+						  	</div>	<!-- End of /.col-sm-6 col-md-4 -->
+						</div>	<!-- End of /.row -->
+					</div>	<!-- End of /.block --> 
+				</div>	<!-- End of /.col-md-12 -->
+			</div>	<!-- End of /.row -->
+		</div>	<!-- End of /.container -->
+	</section>	<!-- End of Section -->
+	
+
+
+<!-- FOOTER Start
+================================================== -->
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="block clearfix">
+                    <a href="#">
+                        <img src="../images/footerlogo5.png" alt="Footer Logo">
+                    </a>
+                    <br><br>
+                    <p>
+                        We stand for best in everything we do, to create an environment where absolute guest satisfaction,which is our highest priority.
+
+                    </p>
+                    <h4 class="connect-heading">CONNECT WITH US</h4>
+                    <ul class="social-icon">
+                        <li>
+                            <a class="facebook-icon" href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="plus-icon" href="#">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="twitter-icon" href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="pinterest-icon" href="#">
+                                <i class="fa fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="linkedin-icon" href="#">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>	<!-- End Of /.social-icon -->
+                </div>	<!-- End Of /.block -->
+            </div> <!-- End Of /.Col-md-4 -->
+            <div class="col-md-4">
+                <div class="block">
+                    <h4>GET IN TOUCH</h4>
+                    <p ><i class="fa  fa-map-marker"></i> <span>Food Court: </span>NO:22 Mccallum's Drive Nuwara Eliya</p>
+                    <p> <i class="fa  fa-phone"></i> <span>Phone:</span> 052 22 22 878 </p>
+
+                    <p> <i class="fa  fa-mobile"></i> <span>Mobile:</span> 070 2 100 600</p>
+
+                    <p class="mail"><i class="fa  fa-envelope"></i>Eamil: <span>info@foodcourt.com</span></p>
+                </div>	<!-- End Of /.block -->
+            </div> <!-- End Of Col-md-3 -->
+
+            <div class="col-md-4">
+                <div class="block">
+                    <div class="media">
+                        <h4>Our Location</h4>
+
+
+                    </div>	<!-- End Of /.media -->
+                </div>	<!-- End Of /.block -->
+            </div> <!-- End Of Col-md-3 -->
+        </div> <!-- End Of /.row -->
+    </div> <!-- End Of /.Container -->
+
+
+
+    <!-- FOOTER-BOTTOM Start
+    ================================================== -->
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <p style="text-align: center;">© 2021 | Food Court <a href="admin/login-form.php">Administrator</a> All Rights Reserved</p>
+                </div>	<!-- End Of /.col-md-12 -->
+            </div>	<!-- End Of /.row -->
+        </div>	<!-- End Of /.container -->
+    </div>	<!-- End Of /.footer-bottom -->
+</footer> <!-- End Of Footer -->
+
+<a id="back-top" href="#"></a>
 </body>
 </html>
