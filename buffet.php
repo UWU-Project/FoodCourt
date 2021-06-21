@@ -432,7 +432,6 @@ if(isset($_POST['Submit'])){
 
 
 
-
 <!-- FOOTER Start
 ================================================== -->
 
@@ -444,8 +443,10 @@ if(isset($_POST['Submit'])){
                     <a href="#">
                         <img src="images/footerlogo5.png" alt="">
                     </a>
+                    <br><br>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        We stand for best in everything we do, to create an environment where absolute guest satisfaction,which is our highest priority.
+
                     </p>
                     <h4 class="connect-heading">CONNECT WITH US</h4>
                     <ul class="social-icon">
@@ -480,7 +481,7 @@ if(isset($_POST['Submit'])){
             <div class="col-md-4">
                 <div class="block">
                     <h4>GET IN TOUCH</h4>
-                    <p ><i class="fa  fa-map-marker"></i> <span>Food Court: </span>77-L3/22 Lady Mccallum's Drive Nuwara Eliya</p>
+                    <p ><i class="fa  fa-map-marker"></i> <span>Food Court: </span>NO:22 Mccallum's Drive Nuwara Eliya</p>
                     <p> <i class="fa  fa-phone"></i> <span>Phone:</span> 052 22 22 878 </p>
 
                     <p> <i class="fa  fa-mobile"></i> <span>Mobile:</span> 070 2 100 600</p>
@@ -488,24 +489,13 @@ if(isset($_POST['Submit'])){
                     <p class="mail"><i class="fa  fa-envelope"></i>Eamil: <span>info@foodcourt.com</span></p>
                 </div>	<!-- End Of /.block -->
             </div> <!-- End Of Col-md-3 -->
+
             <div class="col-md-4">
                 <div class="block">
                     <div class="media">
                         <h4>Our Location</h4>
 
-                        <div id="googleMap" style="width:100%;height:200px;"></div>
 
-                        <script>
-                            function myMap() {
-                                var mapProp= {
-                                    center:new google.maps.LatLng(51.508742,-0.120850),
-                                    zoom:5,
-                                };
-                                var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-                            }
-                        </script>
-
-                        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
                     </div>	<!-- End Of /.media -->
                 </div>	<!-- End Of /.block -->
             </div> <!-- End Of Col-md-3 -->
@@ -522,7 +512,7 @@ if(isset($_POST['Submit'])){
             <div class="row">
                 <div class="col-md-12">
 
-                    <p style="text-align: center;">© 2021 | Food Court <a href="">Group 4</a> All Rights Reserved</p>
+                    <p style="text-align: center;">© 2021 | Food Court <a href="admin/login-form.php">Administrator</a> All Rights Reserved</p>
                 </div>	<!-- End Of /.col-md-12 -->
             </div>	<!-- End Of /.row -->
         </div>	<!-- End Of /.container -->

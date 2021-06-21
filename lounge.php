@@ -124,64 +124,6 @@ if(isset($_POST['Submit'])){
         </div> <!-- End Of /.row -->
     </div>	<!-- End Of /.Container -->
 
-
-    <!-- MODAL Start
-        ================================================== -->
-
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Introduce Yourself</h4>
-                </div>
-                <div class="modal-body clearfix">
-
-                    <form action="#" method="post" id="create-account_form" class="std">
-                        <fieldset>
-                            <h3>Create your account</h3>
-                            <div class="form_content clearfix">
-                                <h4>Enter your e-mail address to create an account.</h4>
-                                <p class="text">
-                                    <label for="email_create">E-mail address</label>
-                                    <span>
-											<input placeholder="E-mail address"  type="text" id="email_create" name="email_create" value="" class="account_input">
-					                    </span>
-                                </p>
-                                <p class="submit">
-                                    <button class="btn btn-primary">Create Your Account</button>
-                                </p>
-                            </div>
-                        </fieldset>
-                    </form>
-                    <form action="" method="post" id="login_form" class="std">
-                        <fieldset>
-                            <h3>Already registered?</h3>
-                            <div class="form_content clearfix">
-                                <p class="text">
-                                    <label for="email">E-mail address</label>
-                                    <span><input placeholder="E-mail address" type="text" id="email" name="email" value="" class="account_input"></span>
-                                </p>
-                                <p class="text">
-                                    <label for="passwd">Password</label>
-                                    <span><input placeholder="Password" type="password" id="passwd" name="passwd" value="" class="account_input"></span>
-                                </p>
-                                <p class="lost_password">
-                                    <a href="#popab-password-reset" class="popab-password-link">Forgot your password?</a>
-                                </p>
-                                <p class="submit">
-                                    <button class="btn btn-success">Log in</button>
-                                </p>
-                            </div>
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
 </section>  <!-- End of /Section -->
 
 
@@ -304,44 +246,44 @@ if(isset($_POST['Submit'])){
                         </div>
                     </div>
                     <div class="block">
-                        <img src="images/food-ad.png" alt="">
+                        <img src="images/resevation.jpg" alt="">
                     </div>
                     <div class="block">
-                        <h4>Latest Food Items</h4>
+                        <h4>Reserve Your Day..</h4>
                         <ul class="media-list">
+
                             <li class="media">
                                 <a class="pull-left" href="#">
-                                    <img class="media-object" src="images/post-img.png" alt="...">
+                                    <img class="media-object" src="images/family.jpg" alt="...">
                                 </a>
                                 <div class="media-body">
-                                    <a href="" class="media-heading">Lamb leg roast
-                                        <p>Lorem ipsum dolor sit amet.</p></a>
+                                    <a href="" class="media-heading">FAMILY
+                                        <p>Happiness Stories. </p></a>
                                 </div>
                             </li>
                             <li class="media">
                                 <a class="pull-left" href="#">
-                                    <img class="media-object" src="images/post-img-2.png" alt="...">
+                                    <img class="media-object" src="images/love.jpg" alt="...">
                                 </a>
                                 <div class="media-body">
-                                    <a href="" class="media-heading"> Lamingtons
-                                        <p>Lorem ipsum dolor.</p></a>
+                                    <a href="" class="media-heading">LOVE
+                                        <p>Endless Stories.</p></a>
                                 </div>
                             </li>
                             <li class="media">
                                 <a class="pull-left" href="#">
-                                    <img class="media-object" src="images/post-img-3.png" alt="...">
+                                    <img class="media-object" src="images/Event.jpg" alt="...">
                                 </a>
                                 <div class="media-body">
                                     <a href="" class="media-heading">
-                                        Anzac Salad
-                                        <p>Lorem ipsum dolor sit.</p>
+                                        EVENT
+                                        <p>Compassionate Together.</p>
 
                                     </a>
                                 </div>
                             </li>
                         </ul>
                     </div>
-
                     <div class="block">
                         <h4>Food Tag</h4>
                         <div class="tag-link">
@@ -429,8 +371,6 @@ if(isset($_POST['Submit'])){
 
 
 
-
-
 <!-- FOOTER Start
 ================================================== -->
 
@@ -442,8 +382,10 @@ if(isset($_POST['Submit'])){
                     <a href="#">
                         <img src="images/footerlogo5.png" alt="">
                     </a>
+                    <br><br>
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        We stand for best in everything we do, to create an environment where absolute guest satisfaction,which is our highest priority.
+
                     </p>
                     <h4 class="connect-heading">CONNECT WITH US</h4>
                     <ul class="social-icon">
@@ -478,7 +420,7 @@ if(isset($_POST['Submit'])){
             <div class="col-md-4">
                 <div class="block">
                     <h4>GET IN TOUCH</h4>
-                    <p ><i class="fa  fa-map-marker"></i> <span>Food Court: </span>77-L3/22 Lady Mccallum's Drive Nuwara Eliya</p>
+                    <p ><i class="fa  fa-map-marker"></i> <span>Food Court: </span>NO:22 Mccallum's Drive Nuwara Eliya</p>
                     <p> <i class="fa  fa-phone"></i> <span>Phone:</span> 052 22 22 878 </p>
 
                     <p> <i class="fa  fa-mobile"></i> <span>Mobile:</span> 070 2 100 600</p>
@@ -486,24 +428,13 @@ if(isset($_POST['Submit'])){
                     <p class="mail"><i class="fa  fa-envelope"></i>Eamil: <span>info@foodcourt.com</span></p>
                 </div>	<!-- End Of /.block -->
             </div> <!-- End Of Col-md-3 -->
+
             <div class="col-md-4">
                 <div class="block">
                     <div class="media">
                         <h4>Our Location</h4>
 
-                        <div id="googleMap" style="width:100%;height:200px;"></div>
 
-                        <script>
-                            function myMap() {
-                                var mapProp= {
-                                    center:new google.maps.LatLng(51.508742,-0.120850),
-                                    zoom:5,
-                                };
-                                var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-                            }
-                        </script>
-
-                        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
                     </div>	<!-- End Of /.media -->
                 </div>	<!-- End Of /.block -->
             </div> <!-- End Of Col-md-3 -->
@@ -520,7 +451,7 @@ if(isset($_POST['Submit'])){
             <div class="row">
                 <div class="col-md-12">
 
-                    <p style="text-align: center;">© 2021 | Food Court <a href="">Group 4</a> All Rights Reserved</p>
+                    <p style="text-align: center;">© 2021 | Food Court <a href="admin/login-form.php">Administrator</a> All Rights Reserved</p>
                 </div>	<!-- End Of /.col-md-12 -->
             </div>	<!-- End Of /.row -->
         </div>	<!-- End Of /.container -->
