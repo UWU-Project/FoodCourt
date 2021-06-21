@@ -47,11 +47,11 @@
             //loop through all table rows
             while ($row=mysqli_fetch_array($result)){
                 echo "<tr>";
-                echo "<td>" . $row['customer_id']."</td>";
+                echo "<td>" . $row['member_id']."</td>";
                 echo "<td>" . $row['firstname']."</td>";
                 echo "<td>" . $row['lastname']."</td>";
                 echo "<td>" . $row['login']."</td>";
-                echo '<td><a href="delete-member.php?id=' . $row['customer_id'] . '">Remove Member</a></td>';
+                echo '<td><a href="delete-member.php?id=' . $row['member_id'] . '">Remove Member</a></td>';
                 echo "</tr>";
             }
             mysqli_free_result($result);
