@@ -51,27 +51,59 @@ or die("There are no records to count ... \n" . mysqli_error());
 
 </head>
 <body>
+
+<!-- LOGO Start
+================================================== -->
+
+<header>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <a href="#">
+                    <img src="../images/logo2copy.png" alt="logo">
+                </a>
+            </div>	<!-- End of /.col-md-12 -->
+        </div>	<!-- End of /.row -->
+    </div>	<!-- End of /.container -->
+</header> <!-- End of /Header -->
+
+<!-- MENU Start
+================================================== -->
 <section id="topic-header">
     <div class="container">
-        <div class="row">
+        <div class="row text-center">
             <h1>Administrator Control Panel</h1>
         </div>
     </div>
 </section>
 
-<div id="page">
+<nav class="navbar navbar-default">
     <div class="container">
-        <div class="row">
-            <div>
-                <a href="profile.php">Profile</a> | <a href="foods-menu.php">Foods</a> | <a
-                        href="accounts.php">Accounts</a> |
-                <a href="orders.php">Orders</a> | <a href="reservations.php">Reservations</a> | <a href="specials.php">Promotions</a>
-                | <a href="allocation.php">Staff</a> | <a href="options.php">Options</a> | <a
-                        href="logout.php">Logout</a>
-            </div>
-        </div>
-    </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
 
+            </button>
+        </div> <!-- End of /.navbar-header -->
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav nav-main">
+                <li class="active"><a href="index.php">Home</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="foods-menu.php">Foods</a></li>
+                <li><a href="accounts.php">Accounts</a></li>
+                <li><a href="orders.php">Orders</a></li>
+                <li><a href="reservations.php">Reservations</a></li>
+                <li><a href="specials.php">Promotions</a></li>
+                <li><a href="allocation.php">Staff</a></li>
+                <li><a href="options.php">Options</a></li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
+        </div>	<!-- /.navbar-collapse -->
+    </div>	<!-- /.container-fluid -->
+</nav>	<!-- End of /.nav -->
+
+<div id="page">
     <div id="container">
         <table width="1000" align="center" style="text-align:center">
             <CAPTION><h3>CURRENT STATUS</h3></CAPTION>

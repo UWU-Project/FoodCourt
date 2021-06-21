@@ -17,13 +17,31 @@ require_once('connect/config.php');
 </head>
 <body>
 <div id="page">
+    <!-- LOGO Start
+================================================== -->
+
+    <header>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <a href="#">
+                        <img src="../images/logo2copy.png" alt="logo">
+                    </a>
+                </div>	<!-- End of /.col-md-12 -->
+            </div>	<!-- End of /.row -->
+        </div>	<!-- End of /.container -->
+    </header> <!-- End of /Header -->
+
+    <!-- MENU Start
+    ================================================== -->
     <section id="topic-header">
         <div class="container">
-            <div class="row">
-                <h1>Administrator Login</h1>
+            <div class="row text-center">
+                <h1>ADMINISTRATOR LOGIN</h1>
             </div>
         </div>
     </section>
+
     <form id="loginForm" name="loginForm" method="post" action="login-exec.php" onsubmit="return loginValidate(this)">
         <table width="300" border="0" align="center" cellpadding="2" cellspacing="0">
             <tr>
