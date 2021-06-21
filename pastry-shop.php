@@ -268,7 +268,7 @@ if(isset($_POST['Submit'])){
 							<form name="categoryForm" id="categoryForm" method="post" action="pastry-shop.php" onsubmit="return categoriesValidate(this)">
 							
         <h3>Category</h3>
-        <p width="168"><select name="category" id="category">
+        <p width="168"><select name="category" id="category" class="form-control form-control-lg">
         <option value="select">- select category -
         <?php 
         //loop through categories table rows

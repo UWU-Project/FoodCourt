@@ -103,7 +103,7 @@ if(isset($_POST['Submit'])){
             <div class="col-md-3 clearfix">
                 <ul class="login-cart">
                     <li>
-                        <a href="customer/login.php.php">LOGIN</a>
+                        <a href="customer/login.php">LOGIN</a>
                     </li>
                     <li>
                         <a href="customer/create.php">REGISTER</a>
@@ -262,10 +262,10 @@ if(isset($_POST['Submit'])){
                 <div class="blog-sidebar">
                     <div class="block">
 
-                        <form name="categoryForm" id="categoryForm" method="post" action="pastry-shop.php" onsubmit="return categoriesValidate(this)">
+                        <form name="categoryForm" id="categoryForm" method="post" action="lounge.php" onsubmit="return categoriesValidate(this)">
 
                             <h3>Category</h3>
-                            <p width="168"><select name="category" id="category">
+                            <p width="168"><select name="category" id="category" class="form-control form-control-lg">
                                     <option value="select">- select category -
                                         <?php
                                         //loop through categories table rows
