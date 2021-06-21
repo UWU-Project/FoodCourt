@@ -1,9 +1,59 @@
+<?php
+//checking connection and connecting to a database
+require_once('connection/config.php');
+//Connect to mysqli server
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,DB_DATABASE);
+if(!$conn) {
+    die('Failed to connect to server: ' . mysqli_error());
+}
+
+
+//selecting all records from the food_details table. Return an error if there are no records in the table
+$result=mysqli_query($conn,"SELECT * FROM food_details_lounge,food_categories_lounge WHERE food_details_lounge.food_category=food_categories_lounge.category_id ")
+or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+?>
+<?php
+//retrive categories from the categories table
+$categories=mysqli_query($conn,"SELECT * FROM food_categories_lounge")
+or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+?>
+<?php
+//retrive a currency from the currencies table
+//define a default value for flag_1
+$flag_1 = 1;
+$currencies=mysqli_query($conn,"SELECT * FROM currencies WHERE flag='$flag_1'")
+or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+?>
+<?php
+if(isset($_POST['Submit'])){
+    //Function to sanitize values received from the form. Prevents SQL injection
+    function clean($str) {
+        global $conn;
+        $str = @trim($str);
+        $str = stripslashes($str);
+
+        return mysqli_real_escape_string($conn,$str);
+    }
+    //get category id
+    $id = clean($_POST['category']);
+
+    //selecting all records from the food_details and categories tables based on category id. Return an error if there are no records in the table
+    if($id > 0){
+        $result=mysqli_query($conn,"SELECT * FROM food_details_lounge,food_categories_lounge WHERE food_category='$id' AND food_details_lounge.food_category=food_categories_lounge.category_id ")
+        or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+    }elseif($id == 0){
+        $result=mysqli_query($conn,"SELECT * FROM specials WHERE '".date('Y-m-d')."' BETWEEN date(special_start_date) and date(special_end_date) ")
+        or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+    }
+}
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
-<?php include '../connection/config.php'; ?>
     <meta charset="UTF-8">
-    <title>Registration Successful</title>
+    <title>Food  Court</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- Fonts -->
@@ -12,18 +62,22 @@
     <!-- Icon -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Css -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
     <!-- jS -->
-    <script src="../js/jquery.min.js" type="text/javascript"></script>
-    <script src="../js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="../js/jquery.nicescroll.js"></script>
-    <script src="../js/jquery.scrollUp.min.js"></script>
-    <script src="../js/main.js" type="text/javascript"></script>
-    <script language="JavaScript" src="../validation/user.js"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery.nivo.slider.js" type="text/javascript"></script>
+    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <script language="JavaScript" src="validation/user.js"></script>
     <style>
         .view1{
 
@@ -52,6 +106,9 @@
                     <li>
                         <a href="customer/login.php">LOGIN</a>
                     </li>
+                    <li>
+                        <a href="customer/create.php">REGISTER</a>
+                    </li>
                 </ul>
             </div>
 
@@ -79,7 +136,7 @@
         <div class="row">
             <div class="col-md-12">
                 <a href="#">
-                    <img src="../images/logo2copy.png" alt="logo">
+                    <img src="images/logo2copy.png" alt="logo">
                 </a>
             </div>	<!-- End of /.col-md-12 -->
         </div>	<!-- End of /.row -->
@@ -102,10 +159,10 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav nav-main">
-                <li ><a href="../index.php">HOME</a></li>
-                <li><a href="../pastry-shop.php">PASTRY SHOP</a></li>
-                <li><a href="../lounge.php">THE LOUNGE</a></li>
-                <li><a href="../buffet.php">BUFFET</a></li>
+                <li ><a href="index.php">HOME</a></li>
+                <li><a href="pastry-shop.php">PASTRY SHOP</a></li>
+                <li><a href="lounge.php">THE LOUNGE</a></li>
+                <li><a href="buffet.php">BUFFET</a></li>
                 <li><a href="#">CART</a></li>
             </ul>
             </li> <!-- End of /.dropdown -->
@@ -116,32 +173,8 @@
     </div>	<!-- /.container-fluid -->
 </nav>	<!-- End of /.nav -->
 
-	<section id="catagorie" style="padding-bottom: 30px">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="block">
-						<div class="block-heading">
-							<h2>Registration Successful</h2>
-						</div>	
-						<div class="row" style="margin:50px 0;">
-						  	<div class="col-md-2">
-						  	</div>	<!-- End of /.col-sm-6 col-md-4 -->
-						  	<div class="col-md-8">
-                <div style="text-align:center;">
-										<h3><a href="login.php">Click Here</a> to login to your account.</h3>
-							      
-							    </div>
-						  	</div>	<!-- End of /.col-sm-6 col-md-4 -->
-						  	<div class="col-md-2">
-						  	</div>	<!-- End of /.col-sm-6 col-md-4 -->
-						</div>	<!-- End of /.row -->
-					</div>	<!-- End of /.block --> 
-				</div>	<!-- End of /.col-md-12 -->
-			</div>	<!-- End of /.row -->
-		</div>	<!-- End of /.container -->
-	</section>	<!-- End of Section -->
-	
+
+
 
 
 <!-- FOOTER Start
@@ -153,7 +186,7 @@
             <div class="col-md-4">
                 <div class="block clearfix">
                     <a href="#">
-                        <img src="../images/footerlogo5.png" alt="Footer Logo">
+                        <img src="images/footerlogo5.png" alt="">
                     </a>
                     <br><br>
                     <p>
