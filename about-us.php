@@ -238,14 +238,14 @@ if(isset($_POST['Submit'])){
 					        </div>
 
 					    </li>
-					  </ul>	<!-- End of /.blog-zone -->
+					  </ul>
 				</div>	<!-- End of /.col-md-9 -->
 
 
 					</div>	<!-- End of /.blog-sidebar -->
 				</div>	<!-- End of /.col-md-3 -->
 			</div>	<!-- End of /.row -->
-		</div>	<!-- End of /.container -->
+		</div>
 	</section>	<!-- End of /#Blog -->
 
 
