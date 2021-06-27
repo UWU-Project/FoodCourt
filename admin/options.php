@@ -152,7 +152,7 @@
         </table>
         <p>&nbsp;</p>
 
-        <!-- Manage Quantities -->
+        <!-- Manage Quantities
         <hr>
         <table align="center" width="910">
             <CAPTION><h3>MANAGE QUANTITIES</h3></CAPTION>
@@ -190,11 +190,11 @@
             </tr>
         </table>
 
-        <!-- Manage Currencies -->
+         Manage Currencies -->
         <p>&nbsp;</p>
         <hr>
         <table align="center" width="910">
-            <CAPTION><h3>MANAGE CURRENCIES</h3></CAPTION>
+            <CAPTION><h3>MANAGE CURRENCY SYMBOL</h3></CAPTION>
             <tr>
                 <td>
                     <form name="currencyForm" id="currencyForm" action="currencies-exec.php" method="post" onsubmit="return currenciesValidate(this)">
@@ -249,7 +249,7 @@
         </table>
         <p>&nbsp;</p>
 
-        <!-- Manage Ratings -->
+        <!-- Manage Ratings
         <hr>
         <table align="center" width="910">
             <CAPTION><h3>MANAGE RATINGS</h3></CAPTION>
@@ -289,7 +289,7 @@
         <p>&nbsp;</p>
         <hr>
 
-        <!-- Manage tables -->
+         Manage tables
         <table align="center" width="910">
             <CAPTION><h3>MANAGE TABLES</h3></CAPTION>
             <tr>
@@ -326,7 +326,7 @@
             </tr>
         </table>
         <p>&nbsp;</p>
-
+-->
         <hr>
         <table align="center" width="910">
             <CAPTION><h3>MANAGE QUESTIONS</h3></CAPTION>
