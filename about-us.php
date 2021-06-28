@@ -78,6 +78,7 @@ if(isset($_POST['Submit'])){
     <script src="js/jquery.scrollUp.min.js"></script>
     <script src="js/main.js" type="text/javascript"></script>
     <script language="JavaScript" src="validation/user.js"></script>
+
     <style>
         .view1{
 
