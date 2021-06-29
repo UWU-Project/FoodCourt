@@ -154,7 +154,7 @@ if(isset($_POST['Submit'])){
             <div class="col-md-3 clearfix">
                 <ul class="login-cart">
                     <li>
-                        <a href="../customer/login.php.php">LOGIN</a>
+                        <a href="../customer/login.php">LOGIN</a>
                     </li>
                     <li>
                         <a href="../customer/create.php">REGISTER</a>
@@ -261,14 +261,39 @@ if(isset($_POST['Submit'])){
 ================================================== -->
 <div class="container">
     <div class="col-md-2" style="padding-top: 20px">
+        <!-- button 1 -->
+        <form Name="" Method="" Action="">
+            <input class="button2 button1 buttonL " Name="btn1" type="Image" src="tbimages/1.png" height="120" width="120" autocomplete="off" checked>
+        </form>
+
         <button class="button2 button1 buttonL ">1</button>
+
+        <!-- button 2 -->
+        <button class="button2 button1 buttonL">
+            <img src="tbimages/1.png" height="120" width="120" />
+        </button>
         <button class="button2 button1 buttonL ">2</button>
-        <button class="button2 button1 buttonL ">3</button>
-        <button class="button2 button1 buttonL ">4</button>
-        <button class="button2 button1 buttonL ">5</button>
+
+        <!-- button 3 -->
+        <button>
+            <input class="button2 button1 buttonL " Name="btn1" type="Image" src="tbimages/1.png" height="120" width="120" autocomplete="off" checked>
+        </button>
         <button class="button2 button1 buttonL ">6</button>
+
+        <!-- button 4 -->
+        <form Name="" Method="" Action="">
+            <input class="btn btn-link" Name="btn1" type="Image" src="tbimages/1.png" height="120" width="120" autocomplete="off" checked>
+        </form>
         <button class="button2 button1 buttonL ">7</button>
+
+        <!-- button 5 -->
+        <button class="btn btn-outline-warning">
+            <img src="tbimages/1.png" height="120" width="120" />
+        </button>
         <button class="button2 button1 buttonL ">8</button>
+        <button class="btn btn-info">
+            <img src="tbimages/1.png" height="120" width="120" />
+        </button>
         <button class="button2 button1 buttonL ">9</button>
         <button class="button2 button1 buttonL ">10</button>
     </div>
@@ -279,8 +304,13 @@ if(isset($_POST['Submit'])){
 
     <div class="col-md-2" style="padding-top: 100px">
         <br><br><br>
-        <button class="button button1 buttonL ">11</button>
+        <button class="btn btn-outline-light" >
+            <img src="tbimages/1.png" height="120" width="120" />
+        </button>
         <button class="button button1 buttonL ">12</button>
+        <button class="btn btn-outline-info" >
+            <img src="tbimages/1.png" height="120" width="120" />
+        </button>
         <button class="button button1 buttonL ">13</button>
         <button class="button button1 buttonL ">14</button>
         <button class="button button1 buttonL ">15</button>
