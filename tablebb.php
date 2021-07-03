@@ -269,14 +269,14 @@ if(isset($_POST['Submit'])){
 <div class="container">
     <div class="row" style="margin-bottom: 50px">
         <div class="col-md-3">
-            <a href="#">
-                <img id="my-img" src="images/t1.png" class="imgcenter" onmouseover="hover(this);" onmouseout="unhover(this);" />
-            </a>
+        <a href="#">
+            <img id="my-img" src="images/t1.png" class="imgcenter" onmouseover="hover(this);" onmouseout="unhover(this);" />
+        </a>
         </div>
         <div class="col-md-6">
-            <a href="#">
-                <img id="my-img" src="images/t11.png" class="imgcenter" onmouseover="hover11(this);" onmouseout="unhover11(this);" />
-            </a>
+        <a href="#">
+            <img id="my-img" src="images/t11.png" class="imgcenter" onmouseover="hover11(this);" onmouseout="unhover11(this);" />
+        </a>
         </div>
         <div class="col-md-3">
             <a href="#">
@@ -285,217 +285,217 @@ if(isset($_POST['Submit'])){
         </div>
     </div>
 </div>
-<div class="container" >
-    <div class="row" style="margin-bottom: 50px">
-        <div class="col-9">
-            <div class="row" style="margin-bottom: 50px">
-                <div class="col"><a href="#">
-                        <img id="my-img" src="images/t3.png" class="imgcenter" onmouseover="hover3(this);" onmouseout="unhover3(this);" />
-                    </a></div>
-                <div class="col"><a href="#">
-                        <img id="my-img" src="images/t5.png" class="imgcenter" onmouseover="hover5(this);" onmouseout="unhover5(this);" />
-                    </a></div>
-                <div class="col"><a href="#">
-                        <img id="my-img" src="images/t7.png" class="imgcenter" onmouseover="hover7(this);" onmouseout="unhover7(this);" />
-                    </a></div>
+    <div class="container" >
+        <div class="row" style="margin-bottom: 50px">
+            <div class="col-9">
+                <div class="row" style="margin-bottom: 50px">
+                    <div class="col"><a href="#">
+                            <img id="my-img" src="images/t3.png" class="imgcenter" onmouseover="hover3(this);" onmouseout="unhover3(this);" />
+                        </a></div>
+                    <div class="col"><a href="#">
+                            <img id="my-img" src="images/t5.png" class="imgcenter" onmouseover="hover5(this);" onmouseout="unhover5(this);" />
+                        </a></div>
+                    <div class="col"><a href="#">
+                            <img id="my-img" src="images/t7.png" class="imgcenter" onmouseover="hover7(this);" onmouseout="unhover7(this);" />
+                        </a></div>
+
+                                        </div>
+                <div class="row">
+                    <div class="col"><a href="#">
+                            <img id="my-img" src="images/t4.png" class="imgcenter" onmouseover="hover4(this);" onmouseout="unhover4(this);" />
+                        </a></div>
+                    <div class="col"><a href="#">
+                            <img id="my-img" src="images/t6.png" class="imgcenter" onmouseover="hover6(this);" onmouseout="unhover6(this);" />
+                        </a></div>
+                    <div class="col"><a href="#">
+                            <img id="my-img" src="images/t8.png" class="imgcenter" onmouseover="hover8(this);" onmouseout="unhover8(this);" />
+                        </a></div>
+
+                </div>
 
             </div>
-            <div class="row">
-                <div class="col"><a href="#">
-                        <img id="my-img" src="images/t4.png" class="imgcenter" onmouseover="hover4(this);" onmouseout="unhover4(this);" />
-                    </a></div>
-                <div class="col"><a href="#">
-                        <img id="my-img" src="images/t6.png" class="imgcenter" onmouseover="hover6(this);" onmouseout="unhover6(this);" />
-                    </a></div>
-                <div class="col"><a href="#">
-                        <img id="my-img" src="images/t8.png" class="imgcenter" onmouseover="hover8(this);" onmouseout="unhover8(this);" />
-                    </a></div>
 
-            </div>
-
+            <div class="col-3"><a href="#">
+                    <img id="my-img" src="images/t9.png" class="imgcenter" onmouseover="hover1(this);" onmouseout="unhover1(this);" />
+                </a></div>
         </div>
 
-        <div class="col-3"><a href="#">
-                <img id="my-img" src="images/t9.png" class="imgcenter" onmouseover="hover1(this);" onmouseout="unhover1(this);" />
-            </a></div>
-    </div>
+        <!-- hover
+        ================================================== -->
+        <script>
+            function hover1(element) {
+                element.setAttribute('src', 'images/t9h.png');
+            }
 
-    <!-- hover
-    ================================================== -->
-    <script>
-        function hover1(element) {
-            element.setAttribute('src', 'images/t9h.png');
-        }
+            function unhover1(element) {
+                element.setAttribute('src', 'images/t9.png');
+            }
+            function hover(element) {
+                element.setAttribute('src', 'images/t1h.png');
+            }
 
-        function unhover1(element) {
-            element.setAttribute('src', 'images/t9.png');
-        }
-        function hover(element) {
-            element.setAttribute('src', 'images/t1h.png');
-        }
+            function unhover(element) {
+                element.setAttribute('src', 'images/t1.png');
+            }
+            function hover2(element) {
+                element.setAttribute('src', 'images/t2h.png');
+            }
 
-        function unhover(element) {
-            element.setAttribute('src', 'images/t1.png');
-        }
-        function hover2(element) {
-            element.setAttribute('src', 'images/t2h.png');
-        }
+            function unhover2(element) {
+                element.setAttribute('src', 'images/t2.png');
+            }
+            function hover3(element) {
+                element.setAttribute('src', 'images/t3h.png');
+            }
 
-        function unhover2(element) {
-            element.setAttribute('src', 'images/t2.png');
-        }
-        function hover3(element) {
-            element.setAttribute('src', 'images/t3h.png');
-        }
+            function unhover3(element) {
+                element.setAttribute('src', 'images/t3.png');
+            }
+            function hover4(element) {
+                element.setAttribute('src', 'images/t4h.png');
+            }
 
-        function unhover3(element) {
-            element.setAttribute('src', 'images/t3.png');
-        }
-        function hover4(element) {
-            element.setAttribute('src', 'images/t4h.png');
-        }
+            function unhover4(element) {
+                element.setAttribute('src', 'images/t4.png');
+            }
+            function hover5(element) {
+                element.setAttribute('src', 'images/t5h.png');
+            }
 
-        function unhover4(element) {
-            element.setAttribute('src', 'images/t4.png');
-        }
-        function hover5(element) {
-            element.setAttribute('src', 'images/t5h.png');
-        }
+            function unhover5(element) {
+                element.setAttribute('src', 'images/t5.png');
+            }
+            function hover6(element) {
+                element.setAttribute('src', 'images/t6h.png');
+            }
 
-        function unhover5(element) {
-            element.setAttribute('src', 'images/t5.png');
-        }
-        function hover6(element) {
-            element.setAttribute('src', 'images/t6h.png');
-        }
+            function unhover6(element) {
+                element.setAttribute('src', 'images/t6.png');
+            }
+            function hover7(element) {
+                element.setAttribute('src', 'images/t7h.png');
+            }
 
-        function unhover6(element) {
-            element.setAttribute('src', 'images/t6.png');
-        }
-        function hover7(element) {
-            element.setAttribute('src', 'images/t7h.png');
-        }
+            function unhover7(element) {
+                element.setAttribute('src', 'images/t7.png');
+            }
+            function hover8(element) {
+                element.setAttribute('src', 'images/t8h.png');
+            }
 
-        function unhover7(element) {
-            element.setAttribute('src', 'images/t7.png');
-        }
-        function hover8(element) {
-            element.setAttribute('src', 'images/t8h.png');
-        }
+            function unhover8(element) {
+                element.setAttribute('src', 'images/t8.png');
+            }
+            function hover9(element) {
+                element.setAttribute('src', 'images/t9h.png');
+            }
 
-        function unhover8(element) {
-            element.setAttribute('src', 'images/t8.png');
-        }
-        function hover9(element) {
-            element.setAttribute('src', 'images/t9h.png');
-        }
+            function unhover9(element) {
+                element.setAttribute('src', 'images/t9.png');
+            }
+            function hover10(element) {
+                element.setAttribute('src', 'images/t10h.png');
+            }
 
-        function unhover9(element) {
-            element.setAttribute('src', 'images/t9.png');
-        }
-        function hover10(element) {
-            element.setAttribute('src', 'images/t10h.png');
-        }
+            function unhover10(element) {
+                element.setAttribute('src', 'images/t10.png');
+            }
+            function hover11(element) {
+                element.setAttribute('src', 'images/t11h.png');
+            }
 
-        function unhover10(element) {
-            element.setAttribute('src', 'images/t10.png');
-        }
-        function hover11(element) {
-            element.setAttribute('src', 'images/t11h.png');
-        }
-
-        function unhover11(element) {
-            element.setAttribute('src', 'images/t11.png');
-        }
-    </script>
+            function unhover11(element) {
+                element.setAttribute('src', 'images/t11.png');
+            }
+        </script>
 </div>
-<!-- FOOTER Start
-================================================== -->
+        <!-- FOOTER Start
+        ================================================== -->
 
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="block clearfix">
-                    <a href="#">
-                        <img src="images/footerlogo5.png" alt="">
-                    </a>
-                    <br><br>
-                    <p>
-                        We stand for best in everything we do, to create an environment where absolute guest satisfaction,which is our highest priority.
-
-                    </p>
-                    <h4 class="connect-heading">CONNECT WITH US</h4>
-                    <ul class="social-icon">
-                        <li>
-                            <a class="facebook-icon" href="#">
-                                <i class="fa fa-facebook"></i>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="block clearfix">
+                            <a href="#">
+                                <img src="images/footerlogo5.png" alt="">
                             </a>
-                        </li>
-                        <li>
-                            <a class="plus-icon" href="#">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="twitter-icon" href="#">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="pinterest-icon" href="#">
-                                <i class="fa fa-pinterest"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="linkedin-icon" href="#">
-                                <i class="fa fa-linkedin"></i>
-                            </a>
-                        </li>
-                    </ul>	<!-- End Of /.social-icon -->
-                </div>	<!-- End Of /.block -->
-            </div> <!-- End Of /.Col-md-4 -->
-            <div class="col-md-4">
-                <div class="block">
-                    <h4>GET IN TOUCH</h4>
-                    <p ><i class="fa  fa-map-marker"></i> <span>Food Court: </span>NO:22 Mccallum's Drive Nuwara Eliya</p>
-                    <p> <i class="fa  fa-phone"></i> <span>Phone:</span> 052 22 22 878 </p>
+                            <br><br>
+                            <p>
+                                We stand for best in everything we do, to create an environment where absolute guest satisfaction,which is our highest priority.
 
-                    <p> <i class="fa  fa-mobile"></i> <span>Mobile:</span> 070 2 100 600</p>
+                            </p>
+                            <h4 class="connect-heading">CONNECT WITH US</h4>
+                            <ul class="social-icon">
+                                <li>
+                                    <a class="facebook-icon" href="#">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="plus-icon" href="#">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="twitter-icon" href="#">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="pinterest-icon" href="#">
+                                        <i class="fa fa-pinterest"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="linkedin-icon" href="#">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>	<!-- End Of /.social-icon -->
+                        </div>	<!-- End Of /.block -->
+                    </div> <!-- End Of /.Col-md-4 -->
+                    <div class="col-md-4">
+                        <div class="block">
+                            <h4>GET IN TOUCH</h4>
+                            <p ><i class="fa  fa-map-marker"></i> <span>Food Court: </span>NO:22 Mccallum's Drive Nuwara Eliya</p>
+                            <p> <i class="fa  fa-phone"></i> <span>Phone:</span> 052 22 22 878 </p>
 
-                    <p class="mail"><i class="fa  fa-envelope"></i>Eamil: <span>info@foodcourt.com</span></p>
-                </div>	<!-- End Of /.block -->
-            </div> <!-- End Of Col-md-3 -->
+                            <p> <i class="fa  fa-mobile"></i> <span>Mobile:</span> 070 2 100 600</p>
 
-            <div class="col-md-4">
-                <div class="block">
-                    <div class="media">
-                        <h4>Our Location</h4>
+                            <p class="mail"><i class="fa  fa-envelope"></i>Eamil: <span>info@foodcourt.com</span></p>
+                        </div>	<!-- End Of /.block -->
+                    </div> <!-- End Of Col-md-3 -->
 
-
-                    </div>	<!-- End Of /.media -->
-                </div>	<!-- End Of /.block -->
-            </div> <!-- End Of Col-md-3 -->
-        </div> <!-- End Of /.row -->
-    </div> <!-- End Of /.Container -->
+                    <div class="col-md-4">
+                        <div class="block">
+                            <div class="media">
+                                <h4>Our Location</h4>
 
 
+                            </div>	<!-- End Of /.media -->
+                        </div>	<!-- End Of /.block -->
+                    </div> <!-- End Of Col-md-3 -->
+                </div> <!-- End Of /.row -->
+            </div> <!-- End Of /.Container -->
 
-    <!-- FOOTER-BOTTOM Start
-    ================================================== -->
 
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
 
-                    <p style="text-align: center;">© 2021 | Food Court <a href="admin/login-form.php">Administrator</a> All Rights Reserved</p>
-                </div>	<!-- End Of /.col-md-12 -->
-            </div>	<!-- End Of /.row -->
-        </div>	<!-- End Of /.container -->
-    </div>	<!-- End Of /.footer-bottom -->
-</footer> <!-- End Of Footer -->
+            <!-- FOOTER-BOTTOM Start
+            ================================================== -->
 
-<a id="back-top" href="#"></a>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <p style="text-align: center;">© 2021 | Food Court <a href="admin/login-form.php">Administrator</a> All Rights Reserved</p>
+                        </div>	<!-- End Of /.col-md-12 -->
+                    </div>	<!-- End Of /.row -->
+                </div>	<!-- End Of /.container -->
+            </div>	<!-- End Of /.footer-bottom -->
+        </footer> <!-- End Of Footer -->
+
+        <a id="back-top" href="#"></a>
 </body>
 </html>
