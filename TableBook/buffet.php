@@ -1,4 +1,8 @@
 <?php
+require_once('../auth.php');
+?>
+
+<?php
 //checking connection and connecting to a database
 require_once('../connection/config.php');
 //Connect to mysqli server
@@ -7,47 +11,34 @@ if(!$conn) {
     die('Failed to connect to server: ' . mysqli_error());
 }
 
+//Select database
 
-//selecting all records from the food_details table. Return an error if there are no records in the table
-$result=mysqli_query($conn,"SELECT * FROM food_details,food_categories WHERE food_details.food_category=food_categories.category_id ")
-or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+//get member id from session
+$memberId = $_SESSION['SESS_MEMBER_ID'];
 ?>
+
 <?php
-//retrive categories from the categories table
-$categories=mysqli_query($conn,"SELECT * FROM food_categories")
-or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+//retrieving all rows from the cart_details table based on flag=0
+$flag_0 = 0;
+$items=mysqli_query($conn,"SELECT * FROM cart_details WHERE member_id='$memberId' AND flag='$flag_0'")
+or die("Something is wrong ... \n" . mysqli_error());
+//get the number of rows
+$num_items = mysqli_num_rows($items);
 ?>
+
+<!--php
+//retrieving all rows from the messages table
+$messages=mysqli_query($conn,"SELECT * FROM messages")
+or die("Something is wrong ... \n" . mysqli_error());
+//get the number of rows
+$num_messages = mysqli_num_rows($messages);
+?-->
+
 <?php
-//retrive a currency from the currencies table
-//define a default value for flag_1
-$flag_1 = 1;
-$currencies=mysqli_query($conn,"SELECT * FROM currencies WHERE flag='$flag_1'")
-or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+//retrieve tables from the tables table
+$tables=mysqli_query($conn,"SELECT * FROM tables")
+or die("Something is wrong ... \n" . mysqli_error());
 ?>
-<?php
-if(isset($_POST['Submit'])){
-    //Function to sanitize values received from the form. Prevents SQL injection
-    function clean($str) {
-        global $conn;
-        $str = @trim($str);
-        $str = stripslashes($str);
-
-        return mysqli_real_escape_string($conn,$str);
-    }
-    //get category id
-    $id = clean($_POST['category']);
-
-    //selecting all records from the food_details and categories tables based on category id. Return an error if there are no records in the table
-    if($id > 0){
-        $result=mysqli_query($conn,"SELECT * FROM food_details,food_categories WHERE food_category='$id' AND food_details.food_category=food_categories.category_id ")
-        or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
-    }elseif($id == 0){
-        $result=mysqli_query($conn,"SELECT * FROM specials WHERE '".date('Y-m-d')."' BETWEEN date(special_start_date) and date(special_end_date) ")
-        or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
-    }
-}
-?>
-
 
 <!doctype html>
 <html lang="en">
@@ -66,7 +57,7 @@ if(isset($_POST['Submit'])){
     <!-- Css -->
     <link rel="stylesheet" href="../css/nivo-slider.css" type="text/css" />
     <link rel="stylesheet" href="../css/owl.carousel.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
@@ -74,8 +65,8 @@ if(isset($_POST['Submit'])){
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- jS -->
-    <script src="../js/jquery.min.js" type="text/javascript"></script>
-    <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+
+
     <script src="../js/jquery.nivo.slider.js" type="text/javascript"></script>
     <script src="../js/owl.carousel.min.js" type="text/javascript"></script>
     <script src="../js/jquery.nicescroll.js"></script>
@@ -263,23 +254,72 @@ if(isset($_POST['Submit'])){
 ================================================== -->
 
 <!--<img id="my-img" src="'images/10.png" onmouseover="hover(this);" onmouseout="unhover(this);" />-->
-
 <!-- Book Table
 ================================================== -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="reserve-exec.php" method="post">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">table</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="table" value="" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="date" class="form-control" name="date" id="exampleInputPassword1" placeholder="Password" required>
+                    </div>
+                    <div class="form-check">
+                        <input type="time" class="form-check-input" name="time" id="exampleCheck1" required>
+                        <input type="text" name="id" hidden value="<?php echo $_SESSION['SESS_MEMBER_ID'];?>">
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="padding-left: 30px;">Submit</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function tableChange(table){
+        document.getElementById('exampleInputEmail1').value = table;
+    }
+</script>
+
+
+
+
+
+<!-- Book Table Pictures
+================================================== -->
+
 <div class="container">
     <div class="row" style="margin-bottom: 50px">
         <div class="col-md-3">
-            <a href="#">
+            <a  data-toggle="modal" data-target="#exampleModal" onclick="tableChange('1')">
                 <img id="my-img" src="../images/t1.png" class="imgcenter" onmouseover="hover(this);" onmouseout="unhover(this);" />
             </a>
         </div>
         <div class="col-md-6">
-            <a href="#">
+            <a data-toggle="modal" data-target="#exampleModal" onclick="tableChange('11')">
                 <img id="my-img" src="../images/t11.png" class="imgcenter" onmouseover="hover11(this);" onmouseout="unhover11(this);" />
             </a>
         </div>
+
         <div class="col-md-3">
-            <a href="#">
+            <a data-toggle="modal" data-target="#exampleModal" onclick="tableChange('2')">
                 <img id="my-img" src="../images/t2.png" class="imgcenter" onmouseover="hover2(this);" onmouseout="unhover2(this);" />
             </a>
         </div>
@@ -289,25 +329,25 @@ if(isset($_POST['Submit'])){
     <div class="row" style="margin-bottom: 50px">
         <div class="col-9">
             <div class="row" style="margin-bottom: 50px">
-                <div class="col"><a href="#">
+                <div class="col"><a data-toggle="modal" data-target="#exampleModal" onclick="tableChange('3')">
                         <img id="my-img" src="../images/t3.png" class="imgcenter" onmouseover="hover3(this);" onmouseout="unhover3(this);" />
                     </a></div>
-                <div class="col"><a href="#">
+                <div class="col"><a data-toggle="modal" data-target="#exampleModal" onclick="tableChange('5')">
                         <img id="my-img" src="../images/t5.png" class="imgcenter" onmouseover="hover5(this);" onmouseout="unhover5(this);" />
                     </a></div>
-                <div class="col"><a href="#">
+                <div class="col"><a data-toggle="modal" data-target="#exampleModal" onclick="tableChange('7')">
                         <img id="my-img" src="../images/t7.png" class="imgcenter" onmouseover="hover7(this);" onmouseout="unhover7(this);" />
                     </a></div>
 
             </div>
             <div class="row">
-                <div class="col"><a href="#">
+                <div class="col"><a data-toggle="modal" data-target="#exampleModal" onclick="tableChange('4')">
                         <img id="my-img" src="../images/t4.png" class="imgcenter" onmouseover="hover4(this);" onmouseout="unhover4(this);" />
                     </a></div>
-                <div class="col"><a href="#">
+                <div class="col"><a data-toggle="modal" data-target="#exampleModal" onclick="tableChange('6')">
                         <img id="my-img" src="../images/t6.png" class="imgcenter" onmouseover="hover6(this);" onmouseout="unhover6(this);" />
                     </a></div>
-                <div class="col"><a href="#">
+                <div class="col"><a data-toggle="modal" data-target="#exampleModal" onclick="tableChange('8')">
                         <img id="my-img" src="../images/t8.png" class="imgcenter" onmouseover="hover8(this);" onmouseout="unhover8(this);" />
                     </a></div>
 
@@ -315,7 +355,7 @@ if(isset($_POST['Submit'])){
 
         </div>
 
-        <div class="col-3"><a href="#">
+        <div class="col-3"><a data-toggle="modal" data-target="#exampleModal" onclick="tableChange('9')">
                 <img id="my-img" src="../images/t9.png" class="imgcenter" onmouseover="hover1(this);" onmouseout="unhover1(this);" />
             </a></div>
     </div>
