@@ -54,6 +54,10 @@ or die("Something is wrong ... \n" . mysqli_error());
 
     <script language="JavaScript" src="../validation/user.js">
     </script>
+    <script src="path/to/jquery.js"></script>
+    <script src="path/to/bootstrap.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script src="../js/bootstrap-confirmation.js"></script>
 </head>
 <body>
 <div id="page">
@@ -106,15 +110,31 @@ or die("Something is wrong ... \n" . mysqli_error());
                                     <input type="date" class="form-control" name="date" id="exampleInputPassword1" placeholder="Password" required>
                                 </div>
                                 <div class="form-check">
-                                    <input type="time" class="form-check-input" name="time" id="exampleCheck1" required>
+
                                     <input type="text" name="id" hidden value="<?php echo $_SESSION['SESS_MEMBER_ID'];?>">
                                 </div>
-                                <button type="submit" class="btn btn-primary" style="padding-left: 30px;">Submit</button>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect2">Example multiple select</label>
+                                    <select name="time" multiple class="form-control" id="exampleFormControlSelect2">
+                                        <option>BreakFast</option>
+                                        <option>Lunch</option>
+                                        <option>Dinner</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary" style="padding-left: 30px;">Submit</button>
+
+
+                                </div>
+
                             </form>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+
                         </div>
                     </div>
                 </div>
@@ -135,16 +155,14 @@ or die("Something is wrong ... \n" . mysqli_error());
                         <td><select name="table" id="table">
                                 <option value="select">- select table -</option>
                                 <?php
-                                //loop through tables table rows
-                                while ($row=mysqli_fetch_array($tables)){
-                                    echo "<option value=$row[table_id]>$row[table_name]</option>";
-                                }
-                                ?>
+            //loop through tables table rows
+            while ($row=mysqli_fetch_array($tables)){
+                echo "<option value=$row[table_id]>$row[table_name]</option>";
+            }
+            ?>
                             </select>
                         </td>
                     </tr>
-
-
                     <tr>
                         <td><b>Date:</b></td><td><input type="date" name="date" id="date" /></td></tr>
                     <tr>
@@ -158,6 +176,8 @@ or die("Something is wrong ... \n" . mysqli_error());
             </form>-->
         </div>
     </div>
+
+
 
 
 </div>
