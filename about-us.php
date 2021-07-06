@@ -163,7 +163,7 @@ if(isset($_POST['Submit'])){
                 <li ><a href="index.php">HOME</a></li>
                 <li><a href="pastry-shop.php">PASTRY SHOP</a></li>
                 <li><a href="lounge.php">THE LOUNGE</a></li>
-                <li><a href="buffet.php">BUFFET</a></li>
+                <li><a href="TableBook/buffet.php">BUFFET</a></li>
                 <li class="active"><a href="about-us.php">ABOUT US</a></li>
                 <li ><a href="#">CART</a></li>
             </ul>

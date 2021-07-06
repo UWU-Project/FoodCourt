@@ -64,24 +64,24 @@ if(isset($_POST['Submit'])){
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Css -->
-    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="../css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- jS -->
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/jquery.nivo.slider.js" type="text/javascript"></script>
-    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-    <script src="js/jquery.nicescroll.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/main.js" type="text/javascript"></script>
-    <script language="JavaScript" src="validation/user.js"></script>
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../js/jquery.nivo.slider.js" type="text/javascript"></script>
+    <script src="../js/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="../js/jquery.nicescroll.js"></script>
+    <script src="../js/jquery.scrollUp.min.js"></script>
+    <script src="../js/main.js" type="text/javascript"></script>
+    <script language="JavaScript" src="../validation/user.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -161,10 +161,10 @@ if(isset($_POST['Submit'])){
             <div class="col-md-3 clearfix">
                 <ul class="login-cart">
                     <li>
-                        <a href="customer/login.php">LOGIN</a>
+                        <a href="../customer/login.php">LOGIN</a>
                     </li>
                     <li>
-                        <a href="customer/create.php">REGISTER</a>
+                        <a href="../customer/create.php">REGISTER</a>
                     </li>
                 </ul>
             </div>
@@ -198,7 +198,7 @@ if(isset($_POST['Submit'])){
         <div class="row">
             <div class="col-md-12">
                 <a href="#">
-                    <img src="images/logo2copy.png" alt="logo">
+                    <img src="../images/logo2copy.png" alt="logo">
                 </a>
             </div>	<!-- End of /.col-md-12 -->
         </div>	<!-- End of /.row -->
@@ -224,11 +224,11 @@ if(isset($_POST['Submit'])){
 
         <div class="navbar navbar-expand-lg navbar-light bg-light" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav nav-main">
-                <li ><a href="index.php">HOME</a></li>
-                <li><a href="pastry-shop.php">PASTRY SHOP</a></li>
-                <li><a href="lounge.php">THE LOUNGE</a></li>
+                <li ><a href="../index.php">HOME</a></li>
+                <li><a href="../pastry-shop.php">PASTRY SHOP</a></li>
+                <li><a href="../lounge.php">THE LOUNGE</a></li>
                 <li class="active"><a href="buffet.php">BUFFET</a></li>
-                <li ><a href="about-us.php">ABOUT US</a></li>
+                <li ><a href="../about-us.php">ABOUT US</a></li>
                 <li><a href="#">CART</a></li>
             </ul>
             </li> <!-- End of /.dropdown -->
@@ -270,17 +270,17 @@ if(isset($_POST['Submit'])){
     <div class="row" style="margin-bottom: 50px">
         <div class="col-md-3">
             <a href="#">
-                <img id="my-img" src="images/t1.png" class="imgcenter" onmouseover="hover(this);" onmouseout="unhover(this);" />
+                <img id="my-img" src="../images/t1.png" class="imgcenter" onmouseover="hover(this);" onmouseout="unhover(this);" />
             </a>
         </div>
         <div class="col-md-6">
             <a href="#">
-                <img id="my-img" src="images/t11.png" class="imgcenter" onmouseover="hover11(this);" onmouseout="unhover11(this);" />
+                <img id="my-img" src="../images/t11.png" class="imgcenter" onmouseover="hover11(this);" onmouseout="unhover11(this);" />
             </a>
         </div>
         <div class="col-md-3">
             <a href="#">
-                <img id="my-img" src="images/t2.png" class="imgcenter" onmouseover="hover2(this);" onmouseout="unhover2(this);" />
+                <img id="my-img" src="../images/t2.png" class="imgcenter" onmouseover="hover2(this);" onmouseout="unhover2(this);" />
             </a>
         </div>
     </div>
@@ -290,25 +290,25 @@ if(isset($_POST['Submit'])){
         <div class="col-9">
             <div class="row" style="margin-bottom: 50px">
                 <div class="col"><a href="#">
-                        <img id="my-img" src="images/t3.png" class="imgcenter" onmouseover="hover3(this);" onmouseout="unhover3(this);" />
+                        <img id="my-img" src="../images/t3.png" class="imgcenter" onmouseover="hover3(this);" onmouseout="unhover3(this);" />
                     </a></div>
                 <div class="col"><a href="#">
-                        <img id="my-img" src="images/t5.png" class="imgcenter" onmouseover="hover5(this);" onmouseout="unhover5(this);" />
+                        <img id="my-img" src="../images/t5.png" class="imgcenter" onmouseover="hover5(this);" onmouseout="unhover5(this);" />
                     </a></div>
                 <div class="col"><a href="#">
-                        <img id="my-img" src="images/t7.png" class="imgcenter" onmouseover="hover7(this);" onmouseout="unhover7(this);" />
+                        <img id="my-img" src="../images/t7.png" class="imgcenter" onmouseover="hover7(this);" onmouseout="unhover7(this);" />
                     </a></div>
 
             </div>
             <div class="row">
                 <div class="col"><a href="#">
-                        <img id="my-img" src="images/t4.png" class="imgcenter" onmouseover="hover4(this);" onmouseout="unhover4(this);" />
+                        <img id="my-img" src="../images/t4.png" class="imgcenter" onmouseover="hover4(this);" onmouseout="unhover4(this);" />
                     </a></div>
                 <div class="col"><a href="#">
-                        <img id="my-img" src="images/t6.png" class="imgcenter" onmouseover="hover6(this);" onmouseout="unhover6(this);" />
+                        <img id="my-img" src="../images/t6.png" class="imgcenter" onmouseover="hover6(this);" onmouseout="unhover6(this);" />
                     </a></div>
                 <div class="col"><a href="#">
-                        <img id="my-img" src="images/t8.png" class="imgcenter" onmouseover="hover8(this);" onmouseout="unhover8(this);" />
+                        <img id="my-img" src="../images/t8.png" class="imgcenter" onmouseover="hover8(this);" onmouseout="unhover8(this);" />
                     </a></div>
 
             </div>
@@ -316,7 +316,7 @@ if(isset($_POST['Submit'])){
         </div>
 
         <div class="col-3"><a href="#">
-                <img id="my-img" src="images/t9.png" class="imgcenter" onmouseover="hover1(this);" onmouseout="unhover1(this);" />
+                <img id="my-img" src="../images/t9.png" class="imgcenter" onmouseover="hover1(this);" onmouseout="unhover1(this);" />
             </a></div>
     </div>
 
@@ -418,7 +418,7 @@ if(isset($_POST['Submit'])){
             <div class="col-md-4">
                 <div class="block clearfix">
                     <a href="#">
-                        <img src="images/footerlogo5.png" alt="">
+                        <img src="../images/footerlogo5.png" alt="">
                     </a>
                     <br><br>
                     <p>
@@ -489,7 +489,7 @@ if(isset($_POST['Submit'])){
             <div class="row">
                 <div class="col-md-12">
 
-                    <p style="text-align: center;">© 2021 | Food Court <a href="admin/login-form.php">Administrator</a> All Rights Reserved</p>
+                    <p style="text-align: center;">© 2021 | Food Court <a href="../admin/login-form.php">Administrator</a> All Rights Reserved</p>
                 </div>	<!-- End Of /.col-md-12 -->
             </div>	<!-- End Of /.row -->
         </div>	<!-- End Of /.container -->
