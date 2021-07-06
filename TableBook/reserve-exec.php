@@ -51,7 +51,18 @@ if(isset($_POST['table'])){
         header("location: booked.php");
     }else{
         $date = clean($_POST['date']);
-        $time = clean($_POST['time']);
+        $teptime = clean($_POST['time']);
+        switch ($teptime) {
+            case 'BreakFast':
+                $time = "08:00:00";
+            break;
+            case 'Lunch':
+                $time = "12:00:00";
+            break;
+            case 'Dinner':
+                $time = "17:00:00";
+            break;
+        }
         $staff = 5;
         $flag = 0;
 
