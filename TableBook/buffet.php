@@ -1,6 +1,6 @@
 <?php
 //checking connection and connecting to a database
-require_once('connection/config.php');
+require_once('../connection/config.php');
 //Connect to mysqli server
 $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,DB_DATABASE);
 if(!$conn) {
@@ -324,88 +324,88 @@ if(isset($_POST['Submit'])){
     ================================================== -->
     <script>
         function hover1(element) {
-            element.setAttribute('src', 'images/t9h.png');
+            element.setAttribute('src', '../images/t9h.png');
         }
 
         function unhover1(element) {
-            element.setAttribute('src', 'images/t9.png');
+            element.setAttribute('src', '../images/t9.png');
         }
         function hover(element) {
-            element.setAttribute('src', 'images/t1h.png');
+            element.setAttribute('src', '../images/t1h.png');
         }
 
         function unhover(element) {
-            element.setAttribute('src', 'images/t1.png');
+            element.setAttribute('src', '../images/t1.png');
         }
         function hover2(element) {
-            element.setAttribute('src', 'images/t2h.png');
+            element.setAttribute('src', '../images/t2h.png');
         }
 
         function unhover2(element) {
-            element.setAttribute('src', 'images/t2.png');
+            element.setAttribute('src', '../images/t2.png');
         }
         function hover3(element) {
-            element.setAttribute('src', 'images/t3h.png');
+            element.setAttribute('src', '../images/t3h.png');
         }
 
         function unhover3(element) {
-            element.setAttribute('src', 'images/t3.png');
+            element.setAttribute('src', '../images/t3.png');
         }
         function hover4(element) {
-            element.setAttribute('src', 'images/t4h.png');
+            element.setAttribute('src', '../images/t4h.png');
         }
 
         function unhover4(element) {
-            element.setAttribute('src', 'images/t4.png');
+            element.setAttribute('src', '../images/t4.png');
         }
         function hover5(element) {
-            element.setAttribute('src', 'images/t5h.png');
+            element.setAttribute('src', '../images/t5h.png');
         }
 
         function unhover5(element) {
-            element.setAttribute('src', 'images/t5.png');
+            element.setAttribute('src', '../images/t5.png');
         }
         function hover6(element) {
-            element.setAttribute('src', 'images/t6h.png');
+            element.setAttribute('src', '../images/t6h.png');
         }
 
         function unhover6(element) {
-            element.setAttribute('src', 'images/t6.png');
+            element.setAttribute('src', '../images/t6.png');
         }
         function hover7(element) {
-            element.setAttribute('src', 'images/t7h.png');
+            element.setAttribute('src', '../images/t7h.png');
         }
 
         function unhover7(element) {
-            element.setAttribute('src', 'images/t7.png');
+            element.setAttribute('src', '../images/t7.png');
         }
         function hover8(element) {
-            element.setAttribute('src', 'images/t8h.png');
+            element.setAttribute('src', '../images/t8h.png');
         }
 
         function unhover8(element) {
-            element.setAttribute('src', 'images/t8.png');
+            element.setAttribute('src', '../images/t8.png');
         }
         function hover9(element) {
-            element.setAttribute('src', 'images/t9h.png');
+            element.setAttribute('src', '../images/t9h.png');
         }
 
         function unhover9(element) {
-            element.setAttribute('src', 'images/t9.png');
+            element.setAttribute('src', '../images/t9.png');
         }
         function hover10(element) {
-            element.setAttribute('src', 'images/t10h.png');
+            element.setAttribute('src', '../images/t10h.png');
         }
 
         function unhover10(element) {
-            element.setAttribute('src', 'images/t10.png');
+            element.setAttribute('src', '../images/t10.png');
         }
         function hover11(element) {
-            element.setAttribute('src', 'images/t11h.png');
+            element.setAttribute('src', '../images/t11h.png');
         }
 
         function unhover11(element) {
-            element.setAttribute('src', 'images/t11.png');
+            element.setAttribute('src', '../images/t11.png');
         }
     </script>
 </div>

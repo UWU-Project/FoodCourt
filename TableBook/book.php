@@ -1,6 +1,4 @@
-<?php
-require_once('../auth.php');
-?>
+
 
 <?php
 //checking connection and connecting to a database
