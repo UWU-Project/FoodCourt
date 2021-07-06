@@ -288,7 +288,7 @@
         </table>
         <p>&nbsp;</p>
         <hr>
-
+-->
          Manage tables
         <table align="center" width="910">
             <CAPTION><h3>MANAGE TABLES</h3></CAPTION>
@@ -326,7 +326,7 @@
             </tr>
         </table>
         <p>&nbsp;</p>
--->
+
         <hr>
         <table align="center" width="910">
             <CAPTION><h3>MANAGE QUESTIONS</h3></CAPTION>

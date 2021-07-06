@@ -1,6 +1,7 @@
 <?php
     require_once('authenticate/auth.php');
 ?>
+
     <?php
         //checking connection and connecting to a database
         require_once('connect/config.php');
@@ -12,9 +13,9 @@
 
 
         //selecting all records from the reservations_details table based on table ids. Return an error if there are no records in the table
-        $tables=mysqli_query($conn,"SELECT customers.firstname, customers.lastname, reservations_details.ReservationID, reservations_details.table_id, reservations_details.Reserve_Date, reservations_details.Reserve_Time, tables.table_id, tables.table_name FROM customers, reservations_details, tables WHERE customers.member_id = reservations_details.member_id AND tables.table_id=reservations_details.table_id")
+        $tables=mysqli_query($conn,"SELECT customers.firstname, customers.lastname, reservations_details.ReservationID, reservations_details.Reserve_Date, reservations_details.Reserve_Time, tables.table_name FROM (( reservations_details INNER JOIN customers ON reservations_details.member_id=customers.member_id)INNER JOIN tables ON reservations_details.table_id=tables.table_id)")
         or die("There are no records to display ... \n" . mysqli_error());
-
+    echo("Error description: " . mysqli_error($conn));
 
     ?>
 
