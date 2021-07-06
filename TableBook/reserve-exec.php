@@ -79,6 +79,7 @@ if(isset($_POST['table'])){
     }
 
 
+
 }else if(isset($_POST['partyhall'])){
     die("Reservation failed!party failed PARTYHALL SELECTED Please try again after a few minutes.");
 
