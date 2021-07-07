@@ -1,6 +1,7 @@
 <?php
 //Start session
 
+
 //Include session details
 require_once('../auth.php');
 
@@ -39,7 +40,7 @@ if(isset($_GET['id'])){
     if($lt == 'food')
         $result=mysqli_query($conn,"SELECT * FROM food_details WHERE food_id='$food_id'") or die("A problem has occured1 ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
     else
-        $result=mysqli_query($conn,"SELECT * FROM specials WHERE special_id='$food_id'") or die("A problem has occured1 ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+        $result=mysqli_query($conn,"SELECT * FROM specials WHERE special_id='$food_id'") or die("A problem has occured2 ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
 
     $food_row=mysqli_fetch_assoc($result);
     $food_price=$food_row[$lt.'_price'];
