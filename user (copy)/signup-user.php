@@ -134,10 +134,7 @@
                     }
                     ?>
                     <div class="form-group">
-                        <input class="form-control" type="text" name="fname" placeholder="First Name" required value="<?php echo $fname ?>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="lname" placeholder="Last Name" required value="<?php echo $lname ?>">
+                        <input class="form-control" type="text" name="name" placeholder="Full Name" required value="<?php echo $name ?>">
                     </div>
                     <div class="form-group">
                         <input class="form-control" type="email" name="email" placeholder="Email Address" required value="<?php echo $email ?>">

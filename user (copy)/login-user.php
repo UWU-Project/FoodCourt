@@ -3,11 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Signup Form</title>
+    <title>Login Form</title>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="style.css">
 
-
+    
 	<link rel="stylesheet" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/font-awesome.min.css">
 	<link rel="stylesheet" href="../css/style.css">
@@ -21,8 +21,8 @@
 	<script src="../js/jquery.scrollUp.min.js"></script>
 	<script src="../js/main.js" type="text/javascript"></script>
 </head>
-
 <body>
+
 <section id="top">
     <div class="container">
         <div class="row">
@@ -99,17 +99,18 @@
     </div>	<!-- /.container-fluid -->
 </nav>	<!-- End of /.nav -->
 
+
     <div class="container">
-        <div class="wrapper">
+    <div class="wrapper">
         <div class="row">
         <div class="col-md-4">
 </div>
-            <div class="col-md-4 form">
-                <form action="signup-user.php" method="POST" autocomplete="">
-                    <h2 class="text-center">Signup Form</h2>
-                    <p class="text-center">It's quick and easy.</p>
+            <div class="col-md-4 form login-form">
+                <form action="login-user.php" method="POST" autocomplete="">
+                    <h2 class="text-center">Login Form</h2>
+                    <p class="text-center">Login with your email and password.</p>
                     <?php
-                    if(count($errors) == 1){
+                    if(count($errors) > 0){
                         ?>
                         <div class="alert alert-danger text-center">
                             <?php
@@ -119,49 +120,29 @@
                             ?>
                         </div>
                         <?php
-                    }elseif(count($errors) > 1){
-                        ?>
-                        <div class="alert alert-danger">
-                            <?php
-                            foreach($errors as $showerror){
-                                ?>
-                                <li><?php echo $showerror; ?></li>
-                                <?php
-                            }
-                            ?>
-                        </div>
-                        <?php
                     }
                     ?>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="fname" placeholder="First Name" required value="<?php echo $fname ?>">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="lname" placeholder="Last Name" required value="<?php echo $lname ?>">
-                    </div>
                     <div class="form-group">
                         <input class="form-control" type="email" name="email" placeholder="Email Address" required value="<?php echo $email ?>">
                     </div>
                     <div class="form-group">
                         <input class="form-control" type="password" name="password" placeholder="Password" required>
                     </div>
+                    <div class="link forget-pass text-left"><a href="forgot-password.php">Forgot password?</a></div>
                     <div class="form-group">
-                        <input class="form-control" type="password" name="cpassword" placeholder="Confirm password" required>
+                        <input class="form-control button" type="submit" name="login" value="Login">
                     </div>
-                    <div class="form-group">
-                        <input class="form-control button" type="submit" name="signup" value="Signup">
-                    </div>
-                    <div class="link login-link text-center">Already a member? <a href="login-user.php">Login here</a></div>
+                    <div class="link login-link text-center">Not yet a member? <a href="signup-user.php">Signup now</a></div>
                 </form>
             </div>
-            
-<div class="col-md-4">
+            <div class="col-md-4">
 </div>
         </div>
     </div>
-    </div>
+                </div>
     
 
+    
 
      <!-- FOOTER Start
     ================================================== -->
@@ -251,6 +232,6 @@
     </footer> <!-- End Of Footer -->
 
     <a id="back-top" href="#"></a>
-    
+ 
 </body>
 </html>
