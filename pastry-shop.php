@@ -390,7 +390,7 @@ if(isset($_POST['Submit'])){
                                     </a>
                                     <p class="price"><?php echo $symbol['currency_symbol']. "" . $row[$lt.'_price']?></p>
                                     <div >
-                                        <a class="view-link shutter" href="#">
+                                        <a class="view-link shutter" href="cart/cart-exec.php?id=' . $row[$lt.'_id'] . '&lt='.$lt.'">
                                         <i class="fa fa-plus-circle"></i>Add To Cart</a>
 								    </div>
 							    </div>

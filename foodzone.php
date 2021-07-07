@@ -124,7 +124,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
                     echo "<td>" . $row[$lt.'_description']."</td>";
                     echo "<td>" . ($lt == 'food'?$row['category_name']:'SPECIAL DEALS')."</td>";
                     echo "<td>" . $symbol['currency_symbol']. "" . $row[$lt.'_price']."</td>";
-                    echo '<td><a href="cart-exec.php?id=' . $row[$lt.'_id'] . '&lt='.$lt.'">Add To Cart</a></td>';
+                    echo '<td><a href="cart/cart-exec.php?id=' . $row[$lt.'_id'] . '&lt='.$lt.'">Add To Cart</a></td>';
                     echo "</td>";
                     echo "</tr>";
                     }      
