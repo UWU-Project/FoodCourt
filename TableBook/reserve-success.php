@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include '../connection/config.php'; ?>
+
     <title><?php echo APP_NAME ?>: Reservation Success</title>
 
 </head>
@@ -27,7 +27,7 @@
             <p><a href="member-index.php">Click Here</a> to go back to your account.</p>
         </div>
     </div>
-    <?php include 'footer.php'; ?>
+
 </div>
 </body>
 
