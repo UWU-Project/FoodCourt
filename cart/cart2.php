@@ -169,7 +169,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
         <div class="card-header bg-dark text-light">
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             Shipping cart
-            <a href="" class="btn btn-outline-info btn-sm pull-right">Continiu shopping</a>
+            <a href="" class="btn btn-outline-info btn-sm pull-right">Continue shopping</a>
             <div class="clearfix"></div>
             <form name="quantityForm" id="quantityForm" method="post" action="update-quantity.php" onsubmit="return updateQuantity(this)">
                 <table width="560" align="center">
