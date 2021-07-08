@@ -170,8 +170,7 @@ padding-top: 15rem ;
                     <li ><a href="about-us.php">ABOUT US</a></li>
                     <li><a href="#">CART</a></li>
 					</ul>
-					
-		        </ul> <!-- End of /.nav-main -->
+
 		    </div>	<!-- /.navbar-collapse -->
 		</div>	<!-- /.container-fluid -->
 	</nav>	<!-- End of /.nav -->
