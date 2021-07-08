@@ -1,9 +1,8 @@
+
 <?php
 //Start session
 session_start();
-
-require_once('../auth.php');
-
+require_once('../auth.php'. mysqli_error());
 //Include database connection details
 require_once('../connection/config.php');
 

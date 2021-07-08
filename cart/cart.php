@@ -145,46 +145,25 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
                 <?php
                 //loop through all table rows
                 $symbol=mysqli_fetch_assoc($currencies); //gets active currency
-                foreach ($result as $row){
+                foreach ($result as $row) {
                     $lt = $row['lt'];
                     echo "<tr>";
-                    echo "<td>" . $row['cart_id']."</td>";
-                    echo '<td><a href=../images/'. $row[$lt.'_photo']. ' alt="click to view full image" target="_blank"><img src=../images/'. $row[$lt.'_photo']. ' width="80" height="70"></a></td>';
-                    echo "<td>" . $row[$lt.'_name']."</td>";
-                    echo "<td>" . $row[$lt.'_description']."</td>";
-                    echo "<td>" . ($lt == 'food'?$row['category_name']:'SPECIAL DEALS')."</td>";
-                    echo "<td>" . $symbol['currency_symbol']. "" . $row[$lt.'_price']."</td>";
-                    echo "<td>" . $row['quantity_value']."</td>";
-                    echo "<td>" . $symbol['currency_symbol']. "" . $row['total']."</td>";
+                    echo "<td>" . $row['cart_id'] . "</td>";
+                    echo '<td><a href=../images/' . $row[$lt . '_photo'] . ' alt="click to view full image" target="_blank"><img src=../images/' . $row[$lt . '_photo'] . ' width="80" height="70"></a></td>';
+                    echo "<td>" . $row[$lt . '_name'] . "</td>";
+                    echo "<td>" . $row[$lt . '_description'] . "</td>";
+                    echo "<td>" . ($lt == 'food' ? $row['category_name'] : 'SPECIAL DEALS') . "</td>";
+                    echo "<td>" . $symbol['currency_symbol'] . "" . $row[$lt . '_price'] . "</td>";
 
-                    echo "<form>";
-                    echo '<td><select name="quantity" id="quantity" onchange="getQuantity(this.value)">
-                    <option value="select">- select quantity -
-                    <?php
-                    while ($row=mysqli_fetch_assoc($quantities)){
-                    echo "<option value=$row[quantity_id]>$row[quantity_value]";
-                    //$_SESSION[SESS_CART_ID] = $row[cart_id];
+                    echo "<td>" . $row['quantity_value'] . "</td>";
+                    echo "<td>" . $symbol['currency_symbol'] . "" . $row['total'] . "</td>";
                 }
-                ?>
-                </select></td>';
-                echo "</form>";
+                    ?>
 
-
-                    echo "<form>";
-                        echo "<td><select name='quantity' id='quantity' onclick='getQuantity(this.value)'>
-                        <option value='1'>select
-                        <option value='2'>1
-                        <option value='3'>2
-                        <option value='4'>3
-
-
-
-                    </select></td>";
-                    echo "</form>";
-
+                <?php
                     echo '<td><a href="order-exec.php?id=' . $row['cart_id'] . '">Place Order</a></td>';
                     echo "</tr>";
-                }
+
                 mysqli_free_result($result);
                 mysqli_close($conn);
                 ?>
