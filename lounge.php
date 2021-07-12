@@ -327,8 +327,10 @@ if(isset($_POST['Submit'])){
                                 </a>
                                 <p class="price"><?php echo $symbol['currency_symbol']. "" . $row[$lt.'_price']?></p>
                                 <div >
-                                    <a class="view-link shutter" href="#">
-                                        <i class="fa fa-plus-circle"></i>Add To Cart</a>
+
+                                    <?php echo '<a class="view-link shutter" href="cart/cart-exec-lounge.php?id=' . $row[$lt.'_id'] . '&lt='.$lt.'"><i class="fa fa-plus-circle"></i>Add To Cart</a>'; ?>
+
+
                                 </div>
                             </div>
 

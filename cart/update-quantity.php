@@ -2,10 +2,10 @@
 //Start session
 session_start();
 
-require_once('auth.php');
+require_once('../auth.php');
 
 //Include database connection details
-require_once('connection/config.php');
+require_once('../connection/config.php');
 
 //Connect to mysqli server
 $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,DB_DATABASE);

@@ -24,14 +24,22 @@ $result = array();
 while($row = mysqli_fetch_assoc($result1)){
     $result[]=$row;
 }
+$result3=mysqli_query($conn,"SELECT food_name,food_description,food_price,food_photo,cart_id,quantity_value,total,flag,category_name,lt FROM food_details_lounge,cart_details,food_categories_lounge,quantities WHERE cart_details.member_id='$member_id' AND cart_details.flag='$flag_0' AND cart_details.food_id=food_details_lounge.food_id AND food_details_lounge.food_category=food_categories_lounge.category_id AND cart_details.quantity_id=quantities.quantity_id AND cart_details.lt ='food'")
+or die("A problem has occured 3... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+$result = array();
+while($row = mysqli_fetch_assoc($result3)){
+    $result[]=$row;
+}
 $result2=mysqli_query($conn,"SELECT * FROM cart_details c inner join specials s on s.special_id = c.food_id inner join quantities q on q.quantity_id = c.quantity_id WHERE c.lt = 'special' and c.member_id ='$member_id' ")
 or die("A problem has occured 2... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
 while($row = mysqli_fetch_assoc($result2)){
     $result[]=$row;
 }
-// var_dump($result);
+//var_dump($result);
 // exit;
 ?>
+
+
 <?php
 if(isset($_POST['Submit'])){
     //Function to sanitize values received from the form. Prevents SQL injection
@@ -47,15 +55,27 @@ if(isset($_POST['Submit'])){
     $id = clean($_POST['category']);
 
     //selecting all records from the food_details table based on category id. Return an error if there are no records in the table
-    $result=mysqli_query($conn,"SELECT * FROM food_details WHERE food_category='$id'")
-    or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+
+
+
+    if($result) {
+
+        $result=mysqli_query($conn,"SELECT * FROM food_details WHERE food_category='$id'")
+        or die("A problem has occured63 ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+    }else {
+        $result=mysqli_query($conn,"SELECT * FROM food_details_lounge WHERE food_category='$id'")
+        or die("A problem has occured66 ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+    }
+
 }
+
 ?>
 <?php
 //retrieving quantities from the quantities table
 $quantities=mysqli_query($conn,"SELECT * FROM quantities")
 or die("Something is wrong ... \n" . mysqli_error());
 ?>
+
 <?php
 //retrieving cart ids from the cart_details table
 //define a default value for flag_0
@@ -63,6 +83,7 @@ $flag_0 = 0;
 $items=mysqli_query($conn,"SELECT * FROM cart_details WHERE member_id='$member_id' AND flag='$flag_0'")
 or die("Something is wrong ... \n" . mysqli_error());
 ?>
+
 <?php
 //retrive a currency from the currencies table
 //define a default value for flag_1
@@ -70,12 +91,13 @@ $flag_1 = 1;
 $currencies=mysqli_query($conn,"SELECT * FROM currencies WHERE flag='$flag_1'")
 or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
 ?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title><?php echo APP_NAME ?>:Shopping Cart</title>
-    <script type="text/javascript" src="swf/swfobject.js"></script>
+
 
     <script language="JavaScript" src="../validation/user.js">
     </script>
@@ -143,9 +165,13 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
                 </tr>
 
                 <?php
+
                 //loop through all table rows
+
                 $symbol=mysqli_fetch_assoc($currencies); //gets active currency
+
                 foreach ($result as $row) {
+
                     $lt = $row['lt'];
                     echo "<tr>";
                     echo "<td>" . $row['cart_id'] . "</td>";
@@ -156,7 +182,9 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
                     echo "<td>" . $symbol['currency_symbol'] . "" . $row[$lt . '_price'] . "</td>";
 
                     echo "<td>" . $row['quantity_value'] . "</td>";
+
                     echo "<td>" . $symbol['currency_symbol'] . "" . $row['total'] . "</td>";
+
                 }
                     ?>
 

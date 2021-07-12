@@ -2,50 +2,6 @@
 //checking connection and connecting to a database
 require_once('connection/config.php');
 //Connect to mysqli server
-$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,DB_DATABASE);
-if(!$conn) {
-    die('Failed to connect to server: ' . mysqli_error());
-}
-
-
-//selecting all records from the food_details table. Return an error if there are no records in the table
-$result=mysqli_query($conn,"SELECT * FROM food_details_lounge,food_categories_lounge WHERE food_details_lounge.food_category=food_categories_lounge.category_id ")
-or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
-?>
-<?php
-//retrive categories from the categories table
-$categories=mysqli_query($conn,"SELECT * FROM food_categories_lounge")
-or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
-?>
-<?php
-//retrive a currency from the currencies table
-//define a default value for flag_1
-$flag_1 = 1;
-$currencies=mysqli_query($conn,"SELECT * FROM currencies WHERE flag='$flag_1'")
-or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
-?>
-<?php
-if(isset($_POST['Submit'])){
-    //Function to sanitize values received from the form. Prevents SQL injection
-    function clean($str) {
-        global $conn;
-        $str = @trim($str);
-        $str = stripslashes($str);
-
-        return mysqli_real_escape_string($conn,$str);
-    }
-    //get category id
-    $id = clean($_POST['category']);
-
-    //selecting all records from the food_details and categories tables based on category id. Return an error if there are no records in the table
-    if($id > 0){
-        $result=mysqli_query($conn,"SELECT * FROM food_details_lounge,food_categories_lounge WHERE food_category='$id' AND food_details_lounge.food_category=food_categories_lounge.category_id ")
-        or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
-    }elseif($id == 0){
-        $result=mysqli_query($conn,"SELECT * FROM specials WHERE '".date('Y-m-d')."' BETWEEN date(special_start_date) and date(special_end_date) ")
-        or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
-    }
-}
 ?>
 
 
