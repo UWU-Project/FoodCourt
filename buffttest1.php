@@ -1,4 +1,8 @@
 <?php
+require_once('auth.php');
+?>
+
+<?php
 //checking connection and connecting to a database
 require_once('connection/config.php');
 //Connect to mysqli server
@@ -7,48 +11,34 @@ if(!$conn) {
     die('Failed to connect to server: ' . mysqli_error());
 }
 
+//Select database
 
-//selecting all records from the food_details table. Return an error if there are no records in the table
-$result=mysqli_query($conn,"SELECT * FROM food_details_lounge,food_categories_lounge WHERE food_details_lounge.food_category=food_categories_lounge.category_id ")
-or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+//get member id from session
+$memberId = $_SESSION['SESS_MEMBER_ID'];
 ?>
+
 <?php
-//retrive categories from the categories table
-$categories=mysqli_query($conn,"SELECT * FROM food_categories_lounge")
-or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+//retrieving all rows from the cart_details table based on flag=0
+$flag_0 = 0;
+$items=mysqli_query($conn,"SELECT * FROM cart_details WHERE member_id='$memberId' AND flag='$flag_0'")
+or die("Something is wrong ... \n" . mysqli_error());
+//get the number of rows
+$num_items = mysqli_num_rows($items);
 ?>
+
+<!--php
+//retrieving all rows from the messages table
+$messages=mysqli_query($conn,"SELECT * FROM messages")
+or die("Something is wrong ... \n" . mysqli_error());
+//get the number of rows
+$num_messages = mysqli_num_rows($messages);
+?-->
+
 <?php
-//retrive a currency from the currencies table
-//define a default value for flag_1
-$flag_1 = 1;
-$currencies=mysqli_query($conn,"SELECT * FROM currencies WHERE flag='$flag_1'")
-or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+//retrieve tables from the tables table
+$tables=mysqli_query($conn,"SELECT * FROM tables")
+or die("Something is wrong ... \n" . mysqli_error());
 ?>
-<?php
-if(isset($_POST['Submit'])){
-    //Function to sanitize values received from the form. Prevents SQL injection
-    function clean($str) {
-        global $conn;
-        $str = @trim($str);
-        $str = stripslashes($str);
-
-        return mysqli_real_escape_string($conn,$str);
-    }
-    //get category id
-    $id = clean($_POST['category']);
-
-    //selecting all records from the food_details and categories tables based on category id. Return an error if there are no records in the table
-    if($id > 0){
-        $result=mysqli_query($conn,"SELECT * FROM food_details_lounge,food_categories_lounge WHERE food_category='$id' AND food_details_lounge.food_category=food_categories_lounge.category_id ")
-        or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
-    }elseif($id == 0){
-        $result=mysqli_query($conn,"SELECT * FROM specials WHERE '".date('Y-m-d')."' BETWEEN date(special_start_date) and date(special_end_date) ")
-        or die("A problem has occured ... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
-    }
-}
-?>
-
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -78,6 +68,18 @@ if(isset($_POST['Submit'])){
     <script src="js/jquery.scrollUp.min.js"></script>
     <script src="js/main.js" type="text/javascript"></script>
     <script language="JavaScript" src="validation/user.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"</script>
+    <script>
+        $(document).ready(function ()(
+         $("#DivShow").click(function ()(
+             $("#Mydiv").css("display","block");
+             ));
+        $("#DivHide").click(function ()(
+            $("#Mydiv").css("display","block");
+        ));
+
+        ));
+    </script>
 
     <style>
         .imgcenter {
@@ -136,7 +138,9 @@ if(isset($_POST['Submit'])){
             <div class="col-md-2">
                 <div class="search-box">
                     <div class="input-group">
-                        <input placeholder="Search Here" type="text" class="form-control">
+                        <label>
+                            <input placeholder="Search Here" type="text" class="form-control">
+                        </label>
                         <span class="input-group-btn">
 					        	<button class="btn btn-default" type="button"></button>
 					      	</span>
@@ -183,17 +187,110 @@ if(isset($_POST['Submit'])){
                 <li ><a href="index.php">HOME</a></li>
                 <li><a href="pastry-shop.php">PASTRY SHOP</a></li>
                 <li><a href="lounge.php">THE LOUNGE</a></li>
-                <li><a href="TableBook/buffet.php">BUFFET</a></li>
-                <li class="active"><a href="about-us.php">ABOUT US</a></li>
-                <li ><a href="#">CART</a></li>
+                <li class="active"><a href="TableBook/buffet.php">BUFFET</a></li>
+                <li><a href="about-us.php">ABOUT US</a></li>
+                <li><a href="#">CART</a></li>
             </ul>
-            </li> <!-- End of /.dropdown -->
-
-
-            </ul> <!-- End of /.nav-main -->
         </div>	<!-- /.navbar-collapse -->
     </div>	<!-- /.container-fluid -->
 </nav>	<!-- End of /.nav -->
+<!-- dbs
+================================================== -->
+<div id="center">
+
+    <h4>RESERVE TABLE(S)</h4>
+    <div>
+
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="TableBook/reserve-exec.php" method="post">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">table</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="table" value="" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="date" class="form-control" name="date" id="exampleInputPassword1" placeholder="Password" required>
+                            </div>
+                            <div class="form-check">
+
+                                <input type="text" name="id" hidden value="<?php echo $_SESSION['SESS_MEMBER_ID'];?>">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect2">Example multiple select</label>
+                                <select name="time" multiple class="form-control" id="exampleFormControlSelect2">
+                                    <option>BreakFast</option>
+                                    <option>Lunch</option>
+                                    <option>Dinner</option>
+
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary" style="padding-left: 30px;">Submit</button>
+
+
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            function tableChange(table){
+                document.getElementById('exampleInputEmail1').value = table;
+            }
+        </script>
+
+        <!--<form name="tableForm" id="tableForm" method="post" action="reserve-exec.php?id=<?php echo $_SESSION['SESS_MEMBER_ID'];?>" onsubmit="return tableValidate(this)">
+                <table align="center" width="300">
+                    <CAPTION><h2>RESERVE A TABLE</h2></CAPTION>
+                    <tr>
+                        <td><b>Table Name/Number:</b></td>
+                        <td><select name="table" id="table">
+                                <option value="select">- select table -</option>
+                                <?php
+        //loop through tables table rows
+        while ($row=mysqli_fetch_array($tables)){
+            echo "<option value=$row[table_id]>$row[table_name]</option>";
+        }
+        ?>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Date:</b></td><td><input type="date" name="date" id="date" /></td></tr>
+                    <tr>
+                        <td><b>Time:</b></td><td><input type="time" name="time" id="time" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input type="submit" value="Reserve"></td>
+                    </tr>
+                </table>
+            </form>-->
+    </div>
+</div>
 
 <!-- Book Table Pictures
 ================================================== -->
@@ -343,12 +440,23 @@ if(isset($_POST['Submit'])){
     </script>
 </div>
 
+<div style="border:#bd6f2f solid 1px;padding:4px 6px 2px 6px">
+
+<p style="alignment: center">Here you can ... For more information <a href="contact-us.php">Click Here</a> to contact us.
+
+</p>
+
+</div>
+
+<div id="Mydiv" style="display: none; border-style: solid ">
+    <h1>Hide and show div tag</h1>
+    <button id="DivHide">Hide Div</button>
+</div>
+    <button id="DivShow">Hide Div</button>
 
 
-
-
-<!-- FOOTER Start
-================================================== -->
+    <!-- FOOTER Start
+    ================================================== -->
 
 <footer>
     <div class="container">

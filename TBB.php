@@ -69,6 +69,7 @@ if(isset($_POST['Submit'])){
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!-- jS -->
     <script src="js/jquery.min.js" type="text/javascript"></script>
@@ -88,10 +89,17 @@ if(isset($_POST['Submit'])){
             height: 50px;
             width: auto;
         }
-        .newfs{
+        .bfont{
 
-             background-image: url('images/rese1.jpeg');
+            font-size: 24px
          }
+        .imgcenter {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+            width: auto;
+        }
 
     </style>
 
@@ -170,8 +178,8 @@ if(isset($_POST['Submit'])){
                 <li ><a href="index.php">HOME</a></li>
                 <li><a href="pastry-shop.php">PASTRY SHOP</a></li>
                 <li><a href="lounge.php">THE LOUNGE</a></li>
-                <li><a href="TableBook/buffet.php">BUFFET</a></li>
-                <li class="active"><a href="about-us.php">ABOUT US</a></li>
+                <li class="active"><a href="TableBook/buffet.php">BUFFET</a></li>
+                <li><a href="about-us.php">ABOUT US</a></li>
                 <li ><a href="#">CART</a></li>
             </ul>
         </div>	<!-- /.navbar-collapse -->
@@ -182,22 +190,29 @@ if(isset($_POST['Submit'])){
 <!-- AAA
 ================================================== -->
 
-        <img src="images/tableres.png" alt="">
+<div>
+    <div class="row imgcenter" >
+        <div class="col-md-12 ">
+            <img src="images/tableres.png" alt="">
+        </div>
+    </div>
 
-                <img src="images/rtw.PNG" alt="">
+    <div class="row imgcenter bfont" >
+       <div class="col-md-6">
 
-        <div class="col-md-6 new">
-            <a href="#">
-                <img src="images/tse22.png" alt="">
-            </a>
-            <button type="button" class="btn btn-secondary">Secondary</button>
-            <button type="button" class="btn btn-secondary">Secondary</button>
+           <img src="images/tse22.png" alt="">
+           <button class="w3-button w3-block w3-black" href="buffttest1.php"><a href="buffttest1.php">Book Your Table</a></button>
         </div>
 
 
+        <div class="col-md-6 new">
 
+            <img src="images/rtw.PNG" alt="">
 
+        </div>
+    </div>
 
+</div>
 
 <!-- FOOTER Start
 ================================================== -->

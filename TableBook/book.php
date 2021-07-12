@@ -58,6 +58,38 @@ or die("Something is wrong ... \n" . mysqli_error());
     <script src="path/to/bootstrap.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
     <script src="../js/bootstrap-confirmation.js"></script>
+
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <style>
+        .cart {
+            height: 100vh
+        }
+
+        .progresses {
+            display: flex;
+            align-items: center
+        }
+
+        .line {
+            width: 76px;
+            height: 6px;
+            background: #63d19e
+        }
+
+        .steps {
+            display: flex;
+            background-color: #63d19e;
+            color: #fff;
+            font-size: 12px;
+            width: 30px;
+            height: 30px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%
+                }
+    </style>
+
 </head>
 <body>
 <div id="page">
@@ -329,7 +361,15 @@ or die("Something is wrong ... \n" . mysqli_error());
 </div>
 <!-- FOOTER Start
 ================================================== -->
-
+<div class="d-flex justify-content-center border-bottom">
+    <div class="p-3">
+        <div class="progresses">
+            <div class="steps"> <span><i class="fa fa-check"></i></span> </div> <span class="line"></span>
+            <div class="steps"> <span><i class="fa fa-check"></i></span> </div> <span class="line"></span>
+            <div class="steps"> <span class="font-weight-bold">3</span> </div>
+        </div>
+    </div>
+</div>
 
 
 </body>
