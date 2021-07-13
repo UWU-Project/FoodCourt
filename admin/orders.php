@@ -108,7 +108,8 @@
             while ($row=mysqli_fetch_assoc($result)){
                 $lt = $row['lt'];
               if($lt =='food'){
-                $qry = "SELECT * FROM food_details f inner join categories c on c.category_id = f.food_category where food_id = {$row['food_id']}";
+                $qry = "SELECT * FROM food_details f inner join food_categories c on c.category_id = f.food_category where food_id = {$row['food_id']}";
+
               }else{
                 $qry = "SELECT * FROM specials where special_id = {$row['food_id']}";
               }

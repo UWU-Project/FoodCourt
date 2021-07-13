@@ -60,7 +60,7 @@ if(isset($_GET['id'])){
 
     //Check whether the query was successful or not
     if($result) {
-        header("location: cart.php");
+        header("location: ../lounge.php");
         exit();
     }else {
         die("A problem has occured with the system " . mysqli_error());
