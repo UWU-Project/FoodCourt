@@ -67,7 +67,7 @@ if(isset($_POST['quantity']) && isset($_POST['item']))
     mysqli_query($conn,$qry_update);
 
     if($qry_update){
-        header("location: cart.php");
+        header("location: noneed.php");
     }
     else{
         //Do nothing

@@ -22,12 +22,12 @@ if (isset($_GET['id']))
     or die("There was a problem while removing the food ... \n" . mysqli_error());
 
     // redirect back to the foods page
-    header("Location: test.php");
+    header("Location: cart.php");
 }
 else
     // if id isn't set, redirect back to the foods page
 {
-    header("Location: test.php");
+    header("Location: cart.php");
 }
 
 ?>
