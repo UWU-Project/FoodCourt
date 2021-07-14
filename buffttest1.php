@@ -59,6 +59,7 @@ or die("Something is wrong ... \n" . mysqli_error());
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
+
     <!-- jS -->
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
@@ -69,18 +70,27 @@ or die("Something is wrong ... \n" . mysqli_error());
     <script src="js/main.js" type="text/javascript"></script>
     <script language="JavaScript" src="validation/user.js"></script>
     <script src="https://code.jquery.com/jquery-latest.js"</script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="bootstrap-confirmation.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="bootstrap-confirmation.min.js"></script>
+
     <script>
-        $(document).ready(function ()(
-         $("#DivShow").click(function ()(
-             $("#Mydiv").css("display","block");
-             ));
-        $("#DivHide").click(function ()(
-            $("#Mydiv").css("display","block");
-        ));
+        $(function() {
+            $('body').confirmation({
+                selector: '[data-toggle="confirmation"]'
+            });
 
-        ));
+            $('.confirmation-callback').confirmation({
+                onConfirm: function(event, element) { alert('confirm') },
+                onCancel: function(event, element) { alert('cancel') }
+            });
+        });
     </script>
-
     <style>
         .imgcenter {
             display: block;
@@ -240,8 +250,9 @@ or die("Something is wrong ... \n" . mysqli_error());
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary" style="padding-left: 30px;">Submit</button>
+                                <button type="submit" class="btn btn-primary" data-toggle="confirmation" style="padding-left: 30px;">Submit</button>
 
+                            </div>
 
                             </div>
 
