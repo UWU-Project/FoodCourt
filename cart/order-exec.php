@@ -73,6 +73,7 @@ if(mysqli_num_rows($qry_select)>0 && isset($_GET['id'])){
     header("location: cart.php");
 
 }else {
+
     header("location: billing-alternative.php"); //redirects to billing-alternative.php if not setup
 }
 ?>

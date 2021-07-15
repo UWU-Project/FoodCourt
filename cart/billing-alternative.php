@@ -76,21 +76,21 @@ $result = mysqli_query($conn, "SELECT * FROM orders_details o inner join cart_de
                       action="billing-exec.php?id=<?php echo $_SESSION['SESS_MEMBER_ID']; ?>"
                       onsubmit="return billingValidate(this)">
                     <div class="row">
-                        <!--<div class="col-md-6 mb-3">
+                        <div class="col-md-6 mb-3">
                             <label for="firstName">First name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                            <input type="text" class="form-control" id="firstName" placeholder="" value="<?php echo $_SESSION['SESS_FIRST_NAME'];?>" required="" readonly>
                             <div class="invalid-feedback"> Valid first name is required. </div>
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <label for="lastName">Last name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+                            <input type="text" class="form-control" id="lastName" placeholder="" value="<?php echo $_SESSION['SESS_LAST_NAME'];?>" required="" readonly>
                             <div class="invalid-feedback"> Valid last name is required. </div>
                         </div>
 
                     </div>
 
-                    <div class="mb-3">
+                    <!--<div class="mb-3">
 
                         <label for="username">Username</label>
                         <div class="input-group">
@@ -101,6 +101,7 @@ $result = mysqli_query($conn, "SELECT * FROM orders_details o inner join cart_de
                             <div class="invalid-feedback" style="width: 100%;"> Your username is required. </div>
                         </div>
                     </div>-->
+
                         <div class="mb-3">
                             <label for="address2">P.O. Box No <span class="text-muted">(Optional)</span></label>
                             <input name="box" type="text" class="form-control" id="address2"
@@ -124,14 +125,14 @@ $result = mysqli_query($conn, "SELECT * FROM orders_details o inner join cart_de
                         </div>
 
                         <div class="row">
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-6 mb-3">
                                 <label for="mNumber">Mobile No</label>
                                 <input name="mNumber" type="text" class="form-control" id="mNumber" placeholder=""
                                        required="">
                                 <div class="invalid-feedback"> Mobile Number Required.</div>
                             </div>
 
-                            <div class="col-md-4 mb-4">
+                            <div class="col-md-6 mb-3">
                                 <label for="lNumber">Landline No<span class="text-muted">(Optional)</span></label>
                                 <input name="lNumber" type="text" class="form-control" id="lNumber"
                                        placeholder="Apartment or Suite" >
