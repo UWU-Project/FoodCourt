@@ -180,6 +180,17 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
         ?-->
 
         <?php
+
+
+        //get member_id from session
+        $member_id = $_SESSION['SESS_MEMBER_ID'];
+
+
+
+
+        if(mysqli_num_rows($items)>0 ){
+
+
         //loop through all table rows
         $symbol=mysqli_fetch_assoc($currencies); //gets active currency
         array_push($cartItem,$row['cart_id']);
@@ -212,6 +223,12 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
         echo "<tr>";
         echo '<td colspan="9" class="table-active"><a href="order-exec.php?id=' .$send . '"><i class="btn btn-warning" >Go To Checkout</i></a></td>';
         echo "</tr>";
+
+
+        }else {
+
+    header("location: test.php"); //redirects to billing-alternative.php if not setup
+}
 
 
 
