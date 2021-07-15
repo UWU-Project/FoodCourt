@@ -34,26 +34,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <style>
-        .photo1{
-            height: 50px;
-            width: auto;
-        }
-        .bfont{
-
-            font-size: 24px
-         }
-        .imgcenter {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-
-            width: auto;
-        }
-
-    </style>
-
-
 </head>
 <body>
 
@@ -137,32 +117,114 @@
     </div>	<!-- /.container-fluid -->
 </nav>	<!-- End of /.nav -->
 
-<!-- AAA
-================================================== -->
+<!-- breadcrumb Start
+    ================================================== -->
 
-<div>
-    <div class="row imgcenter" >
-        <div class="col-md-12 ">
-            <img src="images/tableres.png" alt="">
-        </div>
-    </div>
-
-    <div class="row imgcenter bfont" >
-       <div class="col-md-6">
-
-           <img src="images/tse22.png" alt="">
-           <button class="w3-button w3-block w3-black" href="buffttest1.php"><a href="buffttest1.php">Book Your Table</a></button>
-        </div>
+<section id="topic-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h1>Products Details</h1>
+                <p></p>
+            </div>	<!-- /.col-md-4 -->
+        </div>	<!-- /.row -->
+    </div>	<!-- /.container-->
+</section><!-- /Section -->
 
 
-        <div class="col-md-6 new">
 
-            <img src="images/rtw.PNG" alt="">
 
-        </div>
-    </div>
+<section id="single-product">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="single-product-img">
+                    <img src="images/cake1.jpg" alt="">
+                </div>
 
-</div>
+            </div> <!-- End of /.col-md-5 -->
+            <div class="col-md-4">
+                <div class="block">
+                    <div class="product-des">
+                        <h4>Chocolate Cake</h4>
+                        <p class="price">Rs.380/=</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, culpa, esse, magni omnis blanditiis unde vitae in nobis fuga optio numquam at ipsum impedit perspiciatis quia rem consequatur recusandae repudiandae provident nemo voluptatibus corporis ab id iste pariatur ipsam vero porro eos eaque rerum nam dolorum mollitia adipisci. Quaerat, ullam!</p>
+                        <a class="view-link" href="#"><i class="fa fa-plus-circle"></i>Add To Cart</a>
+                    </div>	<!-- End of /.product-des -->
+                </div> <!-- End of /.block -->
+            </div>	<!-- End of /.col-md-4 -->
+            <div class="col-md-3">
+                <div class="blog-sidebar">
+                    <div class="block">
+                        <h4>Reserve Your Day..</h4>
+                        <ul class="media-list">
+
+                            <li class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="images/family.jpg" alt="...">
+                                </a>
+                                <div class="media-body">
+                                    <a href="" class="media-heading">FAMILY
+                                        <p>Happiness Stories. </p></a>
+                                </div>
+                            </li>
+                            <li class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="images/love.jpg" alt="...">
+                                </a>
+                                <div class="media-body">
+                                    <a href="" class="media-heading">LOVE
+                                        <p>Endless Stories.</p></a>
+                                </div>
+                            </li>
+                            <li class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="images/Event.jpg" alt="...">
+                                </a>
+                                <div class="media-body">
+                                    <a href="" class="media-heading">
+                                        EVENT
+                                        <p>Compassionate Together.</p>
+
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>	<!-- End of /.blog-sidebar -->
+
+            </div>	<!-- End of /.col-md-3 -->
+        </div>	<!-- End of /.row -->
+
+        <div class="row">
+            <div class="col-md-9">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#home" data-toggle="tab">More Info</a></li>
+                    <li><a href="#profile" data-toggle="tab">Comments</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="home">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eligendi quidem vel sit expedita nam sint non explicabo magni totam?</p>
+                    </div>
+                    <div class="tab-pane" id="profile">
+                        <p>No customer comments for the moment.</p>
+                    </div>
+                </div>
+            </div>	<!-- End of /.col-md-9 -->
+            <div class="col-md-3">
+                <div class="blog-sidebar">
+                    <div class="block">
+                        <img src="images/resevation.jpg" alt="">
+                    </div>
+                </div>	<!-- End of /.blog-sidebar -->
+            </div>	<!-- End of /.col-md-3 -->
+        </div>	<!-- End of /.row -->
+    </div>	<!-- End of /.Container -->
+</section> <!-- End of /.Single-product -->
 
 <!-- FOOTER Start
 ================================================== -->

@@ -101,16 +101,35 @@ padding-top: 15rem ;
 <section id="top">
     <div class="container">
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-5">
                 <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
-            <div class="col-md-3 clearfix">
+            <div class="col-md-5 clearfix">
                 <ul class="login-cart">
                     <li>
                         <a href="customer/login.php">LOGIN</a>
                     </li>
                     <li>
                         <a href="customer/create.php">REGISTER</a>
+                    </li>
+                    <li>
+                        <div class="cart dropdown">
+                            <a data-toggle="dropdown" href="#"><i class="fa fa-shopping-cart"></i>Cart(1)</a>
+                            <div class="dropdown-menu dropup">
+                                <span class="caret"></span>
+                                <ul class="media-list">
+                                    <li class="media">
+                                        <img class="pull-left" src="images/b2.jpg" alt="">
+                                        <div class="media-body">
+                                            <h6 style="color: #1e1717">Sri Lankan Kottu
+                                                <span>$250</span>
+                                            </h6>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary btn-sm">Checkout</button>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
