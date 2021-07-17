@@ -206,7 +206,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
         <?php
         $send="";
         foreach ($cartItem as $row) {
-            $send.=$row.=",";
+            $send.=$row.="";
         }
 
         echo "<tr>";

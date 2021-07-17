@@ -86,6 +86,55 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script language="JavaScript" src="../validation/user.js"></script>
     <script src="https://use.fontawesome.com/c560c025cf.js"></script>
+    <style>
+
+        @import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
+
+        body {
+            background-color: #eee;
+            font-family: 'Calibri', sans-serif !important
+        }
+
+        .mt-100 {
+            margin-top: 100px
+        }
+
+        .card {
+            margin-bottom: 30px;
+            border: 0;
+            -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+            letter-spacing: .5px;
+            border-radius: 8px;
+            -webkit-box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, .05);
+            box-shadow: 1px 5px 24px 0 rgba(68, 102, 242, .05)
+        }
+
+        .card .card-header {
+            background-color: #fff;
+            border-bottom: none;
+            padding: 24px;
+            border-bottom: 1px solid #f6f7fb;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px
+        }
+
+        .card-header:first-child {
+            border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+        }
+
+        .card .card-body {
+            padding: 30px;
+            background-color: transparent
+        }
+
+        .btn-primary,
+        .btn-primary.disabled,
+        .btn-primary:disabled {
+            background-color: #4466f2 !important;
+            border-color: #4466f2 !important
+        }
+    </style>
 
 </head>
 <body>
@@ -147,12 +196,12 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
 
 
         <?php
-        $cartItem= array();
+        $cartItem= "";
         //loop through all table rows
         $symbol=mysqli_fetch_assoc($currencies); //gets active currency
         foreach ($result as $row) {
             $lt = $row['lt'];
-            array_push($cartItem,$row['cart_id']);
+            $cartItem.=$row['cart_id'].",";
             echo "<tr>";
             echo "<td>" . $row['cart_id'] . "</td>";
             echo '<td><a href=../images/' . $row[$lt . '_photo'] . ' alt="click to view full image" target="_blank"><img src=../images/' . $row[$lt . '_photo'] . ' width="80" height="70"></a></td>';
@@ -193,10 +242,10 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
 
         //loop through all table rows
         $symbol=mysqli_fetch_assoc($currencies); //gets active currency
-        array_push($cartItem,$row['cart_id']);
+
         foreach ($result_lounge as $row) {
             $lt = $row['lt'];
-
+            $cartItem.=$row['cart_id'].",";
             echo "<tr>";
             echo "<td>" . $row['cart_id'] . "</td>";
             echo '<td><a href=../images/' . $row[$lt . '_photo'] . ' alt="click to view full image" target="_blank"><img src=../images/' . $row[$lt . '_photo'] . ' width="80" height="70"></a></td>';
@@ -215,28 +264,39 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
         ?>
 
         <?php
-        $send="";
-        foreach ($cartItem as $row) {
-            $send.=$row.=",";
-        }
-
+            $cartItem = rtrim($cartItem,',');
         echo "<tr>";
-        echo '<td colspan="9" class="table-active"><a href="order-exec.php?id=' .$send . '"><i class="btn btn-warning" >Go To Checkout</i></a></td>';
+        echo '<td colspan="9" class="table-active"><a href="order-exec.php?id=' .$cartItem . '"><i class="btn btn-warning" >Go To Checkout</i></a></td>';
         echo "</tr>";
 
 
         }else {
+            ?>
+    </table>
+            <div class="container-fluid mt-100">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body cart">
+                                <div class="col-sm-12 empty-cart-cls text-center"> <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3">
+                                    <h3><strong>Your Cart is Empty</strong></h3>
+                                    <h4>Add something to make me happy :)</h4> <a href="../pastry-shop.php" class="btn btn-primary cart-btn-transform m-3" data-abc="true">continue shopping</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    header("location: test.php"); //redirects to billing-alternative.php if not setup
+
+            <?php
 }
-
-
 
         //mysqli_free_result($result_lounge);
         mysqli_close($conn);
         ?>
 
-    </table>
+
 
 </div>
 </body>

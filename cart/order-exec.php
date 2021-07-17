@@ -33,6 +33,8 @@ $member_id = $_SESSION['SESS_MEMBER_ID'];
 $qry_select=mysqli_query($conn,"SELECT * FROM billing_details WHERE member_id='$member_id'")
 or die("The system is experiencing technical issues.\n Our team is working on it.\nPlease try again after some few minutes.");
 
+echo $_GET['id'];
+
 if(mysqli_num_rows($qry_select)>0 && isset($_GET['id'])){
 
     //get cart_id
@@ -62,14 +64,19 @@ if(mysqli_num_rows($qry_select)>0 && isset($_GET['id'])){
 
     $staff = 4;
 
-    //Create INSERT query
-    $qry_create = "INSERT INTO orders_details(member_id,billing_id,cart_id,delivery_date,staffID,flag,time_stamp) VALUES('$member_id','$billing_id','$id','$delivery_date','$staff','$flag_0','$time_stamp')";
-    mysqli_query($conn,$qry_create);
+    $str = "Hello world. It's a beautiful day.";
 
-    //Create UPDATE query (updates flag value in the cart_details table)
-    $qry_update = "UPDATE cart_details SET flag='$flag_1' WHERE cart_id='$id' AND member_id='$member_id'";
-    mysqli_query($conn,$qry_update);
+    $ids = explode(",",$_GET['id']);
 
+    foreach ($ids as $row) {
+        //Create INSERT query
+        $qry_create = "INSERT INTO orders_details(member_id,billing_id,cart_id,delivery_date,staffID,flag,time_stamp) VALUES('$member_id','$billing_id','$row','$delivery_date','$staff','$flag_0','$time_stamp')";
+        mysqli_query($conn,$qry_create);
+
+        //Create UPDATE query (updates flag value in the cart_details table)
+        $qry_update = "UPDATE cart_details SET flag='$flag_1' WHERE cart_id='$row' AND member_id='$member_id'";
+        mysqli_query($conn,$qry_update);
+    }
     header("location: checkout.php");
 
 }else {
