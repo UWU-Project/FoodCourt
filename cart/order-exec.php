@@ -77,7 +77,8 @@ if(mysqli_num_rows($qry_select)>0 && isset($_GET['id'])){
         $qry_update = "UPDATE cart_details SET flag='$flag_1' WHERE cart_id='$row' AND member_id='$member_id'";
         mysqli_query($conn,$qry_update);
     }
-    header("location: checkout.php");
+    header("location: check.php?id=".$_GET['id']);
+
 
 }else {
 

@@ -170,7 +170,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
 </form>
 
 
-<div style="border:#bd6f2f solid 1px;padding:4px 6px 2px 6px" class="card-body">
+<div style="" class="card-body shadow p-3 mb-5 bg-body rounded">
 
 
     <table width="910" height="auto" style="text-align:center;" class="table table-borderless table-hover" w-auto>
@@ -178,7 +178,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
         <thead class="table-dark">
         <tr>
 
-            <th>Item ID</th>
+            <th>ITEM ID</th>
             <th>Food Photo</th>
             <th>Food Name</th>
             <th>Food Description</th>

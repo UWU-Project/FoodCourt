@@ -104,29 +104,55 @@
             </tr>
 
             <?php
-            //loop through all tables rows
-            while ($row=mysqli_fetch_assoc($result)){
-                $lt = $row['lt'];
-              if($lt =='food'){
-                $qry = "SELECT * FROM food_details f inner join food_categories c on c.category_id = f.food_category where food_id = {$row['food_id']}";
+            if((['food_id'])<25000) {
+                //loop through all tables rows
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $lt = $row['lt'];
+                    if ($lt == 'food') {
+                        $qry = "SELECT * FROM food_details f inner join food_categories c on c.category_id = f.food_category where food_id = {$row['food_id']}";
 
-              }else{
-                $qry = "SELECT * FROM specials where special_id = {$row['food_id']}";
-              }
-              // echo $qry.'\n';
-              $res = mysqli_fetch_array(mysqli_query($conn,$qry));
-            echo "<tr>";
-            echo "<td>" . $row['order_id']."</td>";
-            echo "<td>" . $row['firstname']."\t".$row['lastname']."</td>";
-            echo "<td>" . $res[$lt.'_name']."</td>";
-            echo "<td>" . $res[$lt.'_price']."</td>";
-            echo "<td>" . $row['quantity_value']."</td>";
-            echo "<td>" . $row['total']."</td>";
-            echo "<td>" . $row['delivery_date']."</td>";
-            echo "<td>" . $row['Street_Address']."</td>";
-            echo "<td>" . $row['Mobile_No']."</td>";
-            echo '<td><a href="delete-order.php?id=' . $row['order_id'] . '">Remove Order</a></td>';
-            echo "</tr>";
+                    } else {
+                        $qry = "SELECT * FROM specials where special_id = {$row['food_id']}";
+                    }
+                    // echo $qry.'\n';
+                    $res = mysqli_fetch_array(mysqli_query($conn, $qry));
+                    echo "<tr>";
+                    echo "<td>" . $row['order_id'] . "</td>";
+                    echo "<td>" . $row['firstname'] . "\t" . $row['lastname'] . "</td>";
+                    echo "<td>" . $res[$lt . '_name'] . "</td>";
+                    echo "<td>" . $res[$lt . '_price'] . "</td>";
+                    echo "<td>" . $row['quantity_value'] . "</td>";
+                    echo "<td>" . $row['total'] . "</td>";
+                    echo "<td>" . $row['delivery_date'] . "</td>";
+                    echo "<td>" . $row['Street_Address'] . "</td>";
+                    echo "<td>" . $row['Mobile_No'] . "</td>";
+                    echo '<td><a href="delete-order.php?id=' . $row['order_id'] . '">Remove Order</a></td>';
+                    echo "</tr>";
+                }
+            }else if((['food_id'])>25000) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $lt = $row['lt'];
+                    if ($lt == 'food') {
+                        $qry = "SELECT * FROM food_details_lounge f inner join food_categories_lounge c on c.category_id = f.food_category where food_id = {$row['food_id']}";
+
+                    } else {
+                        $qry = "SELECT * FROM specials where special_id = {$row['food_id']}";
+                    }
+                    // echo $qry.'\n';
+                    $res = mysqli_fetch_array(mysqli_query($conn, $qry));
+                    echo "<tr>";
+                    echo "<td>" . $row['order_id'] . "</td>";
+                    echo "<td>" . $row['firstname'] . "\t" . $row['lastname'] . "</td>";
+                    echo "<td>" . $res[$lt . '_name'] . "</td>";
+                    echo "<td>" . $res[$lt . '_price'] . "</td>";
+                    echo "<td>" . $row['quantity_value'] . "</td>";
+                    echo "<td>" . $row['total'] . "</td>";
+                    echo "<td>" . $row['delivery_date'] . "</td>";
+                    echo "<td>" . $row['Street_Address'] . "</td>";
+                    echo "<td>" . $row['Mobile_No'] . "</td>";
+                    echo '<td><a href="delete-order.php?id=' . $row['order_id'] . '">Remove Order</a></td>';
+                    echo "</tr>";
+                }
             }
             mysqli_free_result($result);
             mysqli_close($conn);
