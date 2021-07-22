@@ -38,7 +38,7 @@ error_reporting(0);
 <section id="top">
     <div class="container">
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
             <div class="col-md-3 clearfix">
@@ -106,11 +106,11 @@ error_reporting(0);
 
 
                     <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
-                        <ul class="nav  nav-main">
+                        <ul class="nav navbar-nav nav-main">
 
 
                             <li class="nav-item dropdown dropdown-hover mx-auto" >
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="../pastry-shop.php">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center "  href="../pastry-shop.php">
                                     PASTRY SHOP
                                 </a>
                             </li><li class="nav-item dropdown dropdown-hover mx-auto" >
@@ -126,7 +126,11 @@ error_reporting(0);
                                     ABOUT US
                                 </a>
                             </li>
-
+                            </li><li class="nav-item dropdown dropdown-hover mx-auto" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active"  aria-selected="true" href="../about-us.php">
+                                    CONTACT US
+                                </a>
+                            </li>
                             <a class="nav-link nav-link-icon me-2" href="../cart/cart.php" target="_blank" >
 
                                 <i class="fa fa-shopping-cart me-1"></i>
