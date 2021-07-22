@@ -100,19 +100,19 @@ error_reporting(0);
                 }
                 }
                 ?>
-                <div class="form-group">
+                <div class="form-group has-label">
                   <label for="validationCustom01" class="form-label ">Full Name</label>
-                  <input type="text" name="subject" id="validationCustom01" maxlength="255" class="form-control is-valid" placeholder="Full Name" required>
+                  <input type="text" name="subject" id="validationCustom01" maxlength="255" class="form-control is-valid" placeholder="Full Name" required="true">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group has-label">
                   <label for="email">Your email address:</label>
-                  <input type="email" name="email" id="email" maxlength="255" class="form-control" placeholder="hello@orchidbliss.lk" required>
+                  <input type="email" name="email" id="email" maxlength="255" class="form-control" placeholder="hello@orchidbliss.lk" required="true">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group has-label">
                   <label for="query">Your question:</label>
-                  <textarea cols="30" rows="8" name="query" id="query" class="form-control" placeholder="Describe your problem in at least 250 characters" required></textarea>
+                  <textarea cols="30" rows="8" name="query" id="query" class="form-control" placeholder="Describe your problem in at least 250 characters" required="true"></textarea>
                 </div>
 
                 <div class="form-group">
