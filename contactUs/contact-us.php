@@ -28,28 +28,125 @@ error_reporting(0);
 
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/soft-design-system.css?v=1.0.5" rel="stylesheet" />
-
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body class="contact-us">
-  <!-- Navbar -->
-  <div class="container position-sticky z-index-sticky top-0">
-    <div class="row">
-      <div class="col-12">
-        <nav class="navbar navbar-expand-lg  blur blur-rounded top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
-          <div class="container-fluid px-0">
-            <a class="navbar-brand font-weight-bolder ms-sm-3" href="../index.php" rel="tooltip" title="CST GROUP 4" data-placement="bottom" target="_blank">
-              Orchid Bliss
-            </a>
-            </div>
-          </div>
-        </nav>
-        <!-- End Navbar -->
-      </div>
-    </div>
-  </div>
+<!-- TOP HEADER Start
+================================================== -->
 
-  <!-- -------- START HEADER 8 w/ card over right bg image ------- -->
+<section id="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
+            </div>
+            <div class="col-md-3 clearfix">
+                <ul class="login-cart">
+                    <li>
+                        <a href="../customer/login.php">LOGIN</a>
+                    </li>
+                    <li>
+                        <a href="../customer/create.php">REGISTER</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-2">
+                <div class="search-box">
+                    <div class="input-group">
+                        <input placeholder="Search Here" type="text" class="form-control">
+                        <span class="input-group-btn">
+					        	<button class="btn btn-default" type="button"></button>
+					      	</span>
+                    </div><!-- /.input-group -->
+                </div><!-- /.search-box -->
+            </div>
+        </div> <!-- End Of /.row -->
+    </div>	<!-- End Of /.Container -->
+
+</section>  <!-- End of /Section -->
+
+<!-- LOGO Start
+================================================== -->
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#">
+                    <img src="../images/logo2copy.png" alt="logo">
+                </a>
+            </div>	<!-- End of /.col-md-12 -->
+        </div>	<!-- End of /.row -->
+    </div>	<!-- End of /.container -->
+</header> <!-- End of /Header -->
+
+
+<!-- Navbar -->
+<div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+        <div class="col-12">
+
+            <nav class="navbar navbar-expand-lg  blur  top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+
+                <div class="container-fluid">
+                    <a class="navbar-brand font-weight-bolder ms-sm-3" href="../index.php" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
+                        Orchid Bliss
+                    </a>
+
+                    <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon mt-2">
+                            <span class="navbar-toggler-bar bar1"></span>
+                            <span class="navbar-toggler-bar bar2"></span>
+                            <span class="navbar-toggler-bar bar3"></span>
+                          </span>
+                    </button>
+
+
+
+                    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+                        <ul class="nav  nav-main">
+
+
+                            <li class="nav-item dropdown dropdown-hover mx-auto" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="../pastry-shop.php">
+                                    PASTRY SHOP
+                                </a>
+                            </li><li class="nav-item dropdown dropdown-hover mx-auto" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="../lounge.php" >
+                                    THE LOUNGE
+                                </a>
+                            </li><li class="nav-item dropdown dropdown-hover mx-auto" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="../TableBook/buffet.php">
+                                    BUFFET
+                                </a>
+                            </li><li class="nav-item dropdown dropdown-hover mx-auto" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  aria-selected="true" href="../about-us.php">
+                                    ABOUT US
+                                </a>
+                            </li>
+
+                            <a class="nav-link nav-link-icon me-2" href="../cart/cart.php" target="_blank" >
+
+                                <i class="fa fa-shopping-cart me-1"></i>
+                                <p class="d-inline text-sm z-index-1 font-weight-bold" >CART</p>
+                            </a>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+        </div>
+    </div>
+</div>
+
+
+<!-- -------- START HEADER 8 w/ card over right bg image ------- -->
   <header>
     <div class="page-header min-vh-85" style="margin-top: 1cm">
       <div>

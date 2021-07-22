@@ -144,11 +144,11 @@ error_reporting(0);
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav nav-main">
-                <li ><a href="index.php">HOME</a></li>
-                <li><a href="pastry-shop.php">PASTRY SHOP</a></li>
-                <li><a href="lounge.php">THE LOUNGE</a></li>
-                <li><a href="TableBook/buffet.php">BUFFET</a></li>
-                <li class="active"><a href="about-us.php">ABOUT US</a></li>
+                <li ><a href="../index.php">HOME</a></li>
+                <li><a href="../pastry-shop.php">PASTRY SHOP</a></li>
+                <li><a href="../lounge.php">THE LOUNGE</a></li>
+                <li><a href="../TableBook/buffet.php">BUFFET</a></li>
+                <li class="active"><a href="../about-us.php">ABOUT US</a></li>
                 <li ><a href="#">CART</a></li>
             </ul>
         </div>	<!-- /.navbar-collapse -->
