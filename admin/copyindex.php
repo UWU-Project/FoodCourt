@@ -118,6 +118,8 @@ or die("There are no records to count ... \n" . mysqli_error());
     </div>	<!-- /.container-fluid -->
 </nav>	<!-- End of /.nav -->
 </aside>
+
+
 <div id="page">
     <div id="container">
         <table width="1000" align="center" style="text-align:center">
