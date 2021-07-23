@@ -26,7 +26,7 @@ if($email != false && $password != false){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><?php echo $fetch_info['fname'] ?> | Home</title>
+    <title><?php echo $fetch_info['firstname'] ?> | Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
     @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -65,7 +65,7 @@ if($email != false && $password != false){
     <a class="navbar-brand" href="#">Brand name</a>
     <button type="button" class="btn btn-light"><a href="logout-user.php">Logout</a></button>
     </nav>
-    <h1>Welcome <?php echo $fetch_info['fname'] ?></h1>
+    <h1>Welcome <?php echo $fetch_info['firstname'] ?></h1>
     
 </body>
 </html>
