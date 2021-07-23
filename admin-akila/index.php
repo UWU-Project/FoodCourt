@@ -50,6 +50,7 @@ or die("There are no records to count ... \n" . mysqli_error());
     <script src="../js/bootstrap.min.js" type="text/javascript"></script>
 
 </head>
+
 <body>
 
 <!-- LOGO Start
