@@ -26,37 +26,149 @@ $result = mysqli_query($conn, "SELECT * FROM orders_details o inner join cart_de
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo APP_NAME ?>:Alternative Billing</title>
 
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"/>
+
+    <!-- Nucleo Icons -->
+    <link href="../assets/css/nucleo-icons.css" rel="stylesheet"/>
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet"/>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet"/>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
 
-    <script language="JavaScript" src="../validation/user.js">
-    </script>
-    <style>
-        .container {
-            max-width: 960px;
-        }
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../assets/css/soft-design-system.css?v=1.0.5" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <script language="JavaScript" src="../validation/user.js"></script>
 
-        .lh-condensed {
-            line-height: 1.25;
-        }
-    </style>
 </head>
+
 <body>
-<div id="page">
-
-    <div id="header">
-        <div id="logo"><a href="index.php" class="blockLink"></a></div>
 
 
+<!-- TOP HEADER Start
+================================================== -->
+
+<section id="top">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
+            </div>
+
+            <div class="col-md-3 clearfix">
+                <ul class="login-cart">
+                    <li>
+                        <a href="../customer/login.php"> <i class="fas fa-user"></i>LOGIN</a>
+                    </li>
+                    <li>
+                        <a href="../customer/create.php"><i class="fas fa-user-plus"></i>REGISTER</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-1">
+
+            </div>
+
+            <div class="col-md-2">
+                <div class="search-box">
+                    <div class="input-group">
+                        <input placeholder="Search Here" type="text" class="form-control">
+                        <span class="input-group-btn">
+					        	<button type="button">
+					      	</span>
+                    </div><!-- /.input-group -->
+                </div><!-- /.search-box -->
+            </div>
+        </div> <!-- End Of /.row -->
+    </div>    <!-- End Of /.Container -->
+
+</section>  <!-- End of /Section -->
+
+<!-- LOGO Start
+================================================== -->
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#">
+                    <img src="../images/logo2copy.png" alt="logo">
+                </a>
+            </div>    <!-- End of /.col-md-12 -->
+        </div>    <!-- End of /.row -->
+    </div>    <!-- End of /.container -->
+</header> <!-- End of /Header -->
+
+
+<!-- Navbar -->
+<div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+        <div class="col-12">
+
+            <nav class="navbar navbar-expand-lg  blur  top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+
+                <div class="container-fluid">
+                    <a class="navbar-brand font-weight-bolder ms-sm-3" href="../index.php" rel="tooltip"
+                       title="Orchid Bliss" data-placement="bottom" target="_blank">
+                        ORCHID BLISS
+                    </a>
+
+                    <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon mt-2">
+                            <span class="navbar-toggler-bar bar1"></span>
+                            <span class="navbar-toggler-bar bar2"></span>
+                            <span class="navbar-toggler-bar bar3"></span>
+                          </span>
+                    </button>
+
+
+                    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+                        <ul class="nav navbar-nav nav-main " style="display: inline-block;">
+                            <li class="nav-item dropdown dropdown-hover mx-10">
+                            </li>
+                            <li class="nav" style="margin-left: 50px">
+                                <a class="nav-link nav-link-icon me-2 active " href="../cart/cart.php" target="_blank">
+
+                                    <i class="fa fa-shopping-cart me-1"></i>
+                                    <p class="d-inline text-sm z-index-1 font-weight-bold">CART</p>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </nav>
+            <!-- End Navbar -->
+        </div>
     </div>
+</div>
 
+<!-- Billing Begins -->
+
+<div id="page" style="padding-top: 50px">
 
     <div class="container">
         <div class="py-5 text-center">
-            <img class="d-block mx-auto mb-4" src="../images/logo2copy.png" alt="">
+
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../cart/cart.php">Cart</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Billing Details</li>
+                </ol>
+            </nav>
+
             <h1>Billing Address</h1>
             <hr>
             <p>We have found out that you don't have a billing address in your account. Please add a billing address in
@@ -66,99 +178,123 @@ $result = mysqli_query($conn, "SELECT * FROM orders_details o inner join cart_de
                 For
                 more information <a href="contactus.php">Click Here</a> to contact us.</p></div>
 
+    </div>
 
-        <div class="row">
-            <div class="col-md-8 order-md-1">
-                <h4 class="mb-3">Billing address</h4>
+    <!-- -------- START HEADER 8 w/ card over right bg image ------- -->
+    <header>
+        <div class="page-header min-vh-85">
+            <div>
+                <img class="position-absolute fixed-top ms-auto w-50 h-100 z-index-0 d-none d-sm-none d-md-block border-radius-section border-top-end-radius-0 border-top-start-radius-0 border-bottom-end-radius-0"
+                     src="../assets/img/curved-images/curved8.jpg" alt="image">
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 d-flex justify-content-center flex-column">
+                        <div class="card d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5">
+                            <div class="text-center">
+                                <h4 class="mb-3">Billing address</h4>
+                            </div>
+
+                            <form id="billingForm" class="needs-validation" novalidate="" name="billingForm"
+                                  method="post"
+                                  action="billing-exec.php?id=<?php echo $_SESSION['SESS_MEMBER_ID']; ?>"
+                                  onsubmit="return billingValidate(this)">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName">First name</label>
+                                        <input type="text" class="form-control" id="firstName" placeholder=""
+                                               value="<?php echo $_SESSION['SESS_FIRST_NAME']; ?>" required="" readonly>
+                                        <div class="invalid-feedback"> Valid first name is required.</div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName">Last name</label>
+                                        <input type="text" class="form-control" id="lastName" placeholder=""
+                                               value="<?php echo $_SESSION['SESS_LAST_NAME']; ?>" required="" readonly>
+                                        <div class="invalid-feedback"> Valid last name is required.</div>
+                                    </div>
+
+                                </div>
+
+                                <!--<div class="mb-3">
+
+                                    <label for="username">Username</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">@</span>
+                                        </div>
+                                        <input type="text" class="form-control" id="username" placeholder="Username" required="">
+                                        <div class="invalid-feedback" style="width: 100%;"> Your username is required. </div>
+                                    </div>
+                                </div>-->
+
+                                <div class="mb-3">
+                                    <label for="address2">P.O. Box No <span class="text-muted">(Optional)</span></label>
+                                    <input name="box" type="text" class="form-control" id="address2"
+                                           placeholder="Apartment or Suite" id="box">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="address">Street</label>
+                                    <input name="sAddress" type="text" class="form-control" id="sAddress"
+                                           placeholder="Enter the Address" required="">
+                                    <div class="invalid-feedback"> Please enter your shipping address.</div>
+                                </div>
 
 
-                <form id="billingForm" class="needs-validation" novalidate="" name="billingForm" method="post"
-                      action="billing-exec.php?id=<?php echo $_SESSION['SESS_MEMBER_ID']; ?>"
-                      onsubmit="return billingValidate(this)">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="firstName">First name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="" value="<?php echo $_SESSION['SESS_FIRST_NAME'];?>" required="" readonly>
-                            <div class="invalid-feedback"> Valid first name is required. </div>
+                                <div class="mb-3">
+                                    <label for="address">City</label>
+                                    <input name="city" id="city" type="text" class="form-control"
+                                           placeholder="Enter the Address" required="">
+                                    <div class="invalid-feedback"> Please enter your shipping address.</div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="mNumber">Mobile No</label>
+                                        <input name="mNumber" type="text" class="form-control" id="mNumber"
+                                               placeholder=""
+                                               required="">
+                                        <div class="invalid-feedback"> Mobile Number Required.</div>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lNumber">Landline No<span
+                                                    class="text-muted">(Optional)</span></label>
+                                        <input name="lNumber" type="text" class="form-control" id="lNumber"
+                                               placeholder="Apartment or Suite">
+
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="same-address" required="">
+                                    <label class="custom-control-label" for="same-address">Shipping address is the same
+                                        as my
+                                        billing address</label>
+                                    <div class="invalid-feedback"> Make Sure to Check</div>
+                                </div>
+                                <hr>
+
+
+                                <button class="btn btn-primary btn-lg btn-block" type="submit" name="Submit"
+                                        value="Add">
+                                    Save The Address
+                                </button>
                         </div>
 
-                        <div class="col-md-6 mb-3">
-                            <label for="lastName">Last name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="" value="<?php echo $_SESSION['SESS_LAST_NAME'];?>" required="" readonly>
-                            <div class="invalid-feedback"> Valid last name is required. </div>
-                        </div>
+                        </form>
 
                     </div>
-
-                    <!--<div class="mb-3">
-
-                        <label for="username">Username</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">@</span>
-                            </div>
-                            <input type="text" class="form-control" id="username" placeholder="Username" required="">
-                            <div class="invalid-feedback" style="width: 100%;"> Your username is required. </div>
-                        </div>
-                    </div>-->
-
-                        <div class="mb-3">
-                            <label for="address2">P.O. Box No <span class="text-muted">(Optional)</span></label>
-                            <input name="box" type="text" class="form-control" id="address2"
-                                   placeholder="Apartment or Suite" id="box">
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="address">Street</label>
-                            <input name="sAddress" type="text" class="form-control" id="sAddress"
-                                   placeholder="Enter the Address" required="">
-                            <div class="invalid-feedback"> Please enter your shipping address.</div>
-                        </div>
-
-
-
-                        <div class="mb-3">
-                            <label for="address">City</label>
-                            <input name="city" id="city" type="text" class="form-control"
-                                   placeholder="Enter the Address" required="">
-                            <div class="invalid-feedback"> Please enter your shipping address.</div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="mNumber">Mobile No</label>
-                                <input name="mNumber" type="text" class="form-control" id="mNumber" placeholder=""
-                                       required="">
-                                <div class="invalid-feedback"> Mobile Number Required.</div>
-                            </div>
-
-                            <div class="col-md-6 mb-3">
-                                <label for="lNumber">Landline No<span class="text-muted">(Optional)</span></label>
-                                <input name="lNumber" type="text" class="form-control" id="lNumber"
-                                       placeholder="Apartment or Suite" >
-
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="same-address" required="">
-                            <label class="custom-control-label" for="same-address" >Shipping address is the same as my
-                                billing address</label>
-                            <div class="invalid-feedback"> Make Sure to Check</div>
-                        </div>
-                        <hr>
-
-
-                        <button class="btn btn-primary btn-lg btn-block" type="submit" name="Submit" value="Add">
-                            Save The Address
-                        </button>
-                    </div>
-
-                </form>
+                </div>
             </div>
         </div>
+</div>
 
-    </div>
+</header>
+<!-- -------- END HEADER 8 w/ card over right bg image ------- -->
+
 
 <!-- -------- FOOTER START ------- -->
 <footer class="footer" style="background: #383838; padding-top: 5px">
@@ -260,31 +396,29 @@ $result = mysqli_query($conn, "SELECT * FROM orders_details o inner join cart_de
 <!-- Google Map End -->
 
 
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict'
+
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        }, false)
+    }())
+</script>
 
 
-
-
-    <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function () {
-            'use strict'
-
-            window.addEventListener('load', function () {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation')
-
-                // Loop over them and prevent submission
-                Array.prototype.filter.call(forms, function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault()
-                            event.stopPropagation()
-                        }
-                        form.classList.add('was-validated')
-                    }, false)
-                })
-            }, false)
-        }())
-    </script>
 </body>
 </html>

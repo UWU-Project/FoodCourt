@@ -4,7 +4,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 error_reporting(0);
 ?>
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<html lang="en" >
 
 <head>
   <meta charset="utf-8" />
@@ -32,6 +32,7 @@ error_reporting(0);
 </head>
 
 <body class="contact-us">
+
 <!-- TOP HEADER Start
 ================================================== -->
 
@@ -46,12 +47,15 @@ error_reporting(0);
             <div class="col-md-3 clearfix">
                 <ul class="login-cart">
                     <li>
-                        <a href="../customer/login.php">LOGIN</a>
+                        <a href="../customer/login.php"> <i class="fas fa-user"></i>LOGIN</a>
                     </li>
                     <li>
-                        <a href="../customer/create.php">REGISTER</a>
+                        <a href="../customer/create.php"><i class="fas fa-user-plus"></i>REGISTER</a>
                     </li>
                 </ul>
+            </div>
+            <div class="col-md-1">
+
             </div>
 
             <div class="col-md-2">
@@ -59,7 +63,8 @@ error_reporting(0);
                     <div class="input-group">
                         <input placeholder="Search Here" type="text" class="form-control">
                         <span class="input-group-btn">
-					        	<button class="btn btn-default" type="button"></button>
+					        	<button type="button">
+
 					      	</span>
                     </div><!-- /.input-group -->
                 </div><!-- /.search-box -->
@@ -93,8 +98,8 @@ error_reporting(0);
             <nav class="navbar navbar-expand-lg  blur  top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
 
                 <div class="container-fluid">
-                    <a class="navbar-brand font-weight-bolder ms-sm-3" href="../index.php" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
-                        Orchid Bliss
+                    <a class="navbar-brand font-weight-bolder ms-sm-3" href="../index.php" rel="tooltip" title="Orchid Bliss" data-placement="bottom" target="_blank">
+                        ORCHID BLISS
                     </a>
 
                     <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -149,12 +154,12 @@ error_reporting(0);
 
                             </li>
 
-                            <li class="nav mx-2" >
-                            <a class="nav-link nav-link-icon me-2 " href="../cart/cart.php" target="_blank" >
+                            <li class="nav" style="margin-left: 50px">
+                                <a class="nav-link nav-link-icon me-2 " href="../cart/cart.php" target="_blank" >
 
-                                <i class="fa fa-shopping-cart me-1"></i>
-                                <p class="d-inline text-sm z-index-1 font-weight-bold" >CART</p>
-                            </a>
+                                    <i class="fa fa-shopping-cart me-1"></i>
+                                    <p class="d-inline text-sm z-index-1 font-weight-bold" >CART</p>
+                                </a>
                             </li>
 
 
@@ -167,6 +172,7 @@ error_reporting(0);
         </div>
     </div>
 </div>
+
 
 
 <!-- -------- START HEADER 8 w/ card over right bg image ------- -->
