@@ -1216,3 +1216,11 @@ footer .block span {
 .top-catagori-heading {
 	margin-top: 0;
 }
+
+/* Set the size of the div element that contains the map */
+#map {
+	height: 150px;
+	/* The height is 400 pixels */
+	width: 100%;
+	/* The width is the width of the web page */
+}
