@@ -38,9 +38,11 @@ error_reporting(0);
 <section id="top">
     <div class="container">
         <div class="row">
+
             <div class="col-md-6">
                 <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
+
             <div class="col-md-3 clearfix">
                 <ul class="login-cart">
                     <li>
@@ -107,31 +109,48 @@ error_reporting(0);
 
                     <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
                         <ul class="nav navbar-nav nav-main">
+                            <li class="nav-item dropdown dropdown-hover mx-6 " >
+
+                            </li>
 
 
-                            <li class="nav-item dropdown dropdown-hover mx-auto" >
+
+                            <li class="nav-item dropdown dropdown-hover mx-2" >
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center "  href="../pastry-shop.php">
                                     PASTRY SHOP
                                 </a>
-                            </li><li class="nav-item dropdown dropdown-hover mx-auto" >
+                            </li>
+
+                            <li class="nav-item dropdown dropdown-hover mx-2" >
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="../lounge.php" >
                                     THE LOUNGE
                                 </a>
-                            </li><li class="nav-item dropdown dropdown-hover mx-auto" >
+                            </li>
+
+                            <li class="nav-item dropdown dropdown-hover mx-2" >
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="../TableBook/buffet.php">
                                     BUFFET
                                 </a>
-                            </li><li class="nav-item dropdown dropdown-hover mx-auto" >
+                            </li>
+
+                            <li class="nav-item dropdown dropdown-hover mx-2" >
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  aria-selected="true" href="../about-us.php">
                                     ABOUT US
                                 </a>
                             </li>
-                            </li><li class="nav-item dropdown dropdown-hover mx-auto" >
+
+                            </li>
+                            <li class="nav-item dropdown dropdown-hover mx-2" >
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active"  aria-selected="true" href="../about-us.php">
                                     CONTACT US
                                 </a>
                             </li>
-                            <a class="nav-link nav-link-icon me-2" href="../cart/cart.php" target="_blank" >
+                            <li class="nav-item dropdown dropdown-hover mx-6" >
+
+                            </li>
+
+                            <li class="nav mx-2" >
+                            <a class="nav-link nav-link-icon me-2 " href="../cart/cart.php" target="_blank" >
 
                                 <i class="fa fa-shopping-cart me-1"></i>
                                 <p class="d-inline text-sm z-index-1 font-weight-bold" >CART</p>
@@ -231,7 +250,7 @@ error_reporting(0);
   </header>
   <!-- -------- END HEADER 8 w/ card over right bg image ------- -->
 
-  <footer class="footer" style="background: #383838;">
+  <footer class="footer" style="background: #383838; padding-top: 5px">
     <hr class="horizontal dark mb-5">
     <div class="container">
       <div class=" row">

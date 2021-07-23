@@ -3,6 +3,7 @@ session_start();
 require "connection.php";
 $email = "";
 $fname = "";
+$lname = "";
 $errors = array();
 
 //if user signup button
