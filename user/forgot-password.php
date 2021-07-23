@@ -63,6 +63,7 @@
                     <div class="form-group">
                         <input class="form-control button" type="submit" name="check-email" value="Continue">
                     </div>
+                    <div class="link login-link text-center">Go back to <a href="login-user.php">Login Page</a></div>
                 </form>
             </div>
             <div class="col-md-4">
