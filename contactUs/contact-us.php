@@ -216,6 +216,7 @@ error_reporting(0);
                 $message = file_get_contents('templete.php');
                 $message = str_replace('%subject%', $subject, $message);
                 $message = str_replace('%message%', $query, $message);
+
                 $mail->msgHTML($message);
                 $mail->AddAddress($email);
                 $mail->AddAddress('dkhultraone2@gmail.com'); //admin email
