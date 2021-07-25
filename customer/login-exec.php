@@ -32,9 +32,10 @@ global $conn;
 	$password = clean($_POST['password']);
 	
 	//Create query
-	$qry="SELECT * FROM customers WHERE login='$login' AND passwd='".md5($_POST['password'])."'";
+    $qry="SELECT * FROM customers WHERE login='$login' AND passwd='".md5($_POST['password'])."' AND is_active = true ";
+
 	$result=mysqli_query($conn,$qry);
-	
+
 	//Check whether the query was successful or not
 	if($result) {
 		if(mysqli_num_rows($result) == 1) {

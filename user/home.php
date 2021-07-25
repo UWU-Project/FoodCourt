@@ -1,10 +1,15 @@
 <?php require_once "controllerUserData.php"; ?>
+
+<?php
+require_once('../auth.php');
+?>
+
 <?php 
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 if($email != false && $password != false){
-    $sql = "SELECT * FROM users WHERE email = '$email'";
-    $run_Sql = mysqli_query($con, $sql);
+    $sql = "SELECT * FROM customers WHERE email = '$email'";
+    $run_Sql = mysqli_query($conn, $sql);
     if($run_Sql){
         $fetch_info = mysqli_fetch_assoc($run_Sql);
         $status = $fetch_info['status'];
@@ -66,6 +71,7 @@ if($email != false && $password != false){
     <button type="button" class="btn btn-light"><a href="logout-user.php">Logout</a></button>
     </nav>
     <h1>Welcome <?php echo $fetch_info['firstname'] ?></h1>
-    
+
+
 </body>
 </html>

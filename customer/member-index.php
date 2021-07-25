@@ -3,6 +3,7 @@
 ?>
 <!doctype html>
 <html lang="en">
+
 <head>
 <?php include '../connection/config.php'; ?>
     <meta charset="UTF-8">
