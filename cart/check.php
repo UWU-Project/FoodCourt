@@ -76,6 +76,16 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+
+    <!-- Nucleo Icons -->
+    <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -85,6 +95,11 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script language="JavaScript" src="../validation/user.js"></script>
     <script src="https://use.fontawesome.com/c560c025cf.js"></script>
+
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../assets/css/soft-design-system.css?v=1.0.5" rel="stylesheet" />
+
+
     <style>
 
         @import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
