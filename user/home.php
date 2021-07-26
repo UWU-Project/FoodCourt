@@ -72,6 +72,6 @@ if($email != false && $password != false){
     </nav>
     <h1>Welcome <?php echo $fetch_info['firstname'] ?></h1>
 
-
+<div></div>
 </body>
 </html>
