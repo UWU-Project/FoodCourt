@@ -402,7 +402,7 @@ or die("Something is wrong ... \n" . mysqli_error());
                         <input type="text" class="form-control" name="address"
                                value="<?php echo $tuck['City']; ?> " disabled>
                     </div>
-                    <div class="row">
+
                         <div class="col-md-6 mb-3">
                             <label for="first_name">Mobile Number</label>
                             <input type="text" class="form-control" name="first_name"
@@ -413,11 +413,11 @@ or die("Something is wrong ... \n" . mysqli_error());
                             <input type="text" class="form-control" name="last_name"
                                    value="<?php echo $tuck['Mobile_No']; ?>" disabled>
                         </div>
-                    </div>
+
 
                     <input type="button" id="secondaryButton" onclick="document.getElementById('primaryButton').click()"
                            value="Buy Now" class="btn bg-gradient-warning btn-lg w-100 mt-3 mb-0"/>
-
+                </div>
             </form>
         </div>
         <div class="col-md-1"></div>
