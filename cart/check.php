@@ -77,15 +77,15 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
     <title>Document</title>
 
     <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"/>
 
     <!-- Nucleo Icons -->
-    <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
-    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="../assets/css/nucleo-icons.css" rel="stylesheet"/>
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet"/>
 
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet"/>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -97,21 +97,14 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
     <script src="https://use.fontawesome.com/c560c025cf.js"></script>
 
     <!-- CSS Files -->
-    <link id="pagestyle" href="../assets/css/soft-design-system.css?v=1.0.5" rel="stylesheet" />
-
-
+    <link id="pagestyle" href="../assets/css/soft-design-system.css?v=1.0.5" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bread.css">
     <style>
 
         @import url(http://fonts.googleapis.com/css?family=Calibri:400,300,700);
 
-        body {
-            background-color: #eee;
-            font-family: 'Calibri', sans-serif !important
-        }
 
-        .mt-100 {
-            margin-top: 100px
-        }
 
         .card {
             margin-bottom: 30px;
@@ -151,38 +144,116 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
 
 
     </style>
-    <style>
-        .gradient-custom {
-            background: -webkit-linear-gradient(left, #3931af, #00c6ff);
-        }
-
-        .card-custom {
-            border-top-left-radius: 10% 50%;
-            border-bottom-left-radius: 10% 50%;
-            background-color: #f8f9fa;
-        }
-
-
-        .input-custom {
-            background-color: white;
-        }
-
-        .white-text {
-            color: hsl(52, 0%, 98%);
-            font-weight: 100;
-            font-size: 14px;
-        }
-
-        .back-button {
-            background-color: hsl(52, 0%, 98%);
-            font-weight: 700;
-            color: black;
-            margin-top: 50px;
-        }
-    </style>
 
 </head>
 <body>
+
+
+<!-- TOP HEADER Start
+================================================== -->
+
+
+<section id="top">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6">
+                <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
+            </div>
+
+            <div class="col-md-3 clearfix">
+                <ul class="login-cart">
+                    <li>
+                        <a href="../customer/login.php"> <i class="fas fa-user"></i>LOGIN</a>
+                    </li>
+                    <li>
+                        <a href="../customer/create.php"><i class="fas fa-user-plus"></i>REGISTER</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-1">
+
+            </div>
+
+            <div class="col-md-2">
+                <div class="search-box">
+                    <div class="input-group">
+                        <input placeholder="Search Here" type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button type="button"></button>
+
+					      	</span>
+                    </div><!-- /.input-group -->
+                </div><!-- /.search-box -->
+            </div>
+        </div> <!-- End Of /.row -->
+    </div>    <!-- End Of /.Container -->
+
+</section>  <!-- End of /Section -->
+
+<!-- LOGO Start
+================================================== -->
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#">
+                    <img src="../images/logo2copy.png" alt="logo">
+                </a>
+            </div>    <!-- End of /.col-md-12 -->
+        </div>    <!-- End of /.row -->
+    </div>    <!-- End of /.container -->
+</header> <!-- End of /Header -->
+
+
+<!-- Navbar -->
+<div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+        <div class="col-12">
+
+            <nav class="navbar navbar-expand-lg  blur  top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+
+                <div class="container-fluid">
+                    <a class="navbar-brand font-weight-bolder ms-sm-3" href="../index.php" rel="tooltip"
+                       title="Orchid Bliss" data-placement="bottom" target="_blank">
+                        ORCHID BLISS
+                    </a>
+
+                    <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon mt-2">
+                            <span class="navbar-toggler-bar bar1"></span>
+                            <span class="navbar-toggler-bar bar2"></span>
+                            <span class="navbar-toggler-bar bar3"></span>
+                          </span>
+                    </button>
+
+
+                    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+                        <ul class="nav navbar-nav nav-main " style="display: inline-block;">
+                            <li class="nav-item dropdown dropdown-hover mx-10">
+                            </li>
+                            <li class="nav" style="margin-left: 50px">
+                                <a class="nav-link nav-link-icon me-2 active " href="../cart/cart.php" target="_blank">
+
+                                    <i class="fa fa-shopping-cart me-1"></i>
+                                    <p class="d-inline text-sm z-index-1 font-weight-bold">CART</p>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </nav>
+            <!-- End Navbar -->
+        </div>
+    </div>
+</div>
+
+
 <?php
 
 //retrieving cart ids from the cart_details table
@@ -203,25 +274,40 @@ or die("Something is wrong ... \n" . mysqli_error());
 
 ?>
 
+<div id="page" style="padding-top: 50px">
 
+    <div class="container">
+        <div class="py-5 text-center">
 
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb my-2">
+                    <li class="breadcrumb-item active"><a href="#">Cart</a></li>
+                    <li class="breadcrumb-item active"><a href="#">Billing Details</a></li>
+                    <li class="breadcrumb-item active"><a>Details Added</a></li>
+                    <li class="breadcrumb-item active"><a>Checkout</a></li>
+                    <li class="breadcrumb-item"><a>Payment</a></li>
+                </ol>
+            </nav>
+
+            <h1 style="padding-top: 20px">CHECKOUT SUMMARY</h1>
+            <hr>
+        </div>
+
+    </div>
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12" style="text-align : center; margin: 1.5rem 0 ">
-        <h4 class="ms-2 me-auto">
-            <strong>CHECKOUT SUMMARY</strong>
-        </h4>
-        </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-4 card border-light mb-3 shadow p-3 mb-5 bg-body rounded" style="max-width: 18rem; margin-right: 2rem;">
 
-            <div class="card-header" style="padding-bottom: 1rem" >
-            <h4>
-                <button type="button" class="btn btn-secondary" disabled>
-                    Cart Summary <span class="badge rounded-pill bg-light text-dark"><?php echo mysqli_num_rows($orders); ?></span>
-                </button>
-            </h4>
+        <div class="col-md-1"></div>
+        <div class="col-md-4 card d-flex blur justify-content-center p-4 shadow-lg " style="max-width: 18rem; margin-right: 2rem;">
+
+            <div class="card-header" style="padding-bottom: 1rem">
+                <h4>
+                    <button type="button" class="btn btn-secondary" disabled>
+                        Cart Summary <span
+                                class="badge rounded-pill bg-light text-dark"><?php echo mysqli_num_rows($orders); ?></span>
+                    </button>
+                </h4>
             </div>
 
             <ul class="list-group list-group-numbered">
@@ -276,7 +362,7 @@ or die("Something is wrong ... \n" . mysqli_error());
                 echo "</tr>";
                 ?>
 
-
+            </ul>
         </div>
         <?php
         //selecting all records from almost all tables. Return an error if there are no records in the tables
@@ -286,13 +372,13 @@ or die("Something is wrong ... \n" . mysqli_error());
 
         ?>
 
-        <div class="col-md-6 card border-light mb-3 shadow p-3 mb-5 bg-body rounded" >
+        <div class="col-md-6 card d-flex blur justify-content-center p-4 shadow-lg">
             <div class="card-header">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-                <button type="button" class="btn btn-secondary" disabled>
-                    Delivery Details
-                </button>
-            </h4>
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <button type="button" class="btn btn-secondary" disabled>
+                        Delivery Details
+                    </button>
+                </h4>
             </div>
             <form method="post">
                 <div class="row">
@@ -329,12 +415,15 @@ or die("Something is wrong ... \n" . mysqli_error());
                         </div>
                     </div>
 
-                    <input type="button" id="secondaryButton" onclick="document.getElementById('primaryButton').click()" value="Buy Now" class="btn btn-warning" />
+                    <input type="button" id="secondaryButton" onclick="document.getElementById('primaryButton').click()"
+                           value="Buy Now" class="btn bg-gradient-warning btn-lg w-100 mt-3 mb-0"/>
 
             </form>
         </div>
         <div class="col-md-1"></div>
     </div>
+</div>
+
 </div>
 
 
@@ -350,23 +439,23 @@ mysqli_close($conn);
 <!--payhere-->
 
 <script>
-    function Payment(btn){
+    function Payment(btn) {
         document.getElementById("billing_id").value = btn.value;
         document.getElementById("amount").value = btn.name;
         document.getElementById("order_id");
     }
 </script>
-
-<form method="post" action="https://sandbox.payhere.lk/pay/checkout">
+<div>
+<form method="post" action="https://sandbox.payhere.lk/pay/checkout" hidden>
     <input type="hidden" name="merchant_id" value="1217810">    <!-- Replace your Merchant ID -->
     <input type="hidden" name="return_url" value="http://localhost/FoodCourt/index.php">
     <input type="hidden" name="cancel_url" value="http://localhost/FoodCourt/lounge.php">
     <input type="hidden" name="notify_url" value="http://localhost/FoodCourt/cart/notify.php">
     <!--<br><br>Item Details<br>-->
-    <input type="text"id="order_id" name="order_id" value="<?php echo $idCart ?>" hidden>
-    <input type="text"id="items" name="items" value="Total" hidden><br>
+    <input type="text" id="order_id" name="order_id" value="<?php echo $idCart ?>" hidden>
+    <input type="text" id="items" name="items" value="Total" hidden><br>
     <input type="text" name="currency" value="LKR" hidden>
-    <input type="text"id="amount" name="amount" value="<?php echo $MAX ?>" hidden>
+    <input type="text" id="amount" name="amount" value="<?php echo $MAX ?>" hidden>
     <!--<br><br>Customer Details<br>-->
     <input type="text" name="first_name" value="<?php echo $_SESSION['SESS_FIRST_NAME']; ?>" hidden>
     <input type="text" name="last_name" value="<?php echo $_SESSION['SESS_LAST_NAME']; ?>" hidden><br>
@@ -375,8 +464,114 @@ mysqli_close($conn);
     <input type="text" name="address" value="<?php echo $tuck['P_O_Box_No'] . $tuck['Street_Address']; ?>" hidden>
     <input type="text" name="city" value="<?php echo $tuck['City']; ?>" hidden>
     <input type="hidden" name="country" value="Sri Lanka"><br><br>
-    <input type="submit" value="Buy Now" id="primaryButton"  hidden/>
+    <input type="submit" value="Buy Now" id="primaryButton" hidden/>
 </form>
 
+</div>
+
+
+<!-- -------- FOOTER START ------- -->
+<footer class="footer" style="background: #383838; padding-top: 5px">
+    <hr class="horizontal dark mb-5">
+    <div class="container">
+        <div class=" row">
+            <div class="col-md-4" style="color: #B6B6B6;">
+                <div>
+                    <a href="#">
+                        <img src="../images/footerlogo5.png" alt="">
+                    </a>
+
+                    <p>
+                        We stand for best in everything we do, to create an environment where absolute guest
+                        satisfaction,which is our highest priority.
+
+                    </p>
+                </div>
+                <div>
+                    <h6 class="mt-3 mb-2 opacity-8" style="color: #fff;">Social</h6>
+                    <ul class="d-flex flex-row ms-n3 nav">
+                        <li class="nav-item" style="color: #fff;">
+                            <a class="nav-link pe-1" href="https://www.facebook.com" target="_blank">
+                                <i class="fab fa-facebook text-lg opacity-8" style="color: #fff;"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-1" href="https://twitter.com" target="_blank">
+                                <i class="fab fa-twitter text-lg opacity-8" style="color: #fff;"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-1" href="https://dribbble.com" target="_blank">
+                                <i class="fab fa-dribbble text-lg opacity-8" style="color: #fff;"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-1" href="https://github.com" target="_blank">
+                                <i class="fab fa-github text-lg opacity-8" style="color: #fff;"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pe-1" href="https://www.youtube.com" target="_blank">
+                                <i class="fab fa-youtube text-lg opacity-8" style="color: #fff;"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-md-5 col-sm-6 col-6 mb-4" style="color: #B6B6B6;">
+                <div class="block">
+                    <h4 style="color: #fff;">GET IN TOUCH</h4>
+                    <p><i class="fa fa-map-marker"></i> <span style="color: #fff;">&emsp;FOOD COURT:</span> NO:22
+                        Mccallum's Drive Nuwara Eliya</p>
+                    <p><i class="fa fa-phone"></i> <span style="color: #fff;">&emsp;PHONE:</span> 052 22 22 878 </p>
+
+                    <p><i class="fa fa-mobile"></i> <span style="color: #fff;">&emsp;MOBILE:</span> 070 2 100 600</p>
+
+                    <p class="mail"><i class="fa fa-envelope"></i> <span style="color: #fff;">&emsp;E-MAIL:</span>
+                        info@foodcourt.com</p>
+                </div>    <!-- End Of /.block -->
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="block">
+                    <div class="media">
+                        <h4 style="color: #fff;">OUR LOCATION</h4>
+                        <div id="map"></div>
+
+
+                    </div>    <!-- End Of /.media -->
+                </div>    <!-- End Of /.block -->
+            </div> <!-- End Of Col-md-3 -->
+
+            <div class="col-12">
+                <div class="text-center">
+                    <p class="my-4 text-sm" style="color: #fff;">
+                        Copyright ©
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>
+                        | Food Court <a href="../admin/login-form.php" target="_blank">Administrator</a> All Rights
+                        Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Google Map -->
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqqBMyAoQe2LlTe9e3_U5O8NaUwEJ9dDU&callback=initMap&libraries=&v=weekly"
+        async
+></script>
+<script src="../validation/map.js"></script>
+<!-- Google Map End -->
+
+
+
 </body>
+
+
 </html>

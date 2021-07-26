@@ -1,0 +1,75 @@
+nav .breadcrumb {
+    padding: 0;
+    background: transparent;
+}
+
+.breadcrumb .breadcrumb-item a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 18px;
+    font-size: 13px;
+    color: #999 !important;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.breadcrumb .breadcrumb-item {
+    position: relative;
+    margin: 0 15px 0 0;
+    background: #575763;
+    min-width: 100px;
+    height: 16px;
+}
+
+.breadcrumb-item:before {
+    content: "" !important;
+    position: absolute;
+    width: 0;
+    border-top: 16px solid #575763;
+    border-left: 10px solid transparent;
+    left: -10px;
+    top: 0;
+    height: 16px;
+}
+
+.breadcrumb-item:after {
+    content: "" !important;
+    position: absolute;
+    width: 0;
+    border-top: 16px solid transparent;
+    border-left: 10px solid #575763;
+    right: -10px;
+    top: 0;
+    height: 16px;
+}
+
+.breadcrumb .breadcrumb-item:first-child {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.breadcrumb .breadcrumb-item:last-child {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.breadcrumb .breadcrumb-item:last-child:after {
+    border-left: 15px solid transparent;
+}
+
+.breadcrumb .breadcrumb-item.active:first-child:before {
+    border-top: 16px solid transparent;
+}
+
+.breadcrumb .breadcrumb-item.active {
+    background: #ffc000;
+}
+
+.breadcrumb-item.active:before {
+    border-top: 16px solid #ffc000;
+}
+
+.breadcrumb-item.active:after {
+    border-left: 10px solid #ffc000;
+}

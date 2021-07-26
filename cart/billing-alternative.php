@@ -47,7 +47,7 @@ $result = mysqli_query($conn, "SELECT * FROM orders_details o inner join cart_de
     <link id="pagestyle" href="../assets/css/soft-design-system.css?v=1.0.5" rel="stylesheet"/>
     <link rel="stylesheet" href="../css/style.css">
     <script language="JavaScript" src="../validation/user.js"></script>
-
+    <link rel="stylesheet" href="../css/bread.css">
 </head>
 
 <body>
@@ -162,14 +162,18 @@ $result = mysqli_query($conn, "SELECT * FROM orders_details o inner join cart_de
     <div class="container">
         <div class="py-5 text-center">
 
-            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../cart/cart.php">Cart</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Billing Details</li>
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb my-2">
+                    <li class="breadcrumb-item active"><a href="#">Cart</a></li>
+                    <li class="breadcrumb-item active"><a href="#">Billing Details</a></li>
+                    <li class="breadcrumb-item"><a>Billing Success</a></li>
+                    <li class="breadcrumb-item"><a>Checkout</a></li>
+                    <li class="breadcrumb-item"><a>Payment</a></li>
                 </ol>
             </nav>
 
-            <h1>Billing Address</h1>
+            <h1 style="padding-top: 20px">BILLING ADDRESS</h1>
             <hr>
             <p>We have found out that you don't have a billing address in your account. Please add a billing address in
                 the
