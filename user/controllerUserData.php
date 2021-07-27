@@ -110,6 +110,7 @@ Click below link to verify your email address in order to activate your account.
             $fetch_data = mysqli_fetch_assoc($code_res);
             $fetch_code = $fetch_data['code'];
             $email = $fetch_data['email'];
+            $fname = $fetch_data['firstname'];
             $code = 0;
             $status = 'verified';
             $update_otp = "UPDATE customers SET code = $code, status = '$status' WHERE code = $fetch_code";
@@ -117,7 +118,9 @@ Click below link to verify your email address in order to activate your account.
             if($update_res){
                 $_SESSION['fname'] = $fname;
                 $_SESSION['email'] = $email;
-                header('location: home.php');
+                $info = " $fname Your $email Verified Succesfully.";
+                $_SESSION['info'] = $info;
+                header('location: user-otp-sucess.php');
                 exit();
             }else{
                 $errors['otp-error'] = "Failed while updating code!";
