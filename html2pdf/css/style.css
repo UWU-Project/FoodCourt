@@ -1,0 +1,7 @@
+body { font: 16px sans-serif; }
+img { width: 100px; }
+table { border-collapse: collapse; margin-bottom: 15px; }
+th, td { padding: 2px 0; }
+th { font-weight: normal; padding-right: 30px; text-align: left; }
+/* p { margin: 0 0 15px; } */
+p.heading { font-weight: bold; text-transform: uppercase; text-decoration: underline; }

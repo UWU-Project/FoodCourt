@@ -312,10 +312,14 @@ or die("Something is wrong ... \n" . mysqli_error());
 
             <ul class="list-group list-group-numbered">
                 <?php
+                $lastID = "";
+                $lastQNT = "";
                 $MAX = 0;
                 //loop through all table rows
                 $symbol = mysqli_fetch_assoc($currencies); //gets active currency
                 foreach ($result as $row) {
+                    $lastID .=$row['food_id'].",";
+                    $lastQNT .=$row['quantity_id'].",";
                     $lt = $row['lt'];
                     $MAX += $row['total'];
                     ?>
@@ -452,7 +456,7 @@ mysqli_close($conn);
     <input type="hidden" name="cancel_url" value="http://localhost/FoodCourt/lounge.php">
     <input type="hidden" name="notify_url" value="http://localhost/FoodCourt/cart/notify.php">
     <!--<br><br>Item Details<br>-->
-    <input type="text" id="order_id" name="order_id" value="<?php echo $idCart ?>" hidden>
+    <input type="text" id="order_id" name="order_id" value="<?php echo $lastID."and".$lastQNT; ?>" hidden>
     <input type="text" id="items" name="items" value="Total" hidden><br>
     <input type="text" name="currency" value="LKR" hidden>
     <input type="text" id="amount" name="amount" value="<?php echo $MAX ?>" hidden>
