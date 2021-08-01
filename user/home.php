@@ -140,11 +140,11 @@ $tuck = mysqli_fetch_assoc($billing);
                         <a href="#profile" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded active">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user mr-2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Profile Information
                         </a>
-                        <!--
+
                         <a href="#account" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings mr-2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>Account Settings
                         </a>
-                        -->
+
                         <a href="#security" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield mr-2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>Security
                         </a>
@@ -164,11 +164,11 @@ $tuck = mysqli_fetch_assoc($billing);
                         <li class="nav-item">
                             <a href="#profile" data-toggle="tab" class="nav-link has-icon active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a>
                         </li>
-                        <!--
+
                         <li class="nav-item">
                             <a href="#account" data-toggle="tab" class="nav-link has-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></a>
                         </li>
-                        -->
+
                         <li class="nav-item">
                             <a href="#security" data-toggle="tab" class="nav-link has-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></a>
                         </li>
@@ -195,25 +195,40 @@ $tuck = mysqli_fetch_assoc($billing);
 
                         </form>
                     </div>
-                    <!--
+
                     <div class="tab-pane" id="account">
-                        <h6>ACCOUNT SETTINGS</h6>
+                        <h6>ORDER HISTORY</h6>
                         <hr>
-                        <form>
-                            <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter your username" value="kennethvaldez">
-                                <small id="usernameHelp" class="form-text text-muted">After changing your username, your old username becomes available for anyone else to claim.</small>
-                            </div>
-                            <hr>
-                            <div class="form-group">
-                                <label class="d-block text-danger">Delete Account</label>
-                                <p class="text-muted font-size-sm">Once you delete your account, there is no going back. Please be certain.</p>
-                            </div>
-                            <button class="btn btn-danger" type="button">Delete Account</button>
-                        </form>
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Food ID</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Delivered</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                        <?php
+                        $result2 = mysqli_query($conn, "SELECT * FROM orders_paid WHERE member_id ='$member_id'")
+                        or die("A problem has occured 2... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+                        while ($row = mysqli_fetch_assoc($result2)) {
+                        ?>
+                        <tr>
+                            <th scope="row"><?php echo $row['ID']?></th>
+                            <td><?php echo $row['date']?></td>
+                            <td><?php echo $row['food_id']?></td>
+                            <td><?php echo $row['quantity']?></td>
+                            <td><?php echo $row['total']?></td>
+                            <td><?php echo $row['delivered']?></td>
+                        </tr>
+                        <?php } ?>
+                            </tbody>
+                        </table>
                     </div>
--->
+
                     <div class="tab-pane" id="security">
                         <h6>SECURITY SETTINGS</h6>
                         <hr>
@@ -234,10 +249,29 @@ $tuck = mysqli_fetch_assoc($billing);
                         <hr>
 
                             <div class="form-group mb-0">
+
+
+
+                                <?php
+                                $member_id = $_SESSION['SESS_MEMBER_ID'];
+
+                                //selecting all records from almost all tables. Return an error if there are no records in the tables
+                                $billing2 = mysqli_query($conn, "SELECT * FROM billing_details WHERE member_id='$member_id'")
+                                or die("Something is wrong ... \n" . mysqli_error());
+
+
+                                if(mysqli_num_rows($billing2)>0){
+                                        $check='hidden="true"';
+                                }else{
+                                    $check="";
+                                }
+
+                                ?>
+
                                 <form id="billingForm" class="needs-validation" novalidate="" name="billingForm"
                                       method="post"
                                       action="billing-exec.php?id=<?php echo $_SESSION['SESS_MEMBER_ID']; ?>"
-                                      onsubmit="return billingValidate(this)">
+                                      onsubmit="return billingValidate(this)" <?php echo $check?>>
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label for="firstName">First name</label>

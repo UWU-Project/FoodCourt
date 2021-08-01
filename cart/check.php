@@ -456,11 +456,13 @@ mysqli_close($conn);
     <input type="hidden" name="cancel_url" value="http://localhost/FoodCourt/lounge.php">
     <input type="hidden" name="notify_url" value="http://localhost/FoodCourt/cart/notify.php">
     <!--<br><br>Item Details<br>-->
-    <input type="text" id="order_id" name="order_id" value="<?php echo $lastID."and".$lastQNT; ?>" hidden>
+    <input type="text" id="order_id" name="order_id" value="<?php echo $lastID ?>" hidden>
+    <input type="text" name="custom_2" value="<?php echo $lastQNT ?>" hidden>
     <input type="text" id="items" name="items" value="Total" hidden><br>
     <input type="text" name="currency" value="LKR" hidden>
     <input type="text" id="amount" name="amount" value="<?php echo $MAX ?>" hidden>
     <!--<br><br>Customer Details<br>-->
+    <input type="text" name="custom_1" value="<?php echo $_SESSION['SESS_MEMBER_ID']; ?>" hidden>
     <input type="text" name="first_name" value="<?php echo $_SESSION['SESS_FIRST_NAME']; ?>" hidden>
     <input type="text" name="last_name" value="<?php echo $_SESSION['SESS_LAST_NAME']; ?>" hidden><br>
     <input type="text" name="email" value="<?php echo $email['login']; ?>" hidden>
