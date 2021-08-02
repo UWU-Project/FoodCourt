@@ -61,7 +61,6 @@ $tuck = mysqli_fetch_assoc($billing);
     <link rel="stylesheet" href="../css/style.css">
 
 
-
     <style>
         body{
             margin-top:20px;
@@ -138,16 +137,6 @@ $tuck = mysqli_fetch_assoc($billing);
 
             </div>
 
-            <div class="col-md-2">
-                <div class="search-box">
-                    <div class="input-group">
-                        <input placeholder="Search Here" type="text" class="form-control">
-                        <span class="input-group-btn">
-					        	<button class="btn btn-default" type="button"></button>
-					      	</span>
-                    </div><!-- /.input-group -->
-                </div><!-- /.search-box -->
-            </div>
         </div> <!-- End Of /.row -->
     </div>	<!-- End Of /.Container -->
 </section>  <!-- End of /Section -->
@@ -171,18 +160,60 @@ $tuck = mysqli_fetch_assoc($billing);
 
 <!--
 ================================================== -->
+<!-- Navbar -->
+<div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+        <div class="col-12">
+
+            <nav class="navbar navbar-expand-lg  blur  top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+
+                <div class="container-fluid">
+                    <a class="navbar-brand font-weight-bolder ms-sm-3" href="../index.php" rel="tooltip" title="Orchid Bliss" data-placement="bottom" target="_blank">
+                        ORCHID BLISS
+                    </a>
+
+                    <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon mt-2">
+                            <span class="navbar-toggler-bar bar1"></span>
+                            <span class="navbar-toggler-bar bar2"></span>
+                            <span class="navbar-toggler-bar bar3"></span>
+                          </span>
+                    </button>
 
 
-<section class="container">
-    <nav class="navbar">
-    <a class="navbar-brand" href="#">Brand name</a>
-    <button type="button" class="btn btn-outline-warning"><a href="logout-user.php">Logout</a></button>
-    </nav>
-</section>
 
-<div class="container">
+                    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+                        <ul class="nav navbar-nav nav-main">
+                            <li class="nav-item dropdown dropdown-hover mx-10">
+                            </li>
+                            <li class="nav" style="margin-left: 50px">
+                                <a class="nav-link nav-link-icon me-2 active " href="home.php">
+                                    <i class="fas fa-user me-1"></i>
+                                    <p class="d-inline text-sm z-index-1 font-weight-bold">USER PROFILE</p>
+                                </a>
+                            </li>
+                            <li class="nav" style="margin-left: 0px">
+                                <a class="nav-link nav-link-icon me-2 active " href="logout-user.php">
+                                    <i class="fas fa-user me-1"></i>
+                                    <p class="d-inline text-sm z-index-1 font-weight-bold">LOGOUT</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+            <!-- End Navbar -->
+        </div>
+    </div>
+</div>
+
+
+<div class="container" style="margin-top: 3cm">
 <h1>Welcome <?php echo $fetch_info['firstname'] ?></h1>
 </div>
+
 <br>
 <div class="container">
 
@@ -205,7 +236,7 @@ $tuck = mysqli_fetch_assoc($billing);
                         </a>
 
                         <a href="#account" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings mr-2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>Account Settings
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings mr-2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>Order History
                         </a>
 
                         <a href="#security" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
@@ -325,6 +356,7 @@ $tuck = mysqli_fetch_assoc($billing);
 
                                 if(mysqli_num_rows($billing2)>0){
                                         $check='hidden="true"';
+                                        echo "Billing Address is Already Added";
                                 }else{
                                     $check="";
                                 }
@@ -462,6 +494,19 @@ $tuck = mysqli_fetch_assoc($billing);
         }, false)
     }())
 </script>
+
+
+
+<!--   Core JS Files   -->
+<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+
+<script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+<!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+<script src="../assets/js/plugins/parallax.min.js"></script>
+<!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
+
+<script src="../assets/js/soft-design-system.min.js?v=1.0.5" type="text/javascript"></script>
+
 </body>
 
 </html>
