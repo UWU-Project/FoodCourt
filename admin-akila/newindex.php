@@ -40,27 +40,32 @@ or die("There are no records to count ... \n" . mysqli_error());
 <html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <title> Responsive Sidebar Menu  | CodingLab </title>
+    <title>Admin | Orchid Bliss</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="akila/style.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
+<link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+<link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css">
+<link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
 
 <body>
 <div class="sidebar">
     <div class="logo-details">
-        <i class='bx bxl-c-plus-plus icon'></i>
-        <div class="logo_name">Administrator Control Panel</div>
+        <i class=''></i>
+        <div class="logo_name">Orchid Bliss</div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
     <ul class="nav-list">
         <li class="active">
-            <i class='bx bx-search' ></i>
-            <input type="text" placeholder="Search...">
-            <span class="tooltip">Search</span>
-        </li>
-        <li>
             <a href="#">
                 <i class='bx bx-grid-alt'></i>
                 <span class="links_name" id="demo" onclick="myFunction()">Home</span>
@@ -68,7 +73,7 @@ or die("There are no records to count ... \n" . mysqli_error());
             <span class="tooltip">Home</span>
         </li>
         <li>
-            <a href="#">
+            <a href="./profile.php">
                 <i class='bx bx-user' ></i>
                 <span class="links_name">Profile</span>
             </a>
@@ -125,96 +130,191 @@ or die("There are no records to count ... \n" . mysqli_error());
         </li>
         <li>
             <a href="#">
-                <i class='bx bx-cog' ></i>
+                <i class='bx bx-log-out' id="log_out"></i>
                 <span class="links_name">Logout</span>
             </a>
             <span class="tooltip">Logout</span>
         </li>
-        <li class="profile">
-            <div class="profile-details">
-                <img src="profile.jpg" alt="profileImg">
-                <div class="name_job">
-                    <div class="name">Prem Shahi</div>
-                    <div class="job">Web designer</div>
-                </div>
-            </div>
-            <i class='bx bx-log-out' id="log_out" ></i>
-        </li>
     </ul>
 </div>
+
 <section class="home-section">
-    <div >
-
-        <div id="page">
-            <div id="container">
-                <table width="1000" align="center" style="text-align:center">
-                    <CAPTION><h3>CURRENT STATUS</h3></CAPTION>
-                    <tr>
-                        <th>Members Registered</th>
-                        <th>Orders Placed</th>
-                        <th>Orders Processed</th>
-                        <th>Orders Pending</th>
-                        <th>Table(s) Reserved</th>
-                        <th>Table(s) Allocated</th>
-                        <th>Table(s) Pending</th>
-                    </tr>
-                    <?php
-                    $result1 = mysqli_num_rows($members);
-                    $result2 = mysqli_num_rows($orders_placed);
-                    $result3 = mysqli_num_rows($orders_processed);
-                    $result4 = $result2 - $result3; //gets pending order(s)
-                    $result5 = mysqli_num_rows($tables_reserved);
-                    $result6 = mysqli_num_rows($tables_allocated);
-                    $result7 = $result5 - $result6; //gets pending table(s)
-
-                    echo "<tr align=>";
-                    echo "<td>" . $result1 . "</td>";
-                    echo "<td>" . $result2 . "</td>";
-                    echo "<td>" . $result3 . "</td>";
-                    echo "<td>" . $result4 . "</td>";
-                    echo "<td>" . $result5 . "</td>";
-                    echo "<td>" . $result6 . "</td>";
-                    echo "<td>" . $result7 . "</td>";
-
-                    echo "</tr>";
-                    ?>
-                </table>
-                <hr>
-                <form name="foodStatusForm" id="foodStatusForm" method="post" action="index.php"
-                      onsubmit="return statusValidate(this)">
-                    <table width="360" align="center">
-                        <CAPTION><h3>CUSTOMERS' RATINGS (100%)</h3></CAPTION>
-                        <tr>
-                            <td>Food</td>
-                            <td width="168"><select name="food" id="food">
-                                    <option value="select">- select food -
-
-                                </select></td>
-                            <td><input type="submit" name="Submit" value="Show Ratings"/></td>
-                        </tr>
-                    </table>
-                </form>
-                <table width="900" align="center">
-                    <tr>
-                        <th></th>
-                        <th>Excellent</th>
-                        <th>Good</th>
-                        <th>Average</th>
-                        <th>Bad</th>
-                        <th>Worse</th>
-                    </tr>
-
-
-                </table>
-                <hr>
+   <div id="page">
+      <div id="container">
+         <h1>Dashboard</h1>
+         <p>Welcome to Orchid Bliss</p>
+         <div class="row">
+            <div class="col-xl-3 col-sm-6 col-12">
+               <div class="card">
+                  <div class="card-content">
+                     <div class="card-body">
+                        <div class="media d-flex">
+                           <div class="align-self-center">
+                              <i class="icon-user primary font-large-2 float-left"></i>
+                           </div>
+                           <div class="media-body text-right">
+                              <h3> 
+                                 <?php
+                                    $members = mysqli_num_rows($members);  echo $members; ?>
+                              </h3>
+                              <span>Registered Customers</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <?php include 'footer.php'; ?>
-        </div>
-        Dashboard</div>
+            <div class="col-xl-3">
+               <div class="card">
+                  <div class="card-content">
+                     <div class="card-body">
+                        <div class="media d-flex">
+                           <div class="align-self-center">
+                              <i class="icon-speech warning font-large-2 float-left"></i>
+                           </div>
+                           <div class="media-body text-right">
+                              <h3>
+                                 <?php
+                                    $orders_placed = mysqli_num_rows($orders_placed);  echo $orders_placed; ?>
+                              </h3>
+                              <span>Orders Placed	</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+               <div class="card">
+                  <div class="card-content">
+                     <div class="card-body">
+                        <div class="media d-flex">
+                           <div class="align-self-center">
+                              <i class="icon-graph success font-large-2 float-left"></i>
+                           </div>
+                           <div class="media-body text-right">
+                              <h3>
+                                 <?php
+                                    $orders_processed = mysqli_num_rows($orders_processed);  echo $orders_processed; ?>
+                              </h3>
+                              <span>Processed Orders</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+               <div class="card">
+                  <div class="card-content">
+                     <div class="card-body">
+                        <div class="media d-flex">
+                           <div class="align-self-center">
+                              <i class="icon-pointer danger font-large-2 float-left"></i>
+                           </div>
+                           <div class="media-body text-right">
+                              <h3>
+                                 <?php
+                                    $pending_orders = $orders_placed - $orders_processed;  echo $pending_orders; ?>
+                              </h3>
+                              <span>Pending Orders</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+         <div class="col-xl-3 col-sm-6 col-12">
+               <div class="card">
+                  <div class="card-content">
+                     <div class="card-body">
+                        <div class="media d-flex">
+                           <div class="align-self-center">
+                              <i class="icon-pointer danger font-large-2 float-left"></i>
+                           </div>
+                           <div class="media-body text-right">
+                              <h3>
+                                 <?php
+                                    $pending_orders = $orders_placed - $orders_processed;  echo $pending_orders; ?>
+                              </h3>
+                              <span>Pending Orders</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+               <div class="card">
+                  <div class="card-content">
+                     <div class="card-body">
+                        <div class="media d-flex">
+                           <div class="align-self-center">
+                              <i class="icon-pointer danger font-large-2 float-left"></i>
+                           </div>
+                           <div class="media-body text-right">
+                              <h3>
+                                 <?php
+                                    $pending_orders = $orders_placed - $orders_processed;  echo $pending_orders; ?>
+                              </h3>
+                              <span>Pending Orders</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div> <div class="col-xl-3 col-sm-6 col-12">
+               <div class="card">
+                  <div class="card-content">
+                     <div class="card-body">
+                        <div class="media d-flex">
+                           <div class="align-self-center">
+                              <i class="icon-pointer danger font-large-2 float-left"></i>
+                           </div>
+                           <div class="media-body text-right">
+                              <h3>
+                                 <?php
+                                    $pending_orders = $orders_placed - $orders_processed;  echo $pending_orders; ?>
+                              </h3>
+                              <span>Pending Orders</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+            <div class="row">
+               <div class="card">
+                  <div class="card-content">
+                     <div class="card-body">
+                        <div class="media d-flex">
+                           <div class="align-self-center">
+                              <i class="icon-pointer danger font-large-2 float-left"></i>
+                           </div>
+                           <div class="media-body text-right">
+                              <h3>
+                                 <?php
+                                    $pending_orders = $orders_placed - $orders_processed;  echo $pending_orders; ?>
+                              </h3>
+                              <span>Pending Orders</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 </section>
 
+
 <script src="akila/script.js"></script>
-
-
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
