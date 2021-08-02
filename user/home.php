@@ -46,12 +46,28 @@ $tuck = mysqli_fetch_assoc($billing);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
 
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../assets/css/soft-design-system.css?v=1.0.5" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/style.css">
+
+
+
     <style>
         body{
             margin-top:20px;
             color: #1a202c;
             text-align: left;
-            background-color: #e2e8f0;
+            background-color: #f5f6f8;
         }
         .main-body {
             padding: 15px;
@@ -96,7 +112,7 @@ $tuck = mysqli_fetch_assoc($billing);
         }
 
         .bg-gray-300 {
-            background-color: #e2e8f0;
+            background-color: #e1e8f1;
         }
         .h-100 {
             height: 100%!important;
@@ -108,19 +124,66 @@ $tuck = mysqli_fetch_assoc($billing);
 </head>
 
 <body>
+
 <!-- TOP HEADER Start
+    ================================================== -->
+
+<section id="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
+            </div>
+            <div class="col-md-3 clearfix">
+
+            </div>
+
+            <div class="col-md-2">
+                <div class="search-box">
+                    <div class="input-group">
+                        <input placeholder="Search Here" type="text" class="form-control">
+                        <span class="input-group-btn">
+					        	<button class="btn btn-default" type="button"></button>
+					      	</span>
+                    </div><!-- /.input-group -->
+                </div><!-- /.search-box -->
+            </div>
+        </div> <!-- End Of /.row -->
+    </div>	<!-- End Of /.Container -->
+</section>  <!-- End of /Section -->
+
+
+<!-- LOGO Start
+================================================== -->
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#">
+                    <img src="../images/logo2copy.png" alt="logo">
+                </a>
+            </div>	<!-- End of /.col-md-12 -->
+        </div>	<!-- End of /.row -->
+    </div>	<!-- End of /.container -->
+</header> <!-- End of /Header -->
+
+
+<!--
 ================================================== -->
 
 
-<section id="top">
+<section class="container">
     <nav class="navbar">
     <a class="navbar-brand" href="#">Brand name</a>
-    <button type="button" class="btn btn-light"><a href="logout-user.php">Logout</a></button>
+    <button type="button" class="btn btn-outline-warning"><a href="logout-user.php">Logout</a></button>
     </nav>
 </section>
 
+<div class="container">
 <h1>Welcome <?php echo $fetch_info['firstname'] ?></h1>
-
+</div>
+<br>
 <div class="container">
 
     <!-- Breadcrumb -->
@@ -356,7 +419,7 @@ $tuck = mysqli_fetch_assoc($billing);
                                     </button>
                             </div>
 
-                        </form>
+
                             </div>
 
                     </div>
@@ -365,7 +428,6 @@ $tuck = mysqli_fetch_assoc($billing);
         </div>
     </div>
 
-</div>
 
 
     <!--   Core JS Files   -->
