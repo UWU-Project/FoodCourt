@@ -13,23 +13,23 @@
     <!-- Icon -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Css -->
-    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="../css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!-- jS -->
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/jquery.nivo.slider.js" type="text/javascript"></script>
-    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-    <script src="js/jquery.nicescroll.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/main.js" type="text/javascript"></script>
-    <script language="JavaScript" src="validation/user.js"></script>
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../js/jquery.nivo.slider.js" type="text/javascript"></script>
+    <script src="../js/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="../js/jquery.nicescroll.js"></script>
+    <script src="../js/jquery.scrollUp.min.js"></script>
+    <script src="../js/main.js" type="text/javascript"></script>
+    <script language="JavaScript" src="../validation/user.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -102,7 +102,7 @@
         <div class="row">
             <div class="col-md-12">
                 <a href="#">
-                    <img src="images/logo2copy.png" alt="logo">
+                    <img src="../images/logo2copy.png" alt="logo">
                 </a>
             </div>	<!-- End of /.col-md-12 -->
         </div>	<!-- End of /.row -->
@@ -125,11 +125,11 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav nav-main">
-                <li ><a href="index.php">HOME</a></li>
-                <li><a href="pastry-shop.php">PASTRY SHOP</a></li>
-                <li><a href="lounge.php">THE LOUNGE</a></li>
-                <li class="active"><a href="TableBook/buffet.php">BUFFET</a></li>
-                <li><a href="about-us.php">ABOUT US</a></li>
+                <li ><a href="../index.php">HOME</a></li>
+                <li><a href="../pastry-shop.php">PASTRY SHOP</a></li>
+                <li><a href="../lounge.php">THE LOUNGE</a></li>
+                <li class="active"><a href="buffet.php">BUFFET</a></li>
+                <li><a href="../about-us-old.php">ABOUT US</a></li>
                 <li ><a href="#">CART</a></li>
             </ul>
         </div>	<!-- /.navbar-collapse -->
@@ -143,21 +143,21 @@
 <div>
     <div class="row imgcenter" >
         <div class="col-md-12 ">
-            <img src="images/tableres.png" alt="">
+            <img src="../images/tableres.png" alt="">
         </div>
     </div>
 
     <div class="row imgcenter bfont" >
        <div class="col-md-6">
 
-           <img src="images/tse22.png" alt="">
-           <button class="w3-button w3-block w3-black" href="buffttest1.php"><a href="buffttest1.php">Book Your Table</a></button>
+           <img src="../images/tse22.png" alt="">
+           <button class="w3-button w3-block w3-black" href="buffttest1.php"><a href="../buffttest1.php">Book Your Table</a></button>
         </div>
 
 
         <div class="col-md-6 new">
 
-            <img src="images/rtw.PNG" alt="">
+            <img src="../images/rtw.PNG" alt="">
 
         </div>
     </div>
@@ -173,7 +173,7 @@
             <div class="col-md-4">
                 <div class="block clearfix">
                     <a href="#">
-                        <img src="images/footerlogo5.png" alt="">
+                        <img src="../images/footerlogo5.png" alt="">
                     </a>
                     <br><br>
                     <p>
@@ -244,7 +244,7 @@
             <div class="row">
                 <div class="col-md-12">
 
-                    <p style="text-align: center;">© 2021 | Food Court <a href="admin/login-form.php">Administrator</a> All Rights Reserved</p>
+                    <p style="text-align: center;">© 2021 | Food Court <a href="../admin/login-form.php">Administrator</a> All Rights Reserved</p>
                 </div>	<!-- End Of /.col-md-12 -->
             </div>	<!-- End Of /.row -->
         </div>	<!-- End Of /.container -->

@@ -266,7 +266,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
 
                             <li class="nav-item dropdown dropdown-hover mx-2">
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                                   aria-selected="true" href="../about-us.php">
+                                   aria-selected="true" href="../about-us-old.php">
                                     ABOUT US
                                 </a>
                             </li>
@@ -274,7 +274,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
                             </li>
                             <li class="nav-item dropdown dropdown-hover mx-2">
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                                   aria-selected="true" href="../about-us.php">
+                                   aria-selected="true" href="../about-us-old.php">
                                     CONTACT US
                                 </a>
                             </li>

@@ -198,7 +198,7 @@ or die("Something is wrong ... \n" . mysqli_error());
                 <li><a href="pastry-shop.php">PASTRY SHOP</a></li>
                 <li><a href="lounge.php">THE LOUNGE</a></li>
                 <li class="active"><a href="TableBook/buffet.php">BUFFET</a></li>
-                <li><a href="about-us.php">ABOUT US</a></li>
+                <li><a href="about-us-old.php">ABOUT US</a></li>
                 <li><a href="#">CART</a></li>
             </ul>
         </div>	<!-- /.navbar-collapse -->
