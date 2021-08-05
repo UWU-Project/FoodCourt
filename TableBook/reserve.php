@@ -172,10 +172,7 @@ or die("Something is wrong ... \n" . mysqli_error());
             <nav class="navbar navbar-expand-lg  blur  top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
 
                 <div class="container-fluid">
-                    <a class="navbar-brand font-weight-bolder ms-sm-3" href="../index.php" rel="tooltip"
-                       title="Orchid Bliss" data-placement="bottom" target="_blank">
-                        ORCHID BLISS
-                    </a>
+
 
                     <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
@@ -190,9 +187,9 @@ or die("Something is wrong ... \n" . mysqli_error());
 
                     <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
                         <ul class="nav navbar-nav nav-main mx-auto" style="display: inline-block;">
-                            <li class="nav">
-                                <a class="nav-link nav-link-icon me-2 active " href="../cart/cart.php" target="_blank">
-                                    <i class="fa fa-shopping-cart me-1"></i>
+                            <li class="nav-item px-3">
+                                <a class="nav-link nav-link-icon me-2 active " href="../TableBook/reserve.php" target="_blank">
+                                    <i class="fas fa-calendar-plus me-1"></i>
                                     <p class="d-inline text-sm z-index-1 font-weight-bold">RESERVE TABLE</p>
                                 </a>
                             </li>
@@ -207,65 +204,18 @@ or die("Something is wrong ... \n" . mysqli_error());
     </div>
 </div>
 
-<!-- Navbar Light -->
-<nav
-        class="navbar navbar-expand-lg navbar-light bg-white z-index-3 py-3">
-    <div class="container">
-        <a class="navbar-brand" href="" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
-            Soft UI Design System
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navigation">
-            <ul class="navbar-nav navbar-nav-hover mx-auto">
-                <li class="nav-item px-3">
-                    <a class="nav-link">
-                        Pages
-                    </a>
-                </li>
-
-                <li class="nav-item px-3">
-                    <a class="nav-link">
-                        Utilities
-                    </a>
-                </li>
-
-                <li class="nav-item px-3">
-                    <a class="nav-link">
-                        Blocks
-                    </a>
-                </li>
-
-                <li class="nav-item px-3">
-                    <a class="nav-link ">
-                        Docs
-                    </a>
-                </li>
-            </ul>
-
-            <ul class="navbar-nav ms-auto">
-                <button class="btn bg-gradient-primary mb-0">Buy Now</button>
-            </ul>
-        </div>
-    </div>
-</nav>
 <!-- End Navbar -->
-<!-- dbs
-================================================== -->
-<div id="page" style="padding-top: 50px">
 
+<!-- ================================================== -->
 
-
-        <!-- Button trigger modal -->
-
+<div class="page-header min-vh-25" >
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <div class="modal-dialog col-md-4" role="document">
+                <div class="modal-content d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5 ">
+                    <div class="modal-header ">
+                        <h5 class="modal-title font-weight-bolder text-primary text-gradient" id="exampleModalLabel">Reserve A Table</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -273,41 +223,33 @@ or die("Something is wrong ... \n" . mysqli_error());
                     <div class="modal-body">
                         <form action="reserve-exec.php" method="post">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">table</label>
+                                <label for="exampleInputEmail1">Picked Table</label>
                                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="table" value="" readonly>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
+                                <label for="exampleInputPassword1">Pick A Date</label>
                                 <input type="date" class="form-control" name="date" id="exampleInputPassword1" placeholder="Password" required>
                             </div>
-                            <div class="form-check">
-
-                                <input type="text" name="id" hidden value="<?php echo $_SESSION['SESS_MEMBER_ID'];?>">
-                            </div>
-
                             <div class="form-group">
                                 <label for="exampleFormControlSelect2">Example multiple select</label>
                                 <select name="time" multiple class="form-control" id="exampleFormControlSelect2">
                                     <option>BreakFast</option>
                                     <option>Lunch</option>
                                     <option>Dinner</option>
-
                                 </select>
                             </div>
-
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary" data-toggle="confirmation" style="padding-left: 30px;">Submit</button>
-
+                            <div class="form-check">
+                                <input type="text" name="id" hidden value="<?php echo $_SESSION['SESS_MEMBER_ID'];?>">
                             </div>
-
+                            <div class="modal-footer justify-content-between">
+                                <button type="button" class="btn bg-gradient-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn bg-gradient-primary" data-toggle="confirmation">Submit</button>
+                            </div>
                             </div>
 
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
-                    </div>
                 </div>
             </div>
         </div>
@@ -401,24 +343,12 @@ or die("Something is wrong ... \n" . mysqli_error());
             </a></div>
     </div>
 
-    <!-- hover
-    ================================================== -->
+    <!-- hover ================================================== -->
 
 </div>
 
-<div style="border:#bd6f2f solid 1px;padding:4px 6px 2px 6px">
 
-<p style="alignment: center">Here you can ... For more information <a href="contact-us.php">Click Here</a> to contact us.
 
-</p>
-
-</div>
-
-<div id="Mydiv" style="display: none; border-style: solid ">
-    <h1>Hide and show div tag</h1>
-    <button id="DivHide">Hide Div</button>
-</div>
-    <button id="DivShow">Hide Div</button>
 
 
     <!-- FOOTER Start
