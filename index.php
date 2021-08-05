@@ -426,7 +426,25 @@ body{
                     <h1>
                         VINCENT PIZZA.
                     </h1>
+                    <h1 class="text-dark">Work with an amazing <span class="text-dark" id="typed"></span></h1>
+                    <div id="typed-strings">
+                        <h1>team</h1>
+                        <h1>design</h1>
+                        <h1>tool</h1>
+                    </div>
 
+                    <script type="text/javascript">
+                        if (document.getElementById('typed')) {
+                            var typed = new Typed("#typed", {
+                                stringsElement: '#typed-strings',
+                                typeSpeed: 90,
+                                backSpeed: 90,
+                                backDelay: 200,
+                                startDelay: 500,
+                                loop: true
+                            });
+                        }
+                    </script>
                     <h2>
                         MAKING PEOPLE HAPPY
                     </h2>
