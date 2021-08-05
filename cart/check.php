@@ -164,10 +164,10 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
             <div class="col-md-3 clearfix">
                 <ul class="login-cart">
                     <li>
-                        <a href="../customer/login.php"> <i class="fas fa-user"></i>LOGIN</a>
+                        <a href="../user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
                     </li>
                     <li>
-                        <a href="../customer/create.php"><i class="fas fa-user-plus"></i>REGISTER</a>
+                        <a href="../user/signup-user.php"><i class="fas fa-user-plus"></i>REGISTER</a>
                     </li>
                 </ul>
             </div>
