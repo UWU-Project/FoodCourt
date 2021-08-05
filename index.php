@@ -57,7 +57,8 @@ if (isset($_POST['Submit'])){
     <style>
 	.txtpadding{
 		
-padding-top: 15rem ;
+padding-top: 10rem;
+ padding-bottom: 10rem;
 
 	}
 	.buffetback{
@@ -254,8 +255,15 @@ padding-top: 15rem ;
         background: -webkit-linear-gradient(top, rgba(45,45,45,0.4) 0%, rgba(45,45,45,0.9) 100%);
         background: linear-gradient(to bottom, rgba(45,45,45,0.4) 0%, rgba(45,45,45,0.9) 100%);
     }
+    .padding{
+        padding-top: 50px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+        padding-left: 80px;
+
+    }
 body{
-    background: url(images/our.png);
+    background: url(images/wall2.png);
 
 }
     </style>
@@ -375,9 +383,8 @@ body{
                                 </a>
                             </li>
 
-                            </li>
                             <li class="nav-item dropdown dropdown-hover mx-2" >
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active"  aria-selected="true" href="contactUs/contact-us.php">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center "  aria-selected="true" href="contactUs/contact-us.php">
                                     CONTACT US
                                 </a>
                             </li>
@@ -419,10 +426,11 @@ body{
                     <h1>
                         VINCENT PIZZA.
                     </h1>
+
                     <h2>
                         MAKING PEOPLE HAPPY
                     </h2>
-                    <hr>
+
                     <p>
                         Italian Pizza With Cherry Tomatoes and Green Basil
                     </p>
@@ -504,13 +512,7 @@ body{
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 " >
-				
-				<div>
-					
 					  <img src="images/pasrtyhome.jpg" alt="...">
-
-				</div>
-
 			</div>
 			<div class="col-md-4 txtpadding" style="text-align: center;">
 				<div class="heading ">
@@ -519,16 +521,13 @@ body{
 				
 				<p>Wide range of Delicious Pastries,Sandwiches,Cake, etc...</p>
 				<p>Handmade Chocolates,Sweets,Fresh Juices...</p>
-				<p>
-					<a href="pastry-shop.php" class="btn btn-default btn-transparent" role="button">
+					<a href="pastry-shop.php" class="btn bg-gradient-warning" role="button">
 						<span>ORDER NOW</span>
 					</a>
-				</p>
 			</div>
 		</div>
 	</div>
 </section>
-<hr>
 
 	<!--  1st photo tile
     ================================================== -->
@@ -536,7 +535,7 @@ body{
     .details_card
     {
         align-items: center;
-        margin: 150px 0px;
+
     }
     .details_card>span
     {
@@ -552,35 +551,39 @@ body{
         letter-spacing: 2px
     }
 </style>
-
-
     <section class="restaurant_details" style="background: url(images/food_pic_2.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 0%;
     background-size: cover;
     color:white !important;
-    min-height: 300px;">
+    min-height: 50px;">
+
         <div class="layer">
             <div class="container">
                 <div class="row">
 
-            <section class="pt-2 pb-6 bg-gray-100" id="count-stats">
-                <div class="row justify-content-center text-center">
+            <section class="padding" id="count-stats">
+                <div class="row justify-content-center text-center ">
 
-                    <div class="col-md-4 details_card">
+                    <div class="col-md-4 details_card ">
+                        <br><br>
                         <h1 class="text-gradient text-info" id="state1" countTo="5234">0</h1>
-                        <h5>CUSTOMERS</h5>
+                        <h5 style="color: #ffd002">CUSTOMERS</h5>
                         <p>Of “high-performing” level are led by a certified project manager</p>
                     </div>
-                    <div class="col-md-4 details_card">
+
+                    <div class="col-md-4 details_card ">
+                        <br><br>
                         <h1 class="text-gradient text-info"><span id="state2" countTo="3400">0</span>+</h1>
-                        <h5>FOODS</h5>
+                        <h5 style="color: #ffd002">FOODS</h5>
                         <p>That meets quality standards required by our users</p>
                     </div>
-                    <div class="col-md-4 details_card">
+
+                    <div class="col-md-4 details_card ">
+                        <br><br>
                         <h1 class="text-gradient text-info"><span id="state3" countTo="24">0</span>/7</h1>
-                        <h5>AVAILABLE</h5>
+                        <h5 style="color: #ffd002">AVAILABLE</h5>
                         <p>Actively engage team members that finishes on time</p>
                     </div>
                 </div>
