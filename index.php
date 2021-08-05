@@ -59,6 +59,13 @@ if (isset($_POST['Submit'])){
 	<script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/main.js" type="text/javascript"></script>
 
+    <!--   Core JS Files   -->
+    <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+    <script src="assets/js/plugins/countup.min.js"></script>
+    <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+    <script src="assets/js/plugins/parallax.min.js"></script>
 
     <style>
 	.txtpadding{
@@ -89,7 +96,182 @@ padding-top: 15rem ;
         left: 50%;
         transform: translate(-50%, -50%);
 	}
-</style>
+
+    .our_qualities {
+        background: url(images/our_qualities_bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .home-section h1
+    {
+        color: rgb(255, 255, 255);
+        white-space: nowrap;
+        letter-spacing: 12px;
+        font-weight: 400;
+        font-size: 50px;
+    }
+
+    .home-section h2
+    {
+        color: rgb(255, 255, 255);
+        white-space: nowrap;
+        letter-spacing: 12px;
+        font-weight: 400;f
+    ont-size: 30px;
+    }
+
+    .home-section p
+    {
+        color: rgb(255, 255, 255);
+        white-space: nowrap;
+        letter-spacing: 2px;
+        font-weight: 300;
+        font-size: 17px;
+    }
+    .home-section
+    {
+        background: url(images/home_bg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 650px;
+        background-attachment: fixed;
+    }
+
+    .bttn_style_1
+    {
+        font-family: "Work Sans",sans-serif;
+        letter-spacing: 3px;
+        background-color: transparent;
+        color: white !important;
+        line-height: 45px;
+        display: inline-block;
+        padding: 0 25px;
+        border-radius: 0;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 600;
+        position: relative;
+        border: 2px solid white;
+        opacity: 1;
+    }
+
+    .bttn_style_1:hover
+    {
+        opacity: 0.6;
+    }
+
+    .bttn_style_2
+    {
+        font-family: "Work Sans",sans-serif;
+        letter-spacing: 3px;
+        background-color: #ffc851;
+        color: rgb(18, 22, 24);
+        line-height: 45px;
+        display: inline-block;
+        padding: 0 25px;
+        border-radius: 0;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 600;
+        position: relative;
+        border: 2px solid #ffc851;
+        overflow: hidden;
+        z-index: 1;
+        -webkit-transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        -moz-transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        -ms-transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        -o-transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .bttn_style_2:before
+    {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #222227;
+        -webkit-transform-origin: right center;
+        -moz-transform-origin: right center;
+        -ms-transform-origin: right center;
+        transform-origin: right center;
+        -webkit-transform: scale(0, 1);
+        -moz-transform: scale(0, 1);
+        -ms-transform: scale(0, 1);
+        -o-transform: scale(0, 1);
+        transform: scale(0, 1);
+        -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        -moz-transition: -moz-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        -ms-transition: -ms-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        -o-transition: -o-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: -1;
+    }
+
+    .bttn_style_2:hover:before
+    {
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        -ms-transform-origin: left center;
+        transform-origin: left center;
+        -webkit-transform: scale(1, 1);
+        -moz-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        -o-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+
+    .bttn_style_2:hover
+    {
+        color: #ffc851;
+        border-color: #222227;
+    }
+    .our_qualities_column
+    {
+        text-align: center;
+    }
+
+    .client_details_tab  .form-control
+    {
+        background-color: #fff;
+        border-radius: 0;
+        padding: 25px 10px;
+        box-shadow: none;
+        border: 2px solid #eee;
+    }
+
+    .client_details_tab  .form-control:focus
+    {
+        border-color: #ffc851;
+        box-shadow: none;
+        outline: none;
+    }
+    .text_header
+    {
+        margin-bottom: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.5;
+        margin-top: 22px;
+        text-transform: capitalize;
+    }
+    .layer
+    {
+        height: 100%;
+        background: -moz-linear-gradient(top, rgba(45,45,45,0.4) 0%, rgba(45,45,45,0.9) 100%);
+        background: -webkit-linear-gradient(top, rgba(45,45,45,0.4) 0%, rgba(45,45,45,0.9) 100%);
+        background: linear-gradient(to bottom, rgba(45,45,45,0.4) 0%, rgba(45,45,45,0.9) 100%);
+    }
+body{
+    background: url(images/our.png);
+
+}
+    </style>
 
 </head>
 <body>
@@ -165,114 +347,177 @@ padding-top: 15rem ;
     </header> <!-- End of /Header -->
 
 
+<!-- Navbar -->
+<div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+        <div class="col-12">
+
+            <nav class="navbar navbar-expand-lg  blur  top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+
+                <div class="container-fluid">
+                    <a class="navbar-brand font-weight-bolder ms-sm-3" href="../index.php" rel="tooltip" title="Orchid Bliss" data-placement="bottom" target="_blank">
+                        ORCHID BLISS
+                    </a>
+
+                    <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon mt-2">
+                            <span class="navbar-toggler-bar bar1"></span>
+                            <span class="navbar-toggler-bar bar2"></span>
+                            <span class="navbar-toggler-bar bar3"></span>
+                          </span>
+                    </button>
+
+
+
+                    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+                        <ul class="nav navbar-nav nav-main mx-auto"
+                            <li class="nav-item dropdown dropdown-hover px-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center "  href="../pastry-shop.php">
+                                    PASTRY SHOP
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown dropdown-hover px-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="../lounge.php" >
+                                    THE LOUNGE
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown dropdown-hover px-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="../TableBook/buffet.php">
+                                    BUFFET
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown dropdown-hover px-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  aria-selected="true" href="../about-us-old.php">
+                                    ABOUT US
+                                </a>
+                            </li>
+
+
+                            <li class="nav-item dropdown dropdown-hover px-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active"  aria-selected="true" href="../about-us-old.php">
+                                    CONTACT US
+                                </a>
+                            </li>
+
+
+                            <li class="nav ms-auto" >
+                                <a class="nav-link nav-link-icon me-2 " href="../cart/cart.php" target="_blank" >
+
+                                    <i class="fa fa-shopping-cart me-1"></i>
+                                    <p class="d-inline text-sm z-index-1 font-weight-bold" >CART</p>
+                                </a>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+        </div>
+    </div>
+</div>
+
 
     <!-- MENU Start
     ================================================== -->
 
-	<nav class="navbar navbar-default">
-		<div class="container">
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		    </div> <!-- End of /.navbar-header -->
 
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      	<ul class="nav navbar-nav nav-main">
-		        	<li class="active"><a href="index.php">HOME</a></li>
-					<li><a href="pastry-shop.php">PASTRY SHOP</a></li>
-					<li><a href="lounge.php">THE LOUNGE</a></li>
-					<li><a href="TableBook/buffet.php">BUFFET</a></li>
-                    <li ><a href="about-us-old.php">ABOUT US</a></li>
-                    <li><a href="#">CART</a></li>
-					</ul>
+<!-- HOME SECTION -->
+<section id="slider-area">
+<section class="home-section" id="home">
+    <div class="container">
+        <div class="row" style="flex-wrap: nowrap;">
+            <div class="col-md-6 home-left-section">
+                <div style="padding: 100px 0px; color: white;">
+                    <h1>
+                        VINCENT PIZZA.
+                    </h1>
+                    <h2>
+                        MAKING PEOPLE HAPPY
+                    </h2>
+                    <hr>
+                    <p>
+                        Italian Pizza With Cherry Tomatoes and Green Basil
+                    </p>
+                    <div style="display: flex;">
+                        <a href="order_food.php" target="_blank" class="bttn_style_1" style="margin-right: 10px; display: flex;justify-content: center;align-items: center;">
+                            Order Now
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                        <a href="#menus" class="bttn_style_2" style="display: flex;justify-content: center;align-items: center;">
+                            VIEW MENU
+                            <i class="fas fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-		    </div>	<!-- /.navbar-collapse -->
-		</div>	<!-- /.container-fluid -->
-	</nav>	<!-- End of /.nav -->
+        </div>
+    </div>
+</section>
+</section>
 
 
-	<!-- SLIDER Start
-    ================================================== -->
-
-
-	<section id="slider-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div id="slider" class="nivoSlider">
-                        <div >
-                            <img src="images/PASTRYSHOP.jpg" alt="" />
-
-                       </div>
-				    	<img src="images/BUFFET2.jpg" alt=""/>
-				    	<img src="images/LOUNGE.jpg" alt="" />
-					</div>	<!-- End of /.nivoslider -->
-				</div>	<!-- End of /.col-md-12 -->
-			</div>	<!-- End of /.row -->
-		</div>	<!-- End of /.container -->
-	</section> <!-- End of Section -->
-	<hr>
-	
 	<!--Green tile 3
     ================================================== -->
+<!-- OUR QUALITIES SECTION -->
 
+<section class="our_qualities" style="padding:100px 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="our_qualities_column">
+                    <img src="images/quality_food_img.png" >
+                    <div class="caption">
+                        <h3>
+                            Quality Foods
+                        </h3>
+                        <p>
+                            Sit amet, consectetur adipiscing elit quisque eget maximus velit,
+                            non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="our_qualities_column">
+                    <img src="images/fast_delivery_img.png" >
+                    <div class="caption">
+                        <h3>
+                            Quality Foods
+                        </h3>
+                        <p>
+                            Sit amet, consectetur adipiscing elit quisque eget maximus velit,
+                            non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="our_qualities_column">
+                    <img src="images/original_taste_img.png" >
+                    <div class="caption">
+                        <h3>
+                            Quality Foods
+                        </h3>
+                        <p>
+                            Sit amet, consectetur adipiscing elit quisque eget maximus velit,
+                            non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-	<section id="features">
-		<div class="container imgmargin">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="block">
-						<div class="media">
-							<div class="pull-left" href="#">
-                                <i class="fa fa-heart" aria-hidden="true"></i>
-						  	</div>
-						  	<div class="media-body">
-						    	<h4 class="media-heading">Healthy Meal</h4>
-
-						  </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="block">
-						<div class="media">
-							<div class="pull-left" href="#">
-                                <i class="fa fa-cutlery" aria-hidden="true"></i>
-						  	</div>
-						  	<div class="media-body">
-						    	<h4 class="media-heading">Fast Food</h4>
-
-						  </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="block">
-						<div class="media">
-							<div class="pull-left" href="#">
-                                <i class="fa fa-users" aria-hidden="true"></i>
-						  	</div>
-						  	<div class="media-body">
-						    	<h4 class="media-heading">Meet, Eat & Enjoy</h4>
-
-						  </div>	<!-- End of /.media-body -->
-						</div>	<!-- End of /.media -->
-					</div>	<!-- End of /.block -->
-				</div> <!-- End of /.col-md-4 -->
-			</div>	<!-- End of /.row -->
-		</div>	<!-- End of /.container -->
-	</section>	<!-- End of section -->
-<hr>
-
-
+        </div>
+    </div>
+</section>
 	<!--PASTRY SHOP
     ================================================== -->
-
-<hr>
 <section class="imgmargin">
 	<div class="container">
 		<div class="row">
@@ -305,16 +550,137 @@ padding-top: 15rem ;
 
 	<!--  1st photo tile
     ================================================== -->
+<style type="text/css">
+    .details_card
+    {
+        align-items: center;
+        margin: 150px 0px;
+    }
+    .details_card>span
+    {
+        float: left;
+        font-size: 60px;
+    }
 
-	<section class="buffetback">
-<div class="container">
-			
-		</div>	<!-- End of /.container -->
+    .details_card>div
+    {
+        float: left;
+        font-size: 20px;
+        margin-left: 20px;
+        letter-spacing: 2px
+    }
+</style>
 
 
-</section>	
-<hr>
+    <section class="restaurant_details" style="background: url(images/food_pic_2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 0%;
+    background-size: cover;
+    color:white !important;
+    min-height: 300px;">
+        <div class="layer">
+            <div class="container">
+                <div class="row">
 
+            <section class="pt-2 pb-6 bg-gray-100" id="count-stats">
+                <div class="row justify-content-center text-center">
+
+                    <div class="col-md-4 details_card">
+                        <h1 class="text-gradient text-info" id="state1" countTo="5234">0</h1>
+                        <h5>CUSTOMERS</h5>
+                        <p>Of “high-performing” level are led by a certified project manager</p>
+                    </div>
+                    <div class="col-md-4 details_card">
+                        <h1 class="text-gradient text-info"><span id="state2" countTo="3400">0</span>+</h1>
+                        <h5>FOODS</h5>
+                        <p>That meets quality standards required by our users</p>
+                    </div>
+                    <div class="col-md-4 details_card">
+                        <h1 class="text-gradient text-info"><span id="state3" countTo="24">0</span>/7</h1>
+                        <h5>AVAILABLE</h5>
+                        <p>Actively engage team members that finishes on time</p>
+                    </div>
+                </div>
+            </section>
+        </div></div></div>
+    </section>]
+
+<script>
+    // get the element to animate
+    var element = document.getElementById('count-stats');
+    var elementHeight = element.clientHeight;
+
+    // listen for scroll event and call animate function
+
+    document.addEventListener('scroll', animate);
+
+    // check if element is in view
+    function inView() {
+        // get window height
+        var windowHeight = window.innerHeight;
+        // get number of pixels that the document is scrolled
+        var scrollY = window.scrollY || window.pageYOffset;
+        // get current scroll position (distance from the top of the page to the bottom of the current viewport)
+        var scrollPosition = scrollY + windowHeight;
+        // get element position (distance from the top of the page to the bottom of the element)
+        var elementPosition = element.getBoundingClientRect().top + scrollY + elementHeight;
+
+        // is scroll position greater than element position? (is element in view?)
+        if (scrollPosition > elementPosition) {
+            return true;
+        }
+
+        return false;
+    }
+
+    var animateComplete = true;
+    // animate element when it is in view
+    function animate() {
+
+        // is element in view?
+        if (inView()) {
+            if (animateComplete) {
+                if (document.getElementById('state1')) {
+                    const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+                    if (!countUp.error) {
+                        countUp.start();
+                    } else {
+                        console.error(countUp.error);
+                    }
+                }
+                if (document.getElementById('state2')) {
+                    const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+                    if (!countUp1.error) {
+                        countUp1.start();
+                    } else {
+                        console.error(countUp1.error);
+                    }
+                }
+                if (document.getElementById('state3')) {
+                    const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+                    if (!countUp2.error) {
+                        countUp2.start();
+                    } else {
+                        console.error(countUp2.error);
+                    };
+                }
+                animateComplete = false;
+            }
+        }
+    }
+
+    if (document.getElementById('typed')) {
+        var typed = new Typed("#typed", {
+            stringsElement: '#typed-strings',
+            typeSpeed: 90,
+            backSpeed: 90,
+            backDelay: 200,
+            startDelay: 500,
+            loop: true
+        });
+    }
+</script>
 	<!--THE LOUNGE Start
     ================================================== -->
 
