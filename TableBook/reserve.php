@@ -120,7 +120,7 @@ or die("Something is wrong ... \n" . mysqli_error());
             <div class="col-md-3 clearfix">
                 <ul class="login-cart">
                     <li>
-                        <a href="../customer/login.php"> <i class="fas fa-user"></i>LOGIN</a>
+                        <a href="../user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
                     </li>
                     <li>
                         <a href="../customer/create.php"><i class="fas fa-user-plus"></i>REGISTER</a>
@@ -212,7 +212,7 @@ or die("Something is wrong ... \n" . mysqli_error());
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog col-md-4" role="document">
+            <div class="modal-dialog  d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5 " role="document">
                 <div class="modal-content d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5 ">
                     <div class="modal-header ">
                         <h5 class="modal-title font-weight-bolder text-primary text-gradient" id="exampleModalLabel">Reserve A Table</h5>

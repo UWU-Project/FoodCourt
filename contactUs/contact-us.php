@@ -47,10 +47,10 @@ error_reporting(0);
             <div class="col-md-3 clearfix">
                 <ul class="login-cart">
                     <li>
-                        <a href="../customer/login.php"> <i class="fas fa-user"></i>LOGIN</a>
+                        <a href="../user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
                     </li>
                     <li>
-                        <a href="../customer/create.php"><i class="fas fa-user-plus"></i>REGISTER</a>
+                        <a href="../user/signup-user.php"><i class="fas fa-user-plus"></i>REGISTER</a>
                     </li>
                 </ul>
             </div>
@@ -133,20 +133,20 @@ error_reporting(0);
                             </li>
 
                             <li class="nav-item dropdown dropdown-hover mx-2" >
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="../TableBook/buffet.php">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="../TableBook/TBB.php">
                                     BUFFET
                                 </a>
                             </li>
 
                             <li class="nav-item dropdown dropdown-hover mx-2" >
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  aria-selected="true" href="../about-us-old.php">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  aria-selected="true" href="../about-us.php">
                                     ABOUT US
                                 </a>
                             </li>
 
                             </li>
                             <li class="nav-item dropdown dropdown-hover mx-2" >
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active"  aria-selected="true" href="../about-us-old.php">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active"  aria-selected="true" href="../contactUs/contact-us.php">
                                     CONTACT US
                                 </a>
                             </li>
