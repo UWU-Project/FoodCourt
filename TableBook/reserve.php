@@ -69,7 +69,7 @@ or die("Something is wrong ... \n" . mysqli_error());
 
     <script language="JavaScript" src="../validation/user.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+    <link rel="stylesheet" href="../css/bread.css">
 
 
 
@@ -100,6 +100,9 @@ or die("Something is wrong ... \n" . mysqli_error());
             height: auto;
 
         }
+        .modal-open .container-fluid, .modal-open  .container {
+            -webkit-filter: blur(5px) grayscale(90%);
+        }
     </style>
 
 
@@ -125,7 +128,7 @@ or die("Something is wrong ... \n" . mysqli_error());
                         <a href="../user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
                     </li>
                     <li>
-                        <a href="../customer/create.php"><i class="fas fa-user-plus"></i>REGISTER</a>
+                        <a href="../user/signup-user.php"><i class="fas fa-user-plus"></i>REGISTER</a>
                     </li>
                 </ul>
             </div>
@@ -210,21 +213,49 @@ or die("Something is wrong ... \n" . mysqli_error());
 
 <!-- ================================================== -->
 
-<div class="page-header min-vh-25" >
+<div  id="page" style="padding-top: 50px" >
+    <div class="container">
+        <div class="py-5 text-center">
 
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb my-2 justify-content-center">
+                    <li class="breadcrumb-item active"><a href="#">Table</a></li>
+                    <li class="breadcrumb-item active"><a>Select Table</a></li>
+                    <li class="breadcrumb-item"><a>Pick Date</a></li>
+                    <li class="breadcrumb-item"><a>Reserved</a></li>
+                    <li class="breadcrumb-item"><a>Payment</a></li>
+                </ol>
+            </nav>
+
+            <h1 style="padding-top: 20px">TABLE RESERVATION</h1>
+            <hr>
+        </div>
+
+    </div>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5 ">
-                    <div class="modal-header ">
+                    <div class="modal-header" style="padding-bottom: 2px">
                         <h5 class="modal-title font-weight-bolder text-primary text-gradient" id="exampleModalLabel">Reserve A Table</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
+
+                    <div class="modal-body" style="padding-top: 2px; padding-bottom: 2px;">
                         <form action="reserve-exec.php" method="post">
-                            <div class="form-group">
+                            <div class="form-check">
+                                <input type="text" name="id" hidden value="<?php echo $_SESSION['SESS_MEMBER_ID'];?>">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb my-2 justify-content-center">
+                                        <li class="breadcrumb-item active"><a style="text-align: center">Table</a></li>
+                                        <li class="breadcrumb-item active"><a style="text-align: center">Select Table</a></li>
+                                        <li class="breadcrumb-item active"><a style="text-align: center">Pick Date</a></li>
+                                    </ol>
+                                </nav>
+                            </div>
+                            <div class="form-group" style="padding-top: 20px">
                                 <label for="exampleInputEmail1">Picked Table</label>
                                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="table" value="" readonly>
                             </div>
@@ -240,12 +271,11 @@ or die("Something is wrong ... \n" . mysqli_error());
                                     <option>Dinner</option>
                                 </select>
                             </div>
-                            <div class="form-check">
-                                <input type="text" name="id" hidden value="<?php echo $_SESSION['SESS_MEMBER_ID'];?>">
-                            </div>
-                            <div class="modal-footer justify-content-between">
-                                <button type="button" class="btn bg-gradient-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn bg-gradient-primary" data-toggle="confirmation">Submit</button>
+
+
+                            <div class="modal-footer justify-content-between" style="padding-bottom: 1px">
+                                <button type="button" class="btn bg-gradient-secondary "  data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn bg-gradient-primary del-btn" data-toggle="confirmation">Submit</button>
                             </div>
                             </div>
 
@@ -572,6 +602,24 @@ or die("Something is wrong ... \n" . mysqli_error());
 <!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
 
 <script src="../assets/js/soft-design-system.min.js?v=1.0.5" type="text/javascript"></script>
+
+
+<script>
+    $('.del-btn').on('click',function(e){
+        e.preventDefault();
+        // const href = $(this).attr('href')
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Reserve It!'
+        })
+    })
+
+</script>
 
 </body>
 </html>
