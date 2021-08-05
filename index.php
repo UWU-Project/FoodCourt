@@ -52,7 +52,7 @@ if (isset($_POST['Submit'])){
 
     <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
     <script src="assets/js/plugins/countup.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <style>
 	.txtpadding{
@@ -433,18 +433,7 @@ body{
                         <h1>tool</h1>
                     </div>
 
-                    <script type="text/javascript">
-                        if (document.getElementById('typed')) {
-                            var typed = new Typed("#typed", {
-                                stringsElement: '#typed-strings',
-                                typeSpeed: 90,
-                                backSpeed: 90,
-                                backDelay: 200,
-                                startDelay: 500,
-                                loop: true
-                            });
-                        }
-                    </script>
+
                     <h2>
                         MAKING PEOPLE HAPPY
                     </h2>
@@ -917,6 +906,18 @@ body{
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
+<script type="text/javascript">
+    if (document.getElementById('typed')) {
+        var typed = new Typed("#typed", {
+            stringsElement: '#typed-strings',
+            typeSpeed: 90,
+            backSpeed: 90,
+            backDelay: 200,
+            startDelay: 500,
+            loop: true
+        });
+    }
+</script>
 
 </body>
 </html>
