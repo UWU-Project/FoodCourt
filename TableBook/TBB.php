@@ -29,12 +29,11 @@
 
     <style>
         .photo1{
-            height: 50px;
-            width: auto;
+
         }
         .bfont{
 
-            font-size: 24px
+
          }
         .imgcenter {
             display: block;
@@ -103,7 +102,7 @@
         <div class="row">
             <div class="col-md-12">
                 <a href="#">
-                    <img src="../images/logo2copy.png" alt="logo">
+                    <img src="../images/logo2copy.png"  class="img-fluid" alt="logo">
                 </a>
             </div>	<!-- End of /.col-md-12 -->
         </div>	<!-- End of /.row -->
@@ -199,21 +198,21 @@
 <div>
     <div class="row imgcenter" >
         <div class="col-md-12 ">
-            <img src="../images/tableres.png" alt="">
+            <img src="../images/tableres.png"  class="img-fluid" alt="">
         </div>
     </div>
 
     <div class="row imgcenter bfont" >
        <div class="col-md-6">
 
-           <img src="../images/tse22.png" alt="">
+           <img src="../images/tse22.png"  class="img-fluid" alt="">
            <button class="w3-button w3-block w3-black" href="buffttest1.php"><a href="../buffttest1.php">Book Your Table</a></button>
         </div>
 
 
-        <div class="col-md-6 new">
+        <div class="col-md-6 photo1">
 
-            <img src="../images/rtw.PNG" alt="">
+            <img src="../images/rtw.PNG"  class="img-fluid" alt="">
 
         </div>
     </div>
@@ -228,7 +227,7 @@
             <div class="col-md-4" style="color: #B6B6B6;">
                 <div>
                     <a href="#">
-                        <img src="../images/footerlogo5.png" alt="">
+                        <img src="../images/footerlogo5.png"  class="img-fluid" alt="">
                     </a>
 
                     <p>
