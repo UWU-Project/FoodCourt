@@ -202,7 +202,6 @@
     <!-- ========================================================================================================================================= -->
     <div class="container">
         <div class="py-5 text-center">
-
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb my-2 justify-content-center">
                     <li class="breadcrumb-item active"><a href="#">Table</a></li>
@@ -212,17 +211,16 @@
                     <li class="breadcrumb-item"><a>Payment</a></li>
                 </ol>
             </nav>
-
             <h1 style="padding-top: 20px">RESERVATION SUCCESS</h1>
             <hr>
         </div>
-
     </div>
+    <!-- ========================================================================================================================================= -->
 
-    <div class="container">
-        <div class="row d-flex cart align-items-center justify-content-center">
-            <div class="col-md-10">
-                <div class="card">
+    <div class="container" style="padding-bottom: 1cm">
+        <div class="row">
+            <div class="d-flex justify-content-center flex-column">
+                <div class="card d-flex blur justify-content-center p-4 shadow-lg">
                     <div class="row g-0">
                         <div class="col-md-6 border-right p-5">
                             <div class="text-center order-details">

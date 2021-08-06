@@ -230,23 +230,37 @@ $tuck = mysqli_fetch_assoc($billing);
         <div class="col-md-4 d-none d-md-block">
             <div class="card">
                 <div class="card-body">
-                    <nav class="nav flex-column nav-pills nav-gap-y-1">
-                        <a href="#profile" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded active">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user mr-2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Profile Information
-                        </a>
+                    <div class="nav-wrapper position-relative end-0">
+                        <ul class="nav nav-pills nav-fill flex-column p-1" role="tablist">
+                            <li class="nav-item">
+                                <a href="#profile" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded active" role="tab" aria-controls="code" aria-selected="true">
+                                    <i class="ni ni-badge text-sm me-2"></i>My Profile
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#account" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded" role="tab" aria-controls="code" aria-selected="false">
+                                    <i class="ni ni-basket text-sm me-2"></i>Orders
+                                </a>
+                            </li>
 
-                        <a href="#account" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings mr-2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>Order History
-                        </a>
+                            <li class="nav-item">
+                                <a href="#account2" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded" role="tab" aria-controls="code" aria-selected="false">
+                                    <i class="ni ni-basket text-sm me-2"></i>Reservations
+                                </a>
+                            </li>
 
-                        <a href="#security" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shield mr-2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>Security
-                        </a>
+                            <li class="nav-item">
+                                <a href="#security" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded" role="tab" aria-controls="code" aria-selected="false">
+                                    <i class="ni ni-settings text-sm me-2"></i>Security
+                                </a>
+                            </li>
 
-                        <a href="#billing" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card mr-2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>Billing
-                        </a>
-                    </nav>
+                            <li class="nav-item">
+                                <a href="#billing" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded" role="tab" aria-controls="code" aria-selected="false">
+                                    <i class="ni ni-calendar-grid-58 text-sm me-2"></i>Billing
+                                </a>
+                            </li>
+                    </div>
                 </div>
             </div>
         </div>
@@ -261,6 +275,10 @@ $tuck = mysqli_fetch_assoc($billing);
 
                         <li class="nav-item">
                             <a href="#account" data-toggle="tab" class="nav-link has-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#account2" data-toggle="tab" class="nav-link has-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></a>
                         </li>
 
                         <li class="nav-item">
@@ -291,6 +309,7 @@ $tuck = mysqli_fetch_assoc($billing);
                     </div>
 
                     <div class="tab-pane" id="account">
+                        <!-- cart history -->
                         <h6>ORDER HISTORY</h6>
                         <hr>
                         <table class="table table-hover">
@@ -316,11 +335,68 @@ $tuck = mysqli_fetch_assoc($billing);
                             <td><?php echo $row['food_id']?></td>
                             <td><?php echo $row['quantity']?></td>
                             <td><?php echo $row['total']?></td>
-                            <td><?php echo $row['delivered']?></td>
+                            <td>
+                                <?php
+                                if ($row['delivered'] !== '0') {
+                                echo '<span class="badge bg-gradient-success">'.'confirmed'.'</span>';
+                                }else{
+                                echo '<span class="badge bg-gradient-warning">'.'processing'.'</span>';
+                                }
+                                ?>
+                            </td>
                         </tr>
                         <?php } ?>
                             </tbody>
                         </table>
+                        <!-- cart history end-->
+                    </div>
+                    <div class="tab-pane" id="account2">
+                        <!-- reservation history -->
+                        <h6>RESERVATION HISTORY </h6>
+                        <hr>
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+
+                                <th scope="col">Table No</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Time Slot</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            $resultR = mysqli_query($conn, "SELECT * FROM reservations_details WHERE member_id ='$member_id'")
+                            or die("A problem has occured 2... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+                            while ($rowR = mysqli_fetch_assoc($resultR)) {
+                                ?>
+                                <tr>
+                                    <th scope="row"><?php echo $rowR['ReservationID']?></th>
+
+                                    <td><?php echo $rowR['table_id']?></td>
+                                    <td><?php echo $rowR['Reserve_Date']?></td>
+                                    <td><?php echo $rowR['Reserve_Time']?></td>
+                                    <td><?php
+                                        if ($rowR['flag'] == '1') {
+                                            echo '<span class="badge bg-gradient-success">'.'confirmed'.'</span>';
+                                        }else{
+
+                                            if($rowR['flag'] == '0'){
+                                                echo '<span class="badge bg-gradient-dark">'.'processing'.'</span>';
+                                            }
+                                            else{
+                                                echo '<span class="badge bg-gradient-danger">'.'cancelled'.'</span>';
+                                            }
+
+                                        }
+                                        ?>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                            </tbody>
+                        </table>
+                        <!-- reservation history end -->
                     </div>
 
                     <div class="tab-pane" id="security">
