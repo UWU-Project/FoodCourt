@@ -587,9 +587,6 @@ $tuck = mysqli_fetch_assoc($billing);
 <footer class="footers bg-gradient-faded-light">
     <hr class="horizontal dark ">
     <div class="container">
-
-
-
                 <div class="container">
                     <div class="row ">
                         <div class="col-md-12 py-2">
@@ -611,7 +608,6 @@ $tuck = mysqli_fetch_assoc($billing);
                     </p>
                 </div>
             </div>
-
     </div>
 </footer>
 
