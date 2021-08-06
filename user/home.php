@@ -62,6 +62,27 @@ $tuck = mysqli_fetch_assoc($billing);
 
 
     <style>
+        .footers a {color:#696969;}
+        .footers p {color:#696969;}
+        .footers ul {line-height:30px;}
+        #social-fb:hover {
+            color: #3B5998;
+            transition:all .001s;
+        }
+        #social-tw:hover {
+            color: #4099FF;
+            transition:all .001s;
+        }
+        #social-gp:hover {
+            color: #d34836;
+            transition:all .001s;
+        }
+        #social-em:hover {
+            color: #f39c12;
+            transition:all .001s;
+        }
+
+
         body{
             margin-top:20px;
             color: #1a202c;
@@ -126,21 +147,29 @@ $tuck = mysqli_fetch_assoc($billing);
 
 <!-- TOP HEADER Start
     ================================================== -->
-
-<section id="top">
+<section id="top" >
     <div class="container">
         <div class="row">
-            <div class="col-md-7">
+
+            <div class="col-md-6">
                 <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
-            <div class="col-md-3 clearfix">
 
+            <div class="col-md-3 clearfix">
+                <ul class="login-cart">
+                    <li>
+                        <a href="../cart/cart.php"> <i class="fas fa-shopping-cart"></i>CART</a>
+                    </li>
+                    <li>
+                        <a href="../TableBook/TBB.php"><i class="fas fa-calendar-plus"></i>RESERVATION</a>
+                    </li>
+                </ul>
             </div>
 
         </div> <!-- End Of /.row -->
-    </div>	<!-- End Of /.Container -->
-</section>  <!-- End of /Section -->
+    </div>    <!-- End Of /.Container -->
 
+</section>  <!-- End of /Section -->
 
 <!-- LOGO Start
 ================================================== -->
@@ -211,16 +240,22 @@ $tuck = mysqli_fetch_assoc($billing);
 
 
 <div class="container" style="margin-top: 3cm">
-<h1>Welcome <?php echo $fetch_info['firstname'] ?></h1>
-</div>
 
-<br>
+    <!-- ========================================================================================================================================= -->
+
+    <!-- ========================================================================================================================================= -->
+
 <div class="container">
 
+    <div class="text-center">
+
+        <h1>Welcome <?php echo $fetch_info['firstname'] ?> !</h1>
+        <hr>
+    </div>
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb" class="main-breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Profile Settings</li>
         </ol>
     </nav>
@@ -233,7 +268,7 @@ $tuck = mysqli_fetch_assoc($billing);
                     <div class="nav-wrapper position-relative end-0">
                         <ul class="nav nav-pills nav-fill flex-column p-1" role="tablist">
                             <li class="nav-item">
-                                <a href="#profile" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded active" role="tab" aria-controls="code" aria-selected="true">
+                                <a href="#profile" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded active" role="tab" aria-controls="preview" aria-selected="true">
                                     <i class="ni ni-badge text-sm me-2"></i>My Profile
                                 </a>
                             </li>
@@ -245,7 +280,7 @@ $tuck = mysqli_fetch_assoc($billing);
 
                             <li class="nav-item">
                                 <a href="#account2" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded" role="tab" aria-controls="code" aria-selected="false">
-                                    <i class="ni ni-basket text-sm me-2"></i>Reservations
+                                    <i class="ni ni-calendar-grid-58 text-sm me-2"></i>Reservations
                                 </a>
                             </li>
 
@@ -257,7 +292,7 @@ $tuck = mysqli_fetch_assoc($billing);
 
                             <li class="nav-item">
                                 <a href="#billing" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded" role="tab" aria-controls="code" aria-selected="false">
-                                    <i class="ni ni-calendar-grid-58 text-sm me-2"></i>Billing
+                                    <i class="ni ni-map-big text-sm me-2"></i>Billing
                                 </a>
                             </li>
                     </div>
@@ -304,7 +339,7 @@ $tuck = mysqli_fetch_assoc($billing);
                                 <label for="url">E-Mail</label>
                                 <input type="text" class="form-control" id="url" placeholder="Enter your website address" value="<?php echo $fetch_info['email'] ?>" disabled>
                             </div>
-
+                            <hr>
                         </form>
                     </div>
 
@@ -420,8 +455,6 @@ $tuck = mysqli_fetch_assoc($billing);
 
                             <div class="form-group mb-0">
 
-
-
                                 <?php
                                 $member_id = $_SESSION['SESS_MEMBER_ID'];
 
@@ -432,7 +465,21 @@ $tuck = mysqli_fetch_assoc($billing);
 
                                 if(mysqli_num_rows($billing2)>0){
                                         $check='hidden="true"';
-                                        echo "Billing Address is Already Added";
+                                        echo "Billing Details Already Added";
+
+                                        while ($billS = mysqli_fetch_assoc($billing2)) {
+                                            ?>
+                                            <div class="card bg-gradient-default">
+                                              <div class="card-body">
+
+                                                <blockquote class="blockquote text-white mb-0">
+                                                    <p class="text-dark text-gradient text-info text-sm ms-3">Post Box No : <?php echo $billS['P_O_Box_No']; ?> </br> Street Address : <?php echo $billS['Street_Address']; ?> </br> City : <?php echo $billS['City']; ?> </br> </br>  Mobile Number : <?php echo $billS['Mobile_No']; ?> </br>  Landline Number : <?php echo $billS['Landline_No']; ?> </p>
+                                                </blockquote>
+                                              </div>
+                                            </div>
+                                            <?php
+                                        }
+
                                 }else{
                                     $check="";
                                 }
@@ -535,18 +582,95 @@ $tuck = mysqli_fetch_assoc($billing);
             </div>
         </div>
     </div>
+</div>
 
 
+<!-- -------- FOOTER START ------- -->
+<footer class="footers bg-gradient-faded-light">
+    <hr class="horizontal dark ">
+    <div class="container">
+        <div class=" row">
+            <div class="col-md-4" style="color: #e8d36f;">
 
-    <!--   Core JS Files   -->
-    <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+                    <div class="footers-logo">
+                        <img src="../images/footerlogo5.png" alt="Logo" >
+                    </div>
+                    <div class="footers-info mt-3">
+                        <p>We stand for best in everything we do, to create an environment where absolute guest
+                            satisfaction,which is our highest priority.</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i></a>
+                        <a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i></a>
+                        <a href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-2x social"></i></a>
+                        <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-2x social"></i></a>
+                    </div>
 
-    <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
-    <script src="../assets/js/plugins/parallax.min.js"></script>
-    <!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
+            </div>
 
-    <script src="../assets/js/soft-design-system.min.js?v=1.0.5" type="text/javascript"></script>
+
+            <div class="col-md-5 col-sm-6 col-6 mb-4" style="color: #B6B6B6;">
+                <div class="block">
+                    <h4 style="color: #fff;">GET IN TOUCH</h4>
+                    <p><i class="fa fa-map-marker"></i> <span style="color: #fff;">&emsp;FOOD COURT:</span> NO:22
+                        Mccallum's Drive Nuwara Eliya</p>
+                    <p><i class="fa fa-phone"></i> <span style="color: #fff;">&emsp;PHONE:</span> 052 22 22 878 </p>
+
+                    <p><i class="fa fa-mobile"></i> <span style="color: #fff;">&emsp;MOBILE:</span> 070 2 100 600</p>
+
+                    <p class="mail"><i class="fa fa-envelope"></i> <span style="color: #fff;">&emsp;E-MAIL:</span>
+                        info@foodcourt.com</p>
+                </div>    <!-- End Of /.block -->
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="block">
+                    <div class="media">
+                        <h4 style="color: #fff;">OUR LOCATION</h4>
+                        <div id="map"></div>
+
+
+                    </div>    <!-- End Of /.media -->
+                </div>    <!-- End Of /.block -->
+            </div> <!-- End Of Col-md-3 -->
+
+
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-md-12 py-2">
+                            <small>
+                                Disclaimer: Element Limited is only an intermediary offering its platform to facilitate the transactions between Seller and Customer/Buyer/User and is not and cannot be a party to or control in any manner any transactions between the Seller and the Customer/Buyer/User. All the offers and discounts on this Website have been extended by various Builder(s)/Developer(s) who have advertised their products. Element is only communicating the offers and not selling or rendering any of those products or services. It neither warrants nor is it making any representations with respect to offer(s) made on the site. Element Limited shall neither be responsible nor liable to mediate or resolve any disputes or disagreements between the Customer/Buyer/User and the Seller and both Seller and Customer/Buyer/User shall settle all such disputes without involving Element Limited in any manner.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="col-12">
+                <div class="text-center">
+                    <p class="my-4 text-sm" style="color: #fff;">
+                        Copyright ©
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>
+                        | Food Court All Rights Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!--   Core JS Files   -->
+<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+
+<script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+<!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+<script src="../assets/js/plugins/parallax.min.js"></script>
+<!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
+
+<script src="../assets/js/soft-design-system.min.js?v=1.0.5" type="text/javascript"></script>
 
 <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -570,18 +694,6 @@ $tuck = mysqli_fetch_assoc($billing);
         }, false)
     }())
 </script>
-
-
-
-<!--   Core JS Files   -->
-<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
-
-<script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-<!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
-<script src="../assets/js/plugins/parallax.min.js"></script>
-<!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
-
-<script src="../assets/js/soft-design-system.min.js?v=1.0.5" type="text/javascript"></script>
 
 </body>
 
