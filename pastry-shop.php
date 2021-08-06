@@ -56,31 +56,26 @@ if(isset($_POST['Submit'])){
 	<meta charset="UTF-8">
 	<title>Food  Court</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
 
-	<!-- Fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
+    <!-- Nucleo Icons -->
+    <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
 
-    <!-- Icon -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
 
-	<!-- Css -->
-	<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/responsive.css">
+    <!-- CSS Files -->
+    <link id="pagestyle" href="assets/css/soft-design-system.css?v=1.0.5" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
 
-	<!-- jS -->
-	<script src="js/jquery.min.js" type="text/javascript"></script>
-	<script src="js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="js/jquery.nivo.slider.js" type="text/javascript"></script>
-	<script src="js/owl.carousel.min.js" type="text/javascript"></script>
-	<script src="js/jquery.nicescroll.js"></script>
-	<script src="js/jquery.scrollUp.min.js"></script>
-	<script src="js/main.js" type="text/javascript"></script>
-	<script language="JavaScript" src="validation/user.js"></script>
+
+    <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+    <script src="assets/js/plugins/countup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 <style>
 	.view1{
 		
@@ -88,6 +83,10 @@ if(isset($_POST['Submit'])){
 		width: 200px; 
 		float: left;   
 	}
+    body{
+        background: url(images/wall2.png);
+
+    }
 </style>
 
 
@@ -97,158 +96,154 @@ if(isset($_POST['Submit'])){
 
 <!-- TOP HEADER Start
     ================================================== -->
-	
-	<section id="top">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-7">
-					<p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
-				</div>
-                <div class="col-md-3 clearfix">
-                    <ul class="login-cart">
-                        <li>
-                            <a href="customer/login.php">LOGIN</a>
-                        </li>
-                        <li>
-                            <a href="customer/create.php">REGISTER</a>
-                        </li>
-                    </ul>
-                </div>
 
-                <div class="col-md-2">
-					<div class="search-box">
-						<div class="input-group">
-					    	<input placeholder="Search Here" type="text" class="form-control">
-					      	<span class="input-group-btn">
-					        	<button class="btn btn-default" type="button"></button>
-					      	</span>
-					    </div><!-- /.input-group -->
-					</div><!-- /.search-box -->
-				</div>
-			</div> <!-- End Of /.row -->
-		</div>	<!-- End Of /.Container -->
+<!-- TOP HEADER Start
+================================================== -->
 
-	
-	<!-- MODAL Start
-    	================================================== -->
+<section id="top">
+    <div class="container">
+        <div class="row">
 
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-		    	<div class="modal-content">
-		    		<div class="modal-header">
-		        		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		        		<h4 class="modal-title" id="myModalLabel">Introduce Yourself</h4>
-		      		</div>
-			      	<div class="modal-body clearfix">
+            <div class="col-md-6">
+                <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
+            </div>
 
-						<form action="#" method="post" id="create-account_form" class="std">
-							<fieldset>
-								<h3>Create your account</h3>
-								<div class="form_content clearfix">
-									<h4>Enter your e-mail address to create an account.</h4>
-									<p class="text">
-										<label for="email_create">E-mail address</label>
-										<span>
-											<input placeholder="E-mail address"  type="text" id="email_create" name="email_create" value="" class="account_input">
-					                    </span>
-									 </p>
-									 <p class="submit">
-										<button class="btn btn-primary">Create Your Account</button>
-									</p>
-								</div>
-							</fieldset>
-						</form>
-			      		<form action="" method="post" id="login_form" class="std">
-							<fieldset>
-								<h3>Already registered?</h3>
-								<div class="form_content clearfix">
-									<p class="text">
-									<label for="email">E-mail address</label>
-										<span><input placeholder="E-mail address" type="text" id="email" name="email" value="" class="account_input"></span>
-									</p>
-									<p class="text">
-									<label for="passwd">Password</label>
-										<span><input placeholder="Password" type="password" id="passwd" name="passwd" value="" class="account_input"></span>
-									</p>
-									<p class="lost_password">
-										<a href="#popab-password-reset" class="popab-password-link">Forgot your password?</a>
-									</p>
-									<p class="submit">
-										<button class="btn btn-success">Log in</button>
-									</p>
-								</div>
-							</fieldset>
-						</form>
-			      	</div>
-			      	<div class="modal-footer">
-			        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			      	</div>
-		    	</div>
-		  	</div>
-		</div>	
-	</section>  <!-- End of /Section -->
-	
-
-
-	<!-- LOGO Start
-    ================================================== -->
-	
-	<header>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<a href="#">
-						<img src="images/logo2copy.png" alt="logo">
-					</a>
-				</div>	<!-- End of /.col-md-12 -->
-			</div>	<!-- End of /.row -->
-		</div>	<!-- End of /.container -->
-	</header> <!-- End of /Header -->
-
-	
-
-
-	<!-- MENU Start
-    ================================================== -->
-
-	<nav class="navbar navbar-default">
-		<div class="container">
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-		        <span class="sr-only">Toggle navigation</span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>
-		      </button>
-		    </div> <!-- End of /.navbar-header -->
-
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav nav-main">
-                    <li ><a href="index.php">HOME</a></li>
-                    <li class="active"><a href="pastry-shop.php">PASTRY SHOP</a></li>
-                    <li><a href="lounge.php">THE LOUNGE</a></li>
-                    <li><a href="TableBook/buffet.php">BUFFET</a></li>
-                    <li ><a href="about-us-old.php">ABOUT US</a></li>
-                    <li><a href="#">CART</a></li>
+            <div class="col-md-3 clearfix">
+                <ul class="login-cart">
+                    <li>
+                        <a href="user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
+                    </li>
+                    <li>
+                        <a href="user/signup-user.php"><i class="fas fa-user-plus"></i>REGISTER</a>
+                    </li>
                 </ul>
-					</li> <!-- End of /.dropdown -->
-                </ul> <!-- End of /.nav-main -->
-		    </div>	<!-- /.navbar-collapse -->
-		</div>	<!-- /.container-fluid -->
-	</nav>	<!-- End of /.nav -->
+            </div>
+            <div class="col-md-1">
+
+            </div>
+
+            <div class="col-md-2">
+                <div class="search-box">
+                    <div class="input-group">
+                        <input placeholder="Search Here" type="text" class="form-control">
+                        <span class="input-group-btn">
+					        	<button type="button">
+
+					      	</span>
+                    </div><!-- /.input-group -->
+                </div><!-- /.search-box -->
+            </div>
+        </div> <!-- End Of /.row -->
+    </div>	<!-- End Of /.Container -->
+
+</section>  <!-- End of /Section -->
+
+<!-- LOGO Start
+================================================== -->
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a href="#">
+                    <img src="images/logo2copy.png" alt="logo">
+                </a>
+            </div>	<!-- End of /.col-md-12 -->
+        </div>	<!-- End of /.row -->
+    </div>	<!-- End of /.container -->
+</header> <!-- End of /Header -->
+
+
+<!-- Navbar -->
+<div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+        <div class="col-12">
+
+            <nav class="navbar navbar-expand-lg  blur  top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+
+                <div class="container-fluid">
+                    <a class="navbar-brand font-weight-bolder ms-sm-3" href="index.php" rel="tooltip" title="Orchid Bliss" data-placement="bottom" target="_blank">
+                        ORCHID BLISS
+                    </a>
+
+                    <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon mt-2">
+                            <span class="navbar-toggler-bar bar1"></span>
+                            <span class="navbar-toggler-bar bar2"></span>
+                            <span class="navbar-toggler-bar bar3"></span>
+                          </span>
+                    </button>
 
 
 
+                    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+                        <ul class="nav navbar-nav nav-main">
+                            <li class="nav-item dropdown dropdown-hover mx-6 " >
 
-	<section id="topic-header">
+                            </li>
+
+
+
+                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active"  href="pastry-shop.php">
+                                    PASTRY SHOP
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="lounge.php" >
+                                    THE LOUNGE
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="TableBook/TBB.php">
+                                    BUFFET
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  aria-selected="true" href="about-us.php">
+                                    ABOUT US
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center "  aria-selected="true" href="contactUs/contact-us.php">
+                                    CONTACT US
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown dropdown-hover mx-6" >
+
+                            </li>
+
+                            <li class="nav" style="margin-left: 50px">
+                                <a class="nav-link nav-link-icon me-2 " href="cart/cart.php" target="_blank" >
+
+                                    <i class="fa fa-shopping-cart me-1"></i>
+                                    <p class="d-inline text-sm z-index-1 font-weight-bold" >CART</p>
+                                </a>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+        </div>
+    </div>
+</div>
+
+
+<br><br><br><br>
+<section>
 		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<h2>PASTRY SHOP</h2>
-					<p> </p>
+            <div class="col-md-4">
+					<h3>PASTRY SHOP</h3>
 				</div>	<!-- End of /.col-md-4 -->
             </div>	<!-- End of /.row -->
-		</div>	<!-- End of /.container -->
 	</section>	<!-- End of /#Topic-header -->
 
 
@@ -409,109 +404,105 @@ if(isset($_POST['Submit'])){
 
 				<!-- Pagination -->
 
-				<div class="pagination-bottom">
-					<ul class="pagination">
-						  <li class="disabled"><a href="#">&laquo;</a></li>
-						  <li class="active"><a href="#">1 <span class="sr-only"></span></a></li>
-						  <li><a href="#">2</a></li>
-						  <li><a href="#">3</a></li>
-						  <li><a href="#">4</a></li>
-						  <li><a href="#">»</a></li>
-					</ul>	<!-- End of /.pagination -->
-				</div>
-			</div>	<!-- End of /.col-md-9 -->
-		</div>	<!-- End of /.container -->
-	</section>	<!-- End of Section -->
 
 
-
-<!-- FOOTER Start
-================================================== -->
-
-<footer>
+<!-- -------- FOOTER START ------- -->
+<footer class="footer" style="background: #383838; padding-top: 5px">
+    <hr class="horizontal dark mb-5">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="block clearfix">
+        <div class=" row">
+            <div class="col-md-4" style="color: #B6B6B6;">
+                <div>
                     <a href="#">
                         <img src="images/footerlogo5.png" alt="">
                     </a>
-                    <br><br>
+
                     <p>
-                        We stand for best in everything we do, to create an environment where absolute guest satisfaction,which is our highest priority.
+                        We stand for best in everything we do, to create an environment where absolute guest
+                        satisfaction,which is our highest priority.
 
                     </p>
-                    <h4 class="connect-heading">CONNECT WITH US</h4>
-                    <ul class="social-icon">
-                        <li>
-                            <a class="facebook-icon" href="#">
-                                <i class="fa fa-facebook"></i>
+                </div>
+                <div>
+                    <h6 class="mt-3 mb-2 opacity-8" style="color: #fff;">Social</h6>
+                    <ul class="d-flex flex-row ms-n3 nav">
+                        <li class="nav-item" style="color: #fff;">
+                            <a class="nav-link pe-1" href="https://www.facebook.com" target="_blank">
+                                <i class="fab fa-facebook text-lg opacity-8" style="color: #fff;"></i>
                             </a>
                         </li>
-                        <li>
-                            <a class="plus-icon" href="#">
-                                <i class="fa fa-google-plus"></i>
+                        <li class="nav-item">
+                            <a class="nav-link pe-1" href="https://twitter.com" target="_blank">
+                                <i class="fab fa-twitter text-lg opacity-8" style="color: #fff;"></i>
                             </a>
                         </li>
-                        <li>
-                            <a class="twitter-icon" href="#">
-                                <i class="fa fa-twitter"></i>
+                        <li class="nav-item">
+                            <a class="nav-link pe-1" href="https://dribbble.com" target="_blank">
+                                <i class="fab fa-dribbble text-lg opacity-8" style="color: #fff;"></i>
                             </a>
                         </li>
-                        <li>
-                            <a class="pinterest-icon" href="#">
-                                <i class="fa fa-pinterest"></i>
+                        <li class="nav-item">
+                            <a class="nav-link pe-1" href="https://github.com" target="_blank">
+                                <i class="fab fa-github text-lg opacity-8" style="color: #fff;"></i>
                             </a>
                         </li>
-                        <li>
-                            <a class="linkedin-icon" href="#">
-                                <i class="fa fa-linkedin"></i>
+                        <li class="nav-item">
+                            <a class="nav-link pe-1" href="https://www.youtube.com" target="_blank">
+                                <i class="fab fa-youtube text-lg opacity-8" style="color: #fff;"></i>
                             </a>
                         </li>
-                    </ul>	<!-- End Of /.social-icon -->
-                </div>	<!-- End Of /.block -->
-            </div> <!-- End Of /.Col-md-4 -->
-            <div class="col-md-4">
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-md-5 col-sm-6 col-6 mb-4" style="color: #B6B6B6;">
                 <div class="block">
-                    <h4>GET IN TOUCH</h4>
-                    <p ><i class="fa  fa-map-marker"></i> <span>Food Court: </span>NO:22 Mccallum's Drive Nuwara Eliya</p>
-                    <p> <i class="fa  fa-phone"></i> <span>Phone:</span> 052 22 22 878 </p>
+                    <h4 style="color: #fff;">GET IN TOUCH</h4>
+                    <p><i class="fa fa-map-marker"></i> <span style="color: #fff;">&emsp;FOOD COURT:</span> NO:22
+                        Mccallum's Drive Nuwara Eliya</p>
+                    <p><i class="fa fa-phone"></i> <span style="color: #fff;">&emsp;PHONE:</span> 052 22 22 878 </p>
 
-                    <p> <i class="fa  fa-mobile"></i> <span>Mobile:</span> 070 2 100 600</p>
+                    <p><i class="fa fa-mobile"></i> <span style="color: #fff;">&emsp;MOBILE:</span> 070 2 100 600</p>
 
-                    <p class="mail"><i class="fa  fa-envelope"></i>Eamil: <span>info@foodcourt.com</span></p>
-                </div>	<!-- End Of /.block -->
-            </div> <!-- End Of Col-md-3 -->
+                    <p class="mail"><i class="fa fa-envelope"></i> <span style="color: #fff;">&emsp;E-MAIL:</span>
+                        info@foodcourt.com</p>
+                </div>    <!-- End Of /.block -->
+            </div>
 
-            <div class="col-md-4">
+
+            <div class="col-md-3">
                 <div class="block">
                     <div class="media">
-                        <h4>Our Location</h4>
+                        <h4 style="color: #fff;">OUR LOCATION</h4>
+                        <div id="map"></div>
 
 
-                    </div>	<!-- End Of /.media -->
-                </div>	<!-- End Of /.block -->
+                    </div>    <!-- End Of /.media -->
+                </div>    <!-- End Of /.block -->
             </div> <!-- End Of Col-md-3 -->
-        </div> <!-- End Of /.row -->
-    </div> <!-- End Of /.Container -->
 
+            <div class="col-12">
+                <div class="text-center">
+                    <p class="my-4 text-sm" style="color: #fff;">
+                        Copyright ©
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>
+                        | Food Court <a href="admin/login-form.php" target="_blank">Administrator</a> All Rights
+                        Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
-
-    <!-- FOOTER-BOTTOM Start
-    ================================================== -->
-
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-
-                    <p style="text-align: center;">© 2021 | Food Court <a href="admin/login-form.php">Administrator</a> All Rights Reserved</p>
-                </div>	<!-- End Of /.col-md-12 -->
-            </div>	<!-- End Of /.row -->
-        </div>	<!-- End Of /.container -->
-    </div>	<!-- End Of /.footer-bottom -->
-</footer> <!-- End Of Footer -->
-
-<a id="back-top" href="#"></a>
+<!-- Google Map -->
+<script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqqBMyAoQe2LlTe9e3_U5O8NaUwEJ9dDU&callback=initMap&libraries=&v=weekly"
+        async
+></script>
+<script src="validation/map.js"></script>
 </body>
 </html>
