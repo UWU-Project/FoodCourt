@@ -194,6 +194,7 @@ $tuck = mysqli_fetch_assoc($billing);
     <div class="row">
         <div class="col-12">
 
+
             <nav class="navbar navbar-expand-lg  blur  top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
 
                 <div class="container-fluid">
@@ -212,22 +213,19 @@ $tuck = mysqli_fetch_assoc($billing);
 
 
                     <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
-                        <ul class="nav navbar-nav nav-main">
-                            <li class="nav-item dropdown dropdown-hover mx-10">
-                            </li>
-                            <li class="nav" style="margin-left: 50px">
-                                <a class="nav-link nav-link-icon me-2 active " href="home.php">
+                        <ul class="nav navbar-nav nav-main mx-auto">
+
+                            <li class="nav">
+                                <a class="nav-link nav-link-icon active " href="home.php">
                                     <i class="fas fa-user me-1"></i>
                                     <p class="d-inline text-sm z-index-1 font-weight-bold">USER PROFILE</p>
                                 </a>
                             </li>
-                            <li class="nav" style="margin-left: 0px">
-                                <a class="nav-link nav-link-icon me-2 active " href="logout-user.php">
-                                    <i class="fas fa-user me-1"></i>
-                                    <p class="d-inline text-sm z-index-1 font-weight-bold">LOGOUT</p>
-                                </a>
-                            </li>
 
+
+                        </ul>
+                        <ul class="navbar-nav ms-auto">
+                            <button class="btn bg-gradient-warning mb-0">LOGOUT</button>
                         </ul>
                     </div>
 
