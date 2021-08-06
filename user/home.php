@@ -587,51 +587,7 @@ $tuck = mysqli_fetch_assoc($billing);
 <footer class="footers bg-gradient-faded-light">
     <hr class="horizontal dark ">
     <div class="container">
-        <div class=" row">
-            <div class="col-md-4" style="color: #e8d36f;">
 
-                    <div class="footers-logo">
-                        <img src="../images/footerlogo5.png" alt="Logo" >
-                    </div>
-                    <div class="footers-info mt-3">
-                        <p>We stand for best in everything we do, to create an environment where absolute guest
-                            satisfaction,which is our highest priority.</p>
-                    </div>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-2x social"></i></a>
-                        <a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-2x social"></i></a>
-                        <a href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-2x social"></i></a>
-                        <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-2x social"></i></a>
-                    </div>
-
-            </div>
-
-
-            <div class="col-md-5 col-sm-6 col-6 mb-4" style="color: #B6B6B6;">
-                <div class="block">
-                    <h4 style="color: #fff;">GET IN TOUCH</h4>
-                    <p><i class="fa fa-map-marker"></i> <span style="color: #fff;">&emsp;FOOD COURT:</span> NO:22
-                        Mccallum's Drive Nuwara Eliya</p>
-                    <p><i class="fa fa-phone"></i> <span style="color: #fff;">&emsp;PHONE:</span> 052 22 22 878 </p>
-
-                    <p><i class="fa fa-mobile"></i> <span style="color: #fff;">&emsp;MOBILE:</span> 070 2 100 600</p>
-
-                    <p class="mail"><i class="fa fa-envelope"></i> <span style="color: #fff;">&emsp;E-MAIL:</span>
-                        info@foodcourt.com</p>
-                </div>    <!-- End Of /.block -->
-            </div>
-
-
-            <div class="col-md-3">
-                <div class="block">
-                    <div class="media">
-                        <h4 style="color: #fff;">OUR LOCATION</h4>
-                        <div id="map"></div>
-
-
-                    </div>    <!-- End Of /.media -->
-                </div>    <!-- End Of /.block -->
-            </div> <!-- End Of Col-md-3 -->
 
 
                 <div class="container">
@@ -655,7 +611,7 @@ $tuck = mysqli_fetch_assoc($billing);
                     </p>
                 </div>
             </div>
-        </div>
+
     </div>
 </footer>
 
