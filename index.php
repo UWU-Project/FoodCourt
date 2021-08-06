@@ -321,7 +321,7 @@ body{
         <div class="row">
             <div class="col-md-12">
                 <a href="#">
-                    <img src="images/logo2copy.png" alt="logo">
+                    <img src="images/logo2copy.png"  class="img-fluid" alt="logo">
                 </a>
             </div>	<!-- End of /.col-md-12 -->
         </div>	<!-- End of /.row -->
@@ -798,7 +798,7 @@ body{
             <div class="col-md-4" style="color: #B6B6B6;">
                 <div>
                     <a href="#">
-                        <img src="images/footerlogo5.png" alt="">
+                        <img src="images/footerlogo5.png"  class="img-fluid" alt="">
                     </a>
 
                     <p>
