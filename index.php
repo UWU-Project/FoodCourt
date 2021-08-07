@@ -26,7 +26,6 @@ if (isset($_POST['Submit'])){
 }
 ?>
 
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -263,7 +262,7 @@ padding-top: 10rem;
 
     }
 body{
-    background: url(images/wall2.png);
+    background: url(images/ourback.jpg);
 
 }
     </style>
