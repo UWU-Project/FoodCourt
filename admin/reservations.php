@@ -2,7 +2,8 @@
     require_once('authenticate/auth.php');
 ?>
 
-    <?php
+
+<?php
         //checking connection and connecting to a database
         require_once('connect/config.php');
         //Connect to mysqli server
@@ -40,6 +41,20 @@
 <body>
 <!-- LOGO Start
 ================================================== -->
+<script>
+    <?php
+        if(isset($_GET['m'])){
+        $alert="
+            swal.fire({
+                 type : 'success',
+                 title : 'Record Deleted',
+                 text : 'Record has been deleted'
+             })
+            ";
+            echo $alert;
+        }
+    ?>
+</script>
 
 <header>
     <div class="container">
@@ -202,24 +217,24 @@
                     <div class="modal fade" id="<?php echo $cancel_data; ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo $cancel_data; ?>" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Cancel Order</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-group">
-                                        <label>Cancellation Reason</label>
-                                        <textarea class="form-control" id="cancellation_reason_order_<?php echo $row["ReservationID"] ?>" required="required"></textarea>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                                    <button type="button" data-id = "<?php echo $row["ReservationID"]; ?>" class="btn btn-danger cancel_order_button del-btn">
-                                        Cancel Order
-                                    </button>
-                                </div>
+                                <form action="delete-reservation.php" method="post">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Cancel Order</h5>
+
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <label>Cancellation Reason</label>
+                                                <textarea name="reason" class="form-control" required></textarea>
+                                                <input type="text" id="delete" name="delete" value="ok" hidden>
+                                                <input type="text" id="id" name="id" value="<?php echo $row['ReservationID'];?>" hidden>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                                            <input type="submit" class="btn btn-secondary">yes</input>
+                                        </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -246,7 +261,7 @@
 <script>
     $('.del-btn').on('click',function(e){
         e.preventDefault();
-        //const href = $(this).attr('href')
+        const href = $(this).attr('href')
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -254,8 +269,17 @@
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, Reserve It!'
+            confirmButtonText: 'Yes, Deletet It!'
+        }).then((result) => {
+            if (result.value) {
+                document.location.href = href;
+
+            }
         })
+
+
+
+
     })
 
 </script>

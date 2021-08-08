@@ -10,21 +10,22 @@
         die('Failed to connect to server: ' . mysqli_error());
     }
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // check if the 'id' variable is set in URL
+        if (isset($_POST['id']) && isset($_POST['delete']))
+        {
+            // get id value
+            $id = $_POST['id'];
 
-    // check if the 'id' variable is set in URL
-    if (isset($_GET['id']) && isset($_GET['delete']))
-    {
-        // get id value
-        $id = $_GET['id'];
+            mysqli_query($conn,"UPDATE reservations_details SET flag=2,reason='".$_POST['reason']."' WHERE ReservationID='$id'")
+            or die("The reservation does not exist 2... \n");
 
-        // delete the entry
-        $result = mysqli_query($conn,"DELETE FROM reservations_details WHERE ReservationID='$id'")
-        or die("The reservation does not exist 1 ... \n");
+            // redirect back to the reservations
+            header('Location: reservations.php?m=1');
 
-        // redirect back to the reservations
-        header("Location: reservations.php");
-
+        }
     }
+
 
 
 
