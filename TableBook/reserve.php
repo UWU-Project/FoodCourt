@@ -244,7 +244,7 @@ or die("Something is wrong ... \n" . mysqli_error());
                     </div>
 
                     <div class="modal-body" style="padding-top: 2px; padding-bottom: 2px;">
-                        <form action="reserve-exec.php" method="post">
+                        <form action="reserve-exec.php" method="post" id="reserve">
                             <div class="form-check">
                                 <input type="text" name="id" hidden value="<?php echo $_SESSION['SESS_MEMBER_ID'];?>">
                                 <nav aria-label="breadcrumb">
@@ -275,7 +275,7 @@ or die("Something is wrong ... \n" . mysqli_error());
 
                             <div class="modal-footer justify-content-between" style="padding-bottom: 1px">
                                 <button type="button" class="btn bg-gradient-secondary "  data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn bg-gradient-primary del-btn" data-toggle="confirmation">Submit</button>
+                                <button type="submit" class="btn bg-gradient-primary del-btn">Submit</button>
                             </div>
                             </div>
 
@@ -571,18 +571,6 @@ or die("Something is wrong ... \n" . mysqli_error());
         document.getElementById('exampleInputEmail1').value = table;
     }
 </script>
-<script>
-    $(function() {
-        $('body').confirmation({
-            selector: '[data-toggle="confirmation"]'
-        });
-
-        $('.confirmation-callback').confirmation({
-            onConfirm: function(event, element) { alert('confirm') },
-            onCancel: function(event, element) { alert('cancel') }
-        });
-    });
-</script>
 
 <!-- Google Map -->
 <script
@@ -611,13 +599,20 @@ or die("Something is wrong ... \n" . mysqli_error());
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
-            icon: 'question',
+            icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, Reserve It!'
+            confirmButtonText: 'confirm'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById("reserve").submit();
+            }
         })
     })
+
+
+
 
 </script>
 
