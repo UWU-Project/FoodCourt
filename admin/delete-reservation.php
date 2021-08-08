@@ -12,22 +12,32 @@
 
 
     // check if the 'id' variable is set in URL
-    if (isset($_GET['id']))
+    if (isset($_GET['id']) && isset($_GET['delete']))
     {
         // get id value
         $id = $_GET['id'];
 
         // delete the entry
         $result = mysqli_query($conn,"DELETE FROM reservations_details WHERE ReservationID='$id'")
-        or die("The reservation does not exist ... \n");
+        or die("The reservation does not exist 1 ... \n");
+
+        // redirect back to the reservations
+        header("Location: reservations.php");
+
+    }
+
+
+
+
+    if(isset($_GET['delivery']) && isset($_GET['id'])) {
+        $id = $_GET['id'];
+        mysqli_query($conn,"UPDATE reservations_details SET flag=1 WHERE ReservationID='$id'")
+        or die("The reservation does not exist 2... \n");
+        echo("Error description: " . mysqli_error($conn));
 
         // redirect back to the reservations
         header("Location: reservations.php");
     }
-    else
-        // if id isn't set, redirect back to the reservations
-    {
-        header("Location: reservations.php");
-    }
 
 ?>
+

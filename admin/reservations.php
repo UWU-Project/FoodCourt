@@ -31,6 +31,11 @@
     <script src="../js/jquery.min.js" type="text/javascript"></script>
     <script src="../js/bootstrap.min.js" type="text/javascript"></script>
 
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 <!-- LOGO Start
@@ -141,10 +146,10 @@
                 echo "<td>" . $row['table_id']."</td>";
                 echo "<td>" . $row['Reserve_Date']."</td>";
                 echo "<td>" . $row['Reserve_Time']."</td>";
-                echo '<td><a href="delete-reservation.php?id=' . $row['ReservationID'] . '">Delete Reservation</a></td>';
+                echo '<td><a href="delete-reservation.php?delete='."ok".'&id=' . $row['ReservationID'] . '">Delete Reservation</a></td>';
                 ?>
             <?php
-            echo "</td>";
+
 
             echo "<td>";
 
@@ -163,6 +168,7 @@
                     <!-- DELIVER MODAL -->
                     <div class="modal fade" id="<?php echo $deliver_data; ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo $deliver_data; ?>" aria-hidden="true">
                         <div class="modal-dialog" role="document">
+
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title">Deliver Order</h5>
@@ -175,11 +181,10 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                    <button type="button" data-id = "<?php echo $row["ReservationID"]; ?>" class="btn btn-info deliver_order_button">
-                                        Yes
-                                    </button>
+                                    <?php echo '<a class="btn btn-info deliver_order_button" href="delete-reservation.php?delivery='."ok".'&id='.$row['ReservationID'].'">Yes</a>'; ?>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
@@ -189,6 +194,7 @@
 
                 <li class="list-inline-item" data-toggle="tooltip" title="Cancel Order">
                     <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $cancel_data; ?>" data-placement="top">
+
                         <i class="fas fa-calendar-times"></i>
                     </button>
 
@@ -210,7 +216,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                                    <button type="button" data-id = "<?php echo $row["ReservationID"]; ?>" class="btn btn-danger cancel_order_button">
+                                    <button type="button" data-id = "<?php echo $row["ReservationID"]; ?>" class="btn btn-danger cancel_order_button del-btn">
                                         Cancel Order
                                     </button>
                                 </div>
@@ -236,5 +242,22 @@
     include 'footer.php';
     ?>
 </div>
+
+<script>
+    $('.del-btn').on('click',function(e){
+        e.preventDefault();
+        //const href = $(this).attr('href')
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Reserve It!'
+        })
+    })
+
+</script>
 </body>
 </html>
