@@ -105,8 +105,8 @@ padding-top: 10rem;
         color: rgb(255, 255, 255);
         white-space: nowrap;
         letter-spacing: 12px;
-        font-weight: 400;f
-    ont-size: 30px;
+        font-weight: 400;
+        font-size: 30px;
     }
 
     .home-section p
