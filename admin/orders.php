@@ -92,6 +92,7 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Date</th>
+                    <th scope="col">Customer ID</th>
                     <th scope="col">Food ID</th>
                     <th scope="col">Quantity</th>
                     <th scope="col">Total</th>
@@ -107,21 +108,24 @@
                     <tr>
                         <th scope="row"><?php echo $row['ID']?></th>
                         <td><?php echo $row['date']?></td>
-                        <td><?php
+                        <td><?php echo $row['member_id']?></td>
 
+                        <td><?php
                                    $idss = explode(",", $row['food_id']);
                                    foreach ($idss as $row2) {
                                        echo $row2."<br>";
                                    }
-
                             ?></td>
+
                         <td><?php
                              $idss2 = explode(",", $row['quantity']);
                                    foreach ($idss2 as $row3) {
                                        echo $row3."<br>";
                                    }
                             ?></td>
+
                         <td><?php echo $row['total']?></td>
+
                         <td>
                             <?php
                             if ($row['delivered'] !== '0') {
@@ -131,6 +135,7 @@
                             }
                             ?>
                         </td>
+
                     </tr>
 
                 <?php } ?>
