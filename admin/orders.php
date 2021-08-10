@@ -107,18 +107,20 @@
                     <tr>
                         <th scope="row"><?php echo $row['ID']?></th>
                         <td><?php echo $row['date']?></td>
-                        <td><?php echo $row['food_id'];
+                        <td><?php
 
-//                                 $ids = explode(",", $row['food_id']);
-//                                $string = "";
-//                                foreach ($ids as $row) {
-//                                    $string .= "food_id = " . $row . " OR ";
-//                                }
-//                                $string = rtrim($string, ' OR ');
-//                                echo $string;
+                                   $idss = explode(",", $row['food_id']);
+                                   foreach ($idss as $row2) {
+                                       echo $row2."<br>";
+                                   }
 
                             ?></td>
-                        <td><?php echo $row['quantity']?></td>
+                        <td><?php
+                             $idss2 = explode(",", $row['quantity']);
+                                   foreach ($idss2 as $row3) {
+                                       echo $row3."<br>";
+                                   }
+                            ?></td>
                         <td><?php echo $row['total']?></td>
                         <td>
                             <?php

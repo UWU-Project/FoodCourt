@@ -318,10 +318,11 @@ or die("Something is wrong ... \n" . mysqli_error());
                 //loop through all table rows
                 $symbol = mysqli_fetch_assoc($currencies); //gets active currency
                 foreach ($result as $row) {
-                    $lastID .=$row['food_id'].",";
-                    $lastQNT .=$row['quantity_id'].",";
                     $lt = $row['lt'];
                     $MAX += $row['total'];
+                    $lastID .=$row['food_id']." - ".$row[$lt . '_name'].",";
+                    $lastQNT .=$row['quantity_id'].",";
+
                     ?>
                     <li class="list-group-item d-flex justify-content-between align-items-start">
                         <div class="ms-2 me-auto">
