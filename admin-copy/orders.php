@@ -85,7 +85,7 @@
         $alert="
             swal.fire({
                  type : 'success',
-                 title : 'Order Delivered Succesfully',
+                 title : 'Order Delivered Successfully',
              })
             ";
         echo $alert;
