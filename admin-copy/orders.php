@@ -46,6 +46,55 @@
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
+<!-- ================================================== -->
+<script>
+    <?php
+    if(isset($_GET['n'])){
+        $alert="
+            swal.fire({
+                 type : 'success',
+                 title : 'Order Cancelled',
+                 text : 'Record has added to CANCELLED ORDERS'
+             })
+            ";
+        echo $alert;
+    }
+    ?>
+</script>
+<!-- ================================================== -->
+<!-- ================================================== -->
+<script>
+    <?php
+    if(isset($_GET['x'])){
+        $alert="
+            swal.fire({
+                 type : 'success',
+                 title : 'Order Confirmed',
+                 text : 'Record has added to CONFIRMED ORDERS'
+             })
+            ";
+        echo $alert;
+    }
+    ?>
+</script>
+<!-- ================================================== -->
+<!-- ================================================== -->
+<script>
+    <?php
+    if(isset($_GET['d'])){
+        $alert="
+            swal.fire({
+                 type : 'success',
+                 title : 'Order Delivered Succesfully',
+             })
+            ";
+        echo $alert;
+    }
+    ?>
+</script>
+<!-- ================================================== -->
+
+
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
