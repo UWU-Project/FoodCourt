@@ -11,10 +11,7 @@
             die('Failed to connect to server: ' . mysqli_error());
         }
 
-
-        //selecting all records from almost all tables. Return an error if there are no records in the tables
-        $result=mysqli_query($conn,"SELECT * FROM orders_details o inner join cart_details c on c.cart_id = o.cart_id inner join quantities q on q.quantity_id = c.quantity_id inner join customers m on m.member_id = c.member_id inner join billing_details b on b.billing_id = o.billing_id ") or die("There are no records to display ... \n" . mysqli_error());
-    ?>
+        ?>
 
 
 
@@ -39,6 +36,13 @@
   <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+
+
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
@@ -271,122 +275,129 @@
             </div>
             <div class="card-body px-0 pt-0 pb-2">
               <div class="table-responsive p-0">
-                <table class="table align-items-center mb-0">
-                  <thead>
-                    <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Order ID</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Customer Name</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Food Name</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Food Price</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Quantity</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Total Cost</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Delivery Date</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Delivery Address</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Mobile No</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
-                    </tr>
-                  </thead>
-            
-                  <tbody>
-                  <?php
-            if((['food_id'])<25000) {
-                //loop through all tables rows
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $lt = $row['lt'];
-                    if ($lt == 'food') {
-                        $qry = "SELECT * FROM food_details f inner join food_categories c on c.category_id = f.food_category where food_id = {$row['food_id']}";
+                  <table class="table table-hover">
+                      <thead>
+                      <tr>
+                          <th scope="col">ID</th>
+                          <th scope="col">Date</th>
+                          <th scope="col">Customer ID</th>
+                          <th scope="col">Food ID</th>
+                          <th scope="col">Quantity</th>
+                          <th scope="col">Total</th>
+                          <th scope="col">Delivered</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <?php
+                      $result2 = mysqli_query($conn, "SELECT *
+FROM ((orders_paid
+INNER JOIN billing_details ON orders_paid.member_id = billing_details.member_id)
+INNER JOIN customers ON orders_paid.member_id = customers.member_id);
 
-                    } else {
-                        $qry = "SELECT * FROM specials where special_id = {$row['food_id']}";
-                    }
-                    // echo $qry.'\n';
-                    $res = mysqli_fetch_array(mysqli_query($conn, $qry));
-                    echo "<tr>";
-                    echo "<td>" . $row['order_id'] . "</td>";
-                    echo "<td>" . $row['firstname'] . "\t" . $row['lastname'] . "</td>";
-                    echo "<td>" . $res[$lt . '_name'] . "</td>";
-                    echo "<td>" . $res[$lt . '_price'] . "</td>";
-                    echo "<td>" . $row['quantity_value'] . "</td>";
-                    echo "<td>" . $row['total'] . "</td>";
-                    echo "<td>" . $row['delivery_date'] . "</td>";
-                    echo "<td>" . $row['Street_Address'] . "</td>";
-                    echo "<td>" . $row['Mobile_No'] . "</td>";
-                    echo '<td><a href="delete-order.php?id=' . $row['order_id'] . '">Remove Order</a></td>';
-                    echo "</tr>";
-                }
-            }else if((['food_id'])>25000) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $lt = $row['lt'];
-                    if ($lt == 'food') {
-                        $qry = "SELECT * FROM food_details_lounge f inner join food_categories_lounge c on c.category_id = f.food_category where food_id = {$row['food_id']}";
+")
+                      or die("A problem has occured 2... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+                      while ($row = mysqli_fetch_assoc($result2)) {
+                          ?>
+                          <tr>
+                              <th scope="row"><?php echo $row['ID']?></th>
+                              <td><?php echo $row['date']?></td>
+                              <td>
+                                  <!-- Button trigger modal -->
+                                  <button type="button" class="btn bg-gradient-info" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                      <?php echo $row['member_id']; ?>
+                                  </button>
 
-                    } else {
-                        $qry = "SELECT * FROM specials where special_id = {$row['food_id']}";
-                    }
-                    // echo $qry.'\n';
-                    $res = mysqli_fetch_array(mysqli_query($conn, $qry));
-                    echo "<tr>";
-                    echo "<td>" . $row['order_id'] . "</td>";
-                    echo "<td>" . $row['firstname'] . "\t" . $row['lastname'] . "</td>";
-                    echo "<td>" . $res[$lt . '_name'] . "</td>";
-                    echo "<td>" . $res[$lt . '_price'] . "</td>";
-                    echo "<td>" . $row['quantity_value'] . "</td>";
-                    echo "<td>" . $row['total'] . "</td>";
-                    echo "<td>" . $row['delivery_date'] . "</td>";
-                    echo "<td>" . $row['Street_Address'] . "</td>";
-                    echo "<td>" . $row['Mobile_No'] . "</td>";
-                    echo '<td><a href="delete-order.php?id=' . $row['order_id'] . '">Remove Order</a></td>';
-                    echo "</tr>";
-                }
-            }
-            mysqli_free_result($result);
-            mysqli_close($conn);
-            ?>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div>
-                            <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3" alt="user1">
-                          </div>
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">John Michael</h6>
-                            <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
-                          </div>
-                        </div>
-                      </td>
-                      <td>
-                        <p class="text-xs font-weight-bold mb-0">Manager</p>
-                        <p class="text-xs text-secondary mb-0">Organization</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="badge badge-sm bg-gradient-success">Online</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
-                      </td>
-                      <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+
+                                  <!-- Modal -->
+                                  <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+                                          <div class="modal-content">
+                                              <div class="modal-header">
+                                                  <h5 class="modal-title" id="exampleModalLabel">Customer Details</h5>
+                                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                      <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                              </div>
+                                              <div class="modal-body">
+                                                  <div class="py-3 text-center">
+                                                      <i class="ni ni-bell-55 ni-3x"></i>
+                                                      <h4 class="text-gradient text-danger mt-4">You should read this!</h4>
+                                                      <ol class="list-group list-group-numbered">
+                                                          <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                              <div class="ms-2 me-auto">
+                                                                  <div class="fw-bold">Full name:</div>
+                                                                  <?php echo $row['firstname']; ?> <?php echo $row['lastname']; ?>
+                                                              </div>
+                                                          </li>
+                                                          <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                              <div class="ms-2 me-auto">
+                                                                  <div class="fw-bold">E-mail:</div>
+                                                                  <?php echo $row['email']; ?>
+                                                              </div>
+                                                          </li>
+                                                          <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                              <div class="ms-2 me-auto">
+                                                                  <div class="fw-bold">Mobile Number: </div>
+                                                                  <?php echo $row['Mobile_No']; ?>
+                                                              </div>
+                                                          </li>
+                                                          <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                              <div class="ms-2 me-auto">
+                                                                  <div class="fw-bold">Landline Number: </div>
+                                                                  <?php echo $row['Landline_No']; ?>
+                                                              </div>
+                                                          </li>
+                                                          <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                              <div class="ms-2 me-auto">
+                                                                  <div class="fw-bold">Address: </div>
+                                                                  <?php echo $row['P_O_Box_No']; ?> <br>
+                                                                  <?php echo $row['Street_Address']; ?> <br>
+                                                                  <?php echo $row['City']; ?>
+                                                              </div>
+                                                          </li>
+                                                      </ol>
+                                                  </div>
+                                              </div>
+                                              <div class="modal-footer">
+                                                  <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+                              </td>
+                              <td><?php
+                                  $idss = explode(",", $row['food_id']);
+                                  foreach ($idss as $row2) {
+                                      echo $row2."<br>";
+                                  }
+                                  ?></td>
+                              <td><?php
+                                  $idss2 = explode(",", $row['quantity']);
+                                  foreach ($idss2 as $row3) {
+                                      echo $row3."<br>";
+                                  }
+                                  ?></td>
+                              <td><?php echo $row['total']?></td>
+                              <td>
+                                  <?php
+                                  if ($row['delivered'] !== '0') {
+                                      echo '<span class="badge bg-gradient-success">'.'confirmed'.'</span>';
+                                  }else{
+                                      echo '<span class="badge bg-gradient-warning">'.'processing'.'</span>';
+                                  }
+                                  ?>
+                              </td>
+                          </tr>
+                      <?php } ?>
+                      </tbody>
+                  </table>
+                  <hr>
+                       <?php
+                        mysqli_free_result($result2);
+                        mysqli_close($conn);
+                        ?>
               </div>
             </div>
           </div>

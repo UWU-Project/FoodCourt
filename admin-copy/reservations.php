@@ -474,8 +474,8 @@
                                                                   </div>
                                                               </div>
                                                               <div class="modal-footer">
-                                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                                                                  <input type="submit" class="btn btn-secondary">yes</input>
+                                                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                                                  <input type="submit" class="btn btn-secondary">
                                                               </div>
                                                           </form>
                                                       </div>

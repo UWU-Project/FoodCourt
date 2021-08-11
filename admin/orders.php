@@ -138,7 +138,10 @@
 
                     </tr>
 
+
                 <?php } ?>
+                </tbody>
+            </table>
             <hr>
             </div>
 
