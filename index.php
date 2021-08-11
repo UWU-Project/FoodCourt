@@ -53,6 +53,13 @@ if (isset($_POST['Submit'])){
     <script src="assets/js/plugins/countup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
+    <!-- Required Core stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
+    <!-- Optional Theme stylesheet -->
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+
+
     <style>
 	.txtpadding{
 		
@@ -73,9 +80,6 @@ padding-top: 10rem;
 	text-align: center;
 	font-size: 8rem;
 }
-.imgmargin{
-	margin-top: 10rem;
-	margin-bottom: 10rem;
 }
     .centered {
         position: absolute;
@@ -119,7 +123,7 @@ padding-top: 10rem;
     }
     .home-section
     {
-        background: url(images/home_bg.jpg);
+        background: url(images/asd2.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -423,13 +427,13 @@ body{
             <div class="col-md-6 home-left-section">
                 <div style="padding: 100px 0px; color: white;">
                     <h1>
-                        VINCENT PIZZA.
+                        Love And Food It Is All About Spice.
                     </h1>
-                    <h1 class="text-dark">Work with an amazing <span class="text-dark" id="typed"></span></h1>
+                    <h1 class="text-dark">Welcome with an amazing <span class="text-dark" id="typed"></span></h1>
                     <div id="typed-strings">
-                        <h1>team</h1>
-                        <h1>design</h1>
-                        <h1>tool</h1>
+                        <h1>Healthy </h1>
+                        <h1>Wealthy</h1>
+                        <h1>Experiences</h1>
                     </div>
 
 
@@ -513,12 +517,15 @@ body{
     </div>
 </section>
 	<!--PASTRY SHOP
-    ================================================== -->
+    ==================================================-->
+
 <section class="imgmargin">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 " >
-					  <img src="images/pasrtyhome.jpg" alt="...">
+                    <div>
+                        <img src="images/pasrtyhome.jpg" alt="...">
+                    </div>
 			</div>
 			<div class="col-md-4 txtpadding" style="text-align: center;">
 				<div class="heading ">
@@ -533,8 +540,9 @@ body{
 			</div>
 		</div>
 	</div>
-</section>
 
+
+</section>
 	<!--  1st photo tile
     ================================================== -->
 <style type="text/css">
