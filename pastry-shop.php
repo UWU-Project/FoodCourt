@@ -84,7 +84,7 @@ if(isset($_POST['Submit'])){
 		float: left;   
 	}
     body{
-        background: url(images/wall2.png);
+        background: url(images/ourback.jpg);
 
     }
 </style>

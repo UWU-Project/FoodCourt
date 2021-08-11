@@ -7,35 +7,41 @@
     <title>Food  Court</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <!-- Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
-    <!-- Icon -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Css -->
-    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
 
-    <!-- jS -->
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/jquery.nivo.slider.js" type="text/javascript"></script>
-    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-    <script src="js/jquery.nicescroll.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/main.js" type="text/javascript"></script>
-    <script language="JavaScript" src="validation/user.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Nucleo Icons -->
+    <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+
+    <!-- CSS Files -->
+    <link id="pagestyle" href="assets/css/soft-design-system.css?v=1.0.5" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+    <script src="assets/js/plugins/countup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
+    <style>
+        body{
+            background: url(images/ourback.jpg);
+
+        }
+    </style>
 
 </head>
+
 <body>
+
+
+<!-- TOP HEADER Start
+    ================================================== -->
 
 
 <!-- TOP HEADER Start
@@ -44,18 +50,23 @@
 <section id="top">
     <div class="container">
         <div class="row">
-            <div class="col-md-7">
+
+            <div class="col-md-6">
                 <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
+
             <div class="col-md-3 clearfix">
                 <ul class="login-cart">
                     <li>
-                        <a href="customer/login.php">LOGIN</a>
+                        <a href="user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
                     </li>
                     <li>
-                        <a href="customer/create.php">REGISTER</a>
+                        <a href="user/signup-user.php"><i class="fas fa-user-plus"></i>REGISTER</a>
                     </li>
                 </ul>
+            </div>
+            <div class="col-md-1">
+
             </div>
 
             <div class="col-md-2">
@@ -63,7 +74,8 @@
                     <div class="input-group">
                         <input placeholder="Search Here" type="text" class="form-control">
                         <span class="input-group-btn">
-					        	<button class="btn btn-default" type="button"></button>
+					        	<button type="button">
+
 					      	</span>
                     </div><!-- /.input-group -->
                 </div><!-- /.search-box -->
@@ -73,7 +85,6 @@
 
 </section>  <!-- End of /Section -->
 
-
 <!-- LOGO Start
 ================================================== -->
 
@@ -82,41 +93,96 @@
         <div class="row">
             <div class="col-md-12">
                 <a href="#">
-                    <img src="images/logo2copy.png" alt="logo">
+                    <img src="images/logo2copy.png"  class="img-fluid" alt="logo">
                 </a>
             </div>	<!-- End of /.col-md-12 -->
         </div>	<!-- End of /.row -->
     </div>	<!-- End of /.container -->
 </header> <!-- End of /Header -->
 
-<!-- MENU Start
-================================================== -->
 
-<nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div> <!-- End of /.navbar-header -->
+<!-- Navbar -->
+<div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+        <div class="col-12">
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav nav-main">
-                <li ><a href="index.php">HOME</a></li>
-                <li><a href="pastry-shop.php">PASTRY SHOP</a></li>
-                <li><a href="lounge.php">THE LOUNGE</a></li>
-                <li class="active"><a href="TableBook/buffet.php">BUFFET</a></li>
-                <li><a href="about-us-old.php">ABOUT US</a></li>
-                <li ><a href="#">CART</a></li>
-            </ul>
-        </div>	<!-- /.navbar-collapse -->
+            <nav class="navbar navbar-expand-lg  blur  top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
 
-    </div>	<!-- /.container-fluid -->
-</nav>	<!-- End of /.nav -->
+                <div class="container-fluid">
+                    <a class="navbar-brand font-weight-bolder ms-sm-3" href="index.php" rel="tooltip" title="Orchid Bliss" data-placement="bottom" target="_blank">
+                        ORCHID BLISS
+                    </a>
 
+                    <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon mt-2">
+                            <span class="navbar-toggler-bar bar1"></span>
+                            <span class="navbar-toggler-bar bar2"></span>
+                            <span class="navbar-toggler-bar bar3"></span>
+                          </span>
+                    </button>
+
+
+
+                    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+                        <ul class="nav navbar-nav nav-main">
+                            <li class="nav-item dropdown dropdown-hover mx-6 " >
+
+                            </li>
+
+
+
+                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center "  href="pastry-shop.php">
+                                    PASTRY SHOP
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active" href="lounge.php" >
+                                    THE LOUNGE
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="TableBook/TBB.php">
+                                    BUFFET
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  aria-selected="true" href="about-us.php">
+                                    ABOUT US
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center "  aria-selected="true" href="contactUs/contact-us.php">
+                                    CONTACT US
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown dropdown-hover mx-6" >
+
+                            </li>
+
+                            <li class="nav" style="margin-left: 50px">
+                                <a class="nav-link nav-link-icon me-2 " href="cart/cart.php" target="_blank" >
+
+                                    <i class="fa fa-shopping-cart me-1"></i>
+                                    <p class="d-inline text-sm z-index-1 font-weight-bold" >CART</p>
+                                </a>
+                            </li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+        </div>
+    </div>
+</div>
+<br><br><br><br>
 <!-- breadcrumb Start
     ================================================== -->
 
@@ -124,7 +190,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h1>Products Details</h1>
+                <h3>Products Details</h3>
                 <p></p>
             </div>	<!-- /.col-md-4 -->
         </div>	<!-- /.row -->
