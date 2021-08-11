@@ -515,6 +515,15 @@ or die("There are no records to count ... \n" . mysqli_error());
           </div>
         </div>
 
+        <div class="col-12 mt-4">
+          <div class="card mb-4">
+            <div class="card-body p-3">
+              
+            
+            </div>
+          </div>
+        </div>
+
 
       <?php require_once('components/footer.inc.php'); ?>
     </div>
