@@ -266,145 +266,502 @@
       </div>
     </nav>
     <!-- End Navbar -->
-    <div class="container-fluid py-4">
-      <div class="row">
-        <div class="col-12">
-          <div class="card mb-4" style="height:100vh">
-            <div class="card-header pb-0">
-              <h6>Orders List</h6>
-            </div>
-            <div class="card-body px-0 pt-0 pb-2">
-              <div class="table-responsive p-0">
-                  <table class="table table-hover">
-                      <thead>
-                      <tr>
-                          <th scope="col">ID</th>
-                          <th scope="col">Date</th>
-                          <th scope="col">Customer ID</th>
-                          <th scope="col">Food ID</th>
-                          <th scope="col">Quantity</th>
-                          <th scope="col">Total</th>
-                          <th scope="col">Delivered</th>
-                      </tr>
-                      </thead>
-                      <tbody>
-                      <?php
-                      $result2 = mysqli_query($conn, "SELECT *
-FROM ((orders_paid
-INNER JOIN billing_details ON orders_paid.member_id = billing_details.member_id)
-INNER JOIN customers ON orders_paid.member_id = customers.member_id);
+      <div  id="page">
+          <div class="container">
+              <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Orders Placed</button>
+                      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Confirmed Orders</button>
+                      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Cancelled Orders</button>
+                  </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
 
-")
-                      or die("A problem has occured 2... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
-                      while ($row = mysqli_fetch_assoc($result2)) {
-                          ?>
+                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                          <hr>
+                          <h3>ORDERS PLACED</h3>
+                          <hr>
+                      <!-- Orders tab 1 -->
+                      <table class="table table-hover">
+                          <thead>
                           <tr>
-                              <th scope="row"><?php echo $row['ID']?></th>
-                              <td><?php echo $row['date']?></td>
-                              <td>
-                                  <!-- Button trigger modal -->
-                                  <button type="button" class="btn bg-gradient-info" data-bs-toggle="modal" data-bs-target="#exampleModal4">
-                                      <?php echo $row['member_id']; ?>
-                                  </button>
+                              <th scope="col">ID</th>
+                              <th scope="col">Date</th>
+                              <th scope="col">Customer ID</th>
+                              <th scope="col">Food ID</th>
+                              <th scope="col">Quantity</th>
+                              <th scope="col">Total</th>
+                              <th scope="col">Delivered</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <?php
+                          $result2 = mysqli_query($conn, "SELECT *
+                            FROM ((orders_paid
+                            INNER JOIN billing_details ON orders_paid.member_id = billing_details.member_id)
+                            INNER JOIN customers ON orders_paid.member_id = customers.member_id) WHERE orders_paid.delivered = 0;")
+                          or die("A problem has occured 2... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+                          while ($row = mysqli_fetch_assoc($result2)) {
+                              ?>
+                              <tr>
+                                  <th scope="row"><?php echo $row['ID']?></th>
+                                  <td><?php echo $row['date']?></td>
+                                  <td>
+                                      <!-- Button trigger modal -->
+                                      <button type="button" class="btn bg-gradient-info" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                                          <?php echo $row['member_id']; ?>
+                                      </button>
 
 
-                                  <!-- Modal -->
-                                  <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
-                                          <div class="modal-content">
-                                              <div class="modal-header">
-                                                  <h5 class="modal-title" id="exampleModalLabel">Customer Details</h5>
-                                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                                                      <span aria-hidden="true">&times;</span>
-                                                  </button>
-                                              </div>
-                                              <div class="modal-body">
-                                                  <div class="py-3 text-center">
-                                                      <i class="ni ni-bell-55 ni-3x"></i>
-                                                      <h4 class="text-gradient text-danger mt-4">You should read this!</h4>
-                                                      <ol class="list-group list-group-numbered">
-                                                          <li class="list-group-item d-flex justify-content-between align-items-start">
-                                                              <div class="ms-2 me-auto">
-                                                                  <div class="fw-bold">Full name:</div>
-                                                                  <?php echo $row['firstname']; ?> <?php echo $row['lastname']; ?>
-                                                              </div>
-                                                          </li>
-                                                          <li class="list-group-item d-flex justify-content-between align-items-start">
-                                                              <div class="ms-2 me-auto">
-                                                                  <div class="fw-bold">E-mail:</div>
-                                                                  <?php echo $row['email']; ?>
-                                                              </div>
-                                                          </li>
-                                                          <li class="list-group-item d-flex justify-content-between align-items-start">
-                                                              <div class="ms-2 me-auto">
-                                                                  <div class="fw-bold">Mobile Number: </div>
-                                                                  <?php echo $row['Mobile_No']; ?>
-                                                              </div>
-                                                          </li>
-                                                          <li class="list-group-item d-flex justify-content-between align-items-start">
-                                                              <div class="ms-2 me-auto">
-                                                                  <div class="fw-bold">Landline Number: </div>
-                                                                  <?php echo $row['Landline_No']; ?>
-                                                              </div>
-                                                          </li>
-                                                          <li class="list-group-item d-flex justify-content-between align-items-start">
-                                                              <div class="ms-2 me-auto">
-                                                                  <div class="fw-bold">Address: </div>
-                                                                  <?php echo $row['P_O_Box_No']; ?> <br>
-                                                                  <?php echo $row['Street_Address']; ?> <br>
-                                                                  <?php echo $row['City']; ?>
-                                                              </div>
-                                                          </li>
-                                                      </ol>
+                                      <!-- Modal -->
+                                      <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+                                              <div class="modal-content">
+                                                  <div class="modal-header">
+                                                      <h5 class="modal-title" id="exampleModalLabel">Customer Details</h5>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                          <span aria-hidden="true">&times;</span>
+                                                      </button>
                                                   </div>
-                                              </div>
-                                              <div class="modal-footer">
-                                                  <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
+                                                  <div class="modal-body">
+                                                      <div class="py-3 text-center">
+                                                          <i class="ni ni-bell-55 ni-3x"></i>
+                                                          <h4 class="text-gradient text-danger mt-4">You should read this!</h4>
+                                                          <ol class="list-group list-group-numbered">
+                                                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                                  <div class="ms-2 me-auto">
+                                                                      <div class="fw-bold">Full name:</div>
+                                                                      <?php echo $row['firstname']; ?> <?php echo $row['lastname']; ?>
+                                                                  </div>
+                                                              </li>
+                                                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                                  <div class="ms-2 me-auto">
+                                                                      <div class="fw-bold">E-mail:</div>
+                                                                      <?php echo $row['email']; ?>
+                                                                  </div>
+                                                              </li>
+                                                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                                  <div class="ms-2 me-auto">
+                                                                      <div class="fw-bold">Mobile Number: </div>
+                                                                      <?php echo $row['Mobile_No']; ?>
+                                                                  </div>
+                                                              </li>
+                                                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                                  <div class="ms-2 me-auto">
+                                                                      <div class="fw-bold">Landline Number: </div>
+                                                                      <?php echo $row['Landline_No']; ?>
+                                                                  </div>
+                                                              </li>
+                                                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                                  <div class="ms-2 me-auto">
+                                                                      <div class="fw-bold">Address: </div>
+                                                                      <?php echo $row['P_O_Box_No']; ?> <br>
+                                                                      <?php echo $row['Street_Address']; ?> <br>
+                                                                      <?php echo $row['City']; ?>
+                                                                  </div>
+                                                              </li>
+                                                          </ol>
+                                                      </div>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                      <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
+                                                  </div>
                                               </div>
                                           </div>
                                       </div>
-                                  </div>
+                                  </td>
+                                  <td><?php
+                                      $idss = explode(",", $row['food_id']);
+                                      foreach ($idss as $row2) {
+                                          echo $row2."<br>";
+                                      }
+                                      ?></td>
+                                  <td><?php
+                                      $idss2 = explode(",", $row['quantity']);
+                                      foreach ($idss2 as $row3) {
+                                          echo $row3."<br>";
+                                      }
+                                      ?></td>
+                                  <td><?php echo $row['total']?></td>
+                                  <td>
+                                      <?php
+//                                      if ($row['delivered'] == '1') {
+//                                          echo '<span class="badge bg-gradient-success">'.'confirmed'.'</span>';
+//                                      }elseif ($row['delivered'] == '0'){
+//                                          echo '<span class="badge bg-gradient-warning">'.'processing'.'</span>';
+//                                      }else{
+//                                          echo '<span class="badge bg-gradient-danger">' . 'Cancelled' . '</span>';
+//                                      }
+                                      $deliver_data = "deliver_order".$row['ID'];
+                                      $cancel_data = "cancel_order".$row['ID'];
+                                      ?>
 
+                                      <!-- Button trigger modal -->
+                                      <button type="button" class="btn btn-sm bg-gradient-success" data-bs-toggle="modal" data-bs-target="#<?php echo $deliver_data; ?>">
+                                          Confirm
+                                      </button>
 
-                              </td>
-                              <td><?php
-                                  $idss = explode(",", $row['food_id']);
-                                  foreach ($idss as $row2) {
-                                      echo $row2."<br>";
-                                  }
-                                  ?></td>
-                              <td><?php
-                                  $idss2 = explode(",", $row['quantity']);
-                                  foreach ($idss2 as $row3) {
-                                      echo $row3."<br>";
-                                  }
-                                  ?></td>
-                              <td><?php echo $row['total']?></td>
-                              <td>
-                                  <?php
-                                  if ($row['delivered'] !== '0') {
-                                      echo '<span class="badge bg-gradient-success">'.'confirmed'.'</span>';
-                                  }else{
-                                      echo '<span class="badge bg-gradient-warning">'.'processing'.'</span>';
-                                  }
-                                  ?>
-                              </td>
-                          </tr>
-                      <?php } ?>
-                      </tbody>
-                  </table>
-                  <hr>
-                       <?php
-                        mysqli_free_result($result2);
-                        mysqli_close($conn);
-                        ?>
+                                      <!-- Modal -->
+                                      <div class="modal fade" id="<?php echo $deliver_data; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="<?php echo $deliver_data; ?>" aria-hidden="true">
+                                          <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                  <div class="modal-header">
+                                                      <h5 class="modal-title" id="staticBackdropLabel">Confirm Reservation</h5>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                      <div class="py-3 text-center">
+                                                          <i class="ni ni-bell-55 ni-3x"></i>
+                                                          <h4 class="text-gradient text-danger mt-4">CONFIRM THE ORDER!</h4>
+                                                      </div>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                      <?php echo '<a class="btn btn-info deliver_order_button" href="order-confirm.php?delivery='."ok".'&id='.$row['ID'].'">CONFIRM</a>'; ?>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                      <!-- CANCEL BUTTON -->
+                                          <button type="button" class="btn btn-sm bg-gradient-danger" data-bs-toggle="modal" data-bs-target="#<?php echo $cancel_data; ?>" >
+                                              CANCEL
+                                          </button>
+                                          <!-- Modal -->
+                                      <div class="modal fade" id="<?php echo$cancel_data; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="<?php echo $cancel_data; ?>" aria-hidden="true">
+                                          <div class="modal-dialog">
+                                              <div class="modal-content">
+                                                  <div class="modal-header">
+                                                      <h5 class="modal-title" id="staticBackdropLabel">Delete Reservation</h5>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                      <div class="py-3 text-center">
+                                                          <i class="ni ni-bell-55 ni-3x"></i>
+                                                          <h4 class="text-gradient text-danger mt-4">DELETE THE ORDER!</h4>
+                                                      </div>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                      <?php echo '<a class="btn btn-info deliver_order_button" href="order-confirm.php?cancel='."ok".'&id='.$row['ID'].'">CONFIRM</a>'; ?>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                          <?php } ?>
+                          </tbody>
+                      </table>
+                      <hr>
+                           <?php
+
+                           mysqli_free_result($result2);
+                            ?>
+                      <!-- Orders tab 1 end-->
               </div>
+                  <!-- Orders tab 2 start-->
+                  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                      <hr>
+                      <h3>CONFIRMED ORDERS</h3>
+                      <hr>
+                      <table class="table table-hover">
+                          <thead>
+                          <tr>
+                              <th scope="col">ID</th>
+                              <th scope="col">Date</th>
+                              <th scope="col">Customer ID</th>
+                              <th scope="col">Food ID</th>
+                              <th scope="col">Quantity</th>
+                              <th scope="col">Total</th>
+                              <th scope="col">Delivered</th>
+                              <th scope="col">Status</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <?php
+                          $result3 = mysqli_query($conn, "SELECT *
+                            FROM ((orders_paid
+                            INNER JOIN billing_details ON orders_paid.member_id = billing_details.member_id)
+                            INNER JOIN customers ON orders_paid.member_id = customers.member_id) WHERE orders_paid.delivered = 1 OR orders_paid.delivered = 5 ;")
+                          or die("A problem has occured 2... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+                          while ($row = mysqli_fetch_assoc($result3)) {
+                          ?>
+                              <tr>
+                                  <th scope="row"><?php echo $row['ID']?></th>
+                                  <td><?php echo $row['date']?></td>
+                                  <td>
+                                      <!-- Button trigger modal -->
+                                      <button type="button" class="btn bg-gradient-info" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                          <?php echo $row['member_id']; ?>
+                                      </button>
+
+
+                                      <!-- Modal -->
+                                      <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+                                              <div class="modal-content">
+                                                  <div class="modal-header">
+                                                      <h5 class="modal-title" id="exampleModalLabel">Customer Details</h5>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                          <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                      <div class="py-3 text-center">
+                                                          <i class="ni ni-bell-55 ni-3x"></i>
+                                                          <h4 class="text-gradient text-danger mt-4">Customer Details!</h4>
+                                                          <ol class="list-group list-group-numbered">
+                                                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                                  <div class="ms-2 me-auto">
+                                                                      <div class="fw-bold">Full name:</div>
+                                                                      <?php echo $row['firstname']; ?> <?php echo $row['lastname']; ?>
+                                                                  </div>
+                                                              </li>
+                                                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                                  <div class="ms-2 me-auto">
+                                                                      <div class="fw-bold">E-mail:</div>
+                                                                      <?php echo $row['email']; ?>
+                                                                  </div>
+                                                              </li>
+                                                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                                  <div class="ms-2 me-auto">
+                                                                      <div class="fw-bold">Mobile Number: </div>
+                                                                      <?php echo $row['Mobile_No']; ?>
+                                                                  </div>
+                                                              </li>
+                                                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                                  <div class="ms-2 me-auto">
+                                                                      <div class="fw-bold">Landline Number: </div>
+                                                                      <?php echo $row['Landline_No']; ?>
+                                                                  </div>
+                                                              </li>
+                                                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                                  <div class="ms-2 me-auto">
+                                                                      <div class="fw-bold">Address: </div>
+                                                                      <?php echo $row['P_O_Box_No']; ?> <br>
+                                                                      <?php echo $row['Street_Address']; ?> <br>
+                                                                      <?php echo $row['City']; ?>
+                                                                  </div>
+                                                              </li>
+                                                          </ol>
+                                                      </div>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                      <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  <td><?php
+                                      $idss = explode(",", $row['food_id']);
+                                      foreach ($idss as $row2) {
+                                          echo $row2."<br>";
+                                      }
+                                      ?></td>
+                                  <td><?php
+                                      $idss2 = explode(",", $row['quantity']);
+                                      foreach ($idss2 as $row3) {
+                                          echo $row3."<br>";
+                                      }
+                                      ?></td>
+                                  <td><?php echo $row['total']?></td>
+                                  <td>
+                                      <?php
+                                      if ($row['delivered'] == '1') {
+
+                                          $done = "deliver_order".$row['ID'];
+                                          ?>
+                                          <!-- Button trigger modal -->
+                                          <button type="button" class="btn btn-sm bg-gradient-success" data-bs-toggle="modal" data-bs-target="#<?php echo $done; ?>">
+                                              deliver
+                                          </button>
+
+                                          <!-- Modal -->
+                                          <div class="modal fade" id="<?php echo $done; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="<?php echo $done; ?>" aria-hidden="true">
+                                              <div class="modal-dialog">
+                                                  <div class="modal-content">
+                                                      <div class="modal-header">
+                                                          <h5 class="modal-title" id="staticBackdropLabel">Confirm Reservation</h5>
+                                                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                      </div>
+                                                      <div class="modal-body">
+                                                          <div class="py-3 text-center">
+                                                              <i class="ni ni-bell-55 ni-3x"></i>
+                                                              <h4 class="text-gradient text-danger mt-4">CONFIRM THE ORDER!</h4>
+                                                          </div>
+                                                      </div>
+                                                      <div class="modal-footer">
+                                                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                          <?php echo '<a class="btn btn-info deliver_order_button" href="order-confirm.php?done='."ok".'&id='.$row['ID'].'">DELIVER</a>'; ?>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                      <?php
+                                      }elseif ($row['delivered'] == '0'){
+                                          echo '<span class="badge bg-gradient-warning">'.'processing'.'</span>';
+                                      }elseif ($row['delivered'] == '5'){
+                                          echo '<span class="badge bg-gradient-dark">'.'Delivered'.'</span>';
+                                      }else{
+                                          echo '<span class="badge bg-gradient-danger">' . 'Cancelled' . '</span>';
+                                      }
+
+                                      ?>
+                                  </td>
+                                  <td>
+                                      <?php
+                                      if ($row['delivered'] == '1') {
+                                          echo '<span class="badge bg-gradient-warning">'.'preparing'.'</span>';
+                                      }elseif ($row['delivered'] == '5'){
+                                      echo '<span class="badge bg-gradient-dark">'.'done'.'</span>';
+                                      }
+                                      ?>
+
+                                  </td>
+                              </tr>
+                          <?php }?>
+                          </tbody>
+                      </table>
+                  </div>
+
+
+                  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                      <hr>
+                      <h3>DELIVERED ORDERS</h3>
+                      <hr>
+                      <table class="table table-hover">
+                          <thead>
+                          <tr>
+                              <th scope="col">ID</th>
+                              <th scope="col">Date</th>
+                              <th scope="col">Customer ID</th>
+                              <th scope="col">Food ID</th>
+                              <th scope="col">Quantity</th>
+                              <th scope="col">Total</th>
+                              <th scope="col">Status</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <?php
+                          $result3 = mysqli_query($conn, "SELECT *
+                            FROM ((orders_paid
+                            INNER JOIN billing_details ON orders_paid.member_id = billing_details.member_id)
+                            INNER JOIN customers ON orders_paid.member_id = customers.member_id) WHERE orders_paid.delivered = 2 ;")
+                          or die("A problem has occured 2... \n" . "Our team is working on it at the moment ... \n" . "Please check back after few hours.");
+                          while ($row = mysqli_fetch_assoc($result3)) {
+                              ?>
+                              <tr>
+                                  <th scope="row"><?php echo $row['ID']?></th>
+                                  <td><?php echo $row['date']?></td>
+                                  <td>
+                                      <!-- Button trigger modal -->
+                                      <button type="button" class="btn bg-gradient-info" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                          <?php echo $row['member_id']; ?>
+                                      </button>
+
+
+                                      <!-- Modal -->
+                                      <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                          <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+                                              <div class="modal-content">
+                                                  <div class="modal-header">
+                                                      <h5 class="modal-title" id="exampleModalLabel">Customer Details</h5>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                          <span aria-hidden="true">&times;</span>
+                                                      </button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                      <div class="py-3 text-center">
+                                                          <i class="ni ni-bell-55 ni-3x"></i>
+                                                          <h4 class="text-gradient text-danger mt-4">Customer Details!</h4>
+                                                          <ol class="list-group list-group-numbered">
+                                                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                                  <div class="ms-2 me-auto">
+                                                                      <div class="fw-bold">Full name:</div>
+                                                                      <?php echo $row['firstname']; ?> <?php echo $row['lastname']; ?>
+                                                                  </div>
+                                                              </li>
+                                                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                                  <div class="ms-2 me-auto">
+                                                                      <div class="fw-bold">E-mail:</div>
+                                                                      <?php echo $row['email']; ?>
+                                                                  </div>
+                                                              </li>
+                                                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                                  <div class="ms-2 me-auto">
+                                                                      <div class="fw-bold">Mobile Number: </div>
+                                                                      <?php echo $row['Mobile_No']; ?>
+                                                                  </div>
+                                                              </li>
+                                                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                                  <div class="ms-2 me-auto">
+                                                                      <div class="fw-bold">Landline Number: </div>
+                                                                      <?php echo $row['Landline_No']; ?>
+                                                                  </div>
+                                                              </li>
+                                                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                                                  <div class="ms-2 me-auto">
+                                                                      <div class="fw-bold">Address: </div>
+                                                                      <?php echo $row['P_O_Box_No']; ?> <br>
+                                                                      <?php echo $row['Street_Address']; ?> <br>
+                                                                      <?php echo $row['City']; ?>
+                                                                  </div>
+                                                              </li>
+                                                          </ol>
+                                                      </div>
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                      <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  <td><?php
+                                      $idss = explode(",", $row['food_id']);
+                                      foreach ($idss as $row2) {
+                                          echo $row2."<br>";
+                                      }
+                                      ?></td>
+                                  <td><?php
+                                      $idss2 = explode(",", $row['quantity']);
+                                      foreach ($idss2 as $row3) {
+                                          echo $row3."<br>";
+                                      }
+                                      ?></td>
+                                  <td><?php echo $row['total']?></td>
+                                  <td>
+                                      <?php
+                                      if ($row['delivered'] == '1') {
+                                          echo '<span class="badge bg-gradient-success">'.'confirmed'.'</span>';
+                                      }elseif ($row['delivered'] == '0'){
+                                          echo '<span class="badge bg-gradient-warning">'.'processing'.'</span>';
+                                      }else{
+                                          echo '<span class="badge bg-gradient-danger">' . 'Cancelled' . '</span>';
+                                      }
+
+                                      ?>
+                                  </td>
+                              </tr>
+                          <?php }?>
+                          </tbody>
+                      </table>
+                  </div>
+
+
+
             </div>
           </div>
         </div>
-      </div>
 
-      <?php require_once('components/footer.inc.php'); ?>
+
+      <?php
+
+      mysqli_close($conn);
+      require_once('components/footer.inc.php'); ?>
     </div>
   </main>
   
