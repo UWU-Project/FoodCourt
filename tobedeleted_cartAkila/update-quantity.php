@@ -1,12 +1,11 @@
+
 <?php
 //Start session
-session_start();
-
+//Include session details
 require_once('../auth.php');
 
 //Include database connection details
 require_once('../connection/config.php');
-
 //Connect to mysqli server
 $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD,DB_DATABASE);
 if(!$conn) {
@@ -68,7 +67,7 @@ if(isset($_POST['quantity']) && isset($_POST['item']))
     mysqli_query($conn,$qry_update);
 
     if($qry_update){
-        header("location: cart.php");
+        header("location: noneed.php");
     }
     else{
         //Do nothing

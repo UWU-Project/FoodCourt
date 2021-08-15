@@ -267,7 +267,7 @@ or die("Something is wrong ... \n" . mysqli_error());
                 </button>
             </div>
             <div class="modal-body">
-                <form action="reserve-exec.php" method="post">
+                <form action="../TableBook/reserve-exec.php" method="post">
                     <div class="form-group">
                         <label for="exampleInputEmail1">table</label>
                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="table" value="" readonly>

@@ -130,7 +130,7 @@
                             </li>
 
                             <li class="nav-item dropdown dropdown-hover mx-2" >
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="../TableBook/buffet.php">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="../tobedeleted_cartAkila/buffet.php">
                                     BUFFET
                                 </a>
                             </li>
