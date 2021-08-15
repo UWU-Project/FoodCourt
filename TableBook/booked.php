@@ -27,7 +27,7 @@
         <div style="border:#bd6f2f solid 1px;padding:4px 6px 2px 6px">
             <p>&nbsp;</p>
             <div class="error">Reservation Failed!</div>
-            <p>You are seeing this page because partyhall has been booked already. <a href="buffet.php">Click Here</a> to try again.</p>
+            <p>You are seeing this page because partyhall has been booked already. <a href="../tobedeleted_cartAkila/buffet.php">Click Here</a> to try again.</p>
         </div>
     </div>
 

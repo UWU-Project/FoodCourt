@@ -225,7 +225,7 @@ $tuck = mysqli_fetch_assoc($billing);
 
                         </ul>
                         <ul class="navbar-nav ms-auto">
-                            <button class="btn bg-gradient-warning mb-0">LOGOUT</button>
+                            <button class="btn bg-gradient-warning mb-0"><a href="logout-user.php">LOGOUT</a></button>
                         </ul>
                     </div>
 
