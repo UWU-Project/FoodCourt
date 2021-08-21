@@ -259,7 +259,11 @@ require_once('authenticate/auth.php');
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
-          <h5 class="font-weight-bolder mb-0">Dashboard</h5>
+        <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="./index.php">Home</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Profile</li>
+          </ol>
+          <h5 class="font-weight-bolder mb-0">User Profile</h5>
         </nav>
       </div>
     </nav>
@@ -274,10 +278,6 @@ require_once('authenticate/auth.php');
                   <div class="numbers">
                     <p class="text-sm mb-0 text-capitalize font-weight-bold">Total Customers</p>
                     
-                    <?php
-                      $members = mysqli_num_rows($members); echo
-                       "<h5 class='font-weight-bolder mb-0'> $members </h5>"
-                    ?>
                   </div>
                 </div>
                 <div class="col-4 text-end">
@@ -297,9 +297,7 @@ require_once('authenticate/auth.php');
                   <div class="numbers">
                     <p class="text-sm mb-0 text-capitalize font-weight-bold">Placed Orders</p>
                     <h5 class="font-weight-bolder mb-0">
-                    <?php
-                         $orders_placed = mysqli_num_rows($orders_placed);  echo $orders_placed;
-                    ?>
+                    
                     </h5>
                   </div>
                 </div>
@@ -320,9 +318,7 @@ require_once('authenticate/auth.php');
                   <div class="numbers">
                     <p class="text-sm mb-0 text-capitalize font-weight-bold">Reserved Tables</p>
                     <h5 class="font-weight-bolder mb-0">
-                      <?php
-                         $tables_reserved = mysqli_num_rows($tables_reserved);  echo $tables_reserved;
-                    ?>
+                      
                     </h5>
                   </div>
                 </div>
@@ -344,9 +340,7 @@ require_once('authenticate/auth.php');
                     <p class="text-sm mb-0 text-capitalize font-weight-bold">Pending Orders</p>
                     <h5 class="font-weight-bolder mb-0">
                     
-                    <?php
-                         $orders_processed = mysqli_num_rows($orders_processed);  echo $orders_processed;
-                    ?>
+                    
                     </h5>
                   </div>
                 </div>
