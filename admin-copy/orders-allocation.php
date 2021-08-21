@@ -26,7 +26,7 @@
 
 
     // update the entry
-    $result = mysqli_query($conn,"UPDATE orders_details SET StaffID='$StaffID', flag='$flag_1' WHERE order_id='$OrderID'")
+    $result = mysqli_query($conn,"UPDATE orders_paid SET StaffID='$StaffID', flag='$flag_1' WHERE ID='$OrderID'")
     or die("The order or staff does not exist ... \n" . mysqli_error());
 
     //check if query executed

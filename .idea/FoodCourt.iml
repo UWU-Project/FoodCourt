@@ -3,8 +3,11 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/popup/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/user/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/user/vendor/phpmailer/phpmailer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="buttons" level="application" />
   </component>
 </module>

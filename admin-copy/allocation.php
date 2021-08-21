@@ -19,14 +19,15 @@
     <?php
         //get order ids from the orders_details table based on flag=0
         $flag_0 = 0;
-        $orders=mysqli_query($conn,"SELECT * FROM orders_details WHERE flag='$flag_0'")
+        $orders=mysqli_query($conn,"SELECT * FROM orders_paid WHERE flag='$flag_0'")
         or die("There are no records to display ... \n" . mysqli_error());
     ?>
 
     <?php
         //get reservation ids from the reservations_details table based on flag=0
-        $flag_0 = 0;
-        $reservations=mysqli_query($conn,"SELECT * FROM reservations_details WHERE flag='$flag_0'")
+        $flag_0 = 1;
+        $allocat_0 = 0;
+        $reservations=mysqli_query($conn,"SELECT * FROM reservations_details WHERE flag='$flag_0' AND allocat='$allocat_0'")
         or die("There are no records to display ... \n" . mysqli_error());
     ?>
 
@@ -351,7 +352,19 @@
                                                 <p class="text-xs font-weight-bold mb-0"><?php echo $row['firstname']; ?></p>
                                             </td>
                                             <td>
-                                                <span class="badge bg-gradient-primary">Allocated <?php echo $row['StaffID']; ?></span>
+                                                <span class="badge bg-gradient-primary">
+                                                    <?php
+                                                    $a = $row['StaffID'];;
+                                                    $sql = "SELECT * FROM orders_paid WHERE StaffID='$a'";
+                                                    if ($re=mysqli_query($conn,$sql)) {
+                                                        $rowcount = mysqli_num_rows($re);
+                                                        if($rowcount==0) {
+                                                            echo "NOT Allocated ";
+                                                        }else{
+                                                            echo "Allocated: " . $rowcount;
+                                                        }
+                                                    }?>
+                                                    </span>
                                             </td>
                                         <?php
                                                 echo "</tr>";
@@ -359,6 +372,7 @@
                                             mysqli_free_result($staff);
                                             mysqli_close($conn);
                                         ?>
+
                                     </tbody>
                                 </table>
                         </div>
@@ -368,6 +382,7 @@
                             </div>
                         </div>
                     </div>
+            <!------------------------------------------------------------------------------------------------------------------------------ -->
                     <div class="col-lg-4 mb-lg-0 mb-4">
                         <div class="card">
                             <div class="card-body p-3">
@@ -375,8 +390,47 @@
                                 <div>
                                 <div class="d-flex flex-column h-100">
                                     <p class="mb-1 pt-2 text-bold"></p>
-                                    <h5 class="font-weight-bolder">Title</h5>
-                                    
+                                    <h5 class="font-weight-bolder">ORDERS ALLOCATION</h5>
+                                    <!-- Content here -->
+
+                                    <form id="ordersAllocationForm" name="ordersAllocationForm" method="post" action="orders-allocation.php" onsubmit="return ordersAllocationValidate(this)">
+
+                                        <table class="table align-items-center mb-0">
+
+                                                <tr>
+                                                    <td colspan="2" style="text-align:center;"><span style="color: #FF0000; ">* </span>Required fields</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Order ID</th>
+                                                    <td><span style="color: #FF0000; ">* </span><select name="orderid" id="orderid">
+                                                            <option value="select">- select one option -
+                                                                <?php
+                                                                //loop through orders_details table rows
+                                                                while ($row=mysqli_fetch_array($orders)){
+                                                                    echo "<option value=$row[ID]>$row[ID]";
+                                                                }
+                                                                ?>
+                                                        </select></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Staff ID</th>
+                                                    <td><span style="color: #FF0000; ">* </span><select name="staffid" id="staffid">
+                                                            <option value="select">- select one option -
+                                                                <?php
+                                                                //loop through staff table rows
+                                                                while ($row=mysqli_fetch_array($staff_1)){
+                                                                    echo "<option value=$row[StaffID]>$row[StaffID]";
+                                                                }
+                                                                ?>
+                                                        </select></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    <td><input type="submit" name="Submit" value="Allocate Staff" /></td>
+                                                </tr>
+                                            </table>
+                                    </form>
+
                                     <!-- Content here -->
                                 </div>
                                 </div>
@@ -391,8 +445,48 @@
                                 <div>
                                 <div class="d-flex flex-column h-100">
                                     <p class="mb-1 pt-2 text-bold"></p>
-                                    <h5 class="font-weight-bolder">Title</h5>
-                                <!-- Content Here -->
+                                    <h5 class="font-weight-bolder">RESERVATIONS ALLOCATION</h5>
+                                    <!-- Content here -->
+
+                                    <form id="reservationsAllocationForm" name="reservationsAllocationForm" method="post" action="reservations-allocation.php" onsubmit="return reservationsAllocationValidate(this)">
+
+                                    <table class="table align-items-center mb-0">
+
+                                            <tr>
+                                                <td colspan="2" style="text-align:center;"><span style="color: #FF0000; ">* </span>Required fields</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Reserve ID</th>
+                                                <td><span style="color: #FF0000; ">* </span><select name="reservationid" id="reservationid">
+                                                        <option value="select">- select one option -
+                                                            <?php
+                                                            //loop through reservations_details table rows
+                                                            while ($row=mysqli_fetch_array($reservations)){
+                                                                echo "<option value=$row[ReservationID]>$row[ReservationID]";
+                                                            }
+                                                            ?>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Staff ID</th>
+                                                <td><span style="color: #FF0000; ">* </span><select name="staffid" id="staffid">
+                                                        <option value="select">- select one option -
+                                                            <?php
+                                                            //loop through staff table rows
+                                                            while ($row=mysqli_fetch_array($staff_2)){
+                                                                echo "<option value=$row[StaffID]>$row[StaffID]";
+                                                            }
+                                                            ?>
+                                                    </select></td>
+                                            </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td><input type="submit" name="Submit" value="Allocate Staff" /></td>
+                                        </tr>
+                                        </table>
+                                    </form>
+
+                                    <!-- Content here -->
                                 </div>
                                 </div>
                             </div>
