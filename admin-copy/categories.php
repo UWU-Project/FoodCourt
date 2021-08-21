@@ -273,7 +273,7 @@
               <br/>
               <form name="categoryForm" id="categoryForm" action="categories-exec.php" method="post" onsubmit="return categoriesValidate(this)">
               <div class="input-group mb-3">
-                <input type="text" name="name" class="form-control" placeholder="ADD A NEW CATEGORY" aria-label="ADD A NEW CATEGORY" aria-describedby="button-addon2">
+                <input type="text" name="name" class="form-control" placeholder="ADD A NEW CATEGORY TO PASTRY SHOP" aria-label="ADD A NEW CATEGORY" aria-describedby="button-addon2">
                 <button class="btn btn-outline-primary mb-0" type="submit" name="Submit" id="button-addon2">Add</button>
                 
                 </div></form>

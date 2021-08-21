@@ -313,13 +313,17 @@
 
                 <!-- END WHITE BORDER-->
 
-                <div class="col-12 col-xl-4">
-                    <div class="card h-100">
-                        <div class="card-header pb-0 p-3">
-                            <h6 class="mb-0">STAFF</h6>
-                        </div>
-                        <div class="card-body p-3">
-                            <div class="table-responsive">
+                
+
+                    <div class="col-lg-4 mb-lg-0 mb-4">
+                        <div class="card">
+                            <div class="card-body p-3">
+                            <div class="row">
+                                <div>
+                                <div class="d-flex flex-column h-100">
+                                    <p class="mb-1 pt-2 text-bold"></p>
+                                    <h5 class="font-weight-bolder">STAFF</h5>
+                                    <div class="table-responsive">
                                 <table class="table align-items-center mb-0">
                                     <thead>
                                     <tr>
@@ -358,8 +362,43 @@
                                     </tbody>
                                 </table>
                         </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div class="col-lg-4 mb-lg-0 mb-4">
+                        <div class="card">
+                            <div class="card-body p-3">
+                            <div class="row">
+                                <div>
+                                <div class="d-flex flex-column h-100">
+                                    <p class="mb-1 pt-2 text-bold"></p>
+                                    <h5 class="font-weight-bolder">Title</h5>
+                                    
+                                    <!-- Content here -->
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-4 mb-lg-0 mb-4">
+                        <div class="card">
+                            <div class="card-body p-3">
+                            <div class="row">
+                                <div>
+                                <div class="d-flex flex-column h-100">
+                                    <p class="mb-1 pt-2 text-bold"></p>
+                                    <h5 class="font-weight-bolder">Title</h5>
+                                <!-- Content Here -->
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
 
 
 
