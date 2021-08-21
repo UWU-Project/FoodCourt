@@ -309,19 +309,63 @@
     <div class="container-fluid py-4">
 
         <div class="row mt-4">
-       
-     
+            <!-- START WHITE BOARDER -->
 
-      
+                <!-- END WHITE BORDER-->
 
-        <div class="col-12 mt-4">
-          <div class="card mb-4">
-            <div class="card-body p-3">
-              
-            
-            </div>
-          </div>
-        </div>
+                <div class="col-12 col-xl-4">
+                    <div class="card h-100">
+                        <div class="card-header pb-0 p-3">
+                            <h6 class="mb-0">STAFF</h6>
+                        </div>
+                        <div class="card-body p-3">
+                            <div class="table-responsive">
+                                <table class="table align-items-center mb-0">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Staff ID</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">First Name</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="table align-items-center mb-0">
+                                    <?php
+                                    //loop through all table rows
+                                    while ($row=mysqli_fetch_array($staff)){
+                                    echo "<tr>";?>
+                                            <td>
+                                                <div class="d-flex px-2">
+                                                    <div>
+                                                        <img src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/logos/small-logos/logo-spotify.svg" class="avatar avatar-sm rounded-circle me-2">
+                                                    </div>
+                                                    <div class="my-auto">
+                                                        <h6 class="mb-0 text-xs"><?php echo $row['StaffID']; ?></h6>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p class="text-xs font-weight-bold mb-0"><?php echo $row['firstname']; ?></p>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-gradient-primary">Allocated <?php echo $row['StaffID']; ?></span>
+                                            </td>
+                                        <?php
+                                                echo "</tr>";
+                                            }
+                                            mysqli_free_result($staff);
+                                            mysqli_close($conn);
+                                        ?>
+                                    </tbody>
+                                </table>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+      <!-- END WHITE BORDER-->
+
         </div>
 
 
@@ -330,10 +374,10 @@
   </main>
   
   <!--   Core JS Files   -->
-  <script src="../assets/js/core/popper.min.js"></script>
-  <script src="../assets/js/core/bootstrap.min.js"></script>
-  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/core/bootstrap.min.js"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
   
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
