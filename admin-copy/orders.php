@@ -315,8 +315,12 @@
       </div>
     </nav>
     <!-- End Navbar -->
-      <div  id="page">
-          <div class="container">
+      <div class="container-fluid">
+
+          <div class="row mt-4">
+              <div class="col-lg-12 mb-lg-0 mb-4">
+                  <div class="card">
+                      <div class="card-body p-3">
               <nav>
                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
                       <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Orders Placed</button>
@@ -331,16 +335,18 @@
                           <h3>ORDERS PLACED</h3>
                           <hr>
                       <!-- Orders tab 1 -->
-                      <table class="table table-hover">
-                          <thead>
-                          <tr>
-                              <th scope="col">ID</th>
-                              <th scope="col">Date</th>
-                              <th scope="col">Customer ID</th>
-                              <th scope="col">Food ID</th>
-                              <th scope="col">Quantity</th>
-                              <th scope="col">Total</th>
-                              <th scope="col">Delivered</th>
+                      <div class="table-responsive">
+                          <table class="table table-hover align-items-center mb-0">
+                              <thead>
+
+                              <tr>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">ID</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Date</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Customer ID</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Food ID</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Quantity</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Total</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Delivered</th>
                           </tr>
                           </thead>
                           <tbody>
@@ -502,6 +508,7 @@
                           <?php } ?>
                           </tbody>
                       </table>
+                  </div>
                       <hr>
                            <?php
 
@@ -514,17 +521,19 @@
                       <hr>
                       <h3>CONFIRMED ORDERS</h3>
                       <hr>
-                      <table class="table table-hover">
-                          <thead>
-                          <tr>
-                              <th scope="col">ID</th>
-                              <th scope="col">Date</th>
-                              <th scope="col">Customer ID</th>
-                              <th scope="col">Food ID</th>
-                              <th scope="col">Quantity</th>
-                              <th scope="col">Total</th>
-                              <th scope="col">Delivered</th>
-                              <th scope="col">Status</th>
+                      <div class="table-responsive">
+                          <table class="table table-hover align-items-center mb-0">
+                              <thead>
+
+                              <tr>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">ID</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Date</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Customer ID</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Food ID</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Quantity</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Total</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Delivered</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Status</th>
                           </tr>
                           </thead>
                           <tbody>
@@ -675,22 +684,25 @@
                           </tbody>
                       </table>
                   </div>
+                  </div>
 
 
                   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                       <hr>
                       <h3>DELIVERED ORDERS</h3>
                       <hr>
-                      <table class="table table-hover">
-                          <thead>
-                          <tr>
-                              <th scope="col">ID</th>
-                              <th scope="col">Date</th>
-                              <th scope="col">Customer ID</th>
-                              <th scope="col">Food ID</th>
-                              <th scope="col">Quantity</th>
-                              <th scope="col">Total</th>
-                              <th scope="col">Status</th>
+                      <div class="table-responsive">
+                          <table class="table table-hover align-items-center mb-0">
+                              <thead>
+
+                              <tr>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">ID</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Date</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Customer ID</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Food ID</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Quantity</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Total</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Status</th>
                           </tr>
                           </thead>
                           <tbody>
@@ -798,20 +810,20 @@
                           <?php }?>
                           </tbody>
                       </table>
+                      </div>
                   </div>
 
 
 
             </div>
-          </div>
-        </div>
+          </div></div></div></div></div>
 
 
       <?php
 
       mysqli_close($conn);
       require_once('components/footer.inc.php'); ?>
-    </div>
+
   </main>
   
   <!--   Core JS Files   -->

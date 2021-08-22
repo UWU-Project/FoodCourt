@@ -304,8 +304,13 @@
       </div>
     </nav>
     <!-- End Navbar -->
-      <div  id="page">
-          <div class="container">
+      <div class="container-fluid">
+
+          <div class="row mt-4">
+              <div class="col-lg-12 mb-lg-0 mb-4">
+                  <div class="card">
+                      <div class="card-body p-3">
+
 
               <nav>
                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -320,15 +325,17 @@
                       <hr>
                       <h3>TABLES RESERVED</h3>
                       <hr>
-                      <table class="table table-hover">
-                          <thead>
+                      <div class="table-responsive">
+                          <table class="table table-hover align-items-center mb-0">
+                              <thead>
+
                           <tr>
-                              <th scope="col">Reservation ID</th>
-                              <th scope="col">Customer's ID</th>
-                              <th scope="col">Table Name</th>
-                              <th scope="col">Reserved Date</th>
-                              <th scope="col">Reserved Time</th>
-                              <th scope="col">Action(s)</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Reservation ID</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Customer's ID</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Table Name</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Reserved Date</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Reserved Time</th>
+                              <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Action(s)</th>
                           </tr>
                           </thead>
                           <?php
@@ -500,6 +507,7 @@
 
 
                       </table>
+                      </div>
                       <hr>
                   </div>
 
@@ -518,15 +526,16 @@
                               ?>
 
 
-                      <table class="table table-hover">
-                          <thead>
-                          <tr>
-                              <th scope="col">Reservation ID</th>
-                              <th scope="col">Customer's ID</th>
-                              <th scope="col">Table Name</th>
-                              <th scope="col">Reserved Date</th>
-                              <th scope="col">Reserved Time</th>
-                          </tr>
+                      <div class="table-responsive">
+                          <table class="table table-hover align-items-center mb-0">
+                              <thead>
+                              <tr>
+                                <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Reservation ID</th>
+                                <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Customer's ID</th>
+                                <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Table Name</th>
+                                <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Reserved Date</th>
+                                <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Reserved Time</th>
+                              </tr>
                           </thead>
                               <?php
                               //loop through all table rows
@@ -607,6 +616,7 @@
                                 </tr>
                            <?php   } ?>
                           </table>
+                      </div>
                   </div>
 
 
@@ -623,16 +633,17 @@
                       or die("There are no records to display ... \n" . mysqli_error());
                       echo(mysqli_error($conn));
                       ?>
-                      <table class="table table-hover">
-                          <thead>
-                          <tr>
-                              <th scope="col">Reservation ID</th>
-                              <th scope="col">Customer's ID</th>
-                              <th scope="col">Table Name</th>
-                              <th scope="col">Reserved Date</th>
-                              <th scope="col">Reserved Time</th>
-                              <th scope="col">Reason</th>
-                          </tr>
+                      <div class="table-responsive">
+                          <table class="table table-hover align-items-center mb-0">
+                              <thead>
+                              <tr>
+                                <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Reservation ID</th>
+                                <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Customer's ID</th>
+                                <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Table Name</th>
+                                <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Reserved Date</th>
+                                <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Reserved Time</th>
+                                <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Reason</th>
+                            </tr>
                           </thead>
                           <?php
                           //loop through all table rows
@@ -714,11 +725,11 @@
                               </tr>
                           <?php   } ?>
                       </table>
+                      </div>
                   </div>
               </div>
 
-          </div>
-      </div>
+                      </div></div></div></div></div>
       <?php
 
 

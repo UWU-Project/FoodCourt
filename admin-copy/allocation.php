@@ -469,8 +469,8 @@
                                                         </select></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>&nbsp;</td>
-                                                    <td><input type="submit" name="Submit" value="Allocate Staff" /></td>
+                                                    <td>&nbsp</td>
+                                                    <td><input class="btn btn-primary" type="submit" name="Submit" value="Allocate Staff" /></td>
                                                 </tr>
                                             </table>
                                     </form>
@@ -525,7 +525,7 @@
                                             </tr>
                                         <tr>
                                             <td>&nbsp;</td>
-                                            <td><input type="submit" name="Submit" value="Allocate Staff" /></td>
+                                            <td><input class="btn btn-primary" type="submit" name="Submit" value="Allocate Staff" /></td>
                                         </tr>
                                         </table>
                                     </form>

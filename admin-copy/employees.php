@@ -16,33 +16,6 @@
         or die("There are no records to display ... \n" . mysqli_error());
     ?>
 
-    <?php
-        //get order ids from the orders_details table based on flag=0
-        $flag_0 = 0;
-        $orders=mysqli_query($conn,"SELECT * FROM orders_details WHERE flag='$flag_0'")
-        or die("There are no records to display ... \n" . mysqli_error());
-    ?>
-
-    <?php
-        //get reservation ids from the reservations_details table based on flag=0
-        $flag_0 = 0;
-        $reservations=mysqli_query($conn,"SELECT * FROM reservations_details WHERE flag='$flag_0'")
-        or die("There are no records to display ... \n" . mysqli_error());
-    ?>
-
-    <?php
-        //selecting all records from the staff table. Return an error if there are no records in the tables
-        $staff_1=mysqli_query($conn,"SELECT * FROM staff")
-        or die("There are no records to display ... \n" . mysqli_error());
-    ?>
-
-    <?php
-        //selecting all records from the staff table. Return an error if there are no records in the tables
-        $staff_2=mysqli_query($conn,"SELECT * FROM staff")
-        or die("There are no records to display ... \n" . mysqli_error());
-    ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,9 +38,48 @@
   <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+    <script language="JavaScript" src="validation/admin.js"></script>
+
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
+
+<!-- ================================================== -->
+<script>
+    <?php
+    if(isset($_GET['m'])){
+        $alert="
+            swal.fire({
+                 type : 'success',
+                 title : 'Staff Information Added Successfully',
+             })
+            ";
+        echo $alert;
+    }
+    ?>
+</script>
+<!-- ================================================== -->
+<!-- ================================================== -->
+<script>
+    <?php
+    if(isset($_GET['x'])){
+        $alert="
+            swal.fire({
+                 type : 'success',
+                 title : 'Deleted Successfully',
+             })
+            ";
+        echo $alert;
+    }
+    ?>
+</script>
+<!-- ================================================== -->
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
@@ -299,14 +311,18 @@
               <div class="col-lg-12 mb-lg-0 mb-4">
                 <h5 style="text-align:center">STAFF MEMBER'S LIST</h5>
                 <br/>
-                <table border="0" width="80%" align="center">
-                    <tr>
-                        <th>Staff ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Street Address</th>
-                    </tr>
-
+                  <div class="table-responsive">
+                  <table class="table table-hover align-items-center mb-0">
+                      <thead>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Staff ID</th>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">First Name</th>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Last Name</th>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Email</th>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Mobile No</th>
+                            </tr>
+                      </thead>
+                      <tbody>
                     <?php
                     //loop through all table rows
                     while ($row=mysqli_fetch_array($staff)){
@@ -315,14 +331,16 @@
                         echo "<td>" . $row['firstname']."</td>";
                         echo "<td>" . $row['lastname']."</td>";
                         echo "<td>" . $row['Street_Address']."</td>";
-                        echo '<td><a href="delete-staff.php?id=' . $row['StaffID'] . '">Remove Staff</a></td>';
+                        echo "<td>" . $row['Mobile_Tel']."</td>";
+                        echo '<td><a class="del-btn btn bg-gradient-danger btn-sm" href="delete-staff.php?id=' . $row['StaffID'] . '">Remove Staff</a></td>';
                         echo "</tr>";
                     }
                     mysqli_free_result($staff);
                     mysqli_close($conn);
                     ?>
-
+                      </tbody>
                 </table>
+                  </div>
             <br/>
             <hr/>
             <br/>
@@ -331,25 +349,25 @@
                     <div class="col-lg-6 mb-lg-0 mb-4">
                     <h5 style="text-align:center">ADD A NEW STAFF MEMBER</h5>
                     <br/>
-                        <form id="staffForm" name="staffForm" method="post" action="staff-exec.php" onsubmit="return staffValidate(this)">
+                        <form class="row g-3 needs-validation" id="staffForm" name="staffForm" method="post" action="staff-exec.php" onsubmit="return staffValidate(this)">
                             <div class="form-group">
-                              <label for="exampleFormControlInput1">First Name </label>
-                              <input  name="fName" type="text" id="fName" class="form-control" placeholder="First Name">
+                              <label for="exampleFormControlInput1" class="form-label">First Name </label>
+                              <input  name="fName" type="text" id="fName" class="form-control" placeholder="First Name" required>
                             </div>
                             <div class="form-group">
-                              <label for="exampleFormControlInput1">Last Name </label>
-                              <input name="lName" type="text" id="lName" class="form-control" placeholder="Last Name">
+                              <label for="exampleFormControlInput1" class="form-label">Last Name </label>
+                              <input name="lName" type="text" id="lName" class="form-control" placeholder="Last Name" required>
                             </div>
                             <div class="form-group">
-                              <label for="exampleFormControlInput1">Home Address</label>
-                              <input name="sAddress" type="text" id="sAddress" class="form-control" placeholder="Address">
+                              <label for="exampleFormControlInput1" class="form-label">Email</label>
+                              <input name="sAddress" type="text" id="sAddress" class="form-control" placeholder="Address" required>
                             </div>
                             <div class="form-group">
-                              <label for="exampleFormControlInput1">Mobile Number</label>
-                              <input name="mobile" type="text" id="mobile" class="form-control" placeholder="Mobile Number">
+                              <label for="exampleFormControlInput1" class="form-label">Mobile Number</label>
+                              <input name="mobile" type="text" id="mobile" class="form-control" placeholder="Mobile Number" required>
                             </div>
-                            <div class="input-group mb-3">
-                            <button type="submit" name="Submit" value="Add" class="btn btn-outline-primary mb-0" type="submit" name="Submit" id="button-addon2">Add Member</button>
+                            <div class="input-group mb-3" class="form-label">
+                            <button type="submit" name="Submit" value="Add" class="btn btn-primary mb-0" type="submit" name="Submit" id="button-addon2">Add Member</button>
                             </div>
                         </form>
                     </div>
@@ -368,10 +386,30 @@
   </main>
   
   <!--   Core JS Files   -->
-  <script src="../assets/js/core/popper.min.js"></script>
-  <script src="../assets/js/core/bootstrap.min.js"></script>
-  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script>
+        $('.del-btn').on('click',function(e){
+            e.preventDefault();
+            const href = $(this).attr('href')
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, Deletet It!'
+            }).then((result) => {
+                if (result.value) {
+                    document.location.href = href;
+                }
+            })
+        })
+
+    </script>
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/core/bootstrap.min.js"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example contactUs etc -->
