@@ -32,7 +32,7 @@
     //check if query executed
     if($result) {
         // redirect back to the allocation page
-        header("Location: allocation.php");
+        header("Location: allocation.php?m=1");
         exit();
     }
     else

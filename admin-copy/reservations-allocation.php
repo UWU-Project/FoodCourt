@@ -32,7 +32,7 @@ or die("The reservation or staff does not exist ... \n" . mysqli_error());
 //check if query executed
 if($result) {
     // redirect back to the allocation page
-    header("Location: allocation.php");
+    header("Location: allocation.php?x=1");
     exit();
 }
 else

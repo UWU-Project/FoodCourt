@@ -295,6 +295,10 @@
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="./index.php">Home</a></li>
+                <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Reservations</li>
+            </ol>
           <h5 class="font-weight-bolder mb-0">Reservations</h5>
         </nav>
       </div>
@@ -306,8 +310,8 @@
               <nav>
                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
                       <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Reservations Placed</button>
-                      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Confirmed Orders</button>
-                      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Cancelled Orders</button>
+                      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Confirmed Reservations</button>
+                      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Cancelled Reservations</button>
                   </div>
               </nav>
               <div class="tab-content" id="nav-tabContent">
@@ -316,17 +320,17 @@
                       <hr>
                       <h3>TABLES RESERVED</h3>
                       <hr>
-                      <table border="0" width="900" align="center">
-
+                      <table class="table table-hover">
+                          <thead>
                           <tr>
-                              <th>Reservation ID</th>
-                              <th>Customer's ID</th>
-                              <th>Table Name</th>
-                              <th>Reserved Date</th>
-                              <th>Reserved Time</th>
-                              <th>Action(s)</th>
+                              <th scope="col">Reservation ID</th>
+                              <th scope="col">Customer's ID</th>
+                              <th scope="col">Table Name</th>
+                              <th scope="col">Reserved Date</th>
+                              <th scope="col">Reserved Time</th>
+                              <th scope="col">Action(s)</th>
                           </tr>
-
+                          </thead>
                           <?php
                           //loop through all table rows
                           while ($row=mysqli_fetch_array($tables)){
@@ -400,14 +404,14 @@
                                 }else{
                                     echo '<span class="badge bg-gradient-faded-dark">' . 'Dinner' . '</span>';
                                 }
-
-                              echo "</td>";
                               ?>
-                              <?php
+                              </td>
 
 
-                              echo "<td>";
 
+
+                             <td>
+                                  <?php
                                       $cancel_data = "cancel_order".$row["ReservationID"];
                                       $deliver_data = "deliver_order".$row["ReservationID"];
                                       ?>
@@ -484,10 +488,11 @@
 
                                               </li>
                                           </ul>
-                              <?php
-                              echo "</td>";
 
-                              echo "</tr>";
+                             </td>
+
+                              </tr>
+                              <?php
                           }
                           mysqli_free_result($tables);
                           ?>
@@ -513,15 +518,16 @@
                               ?>
 
 
-                      <table border="0" width="900" align="center">
+                      <table class="table table-hover">
+                          <thead>
                           <tr>
-                              <th>Reservation ID</th>
-                              <th>Customer's ID</th>
-                              <th>Table Name</th>
-                              <th>Reserved Date</th>
-                              <th>Reserved Time</th>
+                              <th scope="col">Reservation ID</th>
+                              <th scope="col">Customer's ID</th>
+                              <th scope="col">Table Name</th>
+                              <th scope="col">Reserved Date</th>
+                              <th scope="col">Reserved Time</th>
                           </tr>
-
+                          </thead>
                               <?php
                               //loop through all table rows
                               while ($row=mysqli_fetch_array($tables2)) {
@@ -617,16 +623,17 @@
                       or die("There are no records to display ... \n" . mysqli_error());
                       echo(mysqli_error($conn));
                       ?>
-                      <table border="0" width="900" align="center">
+                      <table class="table table-hover">
+                          <thead>
                           <tr>
-                              <th>Reservation ID</th>
-                              <th>Customer's ID</th>
-                              <th>Table Name</th>
-                              <th>Reserved Date</th>
-                              <th>Reserved Time</th>
-                              <th>Reason</th>
+                              <th scope="col">Reservation ID</th>
+                              <th scope="col">Customer's ID</th>
+                              <th scope="col">Table Name</th>
+                              <th scope="col">Reserved Date</th>
+                              <th scope="col">Reserved Time</th>
+                              <th scope="col">Reason</th>
                           </tr>
-
+                          </thead>
                           <?php
                           //loop through all table rows
                           while ($row=mysqli_fetch_array($tables3)) {
@@ -712,6 +719,10 @@
 
           </div>
       </div>
+      <?php
+
+
+      require_once('components/footer.inc.php'); ?>
   </main>
 <!--   END   -->
 
@@ -731,8 +742,8 @@ mysqli_close($conn);
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
-  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/chartjs.min.js"></script>
  
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
