@@ -312,9 +312,9 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
           onsubmit="return updateQuantity(this)">
         <table width="560" align="center">
             <tr>
-                <td>Item ID</td>
-                <td><select name="item" id="item">
-                        <option value="select">- select -
+                <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Item ID</th>
+                <td><select class="form-select" name="item" id="item">
+                        <option value="select">- SELECT -
                             <?php
                             //loop through cart_details table rows
                             while ($row = mysqli_fetch_array($items)) {
@@ -323,9 +323,9 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
                             ?>
                     </select>
                 </td>
-                <td>Quantity</td>
-                <td><select name="quantity" id="quantity">
-                        <option value="select">- select -
+                <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Quantity</th>
+                <td><select class="form-select" name="quantity" id="quantity">
+                        <option value="select">- SELECT -
                             <?php
                             //loop through quantities table rows
                             while ($row = mysqli_fetch_assoc($quantities)) {
@@ -334,7 +334,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
                             ?>
                     </select>
                 </td>
-                <td><input type="submit" name="Submit" value="Change Quantity"/></td>
+                <td><input class="bg-gradient-success" type="submit" name="Submit" value="Change Quantity"/></td>
             </tr>
         </table>
     </form>
@@ -343,11 +343,11 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
     <div style="" class="card-body shadow p-3 mb-5 bg-body rounded">
 
         <div class="container-fluid">
-        <table width="910" height="auto" style="text-align:center;" class="table table-borderless table-hover" w-auto>
 
-            <thead class="table-dark">
-            <tr>
-
+          <div class="table-responsive">
+              <table class="table table-hover align-items-center mb-0">
+                  <thead class="table-dark">
+              <tr>
                 <th>ITEM ID</th>
                 <th>Food Photo</th>
                 <th>Food Name</th>
@@ -357,13 +357,8 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
                 <th>Quantity</th>
                 <th>Total Cost</th>
                 <th>Action(s)</th>
-
             </tr>
             </thead>
-            <?php
-
-            ?>
-
 
             <?php
             $cartItem = "";
@@ -379,12 +374,9 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
                 echo "<td>" . $row[$lt . '_description'] . "</td>";
                 echo "<td>" . ($lt == 'food' ? $row['category_name'] : 'SPECIAL DEALS') . "</td>";
                 echo "<td>" . $symbol['currency_symbol'] . "" . $row[$lt . '_price'] . "</td>";
-
                 echo "<td>" . $row['quantity_value'] . "</td>";
                 echo "<td>" . $symbol['currency_symbol'] . "" . $row['total'] . "</td>";
                 echo '<td><a class="btn btn-outline-danger btn-xs" href="delete-cartitem.php?id=' . $row['cart_id'] . '"><i class="fa fa-trash" aria-hidden="true"></i></a></td>';
-
-
             }
             ?>
 
@@ -441,6 +433,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
             }else {
             ?>
         </table>
+            </div>
     </div>
         <div class="container-fluid mt-100">
             <div class="row">
