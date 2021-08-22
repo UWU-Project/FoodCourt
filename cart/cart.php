@@ -263,7 +263,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
 
                             <li class="nav-item dropdown dropdown-hover mx-2">
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                                   href="../tobedeleted_cartAkila/buffet.php">
+                                   href="../TableBook/buffet.php">
                                     BUFFET
                                 </a>
                             </li>
@@ -308,160 +308,160 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
 <div>
     <!-- CART Begins -->
     <div class="container-fluid">
-    <form name="quantityForm" id="quantityForm" method="post" action="update-quantity.php"
-          onsubmit="return updateQuantity(this)">
-        <table width="560" align="center">
-            <tr>
-                <td>Item ID</td>
-                <td><select name="item" id="item">
-                        <option value="select">- select -
-                            <?php
-                            //loop through cart_details table rows
-                            while ($row = mysqli_fetch_array($items)) {
-                                echo "<option value=$row[cart_id]>$row[cart_id]";
-                            }
-                            ?>
-                    </select>
-                </td>
-                <td>Quantity</td>
-                <td><select name="quantity" id="quantity">
-                        <option value="select">- select -
-                            <?php
-                            //loop through quantities table rows
-                            while ($row = mysqli_fetch_assoc($quantities)) {
-                                echo "<option value=$row[quantity_id]>$row[quantity_value]";
-                            }
-                            ?>
-                    </select>
-                </td>
-                <td><input type="submit" name="Submit" value="Change Quantity"/></td>
-            </tr>
-        </table>
-    </form>
-<br>
+        <form name="quantityForm" id="quantityForm" method="post" action="update-quantity.php"
+              onsubmit="return updateQuantity(this)">
+            <table width="560" align="center">
+                <tr>
+                    <td>Item ID</td>
+                    <td><select name="item" id="item">
+                            <option value="select">- select -
+                                <?php
+                                //loop through cart_details table rows
+                                while ($row = mysqli_fetch_array($items)) {
+                                    echo "<option value=$row[cart_id]>$row[cart_id]";
+                                }
+                                ?>
+                        </select>
+                    </td>
+                    <td>Quantity</td>
+                    <td><select name="quantity" id="quantity">
+                            <option value="select">- select -
+                                <?php
+                                //loop through quantities table rows
+                                while ($row = mysqli_fetch_assoc($quantities)) {
+                                    echo "<option value=$row[quantity_id]>$row[quantity_value]";
+                                }
+                                ?>
+                        </select>
+                    </td>
+                    <td><input type="submit" name="Submit" value="Change Quantity"/></td>
+                </tr>
+            </table>
+        </form>
+        <br>
 
-    <div style="" class="card-body shadow p-3 mb-5 bg-body rounded">
+        <div style="" class="card-body shadow p-3 mb-5 bg-body rounded">
 
-        <div class="container-fluid">
-        <table width="910" height="auto" style="text-align:center;" class="table table-borderless table-hover" w-auto>
+            <div class="container-fluid">
+                <table width="910" height="auto" style="text-align:center;" class="table table-borderless table-hover" w-auto>
 
-            <thead class="table-dark">
-            <tr>
+                    <thead class="table-dark">
+                    <tr>
 
-                <th>ITEM ID</th>
-                <th>Food Photo</th>
-                <th>Food Name</th>
-                <th>Food Description</th>
-                <th>Food Category</th>
-                <th>Food Price</th>
-                <th>Quantity</th>
-                <th>Total Cost</th>
-                <th>Action(s)</th>
+                        <th>ITEM ID</th>
+                        <th>Food Photo</th>
+                        <th>Food Name</th>
+                        <th>Food Description</th>
+                        <th>Food Category</th>
+                        <th>Food Price</th>
+                        <th>Quantity</th>
+                        <th>Total Cost</th>
+                        <th>Action(s)</th>
 
-            </tr>
-            </thead>
-            <?php
-
-            ?>
-
-
-            <?php
-            $cartItem = "";
-            //loop through all table rows
-            $symbol = mysqli_fetch_assoc($currencies); //gets active currency
-            foreach ($result as $row) {
-                $lt = $row['lt'];
-                $cartItem .= $row['cart_id'] . ",";
-                echo "<tr>";
-                echo "<td>" . $row['cart_id'] . "</td>";
-                echo '<td><a href=../images/' . $row[$lt . '_photo'] . ' alt="click to view full image" target="_blank"><img src=../images/' . $row[$lt . '_photo'] . ' width="80" height="70"></a></td>';
-                echo "<td>" . $row[$lt . '_name'] . "</td>";
-                echo "<td>" . $row[$lt . '_description'] . "</td>";
-                echo "<td>" . ($lt == 'food' ? $row['category_name'] : 'SPECIAL DEALS') . "</td>";
-                echo "<td>" . $symbol['currency_symbol'] . "" . $row[$lt . '_price'] . "</td>";
-
-                echo "<td>" . $row['quantity_value'] . "</td>";
-                echo "<td>" . $symbol['currency_symbol'] . "" . $row['total'] . "</td>";
-                echo '<td><a class="btn btn-outline-danger btn-xs" href="delete-cartitem.php?id=' . $row['cart_id'] . '"><i class="fa fa-trash" aria-hidden="true"></i></a></td>';
-
-
-            }
-            ?>
-
-            <!--?php
-            echo '<td><a href="order-exec.php?id=' . $row['cart_id'] . '">Place Order</a></td>';
-            echo "</tr>";
-
-
-
-            //mysqli_free_result($result);
-            //mysqli_close($conn);
-            ?-->
-
-            <?php
-
-
-            //get member_id from session
-            $member_id = $_SESSION['SESS_MEMBER_ID'];
-
-
-            if (mysqli_num_rows($items) > 0){
-
-
-                //loop through all table rows
-                $symbol = mysqli_fetch_assoc($currencies); //gets active currency
-
-                foreach ($result_lounge as $row) {
-                    $lt = $row['lt'];
-                    $cartItem .= $row['cart_id'] . ",";
-                    echo "<tr>";
-                    echo "<td>" . $row['cart_id'] . "</td>";
-                    echo '<td><a href=../images/' . $row[$lt . '_photo'] . ' alt="click to view full image" target="_blank"><img src=../images/' . $row[$lt . '_photo'] . ' width="80" height="70"></a></td>';
-                    echo "<td>" . $row[$lt . '_name'] . "</td>";
-                    echo "<td>" . $row[$lt . '_description'] . "</td>";
-                    echo "<td>" . $row[$lt . 'category_name'] . "</td>";
-                    echo "<td>" . $symbol['currency_symbol'] . "" . $row[$lt . '_price'] . "</td>";
-                    echo "<td>" . $row['quantity_value'] . "</td>";
-                    echo "<td>" . $symbol['currency_symbol'] . "" . $row['total'] . "</td>";
-                    echo '<td><a class="btn btn-outline-danger btn-xs" href="delete-cartitem.php?id=' . $row['food_id'] . '"><i class="fa fa-trash" aria-hidden="true"></i></a></td>';
-                    echo "</tr>";
-                    ?>
+                    </tr>
+                    </thead>
                     <?php
 
-                }
-                ?>
-
-                <?php
-                $cartItem = rtrim($cartItem, ',');
-                echo "<tr>";
-                echo '<td colspan="9" class="table-active"><a href="order-exec.php?id=' . $cartItem . '"><i class="btn btn-warning" >Go To Checkout</i></a></td>';
-                echo "</tr>";
+                    ?>
 
 
-            }else {
-            ?>
-        </table>
-    </div>
-        <div class="container-fluid mt-100">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-body cart">
-                            <div class="col-sm-12 empty-cart-cls text-center"><img src="https://i.imgur.com/dCdflKN.png"
-                                                                                   width="130" height="130"
-                                                                                   class="img-fluid mb-4 mr-3">
-                                <h3><strong>Your Cart is Empty</strong></h3>
-                                <h4>Add something to make me happy :)</h4> <a href="../pastry-shop.php"
-                                                                              class="btn btn-primary cart-btn-transform m-3"
-                                                                              data-abc="true">continue shopping</a>
+                    <?php
+                    $cartItem = "";
+                    //loop through all table rows
+                    $symbol = mysqli_fetch_assoc($currencies); //gets active currency
+                    foreach ($result as $row) {
+                        $lt = $row['lt'];
+                        $cartItem .= $row['cart_id'] . ",";
+                        echo "<tr>";
+                        echo "<td>" . $row['cart_id'] . "</td>";
+                        echo '<td><a href=../images/' . $row[$lt . '_photo'] . ' alt="click to view full image" target="_blank"><img src=../images/' . $row[$lt . '_photo'] . ' width="80" height="70"></a></td>';
+                        echo "<td>" . $row[$lt . '_name'] . "</td>";
+                        echo "<td>" . $row[$lt . '_description'] . "</td>";
+                        echo "<td>" . ($lt == 'food' ? $row['category_name'] : 'SPECIAL DEALS') . "</td>";
+                        echo "<td>" . $symbol['currency_symbol'] . "" . $row[$lt . '_price'] . "</td>";
+
+                        echo "<td>" . $row['quantity_value'] . "</td>";
+                        echo "<td>" . $symbol['currency_symbol'] . "" . $row['total'] . "</td>";
+                        echo '<td><a class="btn btn-outline-danger btn-xs" href="delete-cartitem.php?id=' . $row['cart_id'] . '"><i class="fa fa-trash" aria-hidden="true"></i></a></td>';
+
+
+                    }
+                    ?>
+
+                    <!--?php
+                    echo '<td><a href="order-exec.php?id=' . $row['cart_id'] . '">Place Order</a></td>';
+                    echo "</tr>";
+
+
+
+                    //mysqli_free_result($result);
+                    //mysqli_close($conn);
+                    ?-->
+
+                    <?php
+
+
+                    //get member_id from session
+                    $member_id = $_SESSION['SESS_MEMBER_ID'];
+
+
+                    if (mysqli_num_rows($items) > 0){
+
+
+                        //loop through all table rows
+                        $symbol = mysqli_fetch_assoc($currencies); //gets active currency
+
+                        foreach ($result_lounge as $row) {
+                            $lt = $row['lt'];
+                            $cartItem .= $row['cart_id'] . ",";
+                            echo "<tr>";
+                            echo "<td>" . $row['cart_id'] . "</td>";
+                            echo '<td><a href=../images/' . $row[$lt . '_photo'] . ' alt="click to view full image" target="_blank"><img src=../images/' . $row[$lt . '_photo'] . ' width="80" height="70"></a></td>';
+                            echo "<td>" . $row[$lt . '_name'] . "</td>";
+                            echo "<td>" . $row[$lt . '_description'] . "</td>";
+                            echo "<td>" . $row[$lt . 'category_name'] . "</td>";
+                            echo "<td>" . $symbol['currency_symbol'] . "" . $row[$lt . '_price'] . "</td>";
+                            echo "<td>" . $row['quantity_value'] . "</td>";
+                            echo "<td>" . $symbol['currency_symbol'] . "" . $row['total'] . "</td>";
+                            echo '<td><a class="btn btn-outline-danger btn-xs" href="delete-cartitem.php?id=' . $row['food_id'] . '"><i class="fa fa-trash" aria-hidden="true"></i></a></td>';
+                            echo "</tr>";
+                            ?>
+                            <?php
+
+                        }
+                        ?>
+
+                        <?php
+                        $cartItem = rtrim($cartItem, ',');
+                        echo "<tr>";
+                        echo '<td colspan="9" class="table-active"><a href="order-exec.php?id=' . $cartItem . '"><i class="btn btn-warning" >Go To Checkout</i></a></td>';
+                        echo "</tr>";
+
+
+                    }else {
+                    ?>
+                </table>
+            </div>
+            <div class="container-fluid mt-100">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body cart">
+                                <div class="col-sm-12 empty-cart-cls text-center"><img src="https://i.imgur.com/dCdflKN.png"
+                                                                                       width="130" height="130"
+                                                                                       class="img-fluid mb-4 mr-3">
+                                    <h3><strong>Your Cart is Empty</strong></h3>
+                                    <h4>Add something to make me happy :)</h4> <a href="../pastry-shop.php"
+                                                                                  class="btn btn-primary cart-btn-transform m-3"
+                                                                                  data-abc="true">continue shopping</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </div>
+        </div>
         <?php
         }
 
@@ -474,13 +474,13 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
 
 
 
-<!-- Google Map -->
-<script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqqBMyAoQe2LlTe9e3_U5O8NaUwEJ9dDU&callback=initMap&libraries=&v=weekly"
-        async
-></script>
-<script src="../validation/map.js"></script>
-<!-- Google Map End -->
+    <!-- Google Map -->
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqqBMyAoQe2LlTe9e3_U5O8NaUwEJ9dDU&callback=initMap&libraries=&v=weekly"
+            async
+    ></script>
+    <script src="../validation/map.js"></script>
+    <!-- Google Map End -->
 
 </body>
 </html>

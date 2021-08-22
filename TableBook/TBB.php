@@ -131,66 +131,56 @@
                     </button>
 
 
-
                     <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
-                        <ul class="nav navbar-nav nav-main">
-                            <li class="nav-item dropdown dropdown-hover mx-6 " >
-
-                            </li>
+                        <ul class="nav navbar-nav nav-main mx-auto">
 
 
 
-                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                            <li class="nav-item dropdown dropdown-hover px-2" >
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active"  href="../pastry-shop.php">
                                     PASTRY SHOP
                                 </a>
                             </li>
 
-                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                            <li class="nav-item dropdown dropdown-hover px-2" >
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="../lounge.php" >
                                     THE LOUNGE
                                 </a>
                             </li>
 
-                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                            <li class="nav-item dropdown dropdown-hover px-2" >
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="../TableBook/TBB.php">
                                     BUFFET
                                 </a>
                             </li>
 
-                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                            <li class="nav-item dropdown dropdown-hover px-2" >
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  aria-selected="true" href="../about-us.php">
                                     ABOUT US
                                 </a>
                             </li>
 
-                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                            <li class="nav-item dropdown dropdown-hover px-2" >
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center "  aria-selected="true" href="../contactUs/contact-us.php">
                                     CONTACT US
                                 </a>
                             </li>
-                            <li class="nav-item dropdown dropdown-hover mx-6" >
+                        </ul>
 
-                            </li>
+                        <ul class="navbar-nav ms-auto">
+                            <a class="nav-link nav-link-icon me-2 " href="../cart/cart.php" target="_blank" >
 
-                            <li class="nav" style="margin-left: 50px">
-                                <a class="nav-link nav-link-icon me-2 " href="../cart/cart.php" target="_blank" >
-
-                                    <i class="fa fa-shopping-cart me-1"></i>
-                                    <p class="d-inline text-sm z-index-1 font-weight-bold" >CART</p>
-                                </a>
-                            </li>
-
-
-
+                                <i class="fa fa-shopping-cart me-1"></i>
+                                <p class="d-inline text-sm z-index-1 font-weight-bold" >CART</p>
+                            </a>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <!-- End Navbar -->
         </div>
     </div>
 </div>
+<!-- End Navbar -->
 
 <!-- AAA
 ================================================== -->
@@ -216,7 +206,6 @@
 
         </div>
     </div>
-
 </div>
 
 <!-- -------- FOOTER START ------- -->
@@ -310,7 +299,19 @@
         </div>
     </div>
 </footer>
+<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
 
+<script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+<!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+<script src="../assets/js/plugins/parallax.min.js"></script>
+<!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
+
+<script src="../assets/js/soft-design-system.min.js?v=1.0.5" type="text/javascript"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 <!-- Google Map -->
 <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqqBMyAoQe2LlTe9e3_U5O8NaUwEJ9dDU&callback=initMap&libraries=&v=weekly"

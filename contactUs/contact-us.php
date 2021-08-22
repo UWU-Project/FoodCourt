@@ -27,8 +27,9 @@ error_reporting(0);
   <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
 
   <!-- CSS Files -->
-  <link id="pagestyle" href="../assets/css/soft-design-system.css?v=1.0.5" rel="stylesheet" />
+    <link id="pagestyle" href="../assets/css/soft-design-system.css?v=1.0.5" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css">
+
 </head>
 
 <body class="contact-us">
