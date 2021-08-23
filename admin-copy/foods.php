@@ -43,7 +43,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Admin | Orchid Bliss
+    Foods | Orchid Bliss
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -55,9 +55,52 @@
   <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+  <script language="JavaScript" src="validation/admin.js"></script>
+  <style>
+    html {
+        scroll-behavior: smooth;
+      }
+    </style>
+     <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
+
+<script>
+    <?php
+    if(isset($_GET['m'])){
+        $alert="
+            swal.fire({
+                 type : 'success',
+                 title : 'Reservation Cancelled',
+                 text : 'Record has added to CANCELLED RESERVATIONS'
+             })
+            ";
+        echo $alert;
+    }
+    ?>
+</script>
+<!-- ================================================== -->
+<!-- ================================================== -->
+<script>
+    <?php
+    if(isset($_GET['x'])){
+        $alert="
+            swal.fire({
+                 type : 'success',
+                 title : 'Reservation Confirmed',
+                 text : 'Record has added to CONFIRMED RESERVATIONS'
+             })
+            ";
+        echo $alert;
+    }
+    ?>
+</script>
+
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
@@ -67,7 +110,7 @@
       </a>
     </div>
     <hr class="horizontal dark mt-0">
-    <div class="collapse navbar-collapse  w-auto  max-height-vh-100 h-100" id="sidenav-collapse-main">
+    <div class="collapse navbar-collapse w-auto max-height-vh-100 h-100" id="sidenav-collapse-main" style="overflow: initial;">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="./index.php">
@@ -90,7 +133,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">
+          <a class="nav-link active" href="./foods-menu.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>office</title>
@@ -109,6 +152,28 @@
             <span class="nav-link-text ms-1">Foods</span>
           </a>
         </li>
+        
+        <li class="nav-item">
+          <a class="nav-link  " href="./allocation.php">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>office</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-1869.000000, -293.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(1716.000000, 291.000000)">
+                      <g id="office" transform="translate(153.000000, 2.000000)">
+                        <path class="color-background opacity-6" d="M12.25,17.5 L8.75,17.5 L8.75,1.75 C8.75,0.78225 9.53225,0 10.5,0 L31.5,0 C32.46775,0 33.25,0.78225 33.25,1.75 L33.25,12.25 L29.75,12.25 L29.75,3.5 L12.25,3.5 L12.25,17.5 Z"></path>
+                        <path class="color-background" d="M40.25,14 L24.5,14 C23.53225,14 22.75,14.78225 22.75,15.75 L22.75,38.5 L19.25,38.5 L19.25,22.75 C19.25,21.78225 18.46775,21 17.5,21 L1.75,21 C0.78225,21 0,21.78225 0,22.75 L0,40.25 C0,41.21775 0.78225,42 1.75,42 L40.25,42 C41.21775,42 42,41.21775 42,40.25 L42,15.75 C42,14.78225 41.21775,14 40.25,14 Z M12.25,36.75 L7,36.75 L7,33.25 L12.25,33.25 L12.25,36.75 Z M12.25,29.75 L7,29.75 L7,26.25 L12.25,26.25 L12.25,29.75 Z M35,36.75 L29.75,36.75 L29.75,33.25 L35,33.25 L35,36.75 Z M35,29.75 L29.75,29.75 L29.75,26.25 L35,26.25 L35,29.75 Z M35,22.75 L29.75,22.75 L29.75,19.25 L35,19.25 L35,22.75 Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1">Allocation</span>
+          </a>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link  " href="./specials.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -156,7 +221,7 @@
           <a class="nav-link  " href="./reservations.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>box-3d-50</title>
+                <title></title>
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g transform="translate(-2319.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
                     <g transform="translate(1716.000000, 291.000000)">
@@ -174,7 +239,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/rtl.html">
+          <a class="nav-link  " href="./accounts.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>settings</title>
@@ -198,7 +263,7 @@
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Accounts</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/sign-in.html">
+          <a class="nav-link  " href="./employees.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>Add New Staff</title>
@@ -218,7 +283,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/profile.html">
+          <a class="nav-link  " href="./profile.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>Profile Settings</title>
@@ -239,7 +304,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/sign-up.html">
+          <a class="nav-link  " href="./logout.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="20px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>spaceship</title>
@@ -276,99 +341,127 @@
           </ol>
           <h6 class="font-weight-bolder mb-0">PASTRY SHOP - FOOD ITEMS</h6>
         </nav>
+        <div style="mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+        <a href="#addFood">
+        <button type="button" class="btn btn-success">Add a New Food Item</button>
+        </a>
+        <div>
       </div>
     </nav>
     <!-- End Navbar -->
-    <div class="container-fluid">
-        
+    <div class="container-fluid"> 
         <div class="row mt-4">
         <div class="col-lg-12 mb-lg-0 mb-4">
           <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-              <div class="col-lg-12 mb-lg-0 mb-4">
-              <h5 style="text-align:center">ADD A NEW FOOD ITEM</h5>
-              <br/>
-              <form name="categoryForm" id="categoryForm" action="categories-exec.php" method="post" onsubmit="return categoriesValidate(this)">
-              <div class="input-group mb-3">
-                <input type="text" name="name" class="form-control" placeholder="ADD A NEW FOOD ITEM" aria-label="ADD A NEW CATEGORY" aria-describedby="button-addon2">
-                <button class="btn btn-outline-primary mb-0" type="submit" name="Submit" id="button-addon2">Add Foods</button>
-                
-                </div></form>
+              <div class="card-body ">
+                  <h5 style="text-align:center">AVAILABLE FOOD ITEMS</h5>
+                  <hr/>
+                  <div class="table-responsive">
+                  <table width="100%" align="center">
+              <tr>
+                  <th>Food Photo</th>
+                  <th>Food Name</th>
+                  <th>Food Description</th>
+                  <th>Food Price</th>
+                  <th>Food Category</th>
+                  <th>Action(s)</th>
+              </tr>
 
-                <form name="foodsForm" id="foodsForm" action="foods-exec.php" method="post" enctype="multipart/form-data" onsubmit="return foodsValidate(this)">
-                <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Category</th>
-                    <th>Photo</th>
-                    <th>Action(s)</th>
-                </tr>
-                <tr>
-                    <td><input type="text" name="name" id="name" class="textfield" /></td>
-                    <td><textarea name="description" id="description" class="textfield" rows="2" cols="15"></textarea></td>
-                    <td><input type="text" name="price" id="price" class="textfield" /></td>
-                    <td width="168"><select name="category" id="category">
-                            <option value="select">- select one option -
+              <?php
+              //loop through all table rows
+              $symbol=mysqli_fetch_assoc($currencies); //gets active currency
+              while ($row=mysqli_fetch_array($result)){
+                  echo "<tr>";
+                  echo '<td><img src=images/'. $row['food_photo']. ' width="80" height="70"></td>';
+                  echo "<td>" . $row['food_name']."</td>";
+                  echo "<td>" . $row['food_description']."</td>";
+                  echo "<td>" . $symbol['currency_symbol']. "" . $row['food_price']."</td>";
+                  echo "<td>" . $row['category_name']."</td>";
+                  echo '<td><a class="del-btn" href="delete-food.php?id=' . $row['food_id'] . '">Remove Food</a></td>';
+                  echo "</tr>";
+              }
+              mysqli_free_result($result);
+              mysqli_close($conn);
+              ?>
+          </table>
+            </div>
+              <br/><br/>
+                  </div>
+                </div>
+              </div>
+    <div id="addFood">
+      <div class="col-lg-12 mb-lg-0 mb-4 mt-4">
+          <div class="card">
+            <div class="card-body ">
+            <h3 class="mt-2" style="text-align:center;">Add a Food Item</h3>
+            <hr/>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+              <div style="align-items:center;">
+              <form class="p-2" name="foodsForm" id="foodsForm" action="foods-exec.php" method="post" enctype="multipart/form-data" onsubmit="return foodsValidate(this)">
+                  <div class="form-group">
+                      <label for="example-text-input" class="form-control-label">Food Name</label>
+                      <input type="text" name="name" id="name" class="form-control" placeholder="Enter Food Name">
+                  </div>
+                  <div class="form-group">
+                      <label for="example-search-input" class="form-control-label">Description</label>
+                      <textarea name="description" id="description" class="form-control" placeholder="Enter Description"></textarea>
+                  </div>
+                  <div class="form-group">
+                      <label for="example-email-input" class="form-control-label">Food Price</label>
+                      <input type="text" name="price" id="price" class="form-control" placeholder="Enter Food Price">
+                  </div>
+                      <div class="form-group">
+                          <label for="example-date-input" class="form-control-label">Category</label>
+                          <select  name="category" id="category" class="form-control">
+                          <option value="select">- select one option -
                                 <?php
                                 //loop through categories table rows
                                 while ($row=mysqli_fetch_array($categories)){
                                     echo "<option value=$row[category_id]>$row[category_name]";
                                 }
                                 ?>
-                        </select></td>
-                    <td><input type="file" name="photo" id="photo"/></td>
-                    <td><input type="submit" name="Submit" value="Add" /></td>
-                </tr>
-            </form>
+                          </select>
+                      </div>
+                  <div class="form-group">
+                      <label for="example-time-input" class="form-control-label">Add Image</label>
+                      <input type="file" name="photo" id="photo" class="form-control" placeholder="Add Photo">
+                  </div>
+                  <div class="form-group">
+                      <input type="submit" name="Submit" value="Add Foods" class="form-control">
+                  </div>
+              </form>
               </div>
               </div>
-              <hr/>
-              <br/>
-              <div class="row">
-              <div class="col-lg-12 mb-lg-0 mb-4">
-                <h5 style="text-align:center">AVAILABLE FOOD ITEMS</h5>
-                <table width="950" align="center">
-            <tr>
-                <th>Food Photo</th>
-                <th>Food Name</th>
-                <th>Food Description</th>
-                <th>Food Price</th>
-                <th>Food Category</th>
-                <th>Action(s)</th>
-            </tr>
-
-            <?php
-            //loop through all table rows
-            $symbol=mysqli_fetch_assoc($currencies); //gets active currency
-            while ($row=mysqli_fetch_array($result)){
-                echo "<tr>";
-                echo '<td><img src=images/'. $row['food_photo']. ' width="80" height="70"></td>';
-                echo "<td>" . $row['food_name']."</td>";
-                echo "<td>" . $row['food_description']."</td>";
-                echo "<td>" . $symbol['currency_symbol']. "" . $row['food_price']."</td>";
-                echo "<td>" . $row['category_name']."</td>";
-                echo '<td><a href="delete-food.php?id=' . $row['food_id'] . '">Remove Food</a></td>';
-                echo "</tr>";
-            }
-            mysqli_free_result($result);
-            mysqli_close($conn);
-            ?>
-
-        </table>
-            <br/><br/>
-                </div>
-              </div>
+              <div class="col-2"></div>
             </div>
           </div>
-        </div>
-      </div>
+         </div>
       <br/>
       <?php require_once('components/footer.inc.php'); ?>
     </div>
   </main>
-  
+  <script>
+    $('.del-btn').on('click',function(e){
+        e.preventDefault();
+        const href = $(this).attr('href')
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Deletet It!'
+        }).then((result) => {
+            if (result.value) {
+                document.location.href = href;
+            }
+        })
+    })
+
+</script>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
