@@ -260,9 +260,12 @@ or die("Something is wrong ... \n" . mysqli_error());
                             <label for="exampleInputEmail1">Picked Table</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="table" value="" readonly>
                         </div>
+
                         <div class="form-group" id="exampleInputPassword1">
-                            <input type="hidden" name="date" class="date_output" value="2030-05-22">
+                            <input id="testa" type="hidden" name="date" class="date_output" value="">
                         </div>
+
+
                         <div class="form-group">
                             <label for="exampleFormControlSelect2">Example multiple select</label>
                             <select name="time" multiple class="form-control" id="exampleFormControlSelect2">
@@ -280,6 +283,12 @@ or die("Something is wrong ... \n" . mysqli_error());
                 </div>
 
                 </form>
+                <button onclick="testing()" >Ok</button>
+                <script>
+                    function testing(){
+                        console.log(document.getElementById("testa").value);
+                    }
+                </script>
             </div>
 
         </div>
@@ -595,7 +604,7 @@ while ($row=mysqli_fetch_array($tables)){
 
 <script>
     new DateTimePickerComponent.DatePicker( 'exampleInputPassword1' , {
-        date_output: "timestamp",
+        date_output: "date",
     } );
 </script>
 

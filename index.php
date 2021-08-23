@@ -60,25 +60,18 @@ if (isset($_POST['Submit'])){
     <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
 
     <!-- Vendor CSS Files -->
-    <link href="Akila/vendor/animate.css/animate.min.css" rel="stylesheet">
-    <link href="Akila/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="Akila/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="Akila/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="Akila/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="Akila/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="./Akila/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="./Akila/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./Akila/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="./Akila/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="./Akila/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="./Akila/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="Akila/css1/style.css" rel="stylesheet">
+    <link href="./Akila/assets/css/style.css" rel="stylesheet">
 
-    <!-- Vendor JS Files -->
-    <script src="Akila/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="Akila/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="Akila/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="Akila/vendor/php-email-form/validate.js"></script>
-    <script src="Akila/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="Akila/vendor/caro.js"></script>
-    <!-- Template Main JS File -->
-    <script src="Akila/js1/main.js"></script>
+
+
     <style>
 	.txtpadding{
 		
@@ -373,66 +366,56 @@ body{
                     </button>
 
 
-
                     <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
-                        <ul class="nav navbar-nav nav-main">
-                            <li class="nav-item dropdown dropdown-hover mx-6 " >
-
-                            </li>
+                        <ul class="nav navbar-nav nav-main mx-auto">
 
 
 
-                            <li class="nav-item dropdown dropdown-hover mx-2" >
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center "  href="pastry-shop.php">
+                            <li class="nav-item dropdown dropdown-hover px-2" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active"  href="pastry-shop.php">
                                     PASTRY SHOP
                                 </a>
                             </li>
 
-                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                            <li class="nav-item dropdown dropdown-hover px-2" >
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="lounge.php" >
                                     THE LOUNGE
                                 </a>
                             </li>
 
-                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                            <li class="nav-item dropdown dropdown-hover px-2" >
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="TableBook/TBB.php">
                                     BUFFET
                                 </a>
                             </li>
 
-                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                            <li class="nav-item dropdown dropdown-hover px-2" >
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  aria-selected="true" href="about-us.php">
                                     ABOUT US
                                 </a>
                             </li>
 
-                            <li class="nav-item dropdown dropdown-hover mx-2" >
+                            <li class="nav-item dropdown dropdown-hover px-2" >
                                 <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center "  aria-selected="true" href="contactUs/contact-us.php">
                                     CONTACT US
                                 </a>
                             </li>
-                            <li class="nav-item dropdown dropdown-hover mx-6" >
+                        </ul>
 
-                            </li>
+                        <ul class="navbar-nav ms-auto">
+                            <a class="nav-link nav-link-icon me-2 " href="cart/cart.php" target="_blank" >
 
-                            <li class="nav" style="margin-left: 50px">
-                                <a class="nav-link nav-link-icon me-2 " href="cart/cart.php" target="_blank" >
-
-                                    <i class="fa fa-shopping-cart me-1"></i>
-                                    <p class="d-inline text-sm z-index-1 font-weight-bold" >CART</p>
-                                </a>
-                            </li>
-
-
-
+                                <i class="fa fa-shopping-cart me-1"></i>
+                                <p class="d-inline text-sm z-index-1 font-weight-bold" >CART</p>
+                            </a>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <!-- End Navbar -->
         </div>
     </div>
 </div>
+<!-- End Navbar -->
 
 
     <!-- MENU Start
@@ -447,7 +430,7 @@ body{
             <div class="carousel-inner" role="listbox">
 
                 <!-- Slide 1 -->
-                <div class="carousel-item active" style="background: url(Akila/img/slide/slide-1.jpg);">
+                <div class="carousel-item active" style="background: url(./Akila/assets/img/slide/slide-1.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-content">
                             <h2 class="animate__animated animate__fadeInDown"><span>Delicious</span> Restaurant</h2>
@@ -461,7 +444,7 @@ body{
                 </div>
 
                 <!-- Slide 2 -->
-                <div class="carousel-item" style="background: url(Akila/img/slide/slide-2.jpg);">
+                <div class="carousel-item" style="background: url(./Akila/assets/img/slide/slide-2.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-content">
                             <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
@@ -475,8 +458,8 @@ body{
                 </div>
 
                 <!-- Slide 3 -->
-                <div class="carousel-item" style="background: url(Akila/img/slide/slide-3.jpg);">
-                    <div class="carousel-background"><img src="Akila/img/slide/slide-3.jpg" alt=""></div>
+                <div class="carousel-item" style="background: url(./Akila/assets/img/slide/slide-3.jpg);">
+                    <div class="carousel-background"><img src="./Akila/assets/img/slide-3.jpg" alt=""></div>
                     <div class="carousel-container">
                         <div class="carousel-content">
                             <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
@@ -582,183 +565,8 @@ body{
 	</div>
 </section>
 
-<!-- ======= Specials Section ======= -->
-<section id="specials" class="specials">
-    <div class="container">
 
-        <div class="section-title">
-            <h2>Check our <span>Specials</span></h2>
-            <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
-        </div>
 
-        <div class="row">
-            <div class="col-lg-3">
-                <ul class="nav nav-tabs flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Modi sit est</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Unde praesentium sed</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Pariatur explicabo vel</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Nostrum qui quasi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-9 mt-4 mt-lg-0">
-                <div class="tab-content">
-                    <div class="tab-pane active show" id="tab-1">
-                        <div class="row">
-                            <div class="col-lg-8 details order-2 order-lg-1">
-                                <h3>Architecto ut aperiam autem id</h3>
-                                <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                                <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
-                            </div>
-                            <div class="col-lg-4 text-center order-1 order-lg-2">
-                                <img src="Akila/img/specials-1.jpg" alt="" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="tab-2">
-                        <div class="row">
-                            <div class="col-lg-8 details order-2 order-lg-1">
-                                <h3>Et blanditiis nemo veritatis excepturi</h3>
-                                <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                                <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
-                            </div>
-                            <div class="col-lg-4 text-center order-1 order-lg-2">
-                                <img src="Akila/img/specials-2.jpg" alt="" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="tab-3">
-                        <div class="row">
-                            <div class="col-lg-8 details order-2 order-lg-1">
-                                <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
-                                <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
-                                <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
-                            </div>
-                            <div class="col-lg-4 text-center order-1 order-lg-2">
-                                <img src="Akila/img/specials-3.jpg" alt="" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="tab-4">
-                        <div class="row">
-                            <div class="col-lg-8 details order-2 order-lg-1">
-                                <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
-                                <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
-                                <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p>
-                            </div>
-                            <div class="col-lg-4 text-center order-1 order-lg-2">
-                                <img src="Akila/img/specials-4.jpg" alt="" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="tab-5">
-                        <div class="row">
-                            <div class="col-lg-8 details order-2 order-lg-1">
-                                <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
-                                <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
-                                <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
-                            </div>
-                            <div class="col-lg-4 text-center order-1 order-lg-2">
-                                <img src="Akila/img/specials-5.jpg" alt="" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section><!-- End Specials Section -->
-
-<!-- ======= Gallery Section ======= -->
-<section id="gallery" class="gallery">
-    <div class="container-fluid">
-
-        <div class="section-title">
-            <h2>Some photos from <span>Our Restaurant</span></h2>
-            <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
-        </div>
-
-        <div class="row no-gutters">
-
-            <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
-                    <a href="Akila/img/gallery/gallery-1.jpg" class="gallery-lightbox">
-                        <img src="Akila/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
-                    <a href="Akila/img/gallery/gallery-2.jpg" class="gallery-lightbox">
-                        <img src="Akila/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
-                    <a href="Akila/img/gallery/gallery-3.jpg" class="gallery-lightbox">
-                        <img src="Akila/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
-                    <a href="Akila/img/gallery/gallery-4.jpg" class="gallery-lightbox">
-                        <img src="Akila/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
-                    <a href="Akila/img/gallery/gallery-5.jpg" class="gallery-lightbox">
-                        <img src="Akila/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
-                    <a href="Akila/img/gallery/gallery-6.jpg" class="gallery-lightbox">
-                        <img src="Akila/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
-                    <a href="Akila/img/gallery/gallery-7.jpg" class="gallery-lightbox">
-                        <img src="Akila/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-                <div class="gallery-item">
-                    <a href="Akila/img/gallery/gallery-8.jpg" class="gallery-lightbox">
-                        <img src="Akila/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section><!-- End Gallery Section -->
 	<!--  1st photo tile
     ================================================== -->
 <style type="text/css">
@@ -781,7 +589,8 @@ body{
         letter-spacing: 2px
     }
 </style>
-    <section class="restaurant_details" style="background: url(images/food_pic_2.jpg);
+
+    <div class="restaurant_details" style="background: url(images/food_pic_2.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 0%;
@@ -819,7 +628,7 @@ body{
                 </div>
             </section>
         </div></div></div>
-    </section>]
+    </div>
 
 <script>
     // get the element to animate
@@ -925,93 +734,278 @@ body{
 	</div>
 </section>
 
-<hr>
-<!-- 2nd photo tile
-    ================================================== -->
+<!-- ======= Specials Section ======= -->
+<section id="specials" class="specials">
+    <div class="container">
 
-<section class="buffetback">
-  <div class="container">
-			
-<p class="display-1" style="color: white;">When you’re here, you’re family.
+        <div class="section-title">
+            <h2>Check our <span>Specials</span></h2>
+            <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+        </div>
 
-<br>Eat Fresh.
+        <div class="row">
+            <div class="col-lg-3">
+                <ul class="nav nav-tabs flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Modi sit est</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Unde praesentium sed</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Pariatur explicabo vel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Nostrum qui quasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-9 mt-4 mt-lg-0">
+                <div class="tab-content">
+                    <div class="tab-pane active show" id="tab-1">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Architecto ut aperiam autem id</h3>
+                                <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                                <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                            </div>
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="./Akila/assets/img/specials-1.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-2">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Et blanditiis nemo veritatis excepturi</h3>
+                                <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                                <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
+                            </div>
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="./Akila/assets/img/specials-2.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-3">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
+                                <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
+                                <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
+                            </div>
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="./Akila/assets/img/specials-3.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-4">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
+                                <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
+                                <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p>
+                            </div>
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="./Akila/assets/img/specials-4.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-5">
+                        <div class="row">
+                            <div class="col-lg-8 details order-2 order-lg-1">
+                                <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
+                                <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
+                                <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
+                            </div>
+                            <div class="col-lg-4 text-center order-1 order-lg-2">
+                                <img src="./Akila/assets/img/specials-5.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<br>Have it your way.</p>
+    </div>
+</section><!-- End Specials Section -->
 
-		</div>	<!-- End of /.container -->
+<!-- ======= Gallery Section ======= -->
+<section id="gallery" class="gallery">
+    <div class="container-fluid">
 
+        <div class="section-title">
+            <h2>Some photos from <span>Our Restaurant</span></h2>
+            <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+        </div>
 
-</section>
+        <div class="row no-gutters">
 
-	<!-- CATAGORIE Start
-    ================================================== -->
+            <div class="col-lg-3 col-md-4">
+                <div class="gallery-item">
+                    <a href="./Akila/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox">
+                        <img src="./Akila/assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
 
-	<section id="catagorie" style="padding-bottom: 30px">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="block">
-						<div class="block-heading">
-							<h2>OUR fAVOURITE FOOD CATEGORIES</h2>
-						</div>	
-						<div class="row">
-						  	<div class="col-sm-6 col-md-4">
-							    <div class="thumbnail">
-							    	<a class="catagotie-head" href="lounge.php">
-										<img src="images/fav1.jpg" alt="...">
-										<h3>Chicken Biriyani</h3>
-									</a>
-							      	<div class="caption">
-							        	<p>Companiments in the biriyani take-away pack include: Chicken (whole leg), boiled egg, onion raita and malay pickle.
+            <div class="col-lg-3 col-md-4">
+                <div class="gallery-item">
+                    <a href="./Akila/assets/img/gallery/gallery-2.jpg" class="gallery-lightbox">
+                        <img src="./Akila/assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
 
-                                            These accompaniments may vary depending on availability of ingredients.</p>
-							        	<p>
-							        		<a href="lounge.php" class="btn btn-default btn-transparent" role="button">
-							        			<span>Check Items</span>
-							        		</a>
-							        	</p>
-							      	</div>	<!-- End of /.caption -->
-							    </div>	<!-- End of /.thumbnail -->
-						  	</div>	<!-- End of /.col-sm-6 col-md-4 -->
-						  	<div class="col-sm-6 col-md-4">
-							    <div class="thumbnail">
-							    	<a class="catagotie-head" href="lounge.php">
-										<img src="images/fav2.jpg" alt="...">
-										<h3>Vegetable Biriyani</h3>
-									</a>
-							      	<div class="caption">
-							        	<p>Accompaniments in the biriyani take-away pack include: Vegetable cutlets, brinjal moju, onion raita, mango chutney and malay pickle.</p>
-							        	<p>
-							        		<a href="lounge.php" class="btn btn-default btn-transparent" role="button">
-							        			<span>Check Items</span>
-							        		</a>
-							        	</p>
-							      	</div>	<!-- End of /.caption -->
-							    </div>	<!-- End of /.thumbnail -->
-						  	</div>	<!-- End of /.col-sm-6 col-md-4 -->
-						  	<div class="col-sm-6 col-md-4">
-							    <div class="thumbnail">
-							    	<a class="catagotie-head" href="pastry-shop.php">
-										<img src="images/fav3.jpg" alt="...">
-										<h3>Fathers Day Cake</h3>
-									</a>
-							      	<div class="caption">
-								        <p>A delicious Chocolate and Vanilla Marble Cake finished with fondant icing and elegantly decorated with a Father’s Day greeting on top.</p>
-								        <p>
-								        	<a href="pastry-shop.php" class="btn btn-default btn-transparent" role="button">
-								        		<span>Check Items</span>
-								        	</a>
-								        </p>
-								    </div>	<!-- End of /.caption -->
-							    </div>	<!-- End of /.thumbnail -->
-						  	</div>	<!-- End of /.col-sm-6 col-md-4 -->
-						</div>	<!-- End of /.row -->
-					</div>	<!-- End of /.block --> 
-				</div>	<!-- End of /.col-md-12 -->
-			</div>	<!-- End of /.row -->
-		</div>	<!-- End of /.container -->
-	</section>	<!-- End of Section -->
+            <div class="col-lg-3 col-md-4">
+                <div class="gallery-item">
+                    <a href="./Akila/assets/img/gallery/gallery-3.jpg" class="gallery-lightbox">
+                        <img src="./Akila/assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
 
+            <div class="col-lg-3 col-md-4">
+                <div class="gallery-item">
+                    <a href="./Akila/assets/img/gallery/gallery-4.jpg" class="gallery-lightbox">
+                        <img src="./Akila/assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4">
+                <div class="gallery-item">
+                    <a href="./Akila/assets/img/gallery/gallery-5.jpg" class="gallery-lightbox">
+                        <img src="./Akila/assets/img/gallery/gallery-5.jpg" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4">
+                <div class="gallery-item">
+                    <a href="./Akila/assets/img/gallery/gallery-6.jpg" class="gallery-lightbox">
+                        <img src="./Akila/assets/img/gallery/gallery-6.jpg" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4">
+                <div class="gallery-item">
+                    <a href="./Akila/assets/img/gallery/gallery-7.jpg" class="gallery-lightbox">
+                        <img src="./Akila/assets/img/gallery/gallery-7.jpg" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4">
+                <div class="gallery-item">
+                    <a href="./Akila/assets/img/gallery/gallery-8.jpg" class="gallery-lightbox">
+                        <img src="./Akila/assets/img/gallery/gallery-8.jpg" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Gallery Section -->
+
+<!-- ======= Testimonials Section ======= -->
+
+<section id="testimonials" class="testimonials">
+    <div class="container position-relative">
+
+        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="images/cus1.jpg" class="testimonial-img" alt="">
+                        <h3>Dileesha Weliwaththe</h3>
+                        <h4>5 Star Rating</h4>
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="images/cus2.jpg" class="testimonial-img" alt="">
+                        <h3>Sara Wilsson</h3>
+                        <h4>Designer</h4>
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="images/cus3.jpg" class="testimonial-img" alt="">
+                        <h3>Jena Karlis</h3>
+                        <h4>Store Owner</h4>
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="images/cus4.jpg" class="testimonial-img" alt="">
+                        <h3>Matt Brandon</h3>
+                        <h4>Freelancer</h4>
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="images/cus6.jpg" class="testimonial-img" alt="">
+                        <h3>John Larson</h3>
+                        <h4>Entrepreneur</h4>
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</section><!-- End Testimonials Section -->
 
 <!-- -------- FOOTER START ------- -->
 <footer class="footer" style="background: #383838; padding-top: 5px">
@@ -1113,6 +1107,16 @@ body{
 <script src="validation/map.js"></script>
 <!-- Google Map End -->
 
+<!-- Vendor JS Files -->
+<script src="./Akila/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="./Akila/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="./Akila/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="./Akila/assets/vendor/php-email-form/validate.js"></script>
+<script src="./Akila/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Template Main JS File -->
+<script src="./Akila/assets/js/main.js"></script>
+
 <!--   Core JS Files   -->
 <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
 
@@ -1129,18 +1133,7 @@ body{
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-<script type="text/javascript">
-    if (document.getElementById('typed')) {
-        var typed = new Typed("#typed", {
-            stringsElement: '#typed-strings',
-            typeSpeed: 90,
-            backSpeed: 90,
-            backDelay: 200,
-            startDelay: 500,
-            loop: true
-        });
-    }
-</script>
+
 
 </body>
 </html>

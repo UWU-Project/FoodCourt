@@ -47,8 +47,32 @@ if(isset($_POST['table'])){
     $res = mysqli_query($conn,$q);
 
     if(mysqli_num_rows($res) > 0){
+//===============================================
 
-        header("location: booked.php");
+    $row=mysqli_fetch_array($res);
+
+            $teptime = clean($_POST['time']);
+            switch ($teptime) {
+                case 'BreakFast':
+                    $time = "08:00:00";
+                    if($row['Reserve_Time'] == $time){
+                        header("location: booked.php");
+                    }
+                    break;
+                case 'Lunch':
+                    $time = "12:00:00";
+                    if($row['Reserve_Time'] == $time){
+                        header("location: booked.php");
+                    }
+                    break;
+                case 'Dinner':
+                    $time = "17:00:00";
+                    if($row['Reserve_Time'] == $time){
+                        header("location: booked.php");
+                    }
+                    break;
+            }
+        //==================================
     }else{
         $date = clean($_POST['date']);
         $teptime = clean($_POST['time']);
@@ -65,6 +89,7 @@ if(isset($_POST['table'])){
         }
         $staff = 5;
         $flag = 0;
+
 
 
 
