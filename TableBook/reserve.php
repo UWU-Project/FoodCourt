@@ -259,10 +259,12 @@ or die("Something is wrong ... \n" . mysqli_error());
                                 <label for="exampleInputEmail1">Picked Table</label>
                                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="table" value="" readonly>
                             </div>
+
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Pick A Date</label>
                                 <input type="date" class="form-control" name="date" id="exampleInputPassword1" placeholder="Password" required>
                             </div>
+
                             <div class="form-group">
                                 <label for="exampleFormControlSelect2">Example multiple select</label>
                                 <select name="time" multiple class="form-control" id="exampleFormControlSelect2">
@@ -279,8 +281,7 @@ or die("Something is wrong ... \n" . mysqli_error());
                             </div>
                             </div>
 
-                        </form>
-                    </div>
+                </div>
 
                 </div>
             </div>

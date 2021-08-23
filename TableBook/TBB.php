@@ -37,8 +37,7 @@
          }
         .imgcenter {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+
 
             width: auto;
         }
@@ -188,21 +187,22 @@
 <div>
     <div class="row imgcenter" >
         <div class="col-md-12 ">
-            <img src="../images/tableres.png"  class="img-fluid" alt="">
+            <img src="../images/tableres.png"  style="width: 100%;" alt="">
         </div>
     </div>
 
-    <div class="row imgcenter bfont" >
+    <div class="row">
        <div class="col-md-6">
 
-           <img src="../images/tse22.png"  class="img-fluid" alt="">
-           <button class="w3-button w3-block w3-black" href="buffttest1.php"><a href="../buffttest1.php">Book Your Table</a></button>
+           <img src="../images/tse22.png"   style="width: 100%;" alt="">
+<div style="alignment: center">
+           <button type="button" style="alignment: center" class="btn btn-secondary btn-lg btn-block" href="../buffttest1.php">Book Your Table</button>
+       </div>
         </div>
-
 
         <div class="col-md-6 photo1">
 
-            <img src="../images/rtw.PNG"  class="img-fluid" alt="">
+            <img src="../images/rtw.PNG"   style="width: 100%;" alt="">
 
         </div>
     </div>
