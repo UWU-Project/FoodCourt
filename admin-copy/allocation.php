@@ -19,14 +19,15 @@
     <?php
         //get order ids from the orders_details table based on flag=0
         $flag_0 = 0;
-        $orders=mysqli_query($conn,"SELECT * FROM orders_details WHERE flag='$flag_0'")
+        $orders=mysqli_query($conn,"SELECT * FROM orders_paid WHERE flag='$flag_0'")
         or die("There are no records to display ... \n" . mysqli_error());
     ?>
 
     <?php
         //get reservation ids from the reservations_details table based on flag=0
-        $flag_0 = 0;
-        $reservations=mysqli_query($conn,"SELECT * FROM reservations_details WHERE flag='$flag_0'")
+        $flag_0 = 1;
+        $allocat_0 = 0;
+        $reservations=mysqli_query($conn,"SELECT * FROM reservations_details WHERE flag='$flag_0' AND allocat='$allocat_0'")
         or die("There are no records to display ... \n" . mysqli_error());
     ?>
 
@@ -65,9 +66,49 @@
   <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+    <script language="JavaScript" src="validation/admin.js"></script>
+
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
+
+<!-- ================================================== -->
+<script>
+    <?php
+    if(isset($_GET['m'])){
+        $alert="
+            swal.fire({
+                 type : 'success',
+                 title : 'Order Allocated Successfully',
+             })
+            ";
+        echo $alert;
+    }
+    ?>
+</script>
+<!-- ================================================== -->
+<!-- ================================================== -->
+<script>
+    <?php
+    if(isset($_GET['x'])){
+        $alert="
+            swal.fire({
+                 type : 'success',
+                 title : 'Reservation Allocated Successfully',
+             })
+            ";
+        echo $alert;
+    }
+    ?>
+</script>
+<!-- ================================================== -->
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
@@ -297,6 +338,7 @@
   </aside>
 
   <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg ">
+
     <!-- Navbar -->
     <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
       <div class="container-fluid py-1 px-3">
@@ -313,13 +355,17 @@
 
                 <!-- END WHITE BORDER-->
 
-                <div class="col-12 col-xl-4">
-                    <div class="card h-100">
-                        <div class="card-header pb-0 p-3">
-                            <h6 class="mb-0">STAFF</h6>
-                        </div>
-                        <div class="card-body p-3">
-                            <div class="table-responsive">
+                
+
+                    <div class="col-lg-4 mb-lg-0 mb-4">
+                        <div class="card">
+                            <div class="card-body p-3">
+                            <div class="row">
+                                <div>
+                                <div class="d-flex flex-column h-100">
+                                    <p class="mb-1 pt-2 text-bold"></p>
+                                    <h5 class="font-weight-bolder">STAFF</h5>
+                                    <div class="table-responsive">
                                 <table class="table align-items-center mb-0">
                                     <thead>
                                     <tr>
@@ -347,7 +393,22 @@
                                                 <p class="text-xs font-weight-bold mb-0"><?php echo $row['firstname']; ?></p>
                                             </td>
                                             <td>
-                                                <span class="badge bg-gradient-primary">Allocated <?php echo $row['StaffID']; ?></span>
+                                                <span class="badge bg-gradient-primary">
+                                                    <?php
+                                                    $a = $row['StaffID'];;
+                                                    $sql1 = "SELECT COUNT(StaffID) FROM orders_paid WHERE StaffID=$a";
+                                                    $sql2 = "SELECT COUNT(StaffID) FROM reservations_details WHERE StaffID=$a";
+                                                    $re1=mysqli_query($conn,$sql1);
+                                                    $re2=mysqli_query($conn,$sql2);
+                                                    $row1=mysqli_fetch_assoc($re1);
+                                                    $row2=mysqli_fetch_assoc($re2);
+                                                    if ($row1['COUNT(StaffID)'] + $row2['COUNT(StaffID)'] <1) {
+                                                            echo "NOT Allocated ";
+                                                    }else{
+                                                        echo "Allocated: " . $row1['COUNT(StaffID)'] + $row2['COUNT(StaffID)'];
+                                                    }
+                                                    ?>
+                                                    </span>
                                             </td>
                                         <?php
                                                 echo "</tr>";
@@ -355,11 +416,127 @@
                                             mysqli_free_result($staff);
                                             mysqli_close($conn);
                                         ?>
+
                                     </tbody>
                                 </table>
                         </div>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+            <!------------------------------------------------------------------------------------------------------------------------------ -->
+                    <div class="col-lg-4 mb-lg-0 mb-4">
+                        <div class="card">
+                            <div class="card-body p-3">
+                            <div class="row">
+                                <div>
+                                <div class="d-flex flex-column h-100">
+                                    <p class="mb-1 pt-2 text-bold"></p>
+                                    <h5 class="font-weight-bolder">ORDERS ALLOCATION</h5>
+                                    <!-- Content here -->
+
+                                    <form id="ordersAllocationForm" name="ordersAllocationForm" method="post" action="orders-allocation.php" onsubmit="return ordersAllocationValidate(this)">
+
+                                        <table class="table align-items-center mb-0">
+
+                                                <tr>
+                                                    <td colspan="2" style="text-align:center;"><span style="color: #FF0000; ">* </span>Required fields</td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Order ID</th>
+                                                    <td><select class="form-select" aria-label="Default select example" name="orderid" id="orderid">
+                                                            <option value="select">- SELECT ORDER -
+                                                                <?php
+                                                                //loop through orders_details table rows
+                                                                while ($row=mysqli_fetch_array($orders)){
+                                                                    echo "<option value=$row[ID]>$row[ID]";
+                                                                }
+                                                                ?>
+                                                        </select></td>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Staff ID</th>
+                                                    <td><select class="form-select" aria-label="Default select example" name="staffid" id="staffid">
+                                                            <option value="select">- select one option -
+                                                                <?php
+                                                                //loop through staff table rows
+                                                                while ($row=mysqli_fetch_array($staff_1)){
+                                                                    echo "<option value=$row[StaffID]>$row[StaffID]";
+                                                                }
+                                                                ?>
+                                                        </select></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&nbsp</td>
+                                                    <td><input class="btn btn-primary" type="submit" name="Submit" value="Allocate Staff" /></td>
+                                                </tr>
+                                            </table>
+                                    </form>
+
+                                    <!-- Content here -->
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-4 mb-lg-0 mb-4">
+                        <div class="card">
+                            <div class="card-body p-3">
+                            <div class="row">
+                                <div>
+                                <div class="d-flex flex-column h-100">
+                                    <p class="mb-1 pt-2 text-bold"></p>
+                                    <h5 class="font-weight-bolder">RESERVATIONS ALLOCATION</h5>
+                                    <!-- Content here -->
+
+                                    <form id="reservationsAllocationForm" name="reservationsAllocationForm" method="post" action="reservations-allocation.php" onsubmit="return reservationsAllocationValidate(this)">
+
+                                    <table class="table align-items-center mb-0">
+
+                                            <tr>
+                                                <td colspan="2" style="text-align:center;"><span style="color: #FF0000; ">* </span>Required fields</td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Reserve ID</th>
+                                                <td><select class="form-select" aria-label="Default select example" name="reservationid" id="reservationid">
+                                                        <option value="select">- SELECT RESERVATION -
+                                                            <?php
+                                                            //loop through reservations_details table rows
+                                                            while ($row=mysqli_fetch_array($reservations)){
+                                                                echo "<option value=$row[ReservationID]>$row[ReservationID]";
+                                                            }
+                                                            ?>
+                                                    </select></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Staff ID</th>
+                                                <td><select class="form-select" aria-label="Default select example" name="staffid" id="staffid">
+                                                        <option value="select">- select one option -
+                                                            <?php
+                                                            //loop through staff table rows
+                                                            while ($row=mysqli_fetch_array($staff_2)){
+                                                                echo "<option value=$row[StaffID]>$row[StaffID]";
+                                                            }
+                                                            ?>
+                                                    </select></td>
+                                            </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td><input class="btn btn-primary" type="submit" name="Submit" value="Allocate Staff" /></td>
+                                        </tr>
+                                        </table>
+                                    </form>
+
+                                    <!-- Content here -->
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
 
 
 
@@ -388,6 +565,26 @@
       Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
     }
   </script>
+<script>
+    $('.del-btn').on('click',function(e){
+        e.preventDefault();
+        const href = $(this).attr('href')
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Deletet It!'
+        }).then((result) => {
+            if (result.value) {
+                document.location.href = href;
+            }
+        })
+    })
+
+</script>
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example contactUs etc -->

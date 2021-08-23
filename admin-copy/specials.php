@@ -37,7 +37,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Admin | Orchid Bliss
+    Promotions | Orchid Bliss
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -61,7 +61,7 @@
       </a>
     </div>
     <hr class="horizontal dark mt-0">
-    <div class="collapse navbar-collapse  w-auto  max-height-vh-100 h-100" id="sidenav-collapse-main">
+    <div class="collapse navbar-collapse  w-auto  max-height-vh-100 h-100" id="sidenav-collapse-main" style="overflow: initial;">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="./index.php">
@@ -84,7 +84,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./foods.php">
+          <a class="nav-link" href="./foods-menu.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>office</title>
@@ -101,6 +101,26 @@
               </svg>
             </div>
             <span class="nav-link-text ms-1">Foods</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./allocation.php">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>Allocation</title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-1869.000000, -293.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(1716.000000, 291.000000)">
+                      <g id="office" transform="translate(153.000000, 2.000000)">
+                        <path class="color-background opacity-6" d="M12.25,17.5 L8.75,17.5 L8.75,1.75 C8.75,0.78225 9.53225,0 10.5,0 L31.5,0 C32.46775,0 33.25,0.78225 33.25,1.75 L33.25,12.25 L29.75,12.25 L29.75,3.5 L12.25,3.5 L12.25,17.5 Z"></path>
+                        <path class="color-background" d="M40.25,14 L24.5,14 C23.53225,14 22.75,14.78225 22.75,15.75 L22.75,38.5 L19.25,38.5 L19.25,22.75 C19.25,21.78225 18.46775,21 17.5,21 L1.75,21 C0.78225,21 0,21.78225 0,22.75 L0,40.25 C0,41.21775 0.78225,42 1.75,42 L40.25,42 C41.21775,42 42,41.21775 42,40.25 L42,15.75 C42,14.78225 41.21775,14 40.25,14 Z M12.25,36.75 L7,36.75 L7,33.25 L12.25,33.25 L12.25,36.75 Z M12.25,29.75 L7,29.75 L7,26.25 L12.25,26.25 L12.25,29.75 Z M35,36.75 L29.75,36.75 L29.75,33.25 L35,33.25 L35,36.75 Z M35,29.75 L29.75,29.75 L29.75,26.25 L35,26.25 L35,29.75 Z M35,22.75 L29.75,22.75 L29.75,19.25 L35,19.25 L35,22.75 Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1">Allocation</span>
           </a>
         </li>
         <li class="nav-item">
@@ -264,40 +284,48 @@
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Home</a></li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="./index.php">Home</a></li>
             <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Promotions</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Promotions</h6>
+          <h6 class="font-weight-bolder mb-0">PROMOTIONS</h6>
         </nav>
       </div>
     </nav>
     <!-- End Navbar -->
-    <div class="container-fluid py-4">
-      
-
-
-      <div class="col-12 mt-4">
-          <div class="card mb-4">
+    <div class="container-fluid">
+        
+        <div class="row mt-4">
+        <div class="col-lg-12 mb-lg-0 mb-4">
+          <div class="card">
             <div class="card-body p-3">
               <div class="row">
-                <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                  
-                </div>
-                <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                 
-                </div>
-                <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                 
-                </div>
-                <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                  
+              <div class="col-lg-3 mb-lg-0 mb-4"></div>
+              <div class="col-lg-6 mb-lg-0 mb-4">
+              <h5 style="text-align:center">ADD A NEW CATEGORY</h5>
+              <br/>
+              <form name="categoryForm" id="categoryForm" action="categories-exec.php" method="post" onsubmit="return categoriesValidate(this)">
+              <div class="input-group mb-3">
+                <input type="text" name="name" class="form-control" placeholder="ADD A NEW CATEGORY TO PASTRY SHOP" aria-label="ADD A NEW CATEGORY" aria-describedby="button-addon2">
+                <button class="btn btn-outline-primary mb-0" type="submit" name="Submit" id="button-addon2">Add</button>
+                
+                </div></form>
+              </div>
+              <div class="col-lg-3 mb-lg-0 mb-4"></div>
+              </div>
+              <hr/>
+              <br/>
+              <div class="row">
+              <div class="col-lg-12 mb-lg-0 mb-4">
+                <h5 style="text-align:center">AVAILABLE CATEGORIES</h5>
+                <
+            <br/><br/>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-
+      </div>
+      <br/>
       <?php require_once('components/footer.inc.php'); ?>
     </div>
   </main>
@@ -306,16 +334,7 @@
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>\
-  <script>
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav-scrollbar')) {
-      var options = {
-        damping: '0.5'
-      }
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-    }
-  </script>
+  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example contactUs etc -->

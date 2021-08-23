@@ -16,32 +16,6 @@
         or die("There are no records to display ... \n" . mysqli_error());
     ?>
 
-    <?php
-        //get order ids from the orders_details table based on flag=0
-        $flag_0 = 0;
-        $orders=mysqli_query($conn,"SELECT * FROM orders_details WHERE flag='$flag_0'")
-        or die("There are no records to display ... \n" . mysqli_error());
-    ?>
-
-    <?php
-        //get reservation ids from the reservations_details table based on flag=0
-        $flag_0 = 0;
-        $reservations=mysqli_query($conn,"SELECT * FROM reservations_details WHERE flag='$flag_0'")
-        or die("There are no records to display ... \n" . mysqli_error());
-    ?>
-
-    <?php
-        //selecting all records from the staff table. Return an error if there are no records in the tables
-        $staff_1=mysqli_query($conn,"SELECT * FROM staff")
-        or die("There are no records to display ... \n" . mysqli_error());
-    ?>
-
-    <?php
-        //selecting all records from the staff table. Return an error if there are no records in the tables
-        $staff_2=mysqli_query($conn,"SELECT * FROM staff")
-        or die("There are no records to display ... \n" . mysqli_error());
-    ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +26,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Admin | Orchid Bliss
+  Staff | Orchid Bliss
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -64,9 +38,48 @@
   <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+    <script language="JavaScript" src="validation/admin.js"></script>
+
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
+
+<!-- ================================================== -->
+<script>
+    <?php
+    if(isset($_GET['m'])){
+        $alert="
+            swal.fire({
+                 type : 'success',
+                 title : 'Staff Information Added Successfully',
+             })
+            ";
+        echo $alert;
+    }
+    ?>
+</script>
+<!-- ================================================== -->
+<!-- ================================================== -->
+<script>
+    <?php
+    if(isset($_GET['x'])){
+        $alert="
+            swal.fire({
+                 type : 'success',
+                 title : 'Deleted Successfully',
+             })
+            ";
+        echo $alert;
+    }
+    ?>
+</script>
+<!-- ================================================== -->
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
@@ -99,7 +112,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./foods.php">
+          <a class="nav-link" href="./foods-menu.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>office</title>
@@ -119,7 +132,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link  " href="./specials.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>office</title>
@@ -207,7 +220,7 @@
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Accounts</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="../pages/sign-in.html">
+          <a class="nav-link active" href="#">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>Add New Staff</title>
@@ -227,7 +240,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../pages/profile.html">
+          <a class="nav-link  " href="./profile.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>Profile Settings</title>
@@ -279,265 +292,124 @@
       <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Home</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Staff</li>
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="./index.php">Home</a></li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Emplyees</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Emplyees </h6>
+          <h6 class="font-weight-bolder mb-0">STAFF MEMBERS</h6>
         </nav>
       </div>
     </nav>
     <!-- End Navbar -->
-    <div class="container-fluid py-4">
-      <div class="row">
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-8">
-                  <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Total Customers</p>
-                    
-                  </div>
-                </div>
-                <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-8">
-                  <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Placed Orders</p>
-                    <h5 class="font-weight-bolder mb-0">
-                   
-                    </h5>
-                  </div>
-                </div>
-                <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-          <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-8">
-                  <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Reserved Tables</p>
-                    <h5 class="font-weight-bolder mb-0">
-                      
-                    </h5>
-                  </div>
-                </div>
-                <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-sm-6">
-          <div class="card">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-8">
-                  <div class="numbers">
-                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Sales</p>
-                    <h5 class="font-weight-bolder mb-0">
-                      $103,430
-                      <span class="text-success text-sm font-weight-bolder">+5%</span>
-                    </h5>
-                  </div>
-                </div>
-                <div class="col-4 text-end">
-                  <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                    <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <div class="container-fluid">
+        
         <div class="row mt-4">
-        <div class="col-lg-7 mb-lg-0 mb-4">
+        <div class="col-lg-12 mb-lg-0 mb-4">
           <div class="card">
             <div class="card-body p-3">
+              <br/>
               <div class="row">
-                <div class="col-lg-6">
-                  <div class="d-flex flex-column h-100">
-                    <p class="mb-1 pt-2 text-bold"></p>
-                    <h5 class="font-weight-bolder">Order Statistics</h5>
-                    <p class="mb-5">Total Orders, Processed Orders and Pending Orders</p>
-                    <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
-                      See Insights
-                      <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                    </a>
+              <div class="col-lg-12 mb-lg-0 mb-4">
+                <h5 style="text-align:center">STAFF MEMBER'S LIST</h5>
+                <br/>
+                  <div class="table-responsive">
+                  <table class="table table-hover align-items-center mb-0">
+                      <thead>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Staff ID</th>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">First Name</th>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Last Name</th>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Email</th>
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Mobile No</th>
+                            </tr>
+                      </thead>
+                      <tbody>
+                    <?php
+                    //loop through all table rows
+                    while ($row=mysqli_fetch_array($staff)){
+                        echo "<tr>";
+                        echo "<td>" . $row['StaffID']."</td>";
+                        echo "<td>" . $row['firstname']."</td>";
+                        echo "<td>" . $row['lastname']."</td>";
+                        echo "<td>" . $row['Street_Address']."</td>";
+                        echo "<td>" . $row['Mobile_Tel']."</td>";
+                        echo '<td><a class="del-btn btn bg-gradient-danger btn-sm" href="delete-staff.php?id=' . $row['StaffID'] . '">Remove Staff</a></td>';
+                        echo "</tr>";
+                    }
+                    mysqli_free_result($staff);
+                    mysqli_close($conn);
+                    ?>
+                      </tbody>
+                </table>
                   </div>
-                </div>
-                <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
-                  <div class="bg-gradient-primary border-radius-lg h-100">
-                    <img src="./assets/img/shapes/waves-white.svg" class="position-absolute h-100 w-50 top-0 d-lg-block d-none" alt="waves">
-                    <div class="position-relative d-flex align-items-center justify-content-center h-100">
-                      <img class="w-100 position-relative z-index-2 pt-4" src="./assets/img/illustrations/rocket-white.png" alt="rocket">
+            <br/>
+            <hr/>
+            <br/>
+                <div class="row">
+                    <div class="col-lg-3 mb-lg-0 mb-4"></div>
+                    <div class="col-lg-6 mb-lg-0 mb-4">
+                    <h5 style="text-align:center">ADD A NEW STAFF MEMBER</h5>
+                    <br/>
+                        <form class="row g-3 needs-validation" id="staffForm" name="staffForm" method="post" action="staff-exec.php" onsubmit="return staffValidate(this)">
+                            <div class="form-group">
+                              <label for="exampleFormControlInput1" class="form-label">First Name </label>
+                              <input  name="fName" type="text" id="fName" class="form-control" placeholder="First Name" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleFormControlInput1" class="form-label">Last Name </label>
+                              <input name="lName" type="text" id="lName" class="form-control" placeholder="Last Name" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleFormControlInput1" class="form-label">Email</label>
+                              <input name="sAddress" type="text" id="sAddress" class="form-control" placeholder="Address" required>
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleFormControlInput1" class="form-label">Mobile Number</label>
+                              <input name="mobile" type="text" id="mobile" class="form-control" placeholder="Mobile Number" required>
+                            </div>
+                            <div class="input-group mb-3" class="form-label">
+                            <button type="submit" name="Submit" value="Add" class="btn btn-primary mb-0" type="submit" name="Submit" id="button-addon2">Add Member</button>
+                            </div>
+                        </form>
                     </div>
+                    <div class="col-lg-3 mb-lg-0 mb-4"></div>
                   </div>
+              <br/><br/>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-5">
-          <div class="card h-100 p-3">
-            <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('../assets/img/ivancik.jpg');">
-              <span class="mask bg-gradient-dark"></span>
-              <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
-                <h5 class="text-white font-weight-bolder mb-4 pt-2">Add Foods</h5>
-                <p class="text-white">New Food Categories or New Food Items </p>
-                <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="javascript:;">
-                  Add Now
-                  <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
-                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
-      <div class="col-12 mt-4">
-          <div class="card mb-4">
-            <div class="card-body p-3">
-              <div class="row">
-                <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                  <div class="card card-blog card-plain">
-                    <div class="position-relative">
-                      <a class="d-block shadow-xl border-radius-xl">
-                        <img src="./assets/img/home-decor-1.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                      </a>
-                    </div>
-                    <div class="card-body px-1 pb-0">
-                      <a href="javascript:;">
-                        <h5>
-                          Orders List
-                        </h5>
-                      </a>
-                      <p class="mb-4 text-sm">
-                      Music is something that every person has his or her own specific opinion about.
-                      </p>
-                      <div class="d-flex align-items-center justify-content-between">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Orders</button>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                  <div class="card card-blog card-plain">
-                    <div class="position-relative">
-                      <a class="d-block shadow-xl border-radius-xl">
-                        <img src="./assets/img/home-decor-2.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
-                      </a>
-                    </div>
-                    <div class="card-body px-1 pb-0">
-                      <a href="javascript:;">
-                        <h5>
-                          Reservations
-                        </h5>
-                      </a>
-                      <p class="mb-4 text-sm">
-                        Music is something that every person has his or her own specific opinion about.
-                      </p>
-                      <div class="d-flex align-items-center justify-content-between">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Project</button>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                  <div class="card card-blog card-plain">
-                    <div class="position-relative">
-                      <a class="d-block shadow-xl border-radius-xl">
-                        <img src="./assets/img/home-decor-3.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                      </a>
-                    </div>
-                    <div class="card-body px-1 pb-0">
-                      <a href="">
-                        <h5>
-                          Customers List
-                        </h5>
-                      </a>
-                      <p class="mb-4 text-sm">
-                        Different people have different taste, and various types of music.
-                      </p>
-                      <div class="d-flex align-items-center justify-content-between">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Project</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                  <div class="card card-blog card-plain">
-                    <div class="position-relative">
-                      <a class="d-block shadow-xl border-radius-xl">
-                        <img src="./assets/img/home-decor-3.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
-                      </a>
-                    </div>
-                    <div class="card-body px-1 pb-0">
-                      <a href="">
-                        <h5>
-                        Manage Promotions
-                        </h5>
-                      </a>
-                      <p class="mb-4 text-sm">
-                        Different people have different taste, and various types of music.
-                      </p>
-                      <div class="d-flex align-items-center justify-content-between">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Project</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
+      <br/>
       <?php require_once('components/footer.inc.php'); ?>
     </div>
   </main>
   
   <!--   Core JS Files   -->
-  <script src="../assets/js/core/popper.min.js"></script>
-  <script src="../assets/js/core/bootstrap.min.js"></script>
-  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>\
-  <script>
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav-scrollbar')) {
-      var options = {
-        damping: '0.5'
-      }
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-    }
-  </script>
+    <script>
+        $('.del-btn').on('click',function(e){
+            e.preventDefault();
+            const href = $(this).attr('href')
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, Deletet It!'
+            }).then((result) => {
+                if (result.value) {
+                    document.location.href = href;
+                }
+            })
+        })
+
+    </script>
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/core/bootstrap.min.js"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example contactUs etc -->

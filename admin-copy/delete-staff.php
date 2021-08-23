@@ -23,12 +23,13 @@ if(!$conn) {
         or die("The staff does not exist ... \n");
 
         // redirect back to the allocation page
-        header("Location: allocation.php");
+
+        header("Location: employees.php?x=1");
     }
     else
         // if id isn't set, redirect back to allocation page
     {
-        header("Location: allocation.php");
+        header("Location: employees.php");
     }
 
 ?>
