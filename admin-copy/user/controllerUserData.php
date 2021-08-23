@@ -152,7 +152,7 @@ require("vendor/autoload.php");
 
                 if($status == 'verified'){
 
-                  $_SESSION['SESS_MEMBER_ID'] = $fetch_memID;
+                  $_SESSION['SESS_ADMIN_ID'] = $fetch_memID;
                   $_SESSION['SESS_FIRST_NAME'] = $fetch_fname;
                   $_SESSION['SESS_LAST_NAME'] = $fetch_lname;
                   $_SESSION['email'] = $email;
