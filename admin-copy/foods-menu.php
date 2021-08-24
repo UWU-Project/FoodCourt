@@ -229,7 +229,7 @@ require_once('authenticate/auth.php');
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="./logout.php">
+          <a class="nav-link  " href="./user/logout-user.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="20px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>spaceship</title>
