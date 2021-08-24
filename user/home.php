@@ -345,7 +345,8 @@ $tuck = mysqli_fetch_assoc($billing);
                         <!-- cart history -->
                         <h6>ORDER HISTORY</h6>
                         <hr>
-                        <table class="table table-hover">
+                        <div class="table-responsive">
+                        <table class="table table-hover" width="100%" align="center">
                             <thead>
                             <tr>
                                 <th scope="col">ID</th>
@@ -365,8 +366,18 @@ $tuck = mysqli_fetch_assoc($billing);
                         <tr>
                             <th scope="row"><?php echo $row['ID']?></th>
                             <td><?php echo $row['date']?></td>
-                            <td><?php echo $row['food_id']?></td>
-                            <td><?php echo $row['quantity']?></td>
+                            <td><?php
+                                $idss = explode(",", $row['food_id']);
+                                foreach ($idss as $row2) {
+                                    echo $row2."<br>";
+                                }
+                                ?></td>
+                            <td><?php
+                                $idss2 = explode(",", $row['quantity']);
+                                foreach ($idss2 as $row3) {
+                                    echo $row3."<br>";
+                                }
+                                ?></td>
                             <td><?php echo $row['total']?></td>
                             <td>
                                 <?php
@@ -381,13 +392,15 @@ $tuck = mysqli_fetch_assoc($billing);
                         <?php } ?>
                             </tbody>
                         </table>
+                        </div>
                         <!-- cart history end-->
                     </div>
                     <div class="tab-pane" id="account2">
                         <!-- reservation history -->
                         <h6>RESERVATION HISTORY </h6>
                         <hr>
-                        <table class="table table-hover">
+                        <div class="table-responsive">
+                            <table class="table table-hover" width="100%" align="center">
                             <thead>
                             <tr>
                                 <th scope="col">ID</th>
@@ -429,6 +442,7 @@ $tuck = mysqli_fetch_assoc($billing);
                             <?php } ?>
                             </tbody>
                         </table>
+                        </div>
                         <!-- reservation history end -->
                     </div>
 

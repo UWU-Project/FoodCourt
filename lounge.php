@@ -177,13 +177,13 @@ if(isset($_POST['Submit'])){
 
 
                             <li class="nav-item dropdown dropdown-hover px-2" >
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active"  href="pastry-shop.php">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="pastry-shop.php">
                                     PASTRY SHOP
                                 </a>
                             </li>
 
                             <li class="nav-item dropdown dropdown-hover px-2" >
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="lounge.php" >
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active" href="lounge.php" >
                                     THE LOUNGE
                                 </a>
                             </li>
@@ -360,11 +360,37 @@ if(isset($_POST['Submit'])){
                             $lt = "food";
                         while ($row=mysqli_fetch_assoc($result)){
                             ?>
-
+                            <?php
+                            $deliver_data = "deliver_order".$row[$lt.'_id'];
+                            ?>
 
                             <div class="products view1" style="width: 200px; float: left;" >
                                 <a href="#">
-                                    <?php echo '<a href=images/'. $row[$lt.'_photo']. ' alt="click to view full image" target="_blank"><img src=images/'. $row[$lt.'_photo']. ' width="auto" height="100%"></a>'?>
+                                    <?php echo '<a href=images/'. $row[$lt.'_photo']. ' data-bs-toggle="modal" data-bs-target="#' .$deliver_data.'"><img src=images/'. $row[$lt.'_photo']. ' width="auto" height="100%"></a>'?>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="<?php echo $deliver_data; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel"><p class="h2"><?php echo $row[$lt.'_name']?></p></h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <?php echo '<a href=images/'. $row[$lt.'_photo']. '><img src=images/'. $row[$lt.'_photo']. '></a>'?>
+                                                    <hr>
+                                                    <?php echo  $row[$lt . '_description']?>
+                                                    <hr>
+                                                    <p><strong><?php echo $symbol['currency_symbol']. "" . $row[$lt.'_price']?></strong></p>
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </a>
                                 <a href="#">
                                     <h4><?php echo $row[$lt.'_name']?></h4>

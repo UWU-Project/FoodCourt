@@ -208,7 +208,6 @@
                     <li class="breadcrumb-item active"><a>Select Table</a></li>
                     <li class="breadcrumb-item active"><a>Pick Date</a></li>
                     <li class="breadcrumb-item active"><a>Reserved</a></li>
-                    <li class="breadcrumb-item"><a>Payment</a></li>
                 </ol>
             </nav>
             <h1 style="padding-top: 20px">RESERVATION SUCCESS</h1>
@@ -219,56 +218,16 @@
 
     <div class="container" style="padding-bottom: 1cm">
         <div class="row">
-            <div class="d-flex justify-content-center flex-column">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 p-5">
+                    <div class="d-flex justify-content-center flex-column">
                 <div class="card d-flex blur justify-content-center p-4 shadow-lg">
-                    <div class="row g-0">
-                        <div class="col-md-6 border-right p-5">
                             <div class="text-center order-details">
-                                <div class="d-flex justify-content-center mb-5 flex-column align-items-center"> <span class="check1"><i class="fa fa-check"></i></span> <span class="font-weight-bold">Table Reserved Succesfully</span> <small class="mt-2">Your illustraion will go to you soon</small> <a href="#" class="text-decoration-none invoice-link">View Invoice</a> </div> <button class="btn btn-danger btn-block order-button">Go to your Order</button>
+                                <div class="d-flex justify-content-center mb-5 flex-column align-items-center"> <span class="check1"><i class="fa fa-check"></i></span> <span class="font-weight-bold" >TABLE RESERVED SUCCESSFULLY</span> <h1 class="h2">Our Officer will contact you soon to Confirm the Reservation</h1><small class="mt-3">Feel free to <a href="../contactUs/contact-us.php">Contact Us</a></small></div> <button class="btn bg-gradient-success" ><a href="../user/home.php" class="text-decoration-none">Go to your Profile</a></button><button class="btn bg-gradient-info" ><a href="../user/home.php" class="text-decoration-none">Back to Home</a></button>
                             </div>
                         </div>
-                        <div class="col-md-6 background-muted">
-                            <div class="p-3 border-bottom">
-                                <div class="d-flex justify-content-between align-items-center"> <span><i class="fa fa-clock-o text-muted"></i> 3 days delivery</span> <span><i class="fa fa-refresh text-muted"></i> 2 Max Revisions</span> </div>
-                                <div class="mt-3">
-                                    <h6 class="mb-0">Illustraion in Sketch or AI</h6> <span class="d-block mb-0">Includes: Sketch, PSD, PNG, SVG, AI </span> <small>Min: 1 illustraion</small>
-                                    <div class="d-flex flex-column mt-3"> <small><i class="fa fa-check text-muted"></i> Vector file</small> <small><i class="fa fa-check text-muted"></i> Sources files</small> </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 border-bottom">
-                                <div class="col-md-6 border-right">
-                                    <div class="p-3 d-flex justify-content-center align-items-center"> <span>x3</span> </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="p-3 d-flex justify-content-center align-items-center"> <span>$20 per unit</span> </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 border-bottom">
-                                <div class="col-md-6">
-                                    <div class="p-3 d-flex justify-content-center align-items-center"> <span>Subtotal</span> </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="p-3 d-flex justify-content-center align-items-center"> <span>$60</span> </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 border-bottom">
-                                <div class="col-md-6">
-                                    <div class="p-3 d-flex justify-content-center align-items-center"> <span>Processing fees</span> </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="p-3 d-flex justify-content-center align-items-center"> <span>$1.80</span> </div>
-                                </div>
-                            </div>
-                            <div class="row g-0">
-                                <div class="col-md-6">
-                                    <div class="p-3 d-flex justify-content-center align-items-center"> <span class="font-weight-bold">Total</span> </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="p-3 d-flex justify-content-center align-items-center"> <span class="font-weight-bold">$61.80</span> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="col-md-3"></div>
+
                     <div> </div>
                 </div>
             </div>
