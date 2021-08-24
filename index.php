@@ -372,7 +372,7 @@ body{
 
 
                             <li class="nav-item dropdown dropdown-hover px-2" >
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active"  href="pastry-shop.php">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="pastry-shop.php">
                                     PASTRY SHOP
                                 </a>
                             </li>
@@ -417,9 +417,6 @@ body{
 </div>
 <!-- End Navbar -->
 
-
-    <!-- MENU Start
-    ================================================== -->
 <!-- HOME SECTION -->
 < <section id="hero">
     <div class="hero-container">
@@ -486,8 +483,6 @@ body{
     </div>
 </section><!-- End Hero -->
 
-	<!--Green tile 3
-    ================================================== -->
 <!-- OUR QUALITIES SECTION -->
 
 <section class="our_qualities" style="padding:100px 0px;">

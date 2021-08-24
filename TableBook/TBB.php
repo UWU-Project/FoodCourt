@@ -136,7 +136,7 @@
 
 
                             <li class="nav-item dropdown dropdown-hover px-2" >
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active"  href="../pastry-shop.php">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center "  href="../pastry-shop.php">
                                     PASTRY SHOP
                                 </a>
                             </li>
@@ -148,7 +148,7 @@
                             </li>
 
                             <li class="nav-item dropdown dropdown-hover px-2" >
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  href="../TableBook/TBB.php">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active"  href="../TableBook/TBB.php">
                                     BUFFET
                                 </a>
                             </li>

@@ -120,10 +120,10 @@
             <div class="col-md-3 clearfix">
                 <ul class="login-cart">
                     <li>
-                        <a href="../user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
+                        <a href="user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
                     </li>
                     <li>
-                        <a href="../user/signup-user.php"><i class="fas fa-user-plus"></i>REGISTER</a>
+                        <a href="user/signup-user.php"><i class="fas fa-user-plus"></i>REGISTER</a>
                     </li>
                 </ul>
             </div>
@@ -190,7 +190,7 @@
 
 
                             <li class="nav-item dropdown dropdown-hover px-2" >
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active"  href="pastry-shop.php">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center "  href="pastry-shop.php">
                                     PASTRY SHOP
                                 </a>
                             </li>
@@ -208,7 +208,7 @@
                             </li>
 
                             <li class="nav-item dropdown dropdown-hover px-2" >
-                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"  aria-selected="true" href="about-us.php">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center active"  aria-selected="true" href="about-us.php">
                                     ABOUT US
                                 </a>
                             </li>
@@ -363,105 +363,116 @@
 	</section>	<!-- End of /#Blog -->
 
 
-<!-- FOOTER Start
-================================================== -->
-
-<footer>
+<!-- -------- FOOTER START ------- -->
+<footer class="footer" style="background: #383838; padding-top: 5px">
+    <hr class="horizontal dark mb-5">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="block clearfix">
+        <div class=" row">
+            <div class="col-md-4" style="color: #B6B6B6;">
+                <div>
                     <a href="#">
-                        <img src="images/footerlogo5.png" alt="">
+                        <img src="images/footerlogo5.png"  class="img-fluid" alt="">
                     </a>
-                    <br><br>
+
                     <p>
-                        We stand for best in everything we do, to create an environment where absolute guest satisfaction,which is our highest priority.
+                        We stand for best in everything we do, to create an environment where absolute guest
+                        satisfaction,which is our highest priority.
 
                     </p>
-                    <h4 class="connect-heading">CONNECT WITH US</h4>
-                    <ul class="social-icon">
-                        <li>
-                            <a class="facebook-icon" href="#">
-                                <i class="fa fa-facebook"></i>
+                </div>
+                <div>
+                    <h6 class="mt-3 mb-2 opacity-8" style="color: #fff;">Social</h6>
+                    <ul class="d-flex flex-row ms-n3 nav">
+                        <li class="nav-item" style="color: #fff;">
+                            <a class="nav-link pe-1" href="https://www.facebook.com" target="_blank">
+                                <i class="fab fa-facebook text-lg opacity-8" style="color: #fff;"></i>
                             </a>
                         </li>
-                        <li>
-                            <a class="plus-icon" href="#">
-                                <i class="fa fa-google-plus"></i>
+                        <li class="nav-item">
+                            <a class="nav-link pe-1" href="https://twitter.com" target="_blank">
+                                <i class="fab fa-twitter text-lg opacity-8" style="color: #fff;"></i>
                             </a>
                         </li>
-                        <li>
-                            <a class="twitter-icon" href="#">
-                                <i class="fa fa-twitter"></i>
+                        <li class="nav-item">
+                            <a class="nav-link pe-1" href="https://dribbble.com" target="_blank">
+                                <i class="fab fa-dribbble text-lg opacity-8" style="color: #fff;"></i>
                             </a>
                         </li>
-                        <li>
-                            <a class="pinterest-icon" href="#">
-                                <i class="fa fa-pinterest"></i>
+                        <li class="nav-item">
+                            <a class="nav-link pe-1" href="https://github.com" target="_blank">
+                                <i class="fab fa-github text-lg opacity-8" style="color: #fff;"></i>
                             </a>
                         </li>
-                        <li>
-                            <a class="linkedin-icon" href="#">
-                                <i class="fa fa-linkedin"></i>
+                        <li class="nav-item">
+                            <a class="nav-link pe-1" href="https://www.youtube.com" target="_blank">
+                                <i class="fab fa-youtube text-lg opacity-8" style="color: #fff;"></i>
                             </a>
                         </li>
-                    </ul>	<!-- End Of /.social-icon -->
-                </div>	<!-- End Of /.block -->
-            </div> <!-- End Of /.Col-md-4 -->
-            <div class="col-md-4">
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="col-md-5 col-sm-6 col-6 mb-4" style="color: #B6B6B6;">
                 <div class="block">
-                    <h4>GET IN TOUCH</h4>
-                    <p ><i class="fa  fa-map-marker"></i> <span>Food Court: </span>NO:22 Mccallum's Drive Nuwara Eliya</p>
-                    <p> <i class="fa  fa-phone"></i> <span>Phone:</span> 052 22 22 878 </p>
+                    <h4 style="color: #fff;">GET IN TOUCH</h4>
+                    <p><i class="fa fa-map-marker"></i> <span style="color: #fff;">&emsp;FOOD COURT:</span> NO:22
+                        Mccallum's Drive Nuwara Eliya</p>
+                    <p><i class="fa fa-phone"></i> <span style="color: #fff;">&emsp;PHONE:</span> 052 22 22 878 </p>
 
-                    <p> <i class="fa  fa-mobile"></i> <span>Mobile:</span> 070 2 100 600</p>
+                    <p><i class="fa fa-mobile"></i> <span style="color: #fff;">&emsp;MOBILE:</span> 070 2 100 600</p>
 
-                    <p class="mail"><i class="fa  fa-envelope"></i>Eamil: <span>info@foodcourt.com</span></p>
-                </div>	<!-- End Of /.block -->
-            </div> <!-- End Of Col-md-3 -->
+                    <p class="mail"><i class="fa fa-envelope"></i> <span style="color: #fff;">&emsp;E-MAIL:</span>
+                        info@foodcourt.com</p>
+                </div>    <!-- End Of /.block -->
+            </div>
 
-            <div class="col-md-4">
+
+            <div class="col-md-3">
                 <div class="block">
                     <div class="media">
-                        <h4>Our Location</h4>
+                        <h4 style="color: #fff;">OUR LOCATION</h4>
+                        <div id="map"></div>
 
 
-                    </div>	<!-- End Of /.media -->
-                </div>	<!-- End Of /.block -->
+                    </div>    <!-- End Of /.media -->
+                </div>    <!-- End Of /.block -->
             </div> <!-- End Of Col-md-3 -->
-        </div> <!-- End Of /.row -->
-    </div> <!-- End Of /.Container -->
 
-    <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+            <div class="col-12">
+                <div class="text-center">
+                    <p class="my-4 text-sm" style="color: #fff;">
+                        Copyright ©
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>
+                        | Food Court <a href="admin/login-form.php" target="_blank">Administrator</a> All Rights
+                        Reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/core/popper.min.js" type="text/javascript"></script>
 
-    <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
-    <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
-    <script src="assets/js/plugins/parallax.min.js"></script>
-    <!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
+<script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
+<!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+<script src="assets/js/plugins/parallax.min.js"></script>
+<!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
 
-    <script src="assets/js/soft-design-system.min.js?v=1.0.5" type="text/javascript"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
+<script src="assets/js/soft-design-system.min.js?v=1.0.5" type="text/javascript"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
-    <!-- FOOTER-BOTTOM Start
-    ================================================== -->
-
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-
-                    <p style="text-align: center;">© 2021 | Food Court <a href="admin/login-form.php">Administrator</a> All Rights Reserved</p>
-                </div>	<!-- End Of /.col-md-12 -->
-            </div>	<!-- End Of /.row -->
-        </div>	<!-- End Of /.container -->
-    </div>	<!-- End Of /.footer-bottom -->
-</footer> <!-- End Of Footer -->
-
+<!-- Google Map -->
+<script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqqBMyAoQe2LlTe9e3_U5O8NaUwEJ9dDU&callback=initMap&libraries=&v=weekly"async>
+</script>
+<script src="validation/map.js"></script>
 <a id="back-top" href="#"></a>
 </body>
 </html>
