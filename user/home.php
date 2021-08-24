@@ -601,8 +601,8 @@ $tuck = mysqli_fetch_assoc($billing);
         </div>
     </div>
 </div>
-
-
+<br>
+<br><br>
 <!-- -------- FOOTER START ------- -->
 <footer class="footers bg-gradient-faded-light">
     <hr class="horizontal dark ">

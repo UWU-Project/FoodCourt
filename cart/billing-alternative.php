@@ -48,6 +48,12 @@ $result = mysqli_query($conn, "SELECT * FROM orders_details o inner join cart_de
     <link rel="stylesheet" href="../css/style.css">
     <script language="JavaScript" src="../validation/user.js"></script>
     <link rel="stylesheet" href="../css/bread.css">
+    <style>
+        body{
+            background: url(../images/ourback.jpg);
+
+        }
+    </style>
 </head>
 
 <body>
@@ -164,7 +170,7 @@ $result = mysqli_query($conn, "SELECT * FROM orders_details o inner join cart_de
 
 
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb my-2">
+                <ol class="breadcrumb my-2"  style="justify-content: center;">
                     <li class="breadcrumb-item active"><a href="#">Cart</a></li>
                     <li class="breadcrumb-item active"><a href="#">Billing Details</a></li>
                     <li class="breadcrumb-item"><a>Billing Success</a></li>
@@ -172,7 +178,7 @@ $result = mysqli_query($conn, "SELECT * FROM orders_details o inner join cart_de
                     <li class="breadcrumb-item"><a>Payment</a></li>
                 </ol>
             </nav>
-
+<br>
             <h1 style="padding-top: 20px">BILLING ADDRESS</h1>
             <hr>
             <p>We have found out that you don't have a billing address in your account. Please add a billing address in

@@ -89,8 +89,13 @@
             background: #000;
         }
 
-    </style
+         body{
+             background: url(../images/ourback.jpg);
+
+         }
     </style>
+
+
 </head>
 <body>
 
@@ -204,7 +209,7 @@
         <div class="py-5 text-center">
 
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb my-2">
+                <ol class="breadcrumb my-2"  style="justify-content: center;">
                     <li class="breadcrumb-item active"><a href="#">Cart</a></li>
                     <li class="breadcrumb-item active"><a href="#">Billing Details</a></li>
                     <li class="breadcrumb-item active"><a>Billing Success</a></li>

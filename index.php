@@ -506,7 +506,7 @@ padding-top: 10rem;
                             Healthy food
                         </h3>
                         <p>
-                            Eat healthy think better.
+                            “IT IS HEALTH THAT IS REAL WEALTH AND NOT PIECES OF GOLD AND SILVER.”
                         </p>
                     </div>
                 </div>
@@ -519,7 +519,7 @@ padding-top: 10rem;
                             Fast delivery
                         </h3>
                         <p>
-                            Delivering to doorstep.
+                            Give your clients the earliest delivery consistent with quality, Delivering to doorstep.
                         </p>
                     </div>
                 </div>
@@ -532,7 +532,7 @@ padding-top: 10rem;
                             Tasty Food
                         </h3>
                         <p>
-                            Love at first bite.
+                            I like people who love to eat. They’re the best kind of people in the world.
                         </p>
                     </div>
                 </div>

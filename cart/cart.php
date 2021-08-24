@@ -344,7 +344,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
         <div class="container-fluid">
 
           <div class="table-responsive">
-              <table class="table table-hover align-items-center mb-0">
+              <table class="table table-hover align-items-center mb-0" style="margin: 0 10px">
                   <thead class="table-dark">
               <tr>
                 <th>ITEM ID</th>
@@ -425,7 +425,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
                 <?php
                 $cartItem = rtrim($cartItem, ',');
                 echo "<tr>";
-                echo '<td colspan="9" class="table-active"><a href="order-exec.php?id=' . $cartItem . '"><i class="btn btn-warning" >Go To Checkout</i></a></td>';
+                echo '<td colspan="9" class="table-active"  style="text-align: center" ><a href="order-exec.php?id=' . $cartItem . '"><i class="btn btn-warning">Go To Checkout</i></a></td>';
                 echo "</tr>";
 
 
