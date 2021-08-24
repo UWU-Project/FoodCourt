@@ -345,7 +345,7 @@
                             echo "<td>" . $row['firstname']."</td>";
                             echo "<td>" . $row['lastname']."</td>";
                             echo "<td>" . $row['email']."</td>";
-                            echo '<td><a  class="del-btn btn btn-outline-danger btn-sm" href="delete-member.php?id=' . $row['member_id'] . '">Remove Member</a></td>';
+                            echo '<td><a  class="del-btn btn btn-outline-danger btn-sm" href="delete-member.php?id=' . $row['member_id'] . '">Remove Account</a></td>';
                             echo "</tr>";
                         }
                         mysqli_free_result($result);

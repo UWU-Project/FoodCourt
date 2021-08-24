@@ -93,8 +93,8 @@
         $alert="
             swal.fire({
                  type : 'success',
-                 title : 'Reservation Confirmed',
-                 text : 'Record has added to CONFIRMED RESERVATIONS'
+                 title : 'Deletion Confirmed',
+                 text : 'Succecfully Deleted'
              })
             ";
         echo $alert;
