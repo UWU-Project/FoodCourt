@@ -599,14 +599,14 @@ body{
 
                     <div class="col-md-4 details_card ">
                         <br><br>
-                        <h1 class="text-gradient text-info" id="state1" countTo="5234">0</h1>
+                        <h1 class="text-gradient text-info" id="state1" countTo="1500">0</h1>
                         <h5 style="color: #ffd002">CUSTOMERS</h5>
                         <p>Of “high-performing” level are led by a certified project manager</p>
                     </div>
 
                     <div class="col-md-4 details_card ">
                         <br><br>
-                        <h1 class="text-gradient text-info"><span id="state2" countTo="3400">0</span>+</h1>
+                        <h1 class="text-gradient text-info"><span id="state2" countTo="3000+">0</span>+</h1>
                         <h5 style="color: #ffd002">FOODS</h5>
                         <p>That meets quality standards required by our users</p>
                     </div>
@@ -731,27 +731,27 @@ body{
     <div class="container">
 
         <div class="section-title">
-            <h2>Check our <span>Specials</span></h2>
-            <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+            <h2>Check our Specials <span> For Children</span></h2>
+            <p>If you talk about food just as much as you eat it, you're in good company. We've got famous chefs and stars—Julia Child</p>
         </div>
 
         <div class="row">
             <div class="col-lg-3">
                 <ul class="nav nav-tabs flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Modi sit est</a>
+                        <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">PIPPAS SALAD WITH RICE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Unde praesentium sed</a>
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-2">KIKI'S HUMMUS WRAP</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Pariatur explicabo vel</a>
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-3">KARL'S NOODLE SOUP</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Nostrum qui quasi</a>
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-4">PIPPAS SPELLED PATTIES WITH HERB QUARK</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Iusto ut expedita aut</a>
+                        <a class="nav-link" data-bs-toggle="tab" href="#tab-5">MOMOS QUINOA FRUIT SALAD</a>
                     </li>
                 </ul>
             </div>
@@ -760,9 +760,9 @@ body{
                     <div class="tab-pane active show" id="tab-1">
                         <div class="row">
                             <div class="col-lg-8 details order-2 order-lg-1">
-                                <h3>Architecto ut aperiam autem id</h3>
-                                <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                                <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                                <h4>LUNCH FOR CHILDREN</h4>
+                                <p class="fst-italic">Your cheeky sweet tooth love pasta, noodles and noodles?</p>
+                                <p>With Pippa's pasta salad with paprika, you can also add cheeky, colorful vegetables. Whether for the next children's birthday party or as a delicious lunch after daycare or school, Pippa manages to put a smile on every child's face!</p>
                             </div>
                             <div class="col-lg-4 text-center order-1 order-lg-2">
                                 <img src="./Akila/assets/img/specials-1.jpg" alt="" class="img-fluid">
@@ -772,9 +772,9 @@ body{
                     <div class="tab-pane" id="tab-2">
                         <div class="row">
                             <div class="col-lg-8 details order-2 order-lg-1">
-                                <h3>Et blanditiis nemo veritatis excepturi</h3>
-                                <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
-                                <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
+                                <h4>SNACKS FOR CHILDREN</h4>
+                                <p class="fst-italic">Karl carrot and Kiki chickpea go under the wrappers! </p>
+                                <p>With this hummus wrap recipe, the cheeky vegetable duo shows their fresh talent .. or it shows you how you can prepare a fresh snack with an extra portion of vegetables for your hungry gang in no time at all! Tucked away in the wrap, the vegetable duo is not so easily noticed by even the biggest vegetable grouch. Pretty clever, right?</p>
                             </div>
                             <div class="col-lg-4 text-center order-1 order-lg-2">
                                 <img src="./Akila/assets/img/specials-2.jpg" alt="" class="img-fluid">
@@ -784,9 +784,9 @@ body{
                     <div class="tab-pane" id="tab-3">
                         <div class="row">
                             <div class="col-lg-8 details order-2 order-lg-1">
-                                <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
-                                <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
-                                <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
+                                <h4>LUNCH FOR CHILDREN</h4>
+                                <p class="fst-italic">With cheeky soup spoons, the “bigger little ones” can use the letters to fish out their own names.</p>
+                                <p>The soup should of course not get cold. But that doesn't happen with this recipe, because this noodle soup is wonderfully vegetable-tasty and certainly quickly and cheekily plastered.</p>
                             </div>
                             <div class="col-lg-4 text-center order-1 order-lg-2">
                                 <img src="./Akila/assets/img/specials-3.jpg" alt="" class="img-fluid">
@@ -796,9 +796,9 @@ body{
                     <div class="tab-pane" id="tab-4">
                         <div class="row">
                             <div class="col-lg-8 details order-2 order-lg-1">
-                                <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
-                                <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
-                                <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p>
+                                <h4>LUNCH FOR CHILDREN , SNACKS FOR CHILDREN</h4>
+                                <p class="fst-italic">The next excursion with a big family picnic is just around the corner and you are still looking for ideas for spill-free snacks?</p>
+                                <p>Then try Pippa's delicious spelled patties with herb quark! In addition to a large portion of spelled, Pippa and Patrick Paprika have hidden here and provide the necessary (vegetable) kick! Add a portion of Gundula's cheeky herbal quark and the delicious snack for children is perfect! Simply prepare and then put it in the lunch box and picnic basket.</p>
                             </div>
                             <div class="col-lg-4 text-center order-1 order-lg-2">
                                 <img src="./Akila/assets/img/specials-4.jpg" alt="" class="img-fluid">
@@ -808,9 +808,9 @@ body{
                     <div class="tab-pane" id="tab-5">
                         <div class="row">
                             <div class="col-lg-8 details order-2 order-lg-1">
-                                <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
-                                <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
-                                <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
+                                <h4>SNACKS FOR CHILDREN</h4>
+                                <p class="fst-italic">Quinoa, which many call a superfood, is very trendy!</p>
+                                <p>This quinoa fruit salad freshly refreshes this year's buffet at the children's birthday party - Bibi thinks blueberry was pasta salad last year! Quinoa fruit salad is also great as a filling snack for hungry mouths after exercise, or as a less sweet breakfast alternative for your kids.</p>
                             </div>
                             <div class="col-lg-4 text-center order-1 order-lg-2">
                                 <img src="./Akila/assets/img/specials-5.jpg" alt="" class="img-fluid">
@@ -830,7 +830,7 @@ body{
 
         <div class="section-title">
             <h2>Some photos from <span>Our Restaurant</span></h2>
-            <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+            <p>“Need food and a good place to eat? Welcome to our humble place where you can eat good food peacefully.” </p>
         </div>
 
         <div class="row no-gutters">
@@ -922,7 +922,7 @@ body{
                         </div>
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                            Had dinner here recently. My husband ordered the Italian calzone. It came out as a 10” size dinner portion. He claimed it was delicious. The service was excellent.
                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                         </p>
                     </div>
@@ -931,14 +931,14 @@ body{
                 <div class="swiper-slide">
                     <div class="testimonial-item">
                         <img src="images/cus5.jpg" class="testimonial-img" alt="">
-                        <h3>Matt Brandon</h3>
-                        <h4>Freelancer</h4>
+                        <h3>Akila Gunasekara</h3>
+                        <h4>5 Star Rating</h4>
                         <div class="stars">
                             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                            The food was fresh, properly prepared and a great value for the price. We highly recommend it. The breakfast buffet on Sunday was equally as good.
                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                         </p>
                     </div>
@@ -946,30 +946,14 @@ body{
                 <div class="swiper-slide">
                     <div class="testimonial-item">
                         <img src="images/cus2.jpg" class="testimonial-img" alt="">
-                        <h3>Sara Wilsson</h3>
-                        <h4>Designer</h4>
+                        <h3>Dulana Senavirathna</h3>
+                        <h4>5 Star Rating</h4>
                         <div class="stars">
                             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
-                    </div>
-                </div><!-- End testimonial item -->
-
-                <div class="swiper-slide">
-                    <div class="testimonial-item">
-                        <img src="images/cus3.jpg" class="testimonial-img" alt="">
-                        <h3>Jena Karlis</h3>
-                        <h4>Store Owner</h4>
-                        <div class="stars">
-                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                        </div>
-                        <p>
-                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                            We like to go to The Fairway every time we come to the Cape. The food is always delicious! This is the first year we could make reservations (probably due to spacing because of the virus). Our waitress, Casey, was great!
                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                         </p>
                     </div>
@@ -978,14 +962,30 @@ body{
                 <div class="swiper-slide">
                     <div class="testimonial-item">
                         <img src="images/cus4.jpg" class="testimonial-img" alt="">
-                        <h3>Matt Brandon</h3>
-                        <h4>Freelancer</h4>
+                        <h3>Amal Wishwajith</h3>
+                        <h4>5 Star Rating</h4>
                         <div class="stars">
                             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                            Although we didn't go into the onsite restaurant, we ordered some food at the bar a few times and it was delicious. The bar area and lobby were nice and open, good place to relax and meet friends.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <img src="images/cus3.jpg" class="testimonial-img" alt="">
+                        <h3>Ravindu Dherarathne</h3>
+                        <h4>5 Star Rating</h4>
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            It’s a great experience. The ambiance is very welcoming and charming. Amazing drinks, food and service. Staff are extremely knowledgeable and make great recommendations.
                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                         </p>
                     </div>
@@ -994,14 +994,14 @@ body{
                 <div class="swiper-slide">
                     <div class="testimonial-item">
                         <img src="images/cus6.jpg" class="testimonial-img" alt="">
-                        <h3>John Larson</h3>
-                        <h4>Entrepreneur</h4>
+                        <h3>Prasangi Bandara</h3>
+                        <h4>5 Star Rating</h4>
                         <div class="stars">
                             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                            This Orchid Bliss restaurant has left the best impressions! Hospitable hosts, delicious dishes, beautiful presentation, wide wine list and wonderful dessert. I recommend to everyone! I would like to come back here again and again.
                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                         </p>
                     </div>
