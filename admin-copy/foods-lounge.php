@@ -67,7 +67,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
       </a>
     </div>
     <hr class="horizontal dark mt-0">
-    <div class="collapse navbar-collapse  w-auto  max-height-vh-100 h-100" id="sidenav-collapse-main" style="overflow: initial;">
+    <div class="collapse navbar-collapse w-auto max-height-vh-100 h-100" id="sidenav-collapse-main" style="overflow: initial;">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="./index.php">
@@ -90,7 +90,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">
+          <a class="nav-link active" href="./foods-menu.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>office</title>
@@ -109,6 +109,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
             <span class="nav-link-text ms-1">Foods</span>
           </a>
         </li>
+        
         <li class="nav-item">
           <a class="nav-link  " href="./allocation.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -129,6 +130,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
             <span class="nav-link-text ms-1">Allocation</span>
           </a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link  " href="./specials.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -176,7 +178,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
           <a class="nav-link  " href="./reservations.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>box-3d-50</title>
+                <title></title>
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g transform="translate(-2319.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
                     <g transform="translate(1716.000000, 291.000000)">
@@ -194,7 +196,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/rtl.html">
+          <a class="nav-link  " href="./accounts.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>settings</title>
@@ -218,7 +220,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Accounts</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/sign-in.html">
+          <a class="nav-link  " href="./employees.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>Add New Staff</title>
@@ -238,7 +240,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/profile.html">
+          <a class="nav-link  " href="./profile.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>Profile Settings</title>
@@ -259,7 +261,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/sign-up.html">
+          <a class="nav-link  " href="./logout.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="20px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>spaceship</title>
@@ -296,54 +298,22 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
           </ol>
           <h6 class="font-weight-bolder mb-0">THE LOUNGE - FOOD ITEMS</h6>
         </nav>
+        <div style="mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+        <a href="#addFood">
+        <button type="button" class="btn btn-success">Add a New Food Item</button>
+        </a>
+        <div>
       </div>
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid">
-        
         <div class="row mt-4">
         <div class="col-lg-12 mb-lg-0 mb-4">
           <div class="card">
             <div class="card-body p-3">
-              <div class="row">
-              <div class="col-lg-12 mb-lg-0 mb-4">
-              <h5 style="text-align:center">ADD A NEW FOOD ITEM TO THE LOUNGE </h5>
-              <br/>
-
-                <form name="foodsForm" id="foodsForm" action="foods-exec.php" method="post" enctype="multipart/form-data" onsubmit="return foodsValidate(this)">
-                <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Category</th>
-                    <th>Photo</th>
-                    <th>Action(s)</th>
-                </tr>
-                <tr>
-                    <td><input type="text" name="name" id="name" class="textfield" /></td>
-                    <td><textarea name="description" id="description" class="textfield" rows="2" cols="15"></textarea></td>
-                    <td><input type="text" name="price" id="price" class="textfield" /></td>
-                    <td width="168"><select name="category" id="category">
-                            <option value="select">- select one option -
-                                <?php
-                                //loop through categories table rows
-                                while ($row=mysqli_fetch_array($categories)){
-                                    echo "<option value=$row[category_id]>$row[category_name]";
-                                }
-                                ?>
-                        </select></td>
-                    <td><input type="file" name="photo" id="photo"/></td>
-                    <td><input type="submit" name="Submit" value="Add" /></td>
-                </tr>
-            </form>
-              </div>
-              </div>
-              <hr/>
-              <br/>
-              <div class="row">
-              <div class="col-lg-12 mb-lg-0 mb-4">
                 <h5 style="text-align:center">AVAILABLE FOOD ITEMS</h5>
-                <table width="950" align="center">
+                <hr/>
+                <table width="100%" align="center">
             <tr>
                 <th>Food Photo</th>
                 <th>Food Name</th>
@@ -375,10 +345,57 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
       <br/>
+      <div id="addFood">
+      <div class="col-lg-12 mb-lg-0 mb-4 mt-4">
+          <div class="card">
+            <div class="card-body ">
+            <h3 class="mt-2" style="text-align:center;">Add a Food Item</h3>
+            <hr/>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+              <div style="align-items:center;">
+              <form class="p-2" name="foodsForm" id="foodsForm" action="foods-lounge-exec.php" method="post" enctype="multipart/form-data" onsubmit="return foodsValidate(this)">
+                  <div class="form-group">
+                      <label for="example-text-input" class="form-control-label">Food Name</label>
+                      <input type="text" name="name" id="name" class="form-control" placeholder="Enter Food Name">
+                  </div>
+                  <div class="form-group">
+                      <label for="example-search-input" class="form-control-label">Description</label>
+                      <textarea name="description" id="description" class="form-control" placeholder="Enter Description"></textarea>
+                  </div>
+                  <div class="form-group">
+                      <label for="example-email-input" class="form-control-label">Food Price</label>
+                      <input type="text" name="price" id="price" class="form-control" placeholder="Enter Food Price">
+                  </div>
+                      <div class="form-group">
+                          <label for="example-date-input" class="form-control-label">Category</label>
+                          <select  name="category" id="category" class="form-control">
+                          <option value="select">- select one option -
+                                <?php
+                                //loop through categories table rows
+                                while ($row=mysqli_fetch_array($categories)){
+                                    echo "<option value=$row[category_id]>$row[category_name]";
+                                }
+                                ?>
+                          </select>
+                      </div>
+                  <div class="form-group">
+                      <label for="example-time-input" class="form-control-label">Add Image</label>
+                      <input type="file" name="photo" id="photo" class="form-control" placeholder="Add Photo">
+                  </div>
+                  <div class="form-group">
+                      <input type="submit" name="Submit" value="Add Foods" class="form-control">
+                  </div>
+              </form>
+              </div>
+              </div>
+              <div class="col-2"></div>
+            </div>
+          </div>
+         </div>
+        </div>
       <?php require_once('components/footer.inc.php'); ?>
     </div>
   </main>
