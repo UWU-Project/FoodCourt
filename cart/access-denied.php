@@ -395,14 +395,13 @@
         <div class="col-md-12">
             <div class="error-template">
                 <h1>
-                    Oops!</h1>
+                   Login Required..</h1>
                 <div class="error-details">
-                    <h5>Please login to access this Pages.</h5>
+                    <h6>You need to login first here.</h6>
                 </div>
                 <h2>
                     <a href="../user/login-user.php" class="btn btn-warning"><span class="glyphicon glyphicon-home"></span>
                         Login </a></h2>
-
             </div>
         </div>
     </div>
