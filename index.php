@@ -430,7 +430,7 @@ body{
                 <div class="carousel-item active" style="background: url(./Akila/assets/img/slide/slide-1.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-content">
-                            <h2 class="animate__animated animate__fadeInDown"><span>Delicious</span> Restaurant</h2>
+                            <h2 class="animate__animated animate__fadeInDown"><span>PASTRY</span> SHOP</h2>
                             <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
                             <div>
                                 <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
@@ -444,7 +444,7 @@ body{
                 <div class="carousel-item" style="background: url(./Akila/assets/img/slide/slide-2.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-content">
-                            <h2 class="animate__animated animate__fadeInDown">The Lounge</h2>
+                            <h2 class="animate__animated animate__fadeInDown">THE LOUNGE</h2>
                             <p class="animate__animated animate__fadeInUp"> fresh, delicious meal to reach your optimum health and fitness.</p>
                             <div>
                                 <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
@@ -459,7 +459,7 @@ body{
                     <div class="carousel-background"><img src="./Akila/assets/img/slide-3.jpg" alt=""></div>
                     <div class="carousel-container">
                         <div class="carousel-content">
-                            <h2 class="animate__animated animate__fadeInDown">Buffet </h2>
+                            <h2 class="animate__animated animate__fadeInDown">THE BUFFET </h2>
                             <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
                             <div>
                                 <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
@@ -930,6 +930,21 @@ body{
 
                 <div class="swiper-slide">
                     <div class="testimonial-item">
+                        <img src="images/cus5.jpg" class="testimonial-img" alt="">
+                        <h3>Matt Brandon</h3>
+                        <h4>Freelancer</h4>
+                        <div class="stars">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                    </div>
+                </div><!-- End testimonial item -->
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
                         <img src="images/cus2.jpg" class="testimonial-img" alt="">
                         <h3>Sara Wilsson</h3>
                         <h4>Designer</h4>
@@ -1109,7 +1124,6 @@ body{
 <!-- Template Main JS File -->
 <script src="./Akila/assets/js/main.js"></script>
 
-<!--   Core JS Files   -->
 <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
 
 <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
@@ -1118,14 +1132,11 @@ body{
 <!-- Control Center for Soft UI Kit: parallax effects, scripts for the example pages etc -->
 
 <script src="assets/js/soft-design-system.min.js?v=1.0.5" type="text/javascript"></script>
-
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-
-
 
 </body>
 </html>

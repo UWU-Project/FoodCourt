@@ -195,8 +195,11 @@
        <div class="col-md-6">
 
            <img src="../images/tse22.png"   style="width: 100%;" alt="">
-<div style="alignment: center">
-           <button type="button" style="alignment: center" class="btn btn-secondary btn-lg btn-block" href="../buffttest1.php">Book Your Table</button>
+           <br><br><br>
+<div style="text-align: center">
+    <a href="../buffttest1.php" class="btn btn-secondary btn-lg btn-block"><span class="glyphicon glyphicon-home"></span>
+        Book Your Table </a>
+
        </div>
         </div>
 
