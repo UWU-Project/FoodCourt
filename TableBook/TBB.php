@@ -197,7 +197,7 @@
            <img src="../images/tse22.png"   style="width: 100%;" alt="">
            <br><br><br>
 <div style="text-align: center">
-    <a href="../buffttest1.php" class="btn btn-secondary btn-lg btn-block"><span class="glyphicon glyphicon-home"></span>
+    <a href="./reserve.php" class="btn btn-secondary btn-lg btn-block"><span class="glyphicon glyphicon-home"></span>
         Book Your Table </a>
 
        </div>
