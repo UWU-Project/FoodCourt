@@ -87,6 +87,19 @@ if(isset($_POST['Submit'])){
         background: url(images/ourback.jpg);
 
     }
+    /*.product-grid{*/
+    /*   display:flex;*/
+    /*}*/
+    .product-grid{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .product-grid>div{
+        width:100px;
+        height: 200px;
+        margin-bottom: 130px;
+    }
 
 </style>
 

@@ -140,7 +140,13 @@ $tuck = mysqli_fetch_assoc($billing);
         .shadow-none {
             box-shadow: none!important;
         }
+
+         body{
+             background: url(../images/ourback.jpg);
+
+         }
     </style>
+
 </head>
 
 <body>
