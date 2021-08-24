@@ -447,8 +447,8 @@ body{
                 <div class="carousel-item" style="background: url(./Akila/assets/img/slide/slide-2.jpg);">
                     <div class="carousel-container">
                         <div class="carousel-content">
-                            <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                            <h2 class="animate__animated animate__fadeInDown">The Lounge</h2>
+                            <p class="animate__animated animate__fadeInUp"> fresh, delicious meal to reach your optimum health and fitness.</p>
                             <div>
                                 <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
                                 <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
@@ -462,7 +462,7 @@ body{
                     <div class="carousel-background"><img src="./Akila/assets/img/slide-3.jpg" alt=""></div>
                     <div class="carousel-container">
                         <div class="carousel-content">
-                            <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
+                            <h2 class="animate__animated animate__fadeInDown">Buffet </h2>
                             <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
                             <div>
                                 <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
@@ -498,11 +498,10 @@ body{
                     <img src="images/quality_food_img.png" >
                     <div class="caption">
                         <h3>
-                            Quality Foods
+                            Healthy food
                         </h3>
                         <p>
-                            Sit amet, consectetur adipiscing elit quisque eget maximus velit,
-                            non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit.
+                            Eat healthy think better.
                         </p>
                     </div>
                 </div>
@@ -512,11 +511,10 @@ body{
                     <img src="images/fast_delivery_img.png" >
                     <div class="caption">
                         <h3>
-                            Quality Foods
+                            Fast delivery
                         </h3>
                         <p>
-                            Sit amet, consectetur adipiscing elit quisque eget maximus velit,
-                            non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit.
+                            Delivering to doorstep.
                         </p>
                     </div>
                 </div>
@@ -526,11 +524,10 @@ body{
                     <img src="images/original_taste_img.png" >
                     <div class="caption">
                         <h3>
-                            Quality Foods
+                            Tasty Food
                         </h3>
                         <p>
-                            Sit amet, consectetur adipiscing elit quisque eget maximus velit,
-                            non eleifend libero curabitur dapibus mauris sed leo cursus aliquetcras suscipit.
+                            Love at first bite.
                         </p>
                     </div>
                 </div>
