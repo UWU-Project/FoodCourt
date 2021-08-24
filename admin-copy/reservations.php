@@ -543,7 +543,7 @@
 
                               <?php
                               //selecting all records from the reservations_details table based on table ids. Return an error if there are no records in the table
-                              $tables2=mysqli_query($conn,"SELECT customers.member_id, customers.firstname, customers.email, customers.lastname, reservations_details.ReservationID,reservations_details.table_id, reservations_details.Reserve_Date, reservations_details.Reserve_Time, billing_details.Mobile_No, billing_details.Landline_No  FROM (( reservations_details INNER JOIN customers ON reservations_details.member_id=customers.member_id)INNER JOIN billing_details ON reservations_details.member_id=billing_details.member_id) WHERE reservations_details.flag = 1")
+                              $tables2=mysqli_query($conn,"SELECT customers.member_id, customers.firstname, customers.email, customers.lastname, reservations_details.ReservationID,reservations_details.table_id, reservations_details.Reserve_Date, reservations_details.Reserve_Time, reservations_details.allocat, billing_details.Mobile_No, billing_details.Landline_No  FROM (( reservations_details INNER JOIN customers ON reservations_details.member_id=customers.member_id)INNER JOIN billing_details ON reservations_details.member_id=billing_details.member_id) WHERE reservations_details.flag = 1")
                               or die("There are no records to display ... \n" . mysqli_error());
                               echo(mysqli_error($conn));
                               ?>
@@ -558,6 +558,7 @@
                                 <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Table Name</th>
                                 <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Reserved Date</th>
                                 <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">Reserved Time</th>
+                                  <th class="text-uppercase text-secondary text-s font-weight-bolder opacity-7">STATUS</th>
                               </tr>
                           </thead>
                               <?php
@@ -632,6 +633,15 @@
                                       echo '<span class="badge bg-gradient-faded-dark">' . ' Lunch ' . '</span>';
                                   }else{
                                       echo '<span class="badge bg-gradient-faded-dark">' . 'Dinner' . '</span>';
+                                  }
+
+                                  echo "</td>";
+                                  echo "<td>";
+
+                                  if ($row['allocat'] == '1') {
+                                      echo '<span class="badge bg-gradient-primary">'.'ALLOCATED'.'</span>';
+                                  }else{
+                                      echo '<span class="badge bg-gradient-warning">'.'NOT ALLOCATED'.'</span>';
                                   }
 
                                   echo "</td>";

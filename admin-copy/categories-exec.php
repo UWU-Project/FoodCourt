@@ -32,7 +32,7 @@
     //Check whether the query was successful or not
     if($result) {
         echo "<html><script>alert('Food Categories added successfully.')</script></html>";
-        header("location: categories.php");
+        header("location: categories.php?x=1");
         exit();
     }else {
         die("Query failed " . mysqli_error());

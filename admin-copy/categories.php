@@ -50,7 +50,6 @@
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
-<body class="g-sidenav-show  bg-gray-100">
 
 <script>
     <?php
@@ -58,7 +57,7 @@
         $alert="
             swal.fire({
                  type : 'success',
-                 title : 'Reservation Cancelled',
+                 title : 'Category Deleted Successfully',
                  text : 'Record has added to CANCELLED RESERVATIONS'
              })
             ";
@@ -74,8 +73,8 @@
         $alert="
             swal.fire({
                  type : 'success',
-                 title : 'Reservation Confirmed',
-                 text : 'Record has added to CONFIRMED RESERVATIONS'
+                 title : 'Category Created',
+                 text : 'Pastry Shop Category Added Success'
              })
             ";
         echo $alert;
@@ -337,12 +336,15 @@
               <div class="col-lg-6 mb-lg-0 mb-4">
               <h5 style="text-align:center">ADD A NEW CATEGORY</h5>
               <br/>
-              <form name="categoryForm" id="categoryForm" action="categories-exec.php" method="post" onsubmit="return categoriesValidate(this)">
+              <form class="needs-validation" name="categoryForm" id="categoryForm" action="categories-exec.php" method="post" onsubmit="return categoriesValidate(this)" novalidate>
               <div class="input-group mb-3">
-                <input type="text" name="name" class="form-control" placeholder="ADD A NEW CATEGORY TO PASTRY SHOP" aria-label="ADD A NEW CATEGORY" aria-describedby="button-addon2">
-                <button class="btn btn-outline-primary mb-0" type="submit" name="Submit" id="button-addon2">Add</button>
-                
+                <input type="text" name="name" class="form-control" id="validationTooltip01" placeholder="ADD A NEW CATEGORY TO PASTRY SHOP" aria-label="ADD A NEW CATEGORY" aria-describedby="button-addon2" required>
+                  <div class="valid-tooltip">
+                      Looks good!
+                  </div>
+                  <button class="btn btn-outline-primary mb-0" type="submit" name="Submit" id="button-addon2">Add</button>
                 </div></form>
+
               </div>
               <div class="col-lg-3 mb-lg-0 mb-4"></div>
               </div>
@@ -400,6 +402,28 @@
         })
     })
 
+</script>
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict'
+
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        }, false)
+    }())
 </script>
 
   <!--   Core JS Files   -->

@@ -321,7 +321,7 @@ require_once('authenticate/auth.php');
                 <div>
                   <div class="d-flex flex-column h-100">
                     <p class="mb-1 pt-2 text-bold"></p>
-                    <h5 class="font-weight-bolder">Foods of Launge</h5>
+                    <h5 class="font-weight-bolder">Foods of Lounge</h5>
                     <p class="mb-5">Add foods or view available foods</p>
                     <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="./foods-lounge.php">
                     <button type="button" class="btn btn-primary btn-lg">Add Food Item</button>
@@ -339,7 +339,7 @@ require_once('authenticate/auth.php');
                 <div>
                   <div class="d-flex flex-column h-100">
                     <p class="mb-1 pt-2 text-bold"></p>
-                    <h5 class="font-weight-bolder">Food categories of Launge</h5>
+                    <h5 class="font-weight-bolder">Food categories of Lounge</h5>
                     <p class="mb-5">Add categories or view available categories</p>
                     <a class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="./categories-lounge.php">
                     <button type="button" class="btn btn-primary btn-lg">Add Food Category</button>
