@@ -61,7 +61,7 @@
       </a>
     </div>
     <hr class="horizontal dark mt-0">
-    <div class="collapse navbar-collapse  w-auto  max-height-vh-100 h-100" id="sidenav-collapse-main" style="overflow: initial;">
+    <div class="collapse navbar-collapse w-auto max-height-vh-100 h-100" id="sidenav-collapse-main" style="overflow: initial;">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="./index.php">
@@ -84,7 +84,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./foods-menu.php">
+          <a class="nav-link  " href="./foods-menu.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>office</title>
@@ -103,11 +103,12 @@
             <span class="nav-link-text ms-1">Foods</span>
           </a>
         </li>
+        
         <li class="nav-item">
-          <a class="nav-link" href="./allocation.php">
+          <a class="nav-link  " href="./allocation.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>Allocation</title>
+                <title>office</title>
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g transform="translate(-1869.000000, -293.000000)" fill="#FFFFFF" fill-rule="nonzero">
                     <g transform="translate(1716.000000, 291.000000)">
@@ -123,6 +124,7 @@
             <span class="nav-link-text ms-1">Allocation</span>
           </a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link active" href="#">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -170,7 +172,7 @@
           <a class="nav-link  " href="./reservations.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>box-3d-50</title>
+                <title></title>
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g transform="translate(-2319.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
                     <g transform="translate(1716.000000, 291.000000)">
@@ -188,7 +190,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/rtl.html">
+          <a class="nav-link  " href="./accounts.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>settings</title>
@@ -212,7 +214,7 @@
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Accounts</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/sign-in.html">
+          <a class="nav-link  " href="./employees.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 40 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>Add New Staff</title>
@@ -232,7 +234,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/profile.html">
+          <a class="nav-link  " href="./profile.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>Profile Settings</title>
@@ -253,7 +255,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/sign-up.html">
+          <a class="nav-link  " href="./logout.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="20px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>spaceship</title>
@@ -289,6 +291,11 @@
           </ol>
           <h6 class="font-weight-bolder mb-0">PROMOTIONS</h6>
         </nav>
+        <div style="mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+        <a href="#createPromo">
+        <button type="button" class="btn btn-primary">Create a New Promotion</button>
+        </a>
+        <div>
       </div>
     </nav>
     <!-- End Navbar -->
@@ -298,29 +305,88 @@
         <div class="col-lg-12 mb-lg-0 mb-4">
           <div class="card">
             <div class="card-body p-3">
-              <div class="row">
-              <div class="col-lg-3 mb-lg-0 mb-4"></div>
-              <div class="col-lg-6 mb-lg-0 mb-4">
-              <h5 style="text-align:center">ADD A NEW CATEGORY</h5>
-              <br/>
-              <form name="categoryForm" id="categoryForm" action="categories-exec.php" method="post" onsubmit="return categoriesValidate(this)">
-              <div class="input-group mb-3">
-                <input type="text" name="name" class="form-control" placeholder="ADD A NEW CATEGORY TO PASTRY SHOP" aria-label="ADD A NEW CATEGORY" aria-describedby="button-addon2">
-                <button class="btn btn-outline-primary mb-0" type="submit" name="Submit" id="button-addon2">Add</button>
-                
-                </div></form>
+            <h4 class="mt-4 mb-4" style="text-align:center;">Ongoing Promotions List</h4>
+            <hr/>
+        <table width="90%" align="center">
+        <tr>
+        <th>Promo Photo</th>
+        <th>Promo Name</th>
+        <th>Promo Description</th>
+        <th>Promo Price</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Action(s)</th>
+        </tr>
+
+        <?php
+        //loop through all table rows
+        $symbol=mysqli_fetch_assoc($currencies); //gets active currency
+        while ($row=mysqli_fetch_array($result)){
+        echo "<tr>";
+        echo '<td><img src=images/'. $row['special_photo']. ' width="80" height="70"></td>';
+        echo "<td>" . $row['special_name']."</td>";
+        echo "<td width='180' align='left'>" . $row['special_description']."</td>";
+        echo "<td>" . $symbol['currency_symbol']. "" . $row['special_price']."</td>";
+        echo "<td>" . $row['special_start_date']."</td>";
+        echo "<td>" . $row['special_end_date']."</td>";
+        echo '<td><a href="delete-special.php?id=' . $row['special_id'] . '">Remove Promo</a></td>';
+        echo "</tr>";
+        }
+        mysqli_free_result($result);
+        mysqli_close($conn);
+        ?>
+        </table>
+            </div>
+          </div>
+        </div>
+
+        <div id="createPromo">
+        <div class="col-lg-12 mb-lg-0 mb-4 mt-4">
+          <div class="card">
+            <div class="card-body ">
+            <h3 class="mt-2" style="text-align:center;">Create a New Promotion</h3>
+            <hr/>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+              <div style="align-items:center;">
+              <form class="p-2" name="specialsForm" id="specialsForm" action="specials-exec.php" method="post" enctype="multipart/form-data" onsubmit="return specialsValidate(this)">
+                  <div class="form-group">
+                      <label for="example-text-input" class="form-control-label">Promotion Name</label>
+                      <input type="text" name="name" id="name" class="form-control" placeholder="Enter Promotion Name">
+                  </div>
+                  <div class="form-group">
+                      <label for="example-search-input" class="form-control-label">Promotion Description</label>
+                      <textarea name="description" id="description" class="form-control" placeholder="Enter Promotion Description"></textarea>
+                  </div>
+                  <div class="form-group">
+                      <label for="example-email-input" class="form-control-label">Promo Price</label>
+                      <input type="text" name="price" id="price" class="form-control" placeholder="Enter Promo Price">
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                          <label for="example-date-input" class="form-control-label">Start Date</label>
+                          <input name="start_date" id="start_date" class="form-control" type="date" placeholder="Start Date">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                          <label for="example-month-input" class="form-control-label">End Date</label>
+                          <input name="end_date" id="end_date" class="form-control" type="date" placeholder="End Date">
+                      </div>
+                    </div>
+                  <div class="form-group">
+                      <label for="example-time-input" class="form-control-label">Photo</label>
+                      <input type="file" name="photo" id="photo" class="form-control" placeholder="Add Photo">
+                  </div>
+                  <div class="form-group">
+                      <input type="submit" name="Submit" value="Create Promotion" class="form-control">
+                  </div>
+              </form>
               </div>
-              <div class="col-lg-3 mb-lg-0 mb-4"></div>
               </div>
-              <hr/>
-              <br/>
-              <div class="row">
-              <div class="col-lg-12 mb-lg-0 mb-4">
-                <h5 style="text-align:center">AVAILABLE CATEGORIES</h5>
-                <
-            <br/><br/>
-                </div>
-              </div>
+              <div class="col-2"></div>
             </div>
           </div>
         </div>

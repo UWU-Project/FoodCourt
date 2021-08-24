@@ -179,7 +179,7 @@ or die("There are no records to count ... \n" . mysqli_error());
           <a class="nav-link  " href="./reservations.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>box-3d-50</title>
+                <title></title>
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g transform="translate(-2319.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
                     <g transform="translate(1716.000000, 291.000000)">
@@ -197,7 +197,7 @@ or die("There are no records to count ... \n" . mysqli_error());
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/rtl.html">
+          <a class="nav-link  " href="./accounts.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>settings</title>
@@ -429,7 +429,7 @@ or die("There are no records to count ... \n" . mysqli_error());
               <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
                 <h5 class="text-white font-weight-bolder mb-4 pt-2">Add Foods</h5>
                 <p class="text-white">New Food Categories or New Food Items </p>
-                <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="./foods.php">
+                <a class="text-white text-sm font-weight-bold mb-0 icon-move-right mt-auto" href="./foods-menu.php">
                   Add Now
                   <i class="fas fa-arrow-right text-sm ms-1" aria-hidden="true"></i>
                 </a>
@@ -451,7 +451,7 @@ or die("There are no records to count ... \n" . mysqli_error());
                       </a>
                     </div>
                     <div class="card-body px-1 pb-0">
-                      <a href="javascript:;">
+                      <a href="./orders.php">
                         <h5>
                           Orders List
                         </h5>
@@ -460,8 +460,9 @@ or die("There are no records to count ... \n" . mysqli_error());
                       Music is something that every person has his or her own specific opinion about.
                       </p>
                       <div class="d-flex align-items-center justify-content-between">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Orders</button>
-                        
+                      <a href="./orders.php">
+                        <button type="button" class="btn btn-outline-primary btn-sm mb-0" title="Visit Orders">Visit</button>
+                      </a>
                       </div>
                     </div>
                   </div>
@@ -474,7 +475,7 @@ or die("There are no records to count ... \n" . mysqli_error());
                       </a>
                     </div>
                     <div class="card-body px-1 pb-0">
-                      <a href="javascript:;">
+                      <a href="./reservations.php">
                         <h5>
                           Reservations
                         </h5>
@@ -483,8 +484,9 @@ or die("There are no records to count ... \n" . mysqli_error());
                         Music is something that every person has his or her own specific opinion about.
                       </p>
                       <div class="d-flex align-items-center justify-content-between">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Project</button>
-                        
+                      <a href="./reservations.php">
+                        <button type="button" class="btn btn-outline-primary btn-sm mb-0" title="Visit Reservations">Visit</button>
+                      </a>
                       </div>
                     </div>
                   </div>
@@ -497,7 +499,7 @@ or die("There are no records to count ... \n" . mysqli_error());
                       </a>
                     </div>
                     <div class="card-body px-1 pb-0">
-                      <a href="">
+                      <a href="./accounts.php">
                         <h5>
                           Customers List
                         </h5>
@@ -506,7 +508,9 @@ or die("There are no records to count ... \n" . mysqli_error());
                         Different people have different taste, and various types of music.
                       </p>
                       <div class="d-flex align-items-center justify-content-between">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Project</button>
+                      <a href="./accounts.php">
+                        <button type="button" class="btn btn-outline-primary btn-sm mb-0" title="Visit Customers">Visit</button>
+                      </a>
                       </div>
                     </div>
                   </div>
@@ -519,7 +523,7 @@ or die("There are no records to count ... \n" . mysqli_error());
                       </a>
                     </div>
                     <div class="card-body px-1 pb-0">
-                      <a href="">
+                      <a href="./specials.php">
                         <h5>
                         Manage Promotions
                         </h5>
@@ -528,7 +532,9 @@ or die("There are no records to count ... \n" . mysqli_error());
                         Different people have different taste, and various types of music.
                       </p>
                       <div class="d-flex align-items-center justify-content-between">
-                        <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Project</button>
+                      <a href="./specials.php">
+                        <button type="button" class="btn btn-outline-primary btn-sm mb-0" title="Visit Promotions">Visit</button>
+                        </a>
                       </div>
                     </div>
                   </div>
