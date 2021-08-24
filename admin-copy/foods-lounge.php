@@ -55,9 +55,47 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
   <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+  <script language="JavaScript" src="validation/admin.js"></script>
+ 
+     <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
+
+<script>
+    <?php
+    if(isset($_GET['m'])){
+        $alert="
+            swal.fire({
+                 type : 'success',
+                 title : 'Reservation Cancelled',
+                 text : ''
+             })
+            ";
+        echo $alert;
+    }
+    ?>
+</script>
+<!-- ================================================== -->
+<!-- ================================================== -->
+<script>
+    <?php
+    if(isset($_GET['x'])){
+        $alert="
+            swal.fire({
+                 type : 'success',
+                 title : 'Delete Confirmed',
+                 text : ''
+             })
+            ";
+        echo $alert;
+    }
+    ?>
+</script>
 <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
@@ -261,7 +299,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="./logout.php">
+          <a class="nav-link  " href="./user/logout-user.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="20px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>spaceship</title>
@@ -333,7 +371,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
                 echo "<td>" . $row['food_description']."</td>";
                 echo "<td>" . $symbol['currency_symbol']. "" . $row['food_price']."</td>";
                 echo "<td>" . $row['category_name']."</td>";
-                echo '<td><a href="delete-food.php?id=' . $row['food_id'] . '">Remove Food</a></td>';
+                echo '<td><a class="del-btn" href="delete-food.php?id=' . $row['food_id'] . '">Remove Food</a></td>';
                 echo "</tr>";
             }
             mysqli_free_result($result);
@@ -399,7 +437,26 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
       <?php require_once('components/footer.inc.php'); ?>
     </div>
   </main>
-  
+  <script>
+    $('.del-btn').on('click',function(e){
+        e.preventDefault();
+        const href = $(this).attr('href')
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Deletet It!'
+        }).then((result) => {
+            if (result.value) {
+                document.location.href = href;
+            }
+        })
+    })
+
+</script>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
