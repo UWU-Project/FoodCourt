@@ -55,12 +55,13 @@
   <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
-  <script language="JavaScript" src="validation/admin.js"></script>
   <style>
     html {
         scroll-behavior: smooth;
       }
     </style>
+  <script language="JavaScript" src="validation/admin.js"></script>
+ 
      <script
             src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -304,7 +305,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="./logout.php">
+          <a class="nav-link  " href="./user/logout-user.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="20px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>spaceship</title>

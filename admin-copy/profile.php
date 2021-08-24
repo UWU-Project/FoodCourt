@@ -1,6 +1,20 @@
 <?php
 require_once('authenticate/auth.php');
 ?>
+<?php
+//checking connection and connecting to a database
+require_once('connect/config.php');
+
+//Connect to mysqli server
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+if (!$conn) {
+    die('Failed to connect to server: ' . mysqli_error());
+}
+
+$fname = mysqli_query($conn, "SELECT * FROM admin")
+or die("There are no records to count ... \n" . mysqli_error());
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -229,7 +243,7 @@ require_once('authenticate/auth.php');
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./logout.php">
+          <a class="nav-link" href="./user/logout-user.php">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="20px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>spaceship</title>
@@ -270,7 +284,12 @@ require_once('authenticate/auth.php');
           <div class="col-auto my-auto">
             <div class="h-100">
               <h5 class="mb-1">
-                Alec Thompson
+              <?php
+                //loop through categories table rows
+             //    while ($row=mysqli_fetch_assoc($fname)){
+             //    echo $row[f_name];
+             //    }
+                 ?>
               </h5>
               <p class="mb-0 font-weight-bold text-sm">
                 CEO / Co-Founder

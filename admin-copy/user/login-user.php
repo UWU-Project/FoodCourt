@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
 
     <title>
-        Orchid Bliss - Login
+        Admin Panel - Login
     </title>
 
 
@@ -130,11 +130,10 @@
                     <div class="form-group">
                         <input class="form-control" type="password" name="password" placeholder="Password" >
                     </div>
-                    <div class="link forget-pass text-left"><a href="forgot-password.php">Forgot password?</a></div>
                     <div class="form-group">
                         <input class="form-control button bg-warning btn-lg w-100 mt-3 mb-0" type="submit" name="login" value="Login">
                     </div>
-                    <div class="link login-link text-center">Not yet a member? <a href="signup-user.php">Signup now</a></div>
+                    <div class="link login-link text-center">Forgot password? <a href="forgot-password.php"> Reset Now</a></div>
                 </form>
             </div>
             <div class="col-md-4">
