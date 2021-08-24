@@ -37,6 +37,7 @@ or die("There are no records to display ... \n" . mysqli_error());
   <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
@@ -294,7 +295,7 @@ or die("There are no records to display ... \n" . mysqli_error());
               <div class="col-lg-6 mb-lg-0 mb-4">
               <h5 style="text-align:center">ADD A NEW CATEGORY</h5>
               <br/>
-              <form name="categoryForm" id="categoryForm" action="categories-exec.php" method="post" onsubmit="return categoriesValidate(this)">
+              <form name="categoryForm" id="categoryForm" action="categories-exec-lounge.php" method="post" onsubmit="return categoriesValidate(this)">
               <div class="input-group mb-3">
                 <input type="text" name="name" class="form-control" placeholder="ADD A NEW CATEGORY TO LOUNGE" aria-label="ADD A NEW CATEGORY" aria-describedby="button-addon2">
                 <button class="btn btn-outline-primary mb-0" type="submit" name="Submit" id="button-addon2">Add</button>
@@ -318,7 +319,7 @@ or die("There are no records to display ... \n" . mysqli_error());
                 while ($row=mysqli_fetch_array($result)){
                     echo "<tr>";
                     echo "<td>" . $row['category_name']."</td>";
-                    echo '<td><a href="delete-category.php?id=' . $row['category_id'] . '">Remove Category</a></td>';
+                    echo '<td><a href="delete-category-lounge.php?id=' . $row['category_id'] . '">Remove Category</a></td>';
                     echo "</tr>";
                 }
                 mysqli_free_result($result);
