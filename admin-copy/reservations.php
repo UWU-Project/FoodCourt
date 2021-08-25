@@ -641,7 +641,8 @@
                                   if ($row['allocat'] == '1') {
                                       echo '<span class="badge bg-gradient-primary">'.'ALLOCATED'.'</span>';
                                   }else{
-                                      echo '<span class="badge bg-gradient-warning">'.'NOT ALLOCATED'.'</span>';
+
+                                      echo '<a class="btn bg-gradient-success" href="allocation.php">ALLOCATE</a>';
                                   }
 
                                   echo "</td>";

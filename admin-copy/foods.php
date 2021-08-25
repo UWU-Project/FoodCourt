@@ -93,8 +93,8 @@
         $alert="
             swal.fire({
                  type : 'success',
-                 title : 'Deletion Confirmed',
-                 text : 'Succecfully Deleted'
+                 title : 'Removed Succesfully',
+                 text : 'Record has Removed from Pastry Shop'
              })
             ";
         echo $alert;
@@ -400,22 +400,22 @@
                 <div class="col-2"></div>
                 <div class="col-8">
               <div style="align-items:center;">
-              <form class="p-2" name="foodsForm" id="foodsForm" action="foods-exec.php" method="post" enctype="multipart/form-data" onsubmit="return foodsValidate(this)">
+              <form class="p-2 needs-validation" name="foodsForm" id="foodsForm" action="foods-exec.php" method="post" enctype="multipart/form-data" onsubmit="return foodsValidate(this)" novalidate>
                   <div class="form-group">
-                      <label for="example-text-input" class="form-control-label">Food Name</label>
-                      <input type="text" name="name" id="name" class="form-control" placeholder="Enter Food Name">
+                      <label for="example-text-input" class="form-control-label" >Food Name</label>
+                      <input type="text" name="name" id="name" class="form-control" placeholder="Enter Food Name" required>
                   </div>
                   <div class="form-group">
                       <label for="example-search-input" class="form-control-label">Description</label>
-                      <textarea name="description" id="description" class="form-control" placeholder="Enter Description"></textarea>
+                      <textarea name="description" id="description" class="form-control" placeholder="Enter Description" required></textarea>
                   </div>
                   <div class="form-group">
                       <label for="example-email-input" class="form-control-label">Food Price</label>
-                      <input type="text" name="price" id="price" class="form-control" placeholder="Enter Food Price">
+                      <input type="text" name="price" id="price" class="form-control" placeholder="Enter Food Price" required>
                   </div>
                       <div class="form-group">
                           <label for="example-date-input" class="form-control-label">Category</label>
-                          <select  name="category" id="category" class="form-control">
+                          <select  name="category" id="category" class="form-control" required>
                           <option value="select">- select one option -
                                 <?php
                                 //loop through categories table rows
@@ -427,10 +427,10 @@
                       </div>
                   <div class="form-group">
                       <label for="example-time-input" class="form-control-label">Add Image</label>
-                      <input type="file" name="photo" id="photo" class="form-control" placeholder="Add Photo">
+                      <input type="file" name="photo" id="photo" class="form-control" placeholder="Add Photo" required>
                   </div>
                   <div class="form-group">
-                      <input type="submit" name="Submit" value="Add Foods" class="form-control">
+                      <input class="btn bg-gradient-primary btn-lg w-100" type="submit" name="Submit" value="Add Foods" class="form-control btn bg-gradient-primary btn-lg w-100">
                   </div>
               </form>
               </div>
@@ -462,6 +462,28 @@
         })
     })
 
+</script>
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict'
+
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        }, false)
+    }())
 </script>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/popper.min.js"></script>

@@ -86,6 +86,16 @@ if(isset($_POST['Submit'])){
         background: url(images/ourback.jpg);
 
     }
+        .product-grid{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .product-grid>div{
+            width:100px;
+            height: 200px;
+            margin-bottom: 130px;
+        }
     </style>
 
 
@@ -94,18 +104,16 @@ if(isset($_POST['Submit'])){
 
 
 <!-- TOP HEADER Start
-    ================================================== -->
+================================================== -->
 
 <section id="top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-
-            <div class="col-md-6">
+            <div class="col-md-9">
                 <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
-
-            <div class="col-md-3 clearfix">
-                <ul class="login-cart">
+            <div class="col-md-3 clearfix" >
+                <ul class="login-cart" style="text-align: right">
                     <li>
                         <a href="user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
                     </li>
@@ -114,24 +122,8 @@ if(isset($_POST['Submit'])){
                     </li>
                 </ul>
             </div>
-            <div class="col-md-1">
-
-            </div>
-
-            <div class="col-md-2">
-                <div class="search-box">
-                    <div class="input-group">
-                        <input placeholder="Search Here" type="text" class="form-control">
-                        <span class="input-group-btn">
-					        	<button type="button">
-
-					      	</span>
-                    </div><!-- /.input-group -->
-                </div><!-- /.search-box -->
-            </div>
         </div> <!-- End Of /.row -->
     </div>	<!-- End Of /.Container -->
-
 </section>  <!-- End of /Section -->
 
 <!-- LOGO Start

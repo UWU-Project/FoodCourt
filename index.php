@@ -278,7 +278,11 @@ padding-top: 10rem;
         padding-left: 80px;
 
     }
-body{
+    a:link {
+        text-decoration: none;
+    }
+
+    body{
     background: url(images/ourback.jpg);
 
 }
@@ -292,15 +296,13 @@ body{
 ================================================== -->
 
 <section id="top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-
-            <div class="col-md-6">
+            <div class="col-md-9">
                 <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
-
-            <div class="col-md-3 clearfix">
-                <ul class="login-cart">
+            <div class="col-md-3 clearfix" >
+                <ul class="login-cart" style="text-align: right">
                     <li>
                         <a href="user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
                     </li>
@@ -309,24 +311,8 @@ body{
                     </li>
                 </ul>
             </div>
-            <div class="col-md-1">
-
-            </div>
-
-            <div class="col-md-2">
-                <div class="search-box">
-                    <div class="input-group">
-                        <input placeholder="Search Here" type="text" class="form-control">
-                        <span class="input-group-btn">
-					        	<button type="button">
-
-					      	</span>
-                    </div><!-- /.input-group -->
-                </div><!-- /.search-box -->
-            </div>
         </div> <!-- End Of /.row -->
     </div>	<!-- End Of /.Container -->
-
 </section>  <!-- End of /Section -->
 
 <!-- LOGO Start
@@ -431,7 +417,9 @@ body{
                     <div class="carousel-container">
                         <div class="carousel-content">
                             <h2 class="animate__animated animate__fadeInDown"><span>PASTRY</span> SHOP</h2>
-                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                            <p class="animate__animated animate__fadeInUp">Hello to You!
+                                Sandwiches Are Wonderful. You Don’t Need A Spoon Or A Plate
+                            </p>
                             <div>
                                 <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
                                 <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
@@ -445,7 +433,9 @@ body{
                     <div class="carousel-container">
                         <div class="carousel-content">
                             <h2 class="animate__animated animate__fadeInDown">THE LOUNGE</h2>
-                            <p class="animate__animated animate__fadeInUp"> fresh, delicious meal to reach your optimum health and fitness.</p>
+                            <p class="animate__animated animate__fadeInUp">  Order To Your Doorstep
+                                We welcome your appetite. Let our food satisfy your stomach.
+                            </p>
                             <div>
                                 <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
                                 <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
@@ -460,7 +450,9 @@ body{
                     <div class="carousel-container">
                         <div class="carousel-content">
                             <h2 class="animate__animated animate__fadeInDown">THE BUFFET </h2>
-                            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                            <p class="animate__animated animate__fadeInUp"> Let’s Eat Together!
+                                Need food and a good place to eat? Welcome to our humble place where you can eat good food peacefully.
+                            </p>
                             <div>
                                 <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
                                 <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
@@ -496,7 +488,7 @@ body{
                             Healthy food
                         </h3>
                         <p>
-                            Eat healthy think better.
+                            “IT IS HEALTH THAT IS REAL WEALTH AND NOT PIECES OF GOLD AND SILVER.”
                         </p>
                     </div>
                 </div>
@@ -509,7 +501,7 @@ body{
                             Fast delivery
                         </h3>
                         <p>
-                            Delivering to doorstep.
+                            Give your clients the earliest delivery consistent with quality, Delivering to doorstep.
                         </p>
                     </div>
                 </div>
@@ -522,7 +514,7 @@ body{
                             Tasty Food
                         </h3>
                         <p>
-                            Love at first bite.
+                            I like people who love to eat. They’re the best kind of people in the world.
                         </p>
                     </div>
                 </div>
@@ -601,12 +593,12 @@ body{
                         <br><br>
                         <h1 class="text-gradient text-info" id="state1" countTo="1500">0</h1>
                         <h5 style="color: #ffd002">CUSTOMERS</h5>
-                        <p>Of “high-performing” level are led by a certified project manager</p>
+                        <p>Providing great customer service does not always mean doing things by the book.</p>
                     </div>
 
                     <div class="col-md-4 details_card ">
                         <br><br>
-                        <h1 class="text-gradient text-info"><span id="state2" countTo="3000+">0</span>+</h1>
+                        <h1 class="text-gradient text-info"><span id="state2" countTo="3000">0</span>+</h1>
                         <h5 style="color: #ffd002">FOODS</h5>
                         <p>That meets quality standards required by our users</p>
                     </div>
@@ -922,7 +914,7 @@ body{
                         </div>
                         <p>
                             <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            Had dinner here recently. My husband ordered the Italian calzone. It came out as a 10” size dinner portion. He claimed it was delicious. The service was excellent.
+                            Had dinner here recently. My Girlfriend ordered the Italian calzone. It came out as a 10” size dinner portion. He claimed it was delicious. The service was excellent.
                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                         </p>
                     </div>

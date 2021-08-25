@@ -89,49 +89,36 @@
             background: #000;
         }
 
-    </style
+         body{
+             background: url(../images/ourback.jpg);
+
+         }
     </style>
+
+
 </head>
 <body>
-
 <!-- TOP HEADER Start
 ================================================== -->
 
 <section id="top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-
-            <div class="col-md-6">
+            <div class="col-md-9">
                 <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
-
-            <div class="col-md-3 clearfix">
-                <ul class="login-cart">
+            <div class="col-md-3 clearfix" >
+                <ul class="login-cart" style="text-align: right">
                     <li>
-                        <a href="../customer/login.php"> <i class="fas fa-user"></i>LOGIN</a>
+                        <a href="../user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
                     </li>
                     <li>
-                        <a href="../customer/create.php"><i class="fas fa-user-plus"></i>REGISTER</a>
+                        <a href="../user/signup-user.php"><i class="fas fa-user-plus"></i>REGISTER</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-md-1">
-
-            </div>
-
-            <div class="col-md-2">
-                <div class="search-box">
-                    <div class="input-group">
-                        <input placeholder="Search Here" type="text" class="form-control">
-                        <span class="input-group-btn">
-					        	<button type="button">
-					      	</span>
-                    </div><!-- /.input-group -->
-                </div><!-- /.search-box -->
-            </div>
         </div> <!-- End Of /.row -->
-    </div>    <!-- End Of /.Container -->
-
+    </div>	<!-- End Of /.Container -->
 </section>  <!-- End of /Section -->
 
 <!-- LOGO Start
@@ -204,7 +191,7 @@
         <div class="py-5 text-center">
 
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb my-2">
+                <ol class="breadcrumb my-2"  style="justify-content: center;">
                     <li class="breadcrumb-item active"><a href="#">Cart</a></li>
                     <li class="breadcrumb-item active"><a href="#">Billing Details</a></li>
                     <li class="breadcrumb-item active"><a>Billing Success</a></li>

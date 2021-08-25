@@ -24,52 +24,39 @@ if($_SESSION['info'] == false){
     <!-- CSS Files -->
     <link id="pagestyle" href="../assets/css/soft-design-system.css?v=1.0.5" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body{
+            background: url(../images/ourback.jpg);
 
+        }
+    </style>
 </head>
+
 <body>
-
-
 
 <!-- TOP HEADER Start
 ================================================== -->
 
 <section id="top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-
-            <div class="col-md-6">
+            <div class="col-md-9">
                 <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
-
-            <div class="col-md-3 clearfix">
-                <ul class="login-cart">
+            <div class="col-md-3 clearfix" >
+                <ul class="login-cart" style="text-align: right">
                     <li>
-                        <a href="../user/login-user.php" class="active"> <i class="fas fa-user active"></i>LOGIN</a>
+                        <a href="../user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
                     </li>
                     <li>
                         <a href="../user/signup-user.php"><i class="fas fa-user-plus"></i>REGISTER</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-md-1">
-
-            </div>
-
-            <div class="col-md-2">
-                <div class="search-box">
-                    <div class="input-group">
-                        <input placeholder="Search Here" type="text" class="form-control">
-                        <span class="input-group-btn">
-					        	<button type="button">
-
-					      	</span>
-                    </div><!-- /.input-group -->
-                </div><!-- /.search-box -->
-            </div>
         </div> <!-- End Of /.row -->
     </div>	<!-- End Of /.Container -->
-
 </section>  <!-- End of /Section -->
+
 
 <!-- LOGO Start
 ================================================== -->

@@ -103,27 +103,27 @@ or die("Something is wrong ... \n" . mysqli_error());
         .modal-open .container-fluid, .modal-open  .container {
             -webkit-filter: blur(5px) grayscale(90%);
         }
+        body{
+            background: url(../images/ourback.jpg);
+
+        }
     </style>
 
 
 </head>
 <body>
 
-
-<!-- Header Begins -->
 <!-- TOP HEADER Start
 ================================================== -->
 
 <section id="top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-
-            <div class="col-md-6">
+            <div class="col-md-9">
                 <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
-
-            <div class="col-md-3 clearfix">
-                <ul class="login-cart">
+            <div class="col-md-3 clearfix" >
+                <ul class="login-cart" style="text-align: right">
                     <li>
                         <a href="../user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
                     </li>
@@ -132,26 +132,12 @@ or die("Something is wrong ... \n" . mysqli_error());
                     </li>
                 </ul>
             </div>
-            <div class="col-md-1">
-
-            </div>
-
-            <div class="col-md-2">
-                <div class="search-box">
-                    <div class="input-group">
-                        <input placeholder="Search Here" type="text" class="form-control">
-                        <span class="input-group-btn">
-					        	<button type="button">
-
-					      	</span>
-                    </div><!-- /.input-group -->
-                </div><!-- /.search-box -->
-            </div>
         </div> <!-- End Of /.row -->
-    </div>    <!-- End Of /.Container -->
-
+    </div>	<!-- End Of /.Container -->
 </section>  <!-- End of /Section -->
 
+<!-- LOGO Start
+================================================== -->
 <!-- LOGO Start
 ================================================== -->
 

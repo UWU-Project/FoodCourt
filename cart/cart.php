@@ -158,46 +158,27 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
 
 </head>
 <body>
-<!-- Header Begins -->
 <!-- TOP HEADER Start
 ================================================== -->
 
 <section id="top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-
-            <div class="col-md-6">
+            <div class="col-md-9">
                 <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
-
-            <div class="col-md-3 clearfix">
-                <ul class="login-cart">
+            <div class="col-md-3 clearfix" >
+                <ul class="login-cart" style="text-align: right">
                     <li>
-                        <a href="../customer/login.php"> <i class="fas fa-user"></i>LOGIN</a>
+                        <a href="../user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
                     </li>
                     <li>
-                        <a href="../customer/create.php"><i class="fas fa-user-plus"></i>REGISTER</a>
+                        <a href="../user/signup-user.php"><i class="fas fa-user-plus"></i>REGISTER</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-md-1">
-
-            </div>
-
-            <div class="col-md-2">
-                <div class="search-box">
-                    <div class="input-group">
-                        <input placeholder="Search Here" type="text" class="form-control">
-                        <span class="input-group-btn">
-					        	<button type="button">
-
-					      	</span>
-                    </div><!-- /.input-group -->
-                </div><!-- /.search-box -->
-            </div>
         </div> <!-- End Of /.row -->
-    </div>    <!-- End Of /.Container -->
-
+    </div>	<!-- End Of /.Container -->
 </section>  <!-- End of /Section -->
 
 <!-- LOGO Start
@@ -344,7 +325,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
         <div class="container-fluid">
 
           <div class="table-responsive">
-              <table class="table table-hover align-items-center mb-0">
+              <table class="table table-hover align-items-center mb-0" style="margin: 0 10px">
                   <thead class="table-dark">
               <tr>
                 <th>ITEM ID</th>
@@ -425,7 +406,7 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
                 <?php
                 $cartItem = rtrim($cartItem, ',');
                 echo "<tr>";
-                echo '<td colspan="9" class="table-active"><a href="order-exec.php?id=' . $cartItem . '"><i class="btn btn-warning" >Go To Checkout</i></a></td>';
+                echo '<td colspan="9" class="table-active"  style="text-align: center" ><a href="order-exec.php?id=' . $cartItem . '"><i class="btn btn-warning">Go To Checkout</i></a></td>';
                 echo "</tr>";
 
 

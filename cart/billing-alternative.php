@@ -48,49 +48,36 @@ $result = mysqli_query($conn, "SELECT * FROM orders_details o inner join cart_de
     <link rel="stylesheet" href="../css/style.css">
     <script language="JavaScript" src="../validation/user.js"></script>
     <link rel="stylesheet" href="../css/bread.css">
+    <style>
+        body{
+            background: url(../images/ourback.jpg);
+
+        }
+    </style>
 </head>
 
 <body>
-
-
 <!-- TOP HEADER Start
 ================================================== -->
 
 <section id="top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-
-            <div class="col-md-6">
+            <div class="col-md-9">
                 <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
-
-            <div class="col-md-3 clearfix">
-                <ul class="login-cart">
+            <div class="col-md-3 clearfix" >
+                <ul class="login-cart" style="text-align: right">
                     <li>
-                        <a href="../customer/login.php"> <i class="fas fa-user"></i>LOGIN</a>
+                        <a href="../user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
                     </li>
                     <li>
-                        <a href="../customer/create.php"><i class="fas fa-user-plus"></i>REGISTER</a>
+                        <a href="../user/signup-user.php"><i class="fas fa-user-plus"></i>REGISTER</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-md-1">
-
-            </div>
-
-            <div class="col-md-2">
-                <div class="search-box">
-                    <div class="input-group">
-                        <input placeholder="Search Here" type="text" class="form-control">
-                        <span class="input-group-btn">
-					        	<button type="button">
-					      	</span>
-                    </div><!-- /.input-group -->
-                </div><!-- /.search-box -->
-            </div>
         </div> <!-- End Of /.row -->
-    </div>    <!-- End Of /.Container -->
-
+    </div>	<!-- End Of /.Container -->
 </section>  <!-- End of /Section -->
 
 <!-- LOGO Start
@@ -164,7 +151,7 @@ $result = mysqli_query($conn, "SELECT * FROM orders_details o inner join cart_de
 
 
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb my-2">
+                <ol class="breadcrumb my-2"  style="justify-content: center;">
                     <li class="breadcrumb-item active"><a href="#">Cart</a></li>
                     <li class="breadcrumb-item active"><a href="#">Billing Details</a></li>
                     <li class="breadcrumb-item"><a>Billing Success</a></li>
@@ -172,7 +159,7 @@ $result = mysqli_query($conn, "SELECT * FROM orders_details o inner join cart_de
                     <li class="breadcrumb-item"><a>Payment</a></li>
                 </ol>
             </nav>
-
+<br>
             <h1 style="padding-top: 20px">BILLING ADDRESS</h1>
             <hr>
             <p>We have found out that you don't have a billing address in your account. Please add a billing address in

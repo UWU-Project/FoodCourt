@@ -711,7 +711,7 @@
 
                   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                       <hr>
-                      <h3>DELIVERED ORDERS</h3>
+                      <h3>CANCELLED ORDERS</h3>
                       <hr>
                       <div class="table-responsive">
                           <table class="table table-hover align-items-center mb-0">
