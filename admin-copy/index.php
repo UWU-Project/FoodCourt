@@ -505,7 +505,7 @@ or die("There are no records to count ... \n" . mysqli_error());
                         </h5>
                       </a>
                       <p class="mb-4 text-sm">
-                        View and 
+                        View Registered customers details and manage cutomers from the website.
                       </p>
                       <div class="d-flex align-items-center justify-content-between">
                       <a href="./accounts.php">
@@ -529,7 +529,7 @@ or die("There are no records to count ... \n" . mysqli_error());
                         </h5>
                       </a>
                       <p class="mb-4 text-sm">
-                        Different people have different taste, and various types of music.
+                        Create seasonal/ creative new promotions and view ongoing promotions.
                       </p>
                       <div class="d-flex align-items-center justify-content-between">
                       <a href="./specials.php">
