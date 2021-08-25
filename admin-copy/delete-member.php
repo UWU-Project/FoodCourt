@@ -21,7 +21,7 @@ if (isset($_GET['id']))
     or die("The member does not exist ... \n");
 
     // redirect back to the accounts page
-    header("Location: accounts.php");
+    header("Location: accounts.php?m=1");
 }
 else
     // if id isn't set, redirect back to the accounts page

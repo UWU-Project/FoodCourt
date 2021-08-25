@@ -54,8 +54,8 @@
         $alert="
             swal.fire({
                  type : 'success',
-                 title : 'Reservation Cancelled',
-                 text : 'Record has added to CANCELLED RESERVATIONS'
+                 title : 'Customer Deleted Succesfully',
+               
              })
             ";
         echo $alert;
