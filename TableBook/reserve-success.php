@@ -90,6 +90,10 @@
         .background-muted {
             background-color: #fafafc
         }
+        body{
+            background: url(../images/ourback.jpg);
+
+        }
     </style>
 </head>
 <body>
@@ -117,8 +121,6 @@
     </div>	<!-- End Of /.Container -->
 </section>  <!-- End of /Section -->
 
-<!-- LOGO Start
-================================================== -->
 <!-- LOGO Start
 ================================================== -->
 
