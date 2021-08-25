@@ -93,8 +93,8 @@
         $alert="
             swal.fire({
                  type : 'success',
-                 title : 'Removed Succesfully',
-                 text : 'Record has Removed from Pastry Shop'
+                 title : 'Deletion Confirmed',
+                 text : 'Succecfully Deleted'
              })
             ";
         echo $alert;
