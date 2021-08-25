@@ -367,7 +367,7 @@ if(isset($_POST['Submit'])){
                                     <?php echo '<a href=images/'. $row[$lt.'_photo']. ' data-bs-toggle="modal" data-bs-target="#' .$deliver_data.'"><img src=images/'. $row[$lt.'_photo']. ' width="auto" height="100%"></a>'?>
 
 
-                                        <!-- Modal -->
+                                        <!-- Modalx -->
                                         <div class="modal fade" id="<?php echo $deliver_data; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog">
                                                 <div class="modal-content">
