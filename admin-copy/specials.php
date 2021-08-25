@@ -49,6 +49,14 @@
   <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+    <script language="JavaScript" src="validation/admin.js"></script>
+
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
@@ -329,7 +337,7 @@
         echo "<td>" . $symbol['currency_symbol']. "" . $row['special_price']."</td>";
         echo "<td>" . $row['special_start_date']."</td>";
         echo "<td>" . $row['special_end_date']."</td>";
-        echo '<td><a href="delete-special.php?id=' . $row['special_id'] . '">Remove Promo</a></td>';
+        echo '<td><a class="del-btn" href="delete-special.php?id=' . $row['special_id'] . '">Remove Promo</a></td>';
         echo "</tr>";
         }
         mysqli_free_result($result);
@@ -350,38 +358,38 @@
                 <div class="col-2"></div>
                 <div class="col-8">
               <div style="align-items:center;">
-              <form class="p-2" name="specialsForm" id="specialsForm" action="specials-exec.php" method="post" enctype="multipart/form-data" onsubmit="return specialsValidate(this)">
+              <form class="p-2 needs-validation" name="specialsForm" id="specialsForm" action="specials-exec.php" method="post" enctype="multipart/form-data" onsubmit="return specialsValidate(this)" novalidate>
                   <div class="form-group">
                       <label for="example-text-input" class="form-control-label">Promotion Name</label>
-                      <input type="text" name="name" id="name" class="form-control" placeholder="Enter Promotion Name">
+                      <input type="text" name="name" id="name" class="form-control" placeholder="Enter Promotion Name" required>
                   </div>
                   <div class="form-group">
                       <label for="example-search-input" class="form-control-label">Promotion Description</label>
-                      <textarea name="description" id="description" class="form-control" placeholder="Enter Promotion Description"></textarea>
+                      <textarea name="description" id="description" class="form-control" placeholder="Enter Promotion Description" required></textarea>
                   </div>
                   <div class="form-group">
                       <label for="example-email-input" class="form-control-label">Promo Price</label>
-                      <input type="text" name="price" id="price" class="form-control" placeholder="Enter Promo Price">
+                      <input type="text" name="price" id="price" class="form-control" placeholder="Enter Promo Price" required>
                   </div>
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
                           <label for="example-date-input" class="form-control-label">Start Date</label>
-                          <input name="start_date" id="start_date" class="form-control" type="date" placeholder="Start Date">
+                          <input name="start_date" id="start_date" class="form-control" type="date" placeholder="Start Date" required>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                           <label for="example-month-input" class="form-control-label">End Date</label>
-                          <input name="end_date" id="end_date" class="form-control" type="date" placeholder="End Date">
+                          <input name="end_date" id="end_date" class="form-control" type="date" placeholder="End Date" required>
                       </div>
                     </div>
                   <div class="form-group">
                       <label for="example-time-input" class="form-control-label">Photo</label>
-                      <input type="file" name="photo" id="photo" class="form-control" placeholder="Add Photo">
+                      <input type="file" name="photo" id="photo" class="form-control" placeholder="Add Photo" required>
                   </div>
                   <div class="form-group">
-                      <input type="submit" name="Submit" value="Create Promotion" class="form-control">
+                      <input class="btn bg-gradient-faded-primary" type="submit" name="Submit" value="Create Promotion" class="form-control">
                   </div>
               </form>
               </div>
@@ -395,7 +403,49 @@
       <?php require_once('components/footer.inc.php'); ?>
     </div>
   </main>
-  
+
+<script>
+    $('.del-btn').on('click',function(e){
+        e.preventDefault();
+        const href = $(this).attr('href')
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Deletet It!'
+        }).then((result) => {
+            if (result.value) {
+                document.location.href = href;
+            }
+        })
+    })
+
+</script>
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict'
+
+        window.addEventListener('load', function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.filter.call(forms, function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        }, false)
+    }())
+</script>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
