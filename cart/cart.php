@@ -157,7 +157,9 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
     </style>
 
 </head>
+
 <body>
+
 <!-- TOP HEADER Start
 ================================================== -->
 
@@ -170,10 +172,10 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
             <div class="col-md-3 clearfix" >
                 <ul class="login-cart" style="text-align: right">
                     <li>
-                        <a href="../user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
+                        <a href="../user/home.php"> <i class="fas fa-user"></i>PROFILE</a>
                     </li>
                     <li>
-                        <a href="../user/signup-user.php"><i class="fas fa-user-plus"></i>REGISTER</a>
+
                     </li>
                 </ul>
             </div>

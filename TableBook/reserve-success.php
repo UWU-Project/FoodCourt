@@ -110,10 +110,10 @@
             <div class="col-md-3 clearfix" >
                 <ul class="login-cart" style="text-align: right">
                     <li>
-                        <a href="../user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
+                        <a href="../user/home.php"> <i class="fas fa-user"></i>PROFILE</a>
                     </li>
                     <li>
-                        <a href="../user/signup-user.php"><i class="fas fa-user-plus"></i>REGISTER</a>
+
                     </li>
                 </ul>
             </div>
@@ -208,7 +208,7 @@
                     <div class="d-flex justify-content-center flex-column">
                 <div class="card d-flex blur justify-content-center p-4 shadow-lg">
                             <div class="text-center order-details">
-                                <div class="d-flex justify-content-center mb-5 flex-column align-items-center"> <span class="check1"><i class="fa fa-check"></i></span> <span class="font-weight-bold" >TABLE RESERVED SUCCESSFULLY</span> <h1 class="h2">Our Officer will contact you soon to Confirm the Reservation</h1><small class="mt-3">Feel free to <a href="../contactUs/contact-us.php">Contact Us</a></small></div> <button class="btn bg-gradient-success" ><a href="../user/home.php" class="text-decoration-none">Go to your Profile</a></button><button class="btn bg-gradient-info" ><a href="../user/home.php" class="text-decoration-none">Back to Home</a></button>
+                                <div class="d-flex justify-content-center mb-5 flex-column align-items-center"> <span class="check1"><i class="fa fa-check"></i></span> <span class="font-weight-bold" >TABLE RESERVED SUCCESSFULLY</span> <h1 class="h2">Our Officer will contact you soon to Confirm the Reservation</h1><small class="mt-3">Feel free to <a href="../contactUs/contact-us.php">Contact Us</a></small></div> <button class="btn bg-gradient-success" ><a href="../user/home.php" class="text-decoration-none">Go to your Profile</a></button><button class="btn bg-gradient-info" ><a href="../index.php" class="text-decoration-none">Back to Home</a></button>
                             </div>
                         </div>
                     <div class="col-md-3"></div>

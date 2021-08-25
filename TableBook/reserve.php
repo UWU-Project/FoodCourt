@@ -126,10 +126,10 @@ or die("Something is wrong ... \n" . mysqli_error());
             <div class="col-md-3 clearfix" >
                 <ul class="login-cart" style="text-align: right">
                     <li>
-                        <a href="../user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
+                        <a href="../user/home.php"> <i class="fas fa-user"></i>PROFILE</a>
                     </li>
                     <li>
-                        <a href="../user/signup-user.php"><i class="fas fa-user-plus"></i>REGISTER</a>
+
                     </li>
                 </ul>
             </div>
