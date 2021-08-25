@@ -49,7 +49,7 @@
 <!-- LOGO Start
 ================================================== -->
 
-<header>
+<header style="padding:10px;">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -62,61 +62,22 @@
 </header> <!-- End of /Header -->
 
 
-<!-- Navbar -->
-<div class="container position-sticky z-index-sticky top-0">
-    <div class="row">
-        <div class="col-12">
-
-            <nav class="navbar navbar-expand-lg  blur  top-0  z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
-
-                <div class="container-fluid">
-                    <a class="navbar-brand font-weight-bolder ms-sm-3" href="../index.php" rel="tooltip" title="Orchid Bliss" data-placement="bottom" target="_blank">
-                        ORCHID BLISS
-                    </a>
-
-                    <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon mt-2">
-                            <span class="navbar-toggler-bar bar1"></span>
-                            <span class="navbar-toggler-bar bar2"></span>
-                            <span class="navbar-toggler-bar bar3"></span>
-                          </span>
-                    </button>
-
-
-
-                    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
-                        <ul class="nav navbar-nav nav-main">
-                            <li class="nav-item dropdown dropdown-hover mx-10">
-                            </li>
-                            <li class="nav" style="margin-left: 50px">
-                                <a class="nav-link nav-link-icon me-2 active " href="#">
-                                    <i class="fas fa-user me-1"></i>
-                                    <p class="d-inline text-sm z-index-1 font-weight-bold">ADMIN LOGIN</p>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <!-- End Navbar -->
-        </div>
-    </div>
-</div>
-
-
 <!--------------- Begin Login User ----------------------------------->
-<div class="page-header min-vh-75" style="margin-top: 1cm">
+<div class="page-header">
 <div class="container" >
     <div class="wrapper">
         <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3">
 </div>
-            <div class="card d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5 col-md-4 form login-form">
-            <h1 class="text-center">Login Required</h1>
-                    <p class="text-center">Please login to proceed.</p>            
+            <div class="card d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mb-5 col-md-6">
+            <h3 class="text-center">Login Required!</h3>
+                    <p class="text-center">Please login to proceed with the page.</p>   
+                    <br/>   
+                    <a href="./user/login-user.php" style="text-align:center;">
+                    <button type="button" class="btn bg-gradient-primary">Login Now</button>
+                    </a>      
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
 </div>
         </div>
     </div>
