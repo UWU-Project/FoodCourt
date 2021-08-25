@@ -151,16 +151,16 @@
                     }
                     ?>
                     <div class="form-group">
-                        <input class="form-control" type="text" name="fname" placeholder="First Name" required value="<?php echo $fname ?>">
+                        <input class="form-control" type="text" name="fname" placeholder="First Name" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z])$" oninvalid="setCustomValidity('First Name should only contain characters (Eg. Dileesha)')" oninput="setCustomValidity('')" value="<?php echo $fname ?>">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="text" name="lname" placeholder="Last Name" required value="<?php echo $lname ?>">
+                        <input class="form-control" type="text" name="lname" placeholder="Last Name" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z])$" oninvalid="setCustomValidity('Last Name should only contain characters (Eg. Akila)')" oninput="setCustomValidity('')" value="<?php echo $lname ?>">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="email" name="email" placeholder="Email Address" required value="<?php echo $email ?>">
+                        <input class="form-control" type="email" name="email" placeholder="Email Address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  value="<?php echo $email ?>">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="password" name="password" placeholder="Password" required>
+                        <input class="form-control" type="password" name="password" placeholder="Password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" oninvalid="setCustomValidity('Minimum six characters, at least one letter and one number:')" oninput="setCustomValidity('')">
                     </div>
                     <div class="form-group">
                         <input class="form-control" type="password" name="cpassword" placeholder="Confirm password" required>
