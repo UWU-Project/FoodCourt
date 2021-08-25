@@ -490,8 +490,6 @@ if(isset($_POST['Submit'])){
                     <div class="media">
                         <h4 style="color: #fff;">OUR LOCATION</h4>
                         <div id="map"></div>
-
-
                     </div>    <!-- End Of /.media -->
                 </div>    <!-- End Of /.block -->
             </div> <!-- End Of Col-md-3 -->
@@ -503,7 +501,7 @@ if(isset($_POST['Submit'])){
                         <script>
                             document.write(new Date().getFullYear())
                         </script>
-                        | Food Court <a href="admin/login-form.php" target="_blank">Administrator</a> All Rights
+                        | Food Court <a href="admin-copy/user/login-user.php" target="_blank">Administrator</a> All Rights
                         Reserved
                     </p>
                 </div>

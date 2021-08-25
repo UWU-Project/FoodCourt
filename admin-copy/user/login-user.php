@@ -24,6 +24,12 @@
     <!-- CSS Files -->
     <link id="pagestyle" href="../../assets/css/soft-design-system.css?v=1.0.5" rel="stylesheet" />
     <link rel="stylesheet" href="../../css/style.css">
+    <style>
+    body{
+    background: url(../../images/ourback.jpg);
+
+    }
+    </style>
 </head>
 <body>
 

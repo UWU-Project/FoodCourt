@@ -421,8 +421,8 @@ padding-top: 10rem;
                                 Sandwiches Are Wonderful. You Don’t Need A Spoon Or A Plate
                             </p>
                             <div>
-                                <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
-                                <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
+                                <a href="pastry-shop.php" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
+                                <a  href="TableBook/reserve.php" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
                             </div>
                         </div>
                     </div>
@@ -437,8 +437,8 @@ padding-top: 10rem;
                                 We welcome your appetite. Let our food satisfy your stomach.
                             </p>
                             <div>
-                                <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
-                                <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
+                                <a href="lounge.php" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
+                                <a  href="TableBook/reserve.php" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
                             </div>
                         </div>
                     </div>
@@ -454,8 +454,8 @@ padding-top: 10rem;
                                 Need food and a good place to eat? Welcome to our humble place where you can eat good food peacefully.
                             </p>
                             <div>
-                                <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
-                                <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
+                                <a href="TableBook/TBB.php" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
+                                <a href="TableBook/reserve.php" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
                             </div>
                         </div>
                     </div>
@@ -1089,7 +1089,7 @@ padding-top: 10rem;
                         <script>
                             document.write(new Date().getFullYear())
                         </script>
-                        | Food Court <a href="admin/login-form.php" target="_blank">Administrator</a> All Rights
+                        | Food Court <a href="admin-copy/user/login-user.php" target="_blank">Administrator</a> All Rights
                         Reserved
                     </p>
                 </div>
