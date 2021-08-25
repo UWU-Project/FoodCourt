@@ -151,13 +151,13 @@
                     }
                     ?>
                     <div class="form-group">
-                        <input class="form-control" type="text" name="fname" placeholder="First Name" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z])$" value="<?php echo $fname ?>">
+                        <input class="form-control" type="text" name="fname" placeholder="First Name" required="Please Enter Characters" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z])$" value="<?php echo $fname ?>">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="text" name="lname" placeholder="Last Name" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z])$" value="<?php echo $lname ?>">
+                        <input class="form-control" type="text" name="lname" placeholder="Last Name" required="Please Enter Characters" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z])$" value="<?php echo $lname ?>">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" type="email" name="email" placeholder="Email Address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="<?php echo $email ?>">
+                        <input class="form-control" type="email" name="email" placeholder="Email Address" required="Please Enter Valid Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="<?php echo $email ?>">
                     </div>
                     <div class="form-group">
                         <input class="form-control" type="password" name="password" placeholder="Password" required>
