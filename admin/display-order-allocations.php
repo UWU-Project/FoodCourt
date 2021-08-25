@@ -82,14 +82,67 @@
     <!-- End Navbar -->
     <div class="container-fluid py-4">
 
-        <div class="row mt-4">
-          
+        <div class="row mt-2">
 
-        <div class="col-12 mt-4">
+        <div class="col-12">
           <div class="card mb-4">
-            <div class="card-body p-3">
+            <div class="card-body p-3" style="height: 70vh;">
               
-            
+            <div class="table-responsive">
+                                <table class="table align-items-center mb-0">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Staff ID</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">First Name</th>
+                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="table align-items-center mb-0">
+                                    <?php
+                                    //loop through all table rows
+                                    while ($row=mysqli_fetch_array($staff)){
+                                    echo "<tr>";?>
+                                            <td>
+                                                <div class="d-flex px-2">
+                                                    <div>
+                                                        <img src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/logos/small-logos/logo-spotify.svg" class="avatar avatar-sm rounded-circle me-2">
+                                                    </div>
+                                                    <div class="my-auto">
+                                                        <h6 class="mb-0 text-xs"><?php echo $row['StaffID']; ?></h6>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <p class="text-xs font-weight-bold mb-0"><?php echo $row['firstname']; ?></p>
+                                            </td>
+                                            <td>
+                                                <span class="badge bg-gradient-primary">
+                                                    <?php
+                                                    $a = $row['StaffID'];;
+                                                    $sql1 = "SELECT COUNT(StaffID) FROM orders_paid WHERE StaffID=$a";
+                                                    $sql2 = "SELECT COUNT(StaffID) FROM reservations_details WHERE StaffID=$a";
+                                                    $re1=mysqli_query($conn,$sql1);
+                                                    $re2=mysqli_query($conn,$sql2);
+                                                    $row1=mysqli_fetch_assoc($re1);
+                                                    $row2=mysqli_fetch_assoc($re2);
+                                                    if ($row1['COUNT(StaffID)'] + $row2['COUNT(StaffID)'] <1) {
+                                                            echo "NOT Allocated ";
+                                                    }else{
+                                                        echo "Allocated: " . $row1['COUNT(StaffID)'] + $row2['COUNT(StaffID)'];
+                                                    }
+                                                    ?>
+                                                    </span>
+                                            </td>
+                                        <?php
+                                                echo "</tr>";
+                                            }
+                                            mysqli_free_result($staff);
+                                            mysqli_close($conn);
+                                        ?>
+
+                                    </tbody>
+                                </table>
+                        </div>
             </div>
           </div>
         </div>
