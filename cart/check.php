@@ -141,7 +141,10 @@ or die("A problem has occured ... \n" . "Our team is working on it at the moment
             background-color: #4466f2 !important;
             border-color: #4466f2 !important
         }
+        body{
+            background: url(../images/ourback.jpg);
 
+        }
 
     </style>
 
@@ -280,7 +283,7 @@ or die("Something is wrong ... \n" . mysqli_error());
         <div class="py-5 text-center">
 
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb my-2">
+                <ol class="breadcrumb my-2" style="justify-content: center;">
                     <li class="breadcrumb-item active"><a href="#">Cart</a></li>
                     <li class="breadcrumb-item active"><a href="#">Billing Details</a></li>
                     <li class="breadcrumb-item active"><a>Details Added</a></li>

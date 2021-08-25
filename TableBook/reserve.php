@@ -103,6 +103,10 @@ or die("Something is wrong ... \n" . mysqli_error());
         .modal-open .container-fluid, .modal-open  .container {
             -webkit-filter: blur(5px) grayscale(90%);
         }
+        body{
+            background: url(../images/ourback.jpg);
+
+        }
     </style>
 
 
