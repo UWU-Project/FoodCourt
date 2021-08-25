@@ -143,7 +143,7 @@
                     }
                     ?>
                     <div class="form-group">
-                        <input class="form-control" type="email" name="email" placeholder="Email Address" required value="<?php echo $email ?>">
+                        <input class="form-control" type="email" name="email" placeholder="Email Address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value="<?php echo $email ?>">
                     </div>
                     <div class="form-group">
                         <input class="form-control" type="password" name="password" placeholder="Password" required>
@@ -262,8 +262,6 @@
 ></script>
 <script src="../validation/map.js"></script>
 <!-- Google Map End -->
-
-
 
 <!--   Core JS Files   -->
 <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
