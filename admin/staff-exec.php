@@ -35,7 +35,7 @@ $result = @mysqli_query($conn,$qry);
 
 //Check whether the query was successful or not
 if($result) {
-    header("location: profile.php");
+    header("Location: employees.php?m=1");
     echo "<html><script>alert('Staff information added successfully.')</script></html>";
     exit();
 }else {
