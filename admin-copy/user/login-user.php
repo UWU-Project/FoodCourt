@@ -90,7 +90,7 @@
                             <li class="nav-item dropdown dropdown-hover mx-10">
                             </li>
                             <li class="nav" style="margin-left: 50px">
-                                <a class="nav-link nav-link-icon me-2 active " href="../../user/login-user.php" target="_blank">
+                                <a class="nav-link nav-link-icon me-2 active " href="#">
                                     <i class="fas fa-user me-1"></i>
                                     <p class="d-inline text-sm z-index-1 font-weight-bold">ADMIN LOGIN</p>
                                 </a>

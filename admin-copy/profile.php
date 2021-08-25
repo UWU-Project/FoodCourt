@@ -290,9 +290,10 @@ or die("There are no records to count ... \n" . mysqli_error());
              //    echo $row[f_name];
              //    }
                  ?>
+                  Akila Promod
               </h5>
               <p class="mb-0 font-weight-bold text-sm">
-                CEO / Co-Founder
+              
               </p>
             </div>
           </div>

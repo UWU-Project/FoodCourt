@@ -411,7 +411,7 @@
                   </div>
                   <div class="form-group">
                       <label for="example-email-input" class="form-control-label">Food Price</label>
-                      <input type="text" name="price" id="price" class="form-control" placeholder="Enter Food Price" required>
+                      <input type="text" name="price" id="price" class="form-control" placeholder="Enter Food Price" pattern="^[0-9]*$" required>
                   </div>
                       <div class="form-group">
                           <label for="example-date-input" class="form-control-label">Category</label>
