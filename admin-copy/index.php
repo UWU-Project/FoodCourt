@@ -414,7 +414,7 @@ or die("There are no records to count ... \n" . mysqli_error());
                   <div class="bg-gradient-primary border-radius-lg h-100">
                     <img src="./assets/img/shapes/waves-white.svg" class="position-absolute h-100 w-50 top-0 d-lg-block d-none" alt="waves">
                     <div class="position-relative d-flex align-items-center justify-content-center h-100">
-                      <img class="w-100 position-relative z-index-2 pt-4" src="./assets/img/illustrations/rocket-white.png" alt="rocket">
+                      <img class="w-100 position-relative z-index-2 pt-4" src="./assets/img/vr-bg.jpg" alt="rocket">
                     </div>
                   </div>
                 </div>
@@ -424,7 +424,7 @@ or die("There are no records to count ... \n" . mysqli_error());
         </div>
         <div class="col-lg-5">
           <div class="card h-100 p-3">
-            <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('../assets/img/ivancik.jpg');">
+            <div class="overflow-hidden position-relative border-radius-lg bg-cover h-100" style="background-image: url('./assets/img/add-foods.jpg');">
               <span class="mask bg-gradient-dark"></span>
               <div class="card-body position-relative z-index-1 d-flex flex-column h-100 p-3">
                 <h5 class="text-white font-weight-bolder mb-4 pt-2">Add Foods</h5>
@@ -457,7 +457,7 @@ or die("There are no records to count ... \n" . mysqli_error());
                         </h5>
                       </a>
                       <p class="mb-4 text-sm">
-                      Music is something that every person has his or her own specific opinion about.
+                      Find out Available Order Lists including placed orders, confirmed Orders and cancelled orders.
                       </p>
                       <div class="d-flex align-items-center justify-content-between">
                       <a href="./orders.php">
@@ -471,7 +471,7 @@ or die("There are no records to count ... \n" . mysqli_error());
                   <div class="card card-blog card-plain">
                     <div class="position-relative">
                       <a class="d-block shadow-xl border-radius-xl">
-                        <img src="./assets/img/home-decor-2.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+                        <img src="./assets/img/reservTables.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
                       </a>
                     </div>
                     <div class="card-body px-1 pb-0">
@@ -481,7 +481,7 @@ or die("There are no records to count ... \n" . mysqli_error());
                         </h5>
                       </a>
                       <p class="mb-4 text-sm">
-                        Music is something that every person has his or her own specific opinion about.
+                      Find out available Reservation Lists including placed, confirmed and cancelled reservations.
                       </p>
                       <div class="d-flex align-items-center justify-content-between">
                       <a href="./reservations.php">
@@ -495,7 +495,7 @@ or die("There are no records to count ... \n" . mysqli_error());
                   <div class="card card-blog card-plain">
                     <div class="position-relative">
                       <a class="d-block shadow-xl border-radius-xl">
-                        <img src="./assets/img/home-decor-3.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                        <img src="./assets/img/custemersList.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
                       </a>
                     </div>
                     <div class="card-body px-1 pb-0">
@@ -505,7 +505,7 @@ or die("There are no records to count ... \n" . mysqli_error());
                         </h5>
                       </a>
                       <p class="mb-4 text-sm">
-                        Different people have different taste, and various types of music.
+                        View Registered customers details and manage cutomers from the website.
                       </p>
                       <div class="d-flex align-items-center justify-content-between">
                       <a href="./accounts.php">
@@ -519,7 +519,7 @@ or die("There are no records to count ... \n" . mysqli_error());
                   <div class="card card-blog card-plain">
                     <div class="position-relative">
                       <a class="d-block shadow-xl border-radius-xl">
-                        <img src="./assets/img/home-decor-3.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
+                        <img src="./assets/img/home-decor-4.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-xl">
                       </a>
                     </div>
                     <div class="card-body px-1 pb-0">
@@ -529,7 +529,7 @@ or die("There are no records to count ... \n" . mysqli_error());
                         </h5>
                       </a>
                       <p class="mb-4 text-sm">
-                        Different people have different taste, and various types of music.
+                        Create seasonal/ creative new promotions and view ongoing promotions.
                       </p>
                       <div class="d-flex align-items-center justify-content-between">
                       <a href="./specials.php">

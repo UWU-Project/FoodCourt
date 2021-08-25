@@ -93,8 +93,8 @@
         $alert="
             swal.fire({
                  type : 'success',
-                 title : 'Removed Succesfully',
-                 text : 'Record has Removed from Pastry Shop'
+                 title : 'Deletion Confirmed',
+                 text : 'Succecfully Deleted'
              })
             ";
         echo $alert;
@@ -430,7 +430,7 @@
                       <input type="file" name="photo" id="photo" class="form-control" placeholder="Add Photo" required>
                   </div>
                   <div class="form-group">
-                      <input class="btn bg-gradient-primary btn-lg w-100" type="submit" name="Submit" value="Add Foods" class="form-control">
+                      <input class="btn bg-gradient-primary btn-lg w-100" type="submit" name="Submit" value="Add Foods" class="form-control btn bg-gradient-primary btn-lg w-100">
                   </div>
               </form>
               </div>
