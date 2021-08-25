@@ -52,7 +52,7 @@ if (isset($_GET['id']))
     or die("There was a problem while deleting the category ... \n" . mysqli_error());
 
     // redirect back to the categories
-    header("Location: categories-lounge.php");
+    header("Location: categories-lounge.php?m=1");
 }
 else
     // if id isn't set, redirect back to the categories
