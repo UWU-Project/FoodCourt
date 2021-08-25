@@ -152,31 +152,30 @@ $tuck = mysqli_fetch_assoc($billing);
 <body>
 
 <!-- TOP HEADER Start
-    ================================================== -->
-<section id="top" >
-    <div class="container">
-        <div class="row">
+================================================== -->
 
-            <div class="col-md-6">
+<section id="top">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-9">
                 <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
-
-            <div class="col-md-3 clearfix">
-                <ul class="login-cart">
+            <div class="col-md-3 clearfix" >
+                <ul class="login-cart" style="text-align: right">
                     <li>
-                        <a href="../cart/cart.php"> <i class="fas fa-shopping-cart"></i>CART</a>
+                        <a href="../user/login-user.php"> <i class="fas fa-user"></i>LOGIN</a>
                     </li>
                     <li>
-                        <a href="../TableBook/TBB.php"><i class="fas fa-calendar-plus"></i>RESERVATION</a>
+                        <a href="../user/signup-user.php"><i class="fas fa-user-plus"></i>REGISTER</a>
                     </li>
                 </ul>
             </div>
-
         </div> <!-- End Of /.row -->
-    </div>    <!-- End Of /.Container -->
-
+    </div>	<!-- End Of /.Container -->
 </section>  <!-- End of /Section -->
 
+<!-- LOGO Start
+================================================== -->
 <!-- LOGO Start
 ================================================== -->
 
