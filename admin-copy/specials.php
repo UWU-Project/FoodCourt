@@ -389,7 +389,7 @@
                       <input type="file" name="photo" id="photo" class="form-control" placeholder="Add Photo" required>
                   </div>
                   <div class="form-group">
-                      <input class="btn bg-gradient-faded-primary" type="submit" name="Submit" value="Create Promotion" class="form-control">
+                      <input class="btn bg-gradient-primary btn-lg w-100" type="submit" name="Submit" value="Create Promotion" class="form-control">
                   </div>
               </form>
               </div>
