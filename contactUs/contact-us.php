@@ -45,7 +45,7 @@ error_reporting(0);
     <div class="container">
         <div class="row">
 
-            <div class="col-md-6">
+            <div class="col-md-9">
                 <p class="contact-action"><i class="fa fa-phone-square"></i>CST GROUP 4 [ FOOD COURT ]</p>
             </div>
 
@@ -59,21 +59,12 @@ error_reporting(0);
                     </li>
                 </ul>
             </div>
-            <div class="col-md-1">
+
 
             </div>
 
-            <div class="col-md-2">
-                <div class="search-box">
-                    <div class="input-group">
-                        <input placeholder="Search Here" type="text" class="form-control">
-                        <span class="input-group-btn">
-					        	<button type="button">
 
-					      	</span>
-                    </div><!-- /.input-group -->
-                </div><!-- /.search-box -->
-            </div>
+
         </div> <!-- End Of /.row -->
     </div>	<!-- End Of /.Container -->
 
@@ -335,7 +326,7 @@ error_reporting(0);
                         <script>
                             document.write(new Date().getFullYear())
                         </script>
-                        | Food Court <a href="../admin/login-form.php" target="_blank">Administrator</a> All Rights
+                        | Food Court <a href="../admin/user/login-user.php" target="_blank">Administrator</a> All Rights
                         Reserved
                     </p>
                 </div>

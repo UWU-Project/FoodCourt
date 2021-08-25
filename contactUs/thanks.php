@@ -42,30 +42,13 @@
             </div>
 
             <div class="col-md-3 clearfix">
-                <ul class="login-cart">
-                    <li>
-                        <a href="../customer/login.php"> <i class="fas fa-user"></i>LOGIN</a>
-                    </li>
-                    <li>
-                        <a href="../customer/create.php"><i class="fas fa-user-plus"></i>REGISTER</a>
-                    </li>
-                </ul>
+
             </div>
             <div class="col-md-1">
 
             </div>
 
-            <div class="col-md-2">
-                <div class="search-box">
-                    <div class="input-group">
-                        <input placeholder="Search Here" type="text" class="form-control">
-                        <span class="input-group-btn">
-					        	<button type="button">
 
-					      	</span>
-                    </div><!-- /.input-group -->
-                </div><!-- /.search-box -->
-            </div>
         </div> <!-- End Of /.row -->
     </div>	<!-- End Of /.Container -->
 

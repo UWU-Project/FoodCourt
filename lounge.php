@@ -509,7 +509,7 @@ if(isset($_POST['Submit'])){
                         <script>
                             document.write(new Date().getFullYear())
                         </script>
-                        | Food Court <a href="admin-copy/user/login-user.php" target="_blank">Administrator</a> All Rights
+                        | Food Court <a href="admin/user/login-user.php" target="_blank">Administrator</a> All Rights
                         Reserved
                     </p>
                 </div>
