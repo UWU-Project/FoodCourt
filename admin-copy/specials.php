@@ -369,7 +369,7 @@
                   </div>
                   <div class="form-group">
                       <label for="example-email-input" class="form-control-label">Promo Price</label>
-                      <input type="text" name="price" id="price" class="form-control" placeholder="Enter Promo Price" required>
+                      <input type="text" name="price" id="price" class="form-control" placeholder="Enter Promo Price" pattern="^[0-9]*$" required>
                   </div>
                   <div class="row">
                     <div class="col-md-6">

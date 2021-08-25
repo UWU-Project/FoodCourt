@@ -380,19 +380,19 @@
                         <form class="row g-3 needs-validation" id="staffForm" name="staffForm" method="post" action="staff-exec.php" onsubmit="return staffValidate(this)">
                             <div class="form-group">
                               <label for="exampleFormControlInput1" class="form-label">First Name </label>
-                              <input  name="fName" type="text" id="fName" class="form-control" placeholder="First Name" required>
+                              <input  name="fName" type="text" id="fName" class="form-control" placeholder="First Name" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z])$" required>
                             </div>
                             <div class="form-group">
                               <label for="exampleFormControlInput1" class="form-label">Last Name </label>
-                              <input name="lName" type="text" id="lName" class="form-control" placeholder="Last Name" required>
+                              <input name="lName" type="text" id="lName" class="form-control" placeholder="Last Name" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z])$" required>
                             </div>
                             <div class="form-group">
                               <label for="exampleFormControlInput1" class="form-label">Email</label>
-                              <input name="sAddress" type="text" id="sAddress" class="form-control" placeholder="Address" required>
+                              <input name="sAddress" type="email" id="sAddress" class="form-control" placeholder="Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                             </div>
                             <div class="form-group">
                               <label for="exampleFormControlInput1" class="form-label">Mobile Number</label>
-                              <input name="mobile" type="text" id="mobile" class="form-control" placeholder="Mobile Number" required>
+                              <input name="mobile" type="text" id="mobile" class="form-control" placeholder="Mobile Number" pattern="^\d{10}$" required>
                             </div>
                             <div class="input-group mb-3" class="form-label">
                             <button type="submit" name="Submit" value="Add" class="btn btn-primary mb-0" type="submit" name="Submit" id="button-addon2">Add Member</button>

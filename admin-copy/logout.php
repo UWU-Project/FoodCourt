@@ -50,7 +50,7 @@ unset($_SESSION['SESS_ADMIN_NAME']);
             </section>
 
             <h4 style="text-align:center" class="err">You have been logged out.</h4>
-            <p style="text-align:center"><a href="login-form.php">Click Here</a> to Login</p>
+            <p style="text-align:center"><a href="./user/login-user.php">Click Here</a> to Login</p>
             <div id="footer">
                 <div class="footer-bottom">
                     <div class="container">
