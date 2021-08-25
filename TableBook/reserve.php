@@ -39,6 +39,7 @@ $num_messages = mysqli_num_rows($messages);
 $tables=mysqli_query($conn,"SELECT * FROM tables")
 or die("Something is wrong ... \n" . mysqli_error());
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
