@@ -20,13 +20,13 @@ $flag_1 = 1;
 $members = mysqli_query($conn, "SELECT * FROM customers")
 or die("There are no records to count ... \n" . mysqli_error());
 
-$orders_placed = mysqli_query($conn, "SELECT * FROM orders_details")
+$orders_placed = mysqli_query($conn, "SELECT * FROM orders_paid WHERE DATE(date) = DATE(NOW())")
 or die("There are no records to count ... \n" . mysqli_error());
 
-$orders_processed = mysqli_query($conn, "SELECT * FROM orders_details WHERE flag='$flag_1'")
+$orders_processed = mysqli_query($conn, "SELECT * FROM orders_paid WHERE delivered='$flag_1'AND  DATE(date) = DATE(NOW())")
 or die("There are no records to count ... \n" . mysqli_error());
 
-$tables_reserved = mysqli_query($conn, "SELECT * FROM reservations_details WHERE table_flag='$flag_1'")
+$tables_reserved = mysqli_query($conn, "SELECT * FROM reservations_details WHERE table_flag='$flag_1'AND  DATE(Reserve_Date) = DATE(NOW())")
 or die("There are no records to count ... \n" . mysqli_error());
 
 
