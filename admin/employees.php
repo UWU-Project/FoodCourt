@@ -380,11 +380,11 @@
                         <form class="row g-3 needs-validation" id="staffForm" name="staffForm" method="post" action="staff-exec.php" onsubmit="return staffValidate(this)">
                             <div class="form-group">
                               <label for="exampleFormControlInput1" class="form-label">First Name </label>
-                              <input  name="fName" type="text" id="fName" class="form-control" placeholder="First Name" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z])$" required>
+                              <input  name="fName" type="text" id="fName" class="form-control" placeholder="First Name" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z])$" oninvalid="setCustomValidity('First Name should only contain characters (Eg. Dileesha)')" oninput="setCustomValidity('')">
                             </div>
                             <div class="form-group">
                               <label for="exampleFormControlInput1" class="form-label">Last Name </label>
-                              <input name="lName" type="text" id="lName" class="form-control" placeholder="Last Name" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z])$" required>
+                              <input name="lName" type="text" id="lName" class="form-control" placeholder="Last Name" required pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z])$" oninvalid="setCustomValidity('Last Name should only contain characters (Eg. Weliwaththa)')" oninput="setCustomValidity('')">
                             </div>
                             <div class="form-group">
                               <label for="exampleFormControlInput1" class="form-label">Email</label>
