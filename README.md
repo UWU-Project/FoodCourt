@@ -101,8 +101,48 @@ TABLE BOOKING PROCESS
 
 ![image](https://user-images.githubusercontent.com/64683688/159493371-6b4fe846-ed28-4b7a-b29f-106f129194f1.png)
 
+ADMIN PANEL
 
+1 Dashboard
+![image](https://user-images.githubusercontent.com/64683688/159649584-429526d9-af72-4d0d-9f0a-9285b2d30f7d.png)
 
+2 Food Menu
+![image](https://user-images.githubusercontent.com/64683688/159649613-ddbe4af4-9eeb-4eeb-bbbf-1e2081d78f85.png)
 
+2.1. Pastry Shop
+![image](https://user-images.githubusercontent.com/64683688/159649693-b47377d7-ed56-463b-b003-8a295500a083.png)
+![image](https://user-images.githubusercontent.com/64683688/159649742-ba99647e-fa91-4a9b-a3ba-ffcce69b046f.png)
 
+2.2 The Lounge
+![image](https://user-images.githubusercontent.com/64683688/159649792-9ccbea15-26ac-4a11-94ce-6e9b7992bf86.png)
+![image](https://user-images.githubusercontent.com/64683688/159649829-69f117fe-f1b1-4672-b3bb-5aebae8c49f1.png)
+
+3 Staff Allocation
+![image](https://user-images.githubusercontent.com/64683688/159649864-74f9b46b-cc5f-4c5b-a629-76a94e6d83d5.png)
+
+4 Promotions
+![image](https://user-images.githubusercontent.com/64683688/159649906-8c95ddb7-15ac-4792-a835-060f8e900649.png)
+
+5 Orders Management
+![image](https://user-images.githubusercontent.com/64683688/159649969-132d1c76-93b4-478a-ac7f-a02c94304a11.png)
+
+![image](https://user-images.githubusercontent.com/64683688/159649984-46dfe9df-a7ad-4e8c-a605-479f29835dbd.png)
+
+![image](https://user-images.githubusercontent.com/64683688/159649999-7a648f78-eb7b-4dee-85e8-3c0e19247a94.png)
+
+6 Reservation Management
+![image](https://user-images.githubusercontent.com/64683688/159650033-757f996c-bdd0-4c07-a06f-cc30124d7705.png)
+
+![image](https://user-images.githubusercontent.com/64683688/159650054-18ab3c97-2550-4922-ba7d-1775147f1ce8.png)
+
+![image](https://user-images.githubusercontent.com/64683688/159650082-b3f3e041-d613-4fe1-bb26-0b00e716fb81.png)
+
+7 Customers
+![image](https://user-images.githubusercontent.com/64683688/159650115-f6b53c09-ebbc-43bd-8ea6-f905b51ed53b.png)
+
+.8 Staff Members
+![image](https://user-images.githubusercontent.com/64683688/159650174-4246b2ba-66cb-4e14-a978-564400225e0e.png)
+
+9 Profile Settings
+![image](https://user-images.githubusercontent.com/64683688/159650218-b0d2ac6e-ef1d-4321-a7a7-f4b4df628a91.png)
 
