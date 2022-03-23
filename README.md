@@ -6,14 +6,15 @@ Online Food Court
 
 The "Online Food Court" designed and developed for the Client's Hotel, which has a Food Court, consists of three Restaurants. 
 	Namely,
--	Restaurant 1 – "Pastry Shop" 
--	Restaurant 2 – "The Lounge" 
--	Restaurant 3 – "Buffets" 
+	
+- Restaurant 1 – "Pastry Shop" 
+- Restaurant 2 – "The Lounge" 
+- Restaurant 3 – "Buffets" 
 
 The online Food Court system that we are significantly designed simplifies the Ordering Process and the Table Reservation Process of the Hotel for both the Customers and the Restaurant Employees. 
 
-- For the "Pastry Shop" and "The Lounge," we designed a "Food Ordering System." 
-- For the "Buffets," we designed a "Table Reservation System." 
+- For the **"Pastry Shop"** and **"The Lounge"** we designed a **"FOOD ORDERING SYSTEM"**
+- For the **"Buffets"** we designed a **"TABLE RESERVATION SYSTEM"**
 
 ![image](https://user-images.githubusercontent.com/64683688/159475375-7f88790a-3d2d-41bc-a18b-8062bc78e50e.png)
  
@@ -25,20 +26,20 @@ The System has the ability to manage "Customer's Profile," where they can save t
 
 Customers can view all the order details and can easily change or cancel their orders or reservations. This System provides two ways for payment:  
 
-1.	Customers can pay online, and System will take care of payment processing.  
-2.	Customers can pay at respective restaurants, and the hotel will be responsible for payment. 
+1. Customers can pay online, and System will take care of payment processing.  
+2. Customers can pay at respective restaurants, and the hotel will be responsible for payment. 
 
 Furthermore, customers are rewarded with the offers within allowed conditions.	
 
 ## 1.3 Project Aims / Objectives
 
--	The main aim of designing this project was to develop a system that can manage and handle the activities online that are involved in "Table reservation" and "Food Ordering" in an organized, cost-effective, and reliable manner. 
--	To give access for customers to use any electronic device like laptop, computers, smartphones, or tablet to order or reserve, due to social distancing. 
--	The System is available and functioning 24*7 and accessible for everyone. Thus, the customers can use the System very efficiently. 
--	This System's core objective is that computers manage and store data in an electronic database to replace all existing file-based Reservation systems, which can be highly beneficial for the administration. 
+- The main aim of designing this project was to develop a system that can manage and handle the activities online that are involved in "Table reservation" and "Food Ordering" in an organized, cost-effective, and reliable manner. 
+- To give access for customers to use any electronic device like laptop, computers, smartphones, or tablet to order or reserve, due to social distancing. 
+- The System is available and functioning 24*7 and accessible for everyone. Thus, the customers can use the System very efficiently. 
+- This System's core objective is that computers manage and store data in an electronic database to replace all existing file-based Reservation systems, which can be highly beneficial for the administration. 
 
 <details>
-	<summary> <h1> Snapshots </h1> </summary>
+	<summary> <h2> Snapshots </h2> </summary>
 <p>
 	
 ### 1. Home Page
