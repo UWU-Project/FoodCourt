@@ -37,29 +37,31 @@ Furthermore, customers are rewarded with the offers within allowed conditions.
 -	The System is available and functioning 24*7 and accessible for everyone. Thus, the customers can use the System very efficiently. 
 -	This System's core objective is that computers manage and store data in an electronic database to replace all existing file-based Reservation systems, which can be highly beneficial for the administration. 
 
-### Snapshots
-
-1 MAIN PAGES
+<details>
+	<summary> <h1> Snapshots </h1> </summary>
+<p>
+	
+### 1. Home Page
 
 ![image](https://user-images.githubusercontent.com/64683688/159487951-9362661c-e1b5-4ad5-b533-ba3cc8a6487a.png)
 
-Restaurant 1 – Pastry Shop
+### 2. Restaurant 1 – Pastry Shop
 
 ![image](https://user-images.githubusercontent.com/64683688/159488008-7a07d2d0-a148-49f3-90ee-6f95382f895f.png)
 
-Restaurant 2 – The Lounge
+### 3. Restaurant 2 – The Lounge
 
 ![image](https://user-images.githubusercontent.com/64683688/159488056-7d4d5702-5eef-4fb6-9b6a-a8e9b1897195.png)
 
-Restaurant 3 – The Buffet
+### 4. Restaurant 3 – The Buffet
 
 ![image](https://user-images.githubusercontent.com/64683688/159488103-80a54205-4f89-4907-ac2e-66ce9140938d.png)
 
-Contact Us
+### 5. Contact Us
 
 ![image](https://user-images.githubusercontent.com/64683688/159488167-53f26bc3-a9dc-49ed-aee4-28f1d5e74ecc.png)
 
-USER SIGN-UP AND PASSWORD RESET PROCESS
+### USER SIGN-UP AND PASSWORD RESET PROCESS
 
 ![image](https://user-images.githubusercontent.com/64683688/159488287-58d7f402-d0c6-435d-8ffc-6633549f1984.png)
 
@@ -67,11 +69,11 @@ USER SIGN-UP AND PASSWORD RESET PROCESS
 
 ![image](https://user-images.githubusercontent.com/64683688/159488598-daa704c8-1efc-4f24-851f-160a25447b21.png)
 
-Login
+### Login
 
 ![image](https://user-images.githubusercontent.com/64683688/159488584-3ba682f7-7ccd-44f7-a33a-d422ce6b2680.png)
 
-User Profile
+### User Profile
 
 ![image](https://user-images.githubusercontent.com/64683688/159488669-b4fe8d8b-52a5-4f69-9b99-d81c08fdc07b.png)
 
@@ -81,7 +83,7 @@ User Profile
 
 ![image](https://user-images.githubusercontent.com/64683688/159488755-e8250e54-bfdd-412a-8a8b-59fbdd9c7739.png)
 
-CART AND THE CART PROCESS
+### CART AND THE CART PROCESS
 
 ![image](https://user-images.githubusercontent.com/64683688/159488876-f3cb5389-aafe-45a3-87ff-0a8a0291603c.png)
 
@@ -93,7 +95,7 @@ CART AND THE CART PROCESS
 
 ![image](https://user-images.githubusercontent.com/64683688/159489052-03d55fd6-7a8e-4c3a-9137-8216bd239763.png)
 
-TABLE BOOKING PROCESS
+### TABLE BOOKING PROCESS
 
 ![image](https://user-images.githubusercontent.com/64683688/159493325-5ebb0723-028e-45e2-b54e-f265fb970a69.png)
 
@@ -101,48 +103,50 @@ TABLE BOOKING PROCESS
 
 ![image](https://user-images.githubusercontent.com/64683688/159493371-6b4fe846-ed28-4b7a-b29f-106f129194f1.png)
 
-ADMIN PANEL
+## ADMIN PANEL
 
-1 Dashboard
+### 1. Dashboard
 ![image](https://user-images.githubusercontent.com/64683688/159649584-429526d9-af72-4d0d-9f0a-9285b2d30f7d.png)
 
-2 Food Menu
+### 2. Food Menu
 ![image](https://user-images.githubusercontent.com/64683688/159649613-ddbe4af4-9eeb-4eeb-bbbf-1e2081d78f85.png)
 
-2.1. Pastry Shop
+#### 2.1. Pastry Shop
 ![image](https://user-images.githubusercontent.com/64683688/159649693-b47377d7-ed56-463b-b003-8a295500a083.png)
 ![image](https://user-images.githubusercontent.com/64683688/159649742-ba99647e-fa91-4a9b-a3ba-ffcce69b046f.png)
 
-2.2 The Lounge
+#### 2.2 The Lounge
 ![image](https://user-images.githubusercontent.com/64683688/159649792-9ccbea15-26ac-4a11-94ce-6e9b7992bf86.png)
 ![image](https://user-images.githubusercontent.com/64683688/159649829-69f117fe-f1b1-4672-b3bb-5aebae8c49f1.png)
 
-3 Staff Allocation
+### 3. Staff Allocation
 ![image](https://user-images.githubusercontent.com/64683688/159649864-74f9b46b-cc5f-4c5b-a629-76a94e6d83d5.png)
 
-4 Promotions
+### 4. Promotions
 ![image](https://user-images.githubusercontent.com/64683688/159649906-8c95ddb7-15ac-4792-a835-060f8e900649.png)
 
-5 Orders Management
+### 5. Orders Management
 ![image](https://user-images.githubusercontent.com/64683688/159649969-132d1c76-93b4-478a-ac7f-a02c94304a11.png)
 
 ![image](https://user-images.githubusercontent.com/64683688/159649984-46dfe9df-a7ad-4e8c-a605-479f29835dbd.png)
 
 ![image](https://user-images.githubusercontent.com/64683688/159649999-7a648f78-eb7b-4dee-85e8-3c0e19247a94.png)
 
-6 Reservation Management
+### 6. Reservation Management
 ![image](https://user-images.githubusercontent.com/64683688/159650033-757f996c-bdd0-4c07-a06f-cc30124d7705.png)
 
 ![image](https://user-images.githubusercontent.com/64683688/159650054-18ab3c97-2550-4922-ba7d-1775147f1ce8.png)
 
 ![image](https://user-images.githubusercontent.com/64683688/159650082-b3f3e041-d613-4fe1-bb26-0b00e716fb81.png)
 
-7 Customers
+### 7. Customers
 ![image](https://user-images.githubusercontent.com/64683688/159650115-f6b53c09-ebbc-43bd-8ea6-f905b51ed53b.png)
 
-.8 Staff Members
+### 8. Staff Members
 ![image](https://user-images.githubusercontent.com/64683688/159650174-4246b2ba-66cb-4e14-a978-564400225e0e.png)
 
-9 Profile Settings
+### 9. Profile Settings
 ![image](https://user-images.githubusercontent.com/64683688/159650218-b0d2ac6e-ef1d-4321-a7a7-f4b4df628a91.png)
 
+</p>
+</details>
