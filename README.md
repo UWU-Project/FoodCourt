@@ -2,6 +2,13 @@
 
 Online Food Court For the **Hotel Orchid Bliss - NuwaraEliya** 
 
+Implemented the proposed system,
+- Interfaces with HTML, CSS, and JavaScript. 
+- PHP was used as the Backend, while 
+- jQuery and Bootstrap were used as libraries. 
+- MySQL as the database and 
+- X.A.M.P.P. server as the local server.
+
 ## Project Background
 
 The "Online Food Court" designed and developed for the Client's Hotel, which has a Food Court, consists of three Restaurants. 
@@ -44,6 +51,10 @@ Furthermore, customers are rewarded with the offers within allowed conditions.
 - The System is available and functioning 24*7 and accessible for everyone. Thus, the customers can use the System very efficiently. 
 - This System's core objective is that computers manage and store data in an electronic database to replace all existing file-based Reservation systems, which can be highly beneficial for the administration. 
 
+## 
+
+
+
 <details>
 	<summary> <h2> UML Diagrams </h2> </summary>
 <p align="center">
@@ -56,7 +67,6 @@ Furthermore, customers are rewarded with the offers within allowed conditions.
 
 ### 3. Use Case Diagram
 ![Picture1](https://user-images.githubusercontent.com/64683688/160149517-73c35bd8-6aaa-435d-aaad-cf0b9a49e165.png)
-
 </p>
 </details>
 
