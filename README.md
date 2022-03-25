@@ -3,13 +3,21 @@
 Online Food Court For the **Hotel Orchid Bliss - NuwaraEliya** 
 
 Implemented the proposed system,
-- Interfaces with HTML, CSS, and JavaScript. 
-- PHP was used as the Backend, while 
-- jQuery and Bootstrap were used as libraries. 
-- MySQL as the database and 
-- X.A.M.P.P. server as the local server.
+- Interfaces with ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=plastic&logo=html5&logoColor=white), ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=plastic&logo=CSS3&logoColor=white), and [![made-with-HTML](https://img.shields.io/badge/JavaScript-%23323330.svg?style=plastic&logo=javascript&logoColor=%23F7DF1E)](https://www.javascript.com/). 
 
-## Project Background
+- ![PHP](https://img.shields.io/badge/PHP-%23777BB4.svg?style=plastic&logo=php&logoColor=white) was used as the Backend, while 
+
+- ![jQuery](https://img.shields.io/badge/jQuery-%230769AD.svg?style=plastic&logo=jquery&logoColor=white) and ![Bootstrap](https://img.shields.io/badge/Bootstrap-%23563D7C.svg?style=plastic&logo=bootstrap&logoColor=white) were used as libraries. 
+
+- ![MySQL](https://img.shields.io/badge/MySql-%2300f.svg?style=plastic&logo=mysql&logoColor=white) as the database and 
+
+- [![Maintenance](https://img.shields.io/badge/X.A.M.P.P-red.svg)](https://bitbucket.org/lbesson/ansi-colors) server as the local server.
+
+- ![PhpStorm](https://img.shields.io/badge/PhpStorm-143?style=plastic&logo=phpstorm&logoColor=black&color=black&labelColor=darkorchid) and ![Visual Studio](https://img.shields.io/badge/Visual%20Studio%20Code-5C2D91.svg?style=plastic&logo=visual-studio&logoColor=white) as the IDE's.
+
+<details>
+	<summary> <h2> Project Background </h2> </summary>
+<p align="center">
 
 The "Online Food Court" designed and developed for the Client's Hotel, which has a Food Court, consists of three Restaurants. 
 	Namely,
@@ -35,7 +43,7 @@ Proposed Structure of Online Food Court System<br>
 "Table Reservation System" also presents an Interactive system, which enables the customer to access the details of the availability of tables for the buffet while making their reservation online. The System will have all the necessary information about Daily Buffets and the Availability for Reservations. The standard reservation procedure is done via phone calls or by visiting in person to the reservation office.
 ```
 
-`The System has the ability to manage "Customer's Profile," where they can save their previous orders, reservations, and personal information. Further, handling payment and transactions can also be done through this account.`  
+The System has the ability to manage "Customer's Profile," where they can save their previous orders, reservations, and personal information. Further, handling payment and transactions can also be done through this account. 
 
 Customers can view all the order details and can easily change or cancel their orders or reservations. This System provides two ways for payment:  
 
@@ -43,17 +51,21 @@ Customers can view all the order details and can easily change or cancel their o
 2. Customers can pay at respective restaurants, and the hotel will be responsible for payment. 
 
 Furthermore, customers are rewarded with the offers within allowed conditions.	
+	
+</p>
+</details>
 
-## Project Aims / Objectives
+
+<details>
+	<summary> <h2> Project Aims / Objectives </h2> </summary>
 
 - The main aim of designing this project was to develop a system that can manage and handle the activities online that are involved in "Table reservation" and "Food Ordering" in an organized, cost-effective, and reliable manner. 
 - To give access for customers to use any electronic device like laptop, computers, smartphones, or tablet to order or reserve, due to social distancing. 
 - The System is available and functioning 24*7 and accessible for everyone. Thus, the customers can use the System very efficiently. 
 - This System's core objective is that computers manage and store data in an electronic database to replace all existing file-based Reservation systems, which can be highly beneficial for the administration. 
 
-## 
-
-
+</p>
+</details>
 
 <details>
 	<summary> <h2> UML Diagrams </h2> </summary>
