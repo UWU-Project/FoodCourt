@@ -1,28 +1,34 @@
 # Online Food Court
-1.1 Project Title
-Online Food Court
 
-## 1.2 Project Background
+Online Food Court For the **Hotel Orchid Bliss - NuwaraEliya** 
+
+## Project Background
 
 The "Online Food Court" designed and developed for the Client's Hotel, which has a Food Court, consists of three Restaurants. 
 	Namely,
 	
-- Restaurant 1 – "Pastry Shop" 
-- Restaurant 2 – "The Lounge" 
-- Restaurant 3 – "Buffets" 
+- **Restaurant 1 – "Pastry Shop"** 
+- **Restaurant 2 – "The Lounge"** 
+- **Restaurant 3 – "Buffets"** 
 
 The online Food Court system that we are significantly designed simplifies the Ordering Process and the Table Reservation Process of the Hotel for both the Customers and the Restaurant Employees. 
 
 - For the **"Pastry Shop"** and **"The Lounge"** we designed a **"FOOD ORDERING SYSTEM"**
 - For the **"Buffets"** we designed a **"TABLE RESERVATION SYSTEM"**
 
-![image](https://user-images.githubusercontent.com/64683688/159475375-7f88790a-3d2d-41bc-a18b-8062bc78e50e.png)
- 
-Figure 1.2.1: Proposed Online Food Court System
+<p align="center">
+Proposed Structure of Online Food Court System<br>
+<img src="https://user-images.githubusercontent.com/64683688/159475375-7f88790a-3d2d-41bc-a18b-8062bc78e50e.png?raw=true" alt="Proposed Structure of Online Food Court System"/>	
+</p>
 
-"Food Ordering System" presents an Interactive and up-to-date menu with all available options in a very simple manner. The customer can choose one or more items to place an order which will land in the "Cart". Customers can be fully customizing their orders. They can view all the order details in the cart before checking out. In the end, the customer gets order confirmation details. Once the order is placed, it is entered into the database and retrieved in real-time. This allows "Restaurant Employees" to quickly go through the orders as they are received and process all orders efficiently and effectively with minimal delays and confusion. "Table Reservation System" also presents an Interactive system, which enables the customer to access the details of the availability of tables for the buffet while making their reservation online. The System will have all the necessary information about Daily Buffets and the Availability for Reservations. The standard reservation procedure is done via phone calls or by visiting in person to the reservation office.  
+```
+"Food Ordering System" presents an Interactive and up-to-date menu with all available options in a very simple manner. The customer can choose one or more items to place an order which will land in the "Cart". Customers can be fully customizing their orders. They can view all the order details in the cart before checking out. In the end, the customer gets order confirmation details. Once the order is placed, it is entered into the database and retrieved in real-time. This allows "Restaurant Employees" to quickly go through the orders as they are received and process all orders efficiently and effectively with minimal delays and confusion.
+```
+```
+"Table Reservation System" also presents an Interactive system, which enables the customer to access the details of the availability of tables for the buffet while making their reservation online. The System will have all the necessary information about Daily Buffets and the Availability for Reservations. The standard reservation procedure is done via phone calls or by visiting in person to the reservation office.
+```
 
-The System has the ability to manage "Customer's Profile," where they can save their previous orders, reservations, and personal information. Further, handling payment and transactions can also be done through this account.  
+`The System has the ability to manage "Customer's Profile," where they can save their previous orders, reservations, and personal information. Further, handling payment and transactions can also be done through this account.`  
 
 Customers can view all the order details and can easily change or cancel their orders or reservations. This System provides two ways for payment:  
 
@@ -31,7 +37,7 @@ Customers can view all the order details and can easily change or cancel their o
 
 Furthermore, customers are rewarded with the offers within allowed conditions.	
 
-## 1.3 Project Aims / Objectives
+## Project Aims / Objectives
 
 - The main aim of designing this project was to develop a system that can manage and handle the activities online that are involved in "Table reservation" and "Food Ordering" in an organized, cost-effective, and reliable manner. 
 - To give access for customers to use any electronic device like laptop, computers, smartphones, or tablet to order or reserve, due to social distancing. 
@@ -39,8 +45,24 @@ Furthermore, customers are rewarded with the offers within allowed conditions.
 - This System's core objective is that computers manage and store data in an electronic database to replace all existing file-based Reservation systems, which can be highly beneficial for the administration. 
 
 <details>
+	<summary> <h2> UML Diagrams </h2> </summary>
+<p align="center">
+	
+### 1. Class Diagram	
+![image](https://user-images.githubusercontent.com/64683688/160149042-f60b90eb-9f02-4faf-8c02-acd64fee5d1d.png)
+
+### 2. ER Diagram
+![image](https://user-images.githubusercontent.com/64683688/160149217-d3222c97-72a4-465e-9e24-59609aad5cff.png)
+
+### 3. Use Case Diagram
+![Picture1](https://user-images.githubusercontent.com/64683688/160149517-73c35bd8-6aaa-435d-aaad-cf0b9a49e165.png)
+
+</p>
+</details>
+
+<details>
 	<summary> <h2> Snapshots </h2> </summary>
-<p>
+<p align="center">
 	
 ### 1. Home Page
 
