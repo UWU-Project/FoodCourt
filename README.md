@@ -15,6 +15,8 @@ Implemented the proposed system,
 
 - ![PhpStorm](https://img.shields.io/badge/PhpStorm-143?style=plastic&logo=phpstorm&logoColor=black&color=black&labelColor=darkorchid) and ![Visual Studio](https://img.shields.io/badge/Visual%20Studio%20Code-5C2D91.svg?style=plastic&logo=visual-studio&logoColor=white) as the IDE's.
 
+---
+
 <details>
 	<summary> <h2> Project Background </h2> </summary>
 <p align="center">
@@ -55,6 +57,7 @@ Furthermore, customers are rewarded with the offers within allowed conditions.
 </p>
 </details>
 
+---
 
 <details>
 	<summary> <h2> Project Aims / Objectives </h2> </summary>
@@ -67,6 +70,8 @@ Furthermore, customers are rewarded with the offers within allowed conditions.
 </p>
 </details>
 
+---
+
 <details>
 	<summary> <h2> UML Diagrams </h2> </summary>
 <p align="center">
@@ -74,13 +79,19 @@ Furthermore, customers are rewarded with the offers within allowed conditions.
 ### 1. Class Diagram	
 ![image](https://user-images.githubusercontent.com/64683688/160149042-f60b90eb-9f02-4faf-8c02-acd64fee5d1d.png)
 
+---
+	
 ### 2. ER Diagram
 ![image](https://user-images.githubusercontent.com/64683688/160149217-d3222c97-72a4-465e-9e24-59609aad5cff.png)
+
+---	
 
 ### 3. Use Case Diagram
 ![Picture1](https://user-images.githubusercontent.com/64683688/160149517-73c35bd8-6aaa-435d-aaad-cf0b9a49e165.png)
 </p>
 </details>
+
+---
 
 <details>
 	<summary> <h2> METHODOLOGY </h2> </summary>
@@ -118,6 +129,8 @@ In every Sprint, a recurring Iteration passes through the Analysis, Design, Impl
 </p>
 </details>
 
+---
+
 <details>
 	<summary> <h2> Snapshots </h2> </summary>
 <p align="center">
@@ -141,6 +154,8 @@ In every Sprint, a recurring Iteration passes through the Analysis, Design, Impl
 ### 5. Contact Us
 
 ![image](https://user-images.githubusercontent.com/64683688/159488167-53f26bc3-a9dc-49ed-aee4-28f1d5e74ecc.png)
+	
+---
 
 ### USER SIGN-UP AND PASSWORD RESET PROCESS
 
@@ -149,10 +164,14 @@ In every Sprint, a recurring Iteration passes through the Analysis, Design, Impl
 ![image](https://user-images.githubusercontent.com/64683688/159488558-41ad991a-eb4f-4713-b3f1-9989f6a215be.png)
 
 ![image](https://user-images.githubusercontent.com/64683688/159488598-daa704c8-1efc-4f24-851f-160a25447b21.png)
+	
+---
 
 ### Login
 
 ![image](https://user-images.githubusercontent.com/64683688/159488584-3ba682f7-7ccd-44f7-a33a-d422ce6b2680.png)
+	
+---
 
 ### User Profile
 
@@ -163,6 +182,8 @@ In every Sprint, a recurring Iteration passes through the Analysis, Design, Impl
 ![image](https://user-images.githubusercontent.com/64683688/159488718-5a268d60-b785-4c7c-87a5-b2ebe6f52e6e.png)
 
 ![image](https://user-images.githubusercontent.com/64683688/159488755-e8250e54-bfdd-412a-8a8b-59fbdd9c7739.png)
+	
+---
 
 ### CART AND THE CART PROCESS
 
@@ -171,10 +192,15 @@ In every Sprint, a recurring Iteration passes through the Analysis, Design, Impl
 ![image](https://user-images.githubusercontent.com/64683688/159488937-72c8d996-5388-4bc9-8fc2-682a42410d26.png)
 
 ![image](https://user-images.githubusercontent.com/64683688/159488948-740a7eed-83b4-4722-b3da-a9e9ac4736d8.png)
+	
+---
+Checkout and Payhere Payment Gateway
 
 ![image](https://user-images.githubusercontent.com/64683688/159489020-42f00e08-406d-4957-ae5b-7396245e8226.png)
 
 ![image](https://user-images.githubusercontent.com/64683688/159489052-03d55fd6-7a8e-4c3a-9137-8216bd239763.png)
+	
+---
 
 ### TABLE BOOKING PROCESS
 
@@ -183,6 +209,8 @@ In every Sprint, a recurring Iteration passes through the Analysis, Design, Impl
 ![image](https://user-images.githubusercontent.com/64683688/159493347-1a3a42e4-76e1-4cec-a434-2d7bff4b0d31.png)
 
 ![image](https://user-images.githubusercontent.com/64683688/159493371-6b4fe846-ed28-4b7a-b29f-106f129194f1.png)
+	
+---
 
 ## ADMIN PANEL
 
@@ -231,6 +259,8 @@ In every Sprint, a recurring Iteration passes through the Analysis, Design, Impl
 
 </p>
 </details>
+
+---
 
 ## Team Members 
 
