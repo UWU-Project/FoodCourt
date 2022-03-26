@@ -117,9 +117,10 @@ In every Sprint, a recurring Iteration passes through the Analysis, Design, Impl
 
 ![Picture2](https://user-images.githubusercontent.com/64683688/160221067-d5f87120-2459-4268-910b-91eea0d9ee16.png)
 	
-	In Analysis Phase, Most of the Requirements were gathered from the interviews held with the Client. Also, the interviews were held with each Restaurant's staff members, and they enthusiastically supported us by giving relevant documentation and information. Referring to the Previous paper-based Hotel records helped us understand the Hotel's Food Court Process. 
+Majorly, we got a good picture about the Staff and their Problems faced in file-based Systems. So that, we were able to give suggestions and guide the Client to narrow his Requirements. Also, those tactics helped us to obtain the Users and the User Roles of the proposed System.1st Sprint created with the highest priority requirements. At the same time, lower priority requirements were kept for building the next Sprint. Feedbacks from our Client is gathered after every Sprint by showing off the product of developed Sprint for further development of that Sprint.
 	
-	Majorly, we got a good picture about the Staff and their Problems faced in file-based Systems. So that, we were able to give suggestions and guide the Client to narrow his Requirements. Also, those tactics helped us to obtain the Users and the User Roles of the proposed System.1st Sprint created with the highest priority requirements. At the same time, lower priority requirements were kept for building the next Sprint. Feedbacks from our Client is gathered after every Sprint by showing off the product of developed Sprint for further development of that Sprint.
+	
+	In Analysis Phase, Most of the Requirements were gathered from the interviews held with the Client. Also, the interviews were held with each Restaurant's staff members, and they enthusiastically supported us by giving relevant documentation and information. Referring to the Previous paper-based Hotel records helped us understand the Hotel's Food Court Process. 
 	
 	In Designing Phase, we created required diagrams for logical and database design based on the analysis phase. So, E.R. diagrams, use ease diagram, activity diagram, and class diagram were created.
 	
