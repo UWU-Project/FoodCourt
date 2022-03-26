@@ -231,3 +231,9 @@ In every Sprint, a recurring Iteration passes through the Analysis, Design, Impl
 
 </p>
 </details>
+
+## Team Members 
+
+<a href="https://github.com/UWU-Project/FoodCourt/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=UWU-Project/CarDealership" />
+</a>
