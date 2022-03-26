@@ -83,6 +83,42 @@ Furthermore, customers are rewarded with the offers within allowed conditions.
 </details>
 
 <details>
+	<summary> <h2> METHODOLOGY </h2> </summary>
+<p align="center">
+
+### Agile Methodology
+	
+By considering the Client's Priorities from the Gathered requirements and the Time period that we had to complete the project, we considered using an Iterative Method to develop the System. Therefore, we selected Agile Methodology having Three Sprints with iteration. We broke down the proposed "Online Food Court" System into Three Standalone modules by sorting out the Client's Highest Priorities.
+
+![Picture3](https://user-images.githubusercontent.com/64683688/160221411-f75b48fe-6e06-40cf-ba90-4e6d7218573a.png)
+
+By using this Agile Methodology, the Client would be allowed to interact with the development of every Sprint. It helped us to develop the System within the Client's changing requirements. Hence, we were able to develop a more user-friendly and efficient system within a short period of time. 
+
+	In the First Sprint, we designed the Fully functional "Food Ordering System," which is required for the "Pastry Shop" and "The Lounge." which contains Customer Registration, Admin Panel, Food Items browsing and filtering, adding to cart, Food Customization and Placing the Order. Then the System was tested. 
+
+	In the Second Sprint, we designed the Table Booking System which is required for the "Buffets." This contains Date Selection, Buffet Selection, Checking Table Availability, and Making a Reservation. Then the System would be combined with Sprint 1, and the System was tested.
+
+	In the Third Sprint, we set up the Payment Gateway system and Combined the "Food Ordering System" into it. After completing all the Pre-tested Sprint, full system Implementation had been done. Then we tested the whole System and validated it. After completing the Testing and Validation, the System was given to the Client.
+
+### Iteration Process Within the Sprints in Agile
+	
+In every Sprint, a recurring Iteration passes through the Analysis, Design, Implementation, and Testing Phases to have a shippable product to the customer.
+
+![Picture2](https://user-images.githubusercontent.com/64683688/160221067-d5f87120-2459-4268-910b-91eea0d9ee16.png)
+	
+	In Analysis Phase, Most of the Requirements were gathered from the interviews held with the Client. Also, the interviews were held with each Restaurant's staff members, and they enthusiastically supported us by giving relevant documentation and information. Referring to the Previous paper-based Hotel records helped us understand the Hotel's Food Court Process. 
+	
+	Majorly, we got a good picture about the Staff and their Problems faced in file-based Systems. So that, we were able to give suggestions and guide the Client to narrow his Requirements. Also, those tactics helped us to obtain the Users and the User Roles of the proposed System.1st Sprint created with the highest priority requirements. At the same time, lower priority requirements were kept for building the next Sprint. Feedbacks from our Client is gathered after every Sprint by showing off the product of developed Sprint for further development of that Sprint.
+	
+	In Designing Phase, we created required diagrams for logical and database design based on the analysis phase. So, E.R. diagrams, use ease diagram, activity diagram, and class diagram were created.
+	
+	In the Implementation Phase, we created the proposed system Interface with HTML, CSS, and JavaScript. PHP was used as the Backend, while jQuery and Bootstrap were used as libraries. MySQL as the database and X.A.M.P.P. server as the local server.
+	
+	In Testing Phase, we checked whether the functions are working fine and fixed associated bugs before letting the Client use and give feedback about the System.	
+</p>
+</details>
+
+<details>
 	<summary> <h2> Snapshots </h2> </summary>
 <p align="center">
 	
