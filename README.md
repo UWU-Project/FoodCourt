@@ -28,7 +28,7 @@ The "Online Food Court" designed and developed for the Client's Hotel, which has
 - **Restaurant 2 – "The Lounge"** 
 - **Restaurant 3 – "Buffets"** 
 
-The online Food Court system that we are significantly designed simplifies the Ordering Process and the Table Reservation Process of the Hotel for both the Customers and the Restaurant Employees. 
+The Online Food Court system that we are significantly designed simplifies the Ordering Process and the Table Reservation Process of the Hotel for both the Customers and the Restaurant Employees. 
 
 - For the **"Pastry Shop"** and **"The Lounge"** we designed a **"FOOD ORDERING SYSTEM"**
 - For the **"Buffets"** we designed a **"TABLE RESERVATION SYSTEM"**
