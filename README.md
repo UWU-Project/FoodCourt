@@ -94,6 +94,32 @@ Furthermore, customers are rewarded with the offers within allowed conditions.
 ---
 
 <details>
+	<summary> <h2> WIREFRAMES </h2> </summary>
+<p align="center">
+
+### Home
+![Home](https://user-images.githubusercontent.com/64683688/232330665-1bf2c42e-048f-40be-b7c3-c0ce4a6bc91e.png)
+
+### Lounge
+![Lounge](https://user-images.githubusercontent.com/64683688/232330674-f81b3869-21bf-4466-9586-d6f9aa4b4a15.png)
+
+### Pastry Shop
+![Pastry Shop](https://user-images.githubusercontent.com/64683688/232330763-f1497b9d-22b4-42ba-8b65-410d51212bed.png)
+
+### Buffet
+![Buffet](https://user-images.githubusercontent.com/64683688/232330821-a6959157-1279-42a7-a5cd-ec0e09db440b.png)
+
+### Contact Us
+![Contact Us](https://user-images.githubusercontent.com/64683688/232330882-61fd51e6-3835-40df-b741-a4aa41a09215.png)
+
+### Cart
+![Cart](https://user-images.githubusercontent.com/64683688/232330943-902ef7d6-6a4e-4448-b82a-2c7ebef55997.png)
+
+</details>
+
+---
+
+<details>
 	<summary> <h2> METHODOLOGY </h2> </summary>
 <p align="center">
 
